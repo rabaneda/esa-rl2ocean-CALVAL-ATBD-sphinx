@@ -1,87 +1,133 @@
 \babel@toc {english}{}\relax 
-\contentsline {chapter}{\numberline {1}Authors and approval}{3}{chapter.1}%
-\contentsline {chapter}{\numberline {2}Change records}{5}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Introduction}{5}{section.2.1}%
-\contentsline {subsection}{\numberline {2.1.1}Purpose and scope}{5}{subsection.2.1.1}%
-\contentsline {subsection}{\numberline {2.1.2}Cal/Val context}{5}{subsection.2.1.2}%
-\contentsline {subsection}{\numberline {2.1.3}L2 product scope}{6}{subsection.2.1.3}%
-\contentsline {subsection}{\numberline {2.1.4}Cal/Val objectives and performance}{6}{subsection.2.1.4}%
-\contentsline {subsection}{\numberline {2.1.5}ATBD purpose}{7}{subsection.2.1.5}%
-\contentsline {subsection}{\numberline {2.1.6}Applicable and reference documents}{7}{subsection.2.1.6}%
-\contentsline {subsection}{\numberline {2.1.7}Acronyms}{7}{subsection.2.1.7}%
-\contentsline {subsection}{\numberline {2.1.8}Definitions and conventions}{8}{subsection.2.1.8}%
-\contentsline {section}{\numberline {2.2}Processing model and data flow}{9}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}Overview and top\sphinxhyphen {}down decomposition}{9}{subsection.2.2.1}%
-\contentsline {subsection}{\numberline {2.2.2}Pre\sphinxhyphen {}launch phase (D)}{9}{subsection.2.2.2}%
-\contentsline {subsection}{\numberline {2.2.3}Commissioning phase (IOC or E1)}{9}{subsection.2.2.3}%
-\contentsline {subsection}{\numberline {2.2.4}Exploitation phase (E2)}{9}{subsection.2.2.4}%
-\contentsline {subsection}{\numberline {2.2.5}End\sphinxhyphen {}to\sphinxhyphen {}end data flow}{9}{subsection.2.2.5}%
-\contentsline {section}{\numberline {2.3}Algorithms description}{9}{section.2.3}%
-\contentsline {subsection}{\numberline {2.3.1}Selected Calibration methods}{10}{subsection.2.3.1}%
-\contentsline {subsubsection}{\numberline {2.3.1.1}ROSE\sphinxhyphen {}L L1 SLC products}{10}{subsubsection.2.3.1.1}%
-\contentsline {paragraph}{Short description}{10}{paragraph*.40}%
-\contentsline {paragraph}{Description of inputs}{10}{paragraph*.41}%
-\contentsline {paragraph}{Detailed methodology}{10}{paragraph*.42}%
-\contentsline {paragraph}{Performance metrics}{10}{paragraph*.43}%
-\contentsline {paragraph}{Expected output}{10}{paragraph*.44}%
-\contentsline {subsubsection}{\numberline {2.3.1.2}NOC}{10}{subsubsection.2.3.1.2}%
-\contentsline {paragraph}{Short description}{10}{paragraph*.45}%
-\contentsline {paragraph}{Description of inputs}{10}{paragraph*.46}%
-\contentsline {paragraph}{Detailed methodology}{10}{paragraph*.47}%
-\contentsline {paragraph}{Performance metrics}{10}{paragraph*.48}%
-\contentsline {paragraph}{Expected output}{10}{paragraph*.49}%
-\contentsline {subsubsection}{\numberline {2.3.1.3}GMF tuning}{10}{subsubsection.2.3.1.3}%
-\contentsline {paragraph}{Short description}{10}{paragraph*.50}%
-\contentsline {paragraph}{Description of inputs}{10}{paragraph*.51}%
-\contentsline {paragraph}{Detailed methodology}{10}{paragraph*.52}%
-\contentsline {paragraph}{Performance metrics}{10}{paragraph*.53}%
-\contentsline {paragraph}{Expected output}{10}{paragraph*.54}%
-\contentsline {subsubsection}{\numberline {2.3.1.4}MTF tuning}{10}{subsubsection.2.3.1.4}%
-\contentsline {paragraph}{Short description}{10}{paragraph*.55}%
-\contentsline {paragraph}{Description of inputs}{10}{paragraph*.56}%
-\contentsline {paragraph}{Detailed methodology}{10}{paragraph*.57}%
-\contentsline {paragraph}{Performance metrics}{10}{paragraph*.58}%
-\contentsline {paragraph}{Expected output}{10}{paragraph*.59}%
-\contentsline {subsubsection}{\numberline {2.3.1.5}Summary}{10}{subsubsection.2.3.1.5}%
-\contentsline {subsection}{\numberline {2.3.2}Selected Validation methods}{10}{subsection.2.3.2}%
-\contentsline {subsubsection}{\numberline {2.3.2.1}One\sphinxhyphen {}to\sphinxhyphen {}one validation}{11}{subsubsection.2.3.2.1}%
-\contentsline {paragraph}{Short description}{11}{paragraph*.60}%
-\contentsline {paragraph}{Description of inputs}{11}{paragraph*.61}%
-\contentsline {paragraph}{Detailed methodology}{11}{paragraph*.62}%
-\contentsline {paragraph}{Performance metrics}{11}{paragraph*.63}%
-\contentsline {paragraph}{Expected output}{11}{paragraph*.64}%
-\contentsline {subsubsection}{\numberline {2.3.2.2}Triple collocation}{11}{subsubsection.2.3.2.2}%
-\contentsline {paragraph}{Short description}{11}{paragraph*.65}%
-\contentsline {paragraph}{Description of inputs}{11}{paragraph*.66}%
-\contentsline {paragraph}{Detailed methodology}{11}{paragraph*.67}%
-\contentsline {paragraph}{Performance metrics}{11}{paragraph*.68}%
-\contentsline {paragraph}{Expected output}{11}{paragraph*.69}%
-\contentsline {subsubsection}{\numberline {2.3.2.3}Spatial variances}{11}{subsubsection.2.3.2.3}%
-\contentsline {paragraph}{Short description}{11}{paragraph*.70}%
-\contentsline {paragraph}{Description of inputs}{11}{paragraph*.71}%
-\contentsline {paragraph}{Detailed methodology}{11}{paragraph*.72}%
-\contentsline {paragraph}{Performance metrics}{11}{paragraph*.73}%
-\contentsline {paragraph}{Expected output}{11}{paragraph*.74}%
-\contentsline {subsubsection}{\numberline {2.3.2.4}Summary}{11}{subsubsection.2.3.2.4}%
-\contentsline {section}{\numberline {2.4}Uncertainty analysis}{11}{section.2.4}%
-\contentsline {subsection}{\numberline {2.4.1}Introduction}{11}{subsection.2.4.1}%
-\contentsline {subsection}{\numberline {2.4.2}The GUM Principles: A review}{12}{subsection.2.4.2}%
-\contentsline {subsubsection}{\numberline {2.4.2.1}The International Vocabulary of Metrology (VIM)}{12}{subsubsection.2.4.2.1}%
-\contentsline {subsubsection}{\numberline {2.4.2.2}Guide to the Expression of Uncertainty in Measurement (GUM)}{12}{subsubsection.2.4.2.2}%
-\contentsline {subsubsection}{\numberline {2.4.2.3}Quality Assurance Framework for Earth Observation (QA4EO)}{12}{subsubsection.2.4.2.3}%
-\contentsline {subsection}{\numberline {2.4.3}Product\sphinxhyphen {}specific uncertainty estimation}{14}{subsection.2.4.3}%
-\contentsline {subsubsection}{\numberline {2.4.3.1}Azimuth wavelength cutoff}{14}{subsubsection.2.4.3.1}%
-\contentsline {subsubsection}{\numberline {2.4.3.2}MACS}{14}{subsubsection.2.4.3.2}%
-\contentsline {subsubsection}{\numberline {2.4.3.3}iMACS}{14}{subsubsection.2.4.3.3}%
-\contentsline {subsubsection}{\numberline {2.4.3.4}DCA}{14}{subsubsection.2.4.3.4}%
-\contentsline {subsubsection}{\numberline {2.4.3.5}Texture\sphinxhyphen {}based azimuth cutoff}{14}{subsubsection.2.4.3.5}%
-\contentsline {subsubsection}{\numberline {2.4.3.6}RVL}{15}{subsubsection.2.4.3.6}%
-\contentsline {subsubsection}{\numberline {2.4.3.7}Inverse Wave Age}{15}{subsubsection.2.4.3.7}%
-\contentsline {subsubsection}{\numberline {2.4.3.8}Wind products}{15}{subsubsection.2.4.3.8}%
-\contentsline {paragraph}{Wind speed, wind stress, and hub height wind speed}{15}{paragraph*.75}%
-\contentsline {subsubsection}{\numberline {2.4.3.9}Sea\sphinxhyphen {}state products}{15}{subsubsection.2.4.3.9}%
-\contentsline {subsubsection}{\numberline {2.4.3.10}Line\sphinxhyphen {}of\sphinxhyphen {}sight current products}{15}{subsubsection.2.4.3.10}%
-\contentsline {paragraph}{Line\sphinxhyphen {}of\sphinxhyphen {}sight wave Doppler and line\sphinxhyphen {}of\sphinxhyphen {}sight surface current component}{15}{paragraph*.76}%
-\contentsline {subsubsection}{\numberline {2.4.3.11}Summary}{16}{subsubsection.2.4.3.11}%
-\contentsline {subsection}{\numberline {2.4.4}References}{16}{subsection.2.4.4}%
-\contentsline {chapter}{Index}{17}{section*.85}%
+\contentsline {chapter}{\numberline {1}Introduction}{3}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Purpose and scope}{3}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Cal/Val context}{3}{section.1.2}%
+\contentsline {section}{\numberline {1.3}L2 product scope}{4}{section.1.3}%
+\contentsline {section}{\numberline {1.4}Cal/Val objectives and performance}{4}{section.1.4}%
+\contentsline {section}{\numberline {1.5}ATBD purpose}{5}{section.1.5}%
+\contentsline {section}{\numberline {1.6}Applicable and reference documents}{5}{section.1.6}%
+\contentsline {section}{\numberline {1.7}Acronyms}{5}{section.1.7}%
+\contentsline {section}{\numberline {1.8}Definitions and conventions}{6}{section.1.8}%
+\contentsline {chapter}{\numberline {2}Processing model and data flow}{9}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Overview and top\sphinxhyphen {}down decomposition}{9}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Pre\sphinxhyphen {}launch phase (D)}{9}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Commissioning phase (IOC or E1)}{9}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Exploitation phase (E2)}{9}{section.2.4}%
+\contentsline {section}{\numberline {2.5}End\sphinxhyphen {}to\sphinxhyphen {}end data flow}{9}{section.2.5}%
+\contentsline {chapter}{\numberline {3}L\sphinxhyphen {}band SAR datasets description}{11}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Generated datasets}{11}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Reconditioned}{11}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Emulated}{11}{subsection.3.1.2}%
+\contentsline {subsection}{\numberline {3.1.3}Simulated}{11}{subsection.3.1.3}%
+\contentsline {section}{\numberline {3.2}Third\sphinxhyphen {}party datasets}{11}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}ALOS}{11}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}ALOS\sphinxhyphen {}2}{11}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}ALOS\sphinxhyphen {}4}{11}{subsection.3.2.3}%
+\contentsline {subsection}{\numberline {3.2.4}SAOCOM}{11}{subsection.3.2.4}%
+\contentsline {subsection}{\numberline {3.2.5}NiSAR}{11}{subsection.3.2.5}%
+\contentsline {chapter}{\numberline {4}Auxiliary datasets description}{13}{chapter.4}%
+\contentsline {chapter}{\numberline {5}Reference datasets description}{15}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Ocean Surface Vector Stress}{15}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Wind vector}{15}{subsection.5.1.1}%
+\contentsline {subsubsection}{\numberline {5.1.1.1}C\sphinxhyphen {}band SAR}{15}{subsubsection.5.1.1.1}%
+\contentsline {paragraph}{Sentinel\sphinxhyphen {}1 L2 OCN \sphinxhyphen {} OWI}{15}{paragraph*.40}%
+\contentsline {paragraph}{RADARSAT\sphinxhyphen {}2 Wind}{16}{paragraph*.41}%
+\contentsline {subsubsection}{\numberline {5.1.1.2}Numerical Prediction Model}{16}{subsubsection.5.1.1.2}%
+\contentsline {paragraph}{ERA5 Reanalysed wind}{16}{paragraph*.42}%
+\contentsline {subsubsection}{\numberline {5.1.1.3}In\sphinxhyphen {}Situ Observations}{17}{subsubsection.5.1.1.3}%
+\contentsline {paragraph}{ECMWF MARS archive}{17}{paragraph*.43}%
+\contentsline {paragraph}{Copernicus Marine}{18}{paragraph*.44}%
+\contentsline {subsubsection}{\numberline {5.1.1.4}Scatterometers}{19}{subsubsection.5.1.1.4}%
+\contentsline {paragraph}{ASCAT}{19}{paragraph*.45}%
+\contentsline {paragraph}{HY\sphinxhyphen {}2B/HY\sphinxhyphen {}2C}{20}{paragraph*.46}%
+\contentsline {paragraph}{Oceansat\sphinxhyphen {}3}{21}{paragraph*.47}%
+\contentsline {subsubsection}{\numberline {5.1.1.5}Radiometers}{21}{subsubsection.5.1.1.5}%
+\contentsline {paragraph}{RSS microwave radiometers (AMSR2, GMI, SSMIS, WindSat)}{21}{paragraph*.48}%
+\contentsline {subsubsection}{\numberline {5.1.1.6}Plane}{22}{subsubsection.5.1.1.6}%
+\contentsline {paragraph}{SFMR}{22}{paragraph*.49}%
+\contentsline {paragraph}{Dropsonde}{22}{paragraph*.50}%
+\contentsline {subsection}{\numberline {5.1.2}Wind stress}{22}{subsection.5.1.2}%
+\contentsline {section}{\numberline {5.2}Sea State}{22}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Total significant wave height}{22}{subsection.5.2.1}%
+\contentsline {subsubsection}{\numberline {5.2.1.1}NWP}{22}{subsubsection.5.2.1.1}%
+\contentsline {paragraph}{WAVEWATCH III}{22}{paragraph*.51}%
+\contentsline {subsubsection}{\numberline {5.2.1.2}C\sphinxhyphen {}band SAR}{22}{subsubsection.5.2.1.2}%
+\contentsline {paragraph}{Sentinel\sphinxhyphen {}1 L2 OCN \sphinxhyphen {} OSW}{22}{paragraph*.52}%
+\contentsline {subsubsection}{\numberline {5.2.1.3}In\sphinxhyphen {}Situ Observations}{23}{subsubsection.5.2.1.3}%
+\contentsline {paragraph}{ECMWF MARS archive}{23}{paragraph*.53}%
+\contentsline {paragraph}{Copernicus Marine}{24}{paragraph*.54}%
+\contentsline {subsubsection}{\numberline {5.2.1.4}Sea\sphinxhyphen {}ice maps}{24}{subsubsection.5.2.1.4}%
+\contentsline {subsubsection}{\numberline {5.2.1.5}Altimeters}{25}{subsubsection.5.2.1.5}%
+\contentsline {paragraph}{Global Ocean L3 Significant Wave Height from Reprocessed Satellite Measurements}{25}{paragraph*.55}%
+\contentsline {paragraph}{Global Ocean L3 Significant Wave Height from NRT Satellite Measurements}{26}{paragraph*.56}%
+\contentsline {subsection}{\numberline {5.2.2}Mean period wind\sphinxhyphen {}sea}{27}{subsection.5.2.2}%
+\contentsline {subsection}{\numberline {5.2.3}First moment wave period}{27}{subsection.5.2.3}%
+\contentsline {subsection}{\numberline {5.2.4}Second moment wave period}{27}{subsection.5.2.4}%
+\contentsline {subsection}{\numberline {5.2.5}Wave height swell dominant system}{27}{subsection.5.2.5}%
+\contentsline {subsection}{\numberline {5.2.6}Wave height swell secondary system}{27}{subsection.5.2.6}%
+\contentsline {subsection}{\numberline {5.2.7}Significant wave height wind\sphinxhyphen {}sea}{27}{subsection.5.2.7}%
+\contentsline {subsection}{\numberline {5.2.8}Mean period wind\sphinxhyphen {}sea}{27}{subsection.5.2.8}%
+\contentsline {subsection}{\numberline {5.2.9}Wave direction}{27}{subsection.5.2.9}%
+\contentsline {subsection}{\numberline {5.2.10}Wave directional energy spectrum}{27}{subsection.5.2.10}%
+\contentsline {section}{\numberline {5.3}Line\sphinxhyphen {}of\sphinxhyphen {}sight currents}{27}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}LoS wave Doppler}{27}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.3.2}LoS surface current component}{27}{subsection.5.3.2}%
+\contentsline {subsubsection}{\numberline {5.3.2.1}NWP}{27}{subsubsection.5.3.2.1}%
+\contentsline {paragraph}{HYCOM}{27}{paragraph*.57}%
+\contentsline {subsubsection}{\numberline {5.3.2.2}C\sphinxhyphen {}band SAR}{28}{subsubsection.5.3.2.2}%
+\contentsline {paragraph}{Sentinel\sphinxhyphen {}1 L2 OCN \sphinxhyphen {} RVL}{28}{paragraph*.58}%
+\contentsline {subsubsection}{\numberline {5.3.2.3}HF radars}{28}{subsubsection.5.3.2.3}%
+\contentsline {paragraph}{Copernicus Marine \sphinxhyphen {} global radar coverage}{28}{paragraph*.59}%
+\contentsline {paragraph}{NOAA \sphinxhyphen {} US radar coverage}{31}{paragraph*.60}%
+\contentsline {subsubsection}{\numberline {5.3.2.4}In\sphinxhyphen {}Situ Observations (Copernicus Marine)}{32}{subsubsection.5.3.2.4}%
+\contentsline {subsubsection}{\numberline {5.3.2.5}Altimeters}{33}{subsubsection.5.3.2.5}%
+\contentsline {subsubsection}{\numberline {5.3.2.6}IWRAP}{33}{subsubsection.5.3.2.6}%
+\contentsline {chapter}{\numberline {6}Algorithms description}{35}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Selected Calibration methods}{35}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1}ROSE\sphinxhyphen {}L L1 SLC products}{35}{subsection.6.1.1}%
+\contentsline {subsubsection}{\numberline {6.1.1.1}Short description}{35}{subsubsection.6.1.1.1}%
+\contentsline {subsubsection}{\numberline {6.1.1.2}Description of inputs}{35}{subsubsection.6.1.1.2}%
+\contentsline {subsubsection}{\numberline {6.1.1.3}Detailed methodology}{35}{subsubsection.6.1.1.3}%
+\contentsline {subsubsection}{\numberline {6.1.1.4}Performance metrics}{35}{subsubsection.6.1.1.4}%
+\contentsline {subsubsection}{\numberline {6.1.1.5}Expected output}{35}{subsubsection.6.1.1.5}%
+\contentsline {subsection}{\numberline {6.1.2}Numerical Weather Prediction Ocean Calibration of SAR \(\sigma _0\)}{35}{subsection.6.1.2}%
+\contentsline {subsection}{\numberline {6.1.3}GMF tuning}{36}{subsection.6.1.3}%
+\contentsline {subsubsection}{\numberline {6.1.3.1}Short description}{36}{subsubsection.6.1.3.1}%
+\contentsline {subsubsection}{\numberline {6.1.3.2}Description of inputs}{36}{subsubsection.6.1.3.2}%
+\contentsline {subsubsection}{\numberline {6.1.3.3}Detailed methodology}{36}{subsubsection.6.1.3.3}%
+\contentsline {subsubsection}{\numberline {6.1.3.4}Performance metrics}{36}{subsubsection.6.1.3.4}%
+\contentsline {subsubsection}{\numberline {6.1.3.5}Expected output}{36}{subsubsection.6.1.3.5}%
+\contentsline {subsection}{\numberline {6.1.4}MTF tuning}{36}{subsection.6.1.4}%
+\contentsline {subsubsection}{\numberline {6.1.4.1}Short description}{36}{subsubsection.6.1.4.1}%
+\contentsline {subsubsection}{\numberline {6.1.4.2}Description of inputs}{36}{subsubsection.6.1.4.2}%
+\contentsline {subsubsection}{\numberline {6.1.4.3}Detailed methodology}{36}{subsubsection.6.1.4.3}%
+\contentsline {subsubsection}{\numberline {6.1.4.4}Performance metrics}{36}{subsubsection.6.1.4.4}%
+\contentsline {subsubsection}{\numberline {6.1.4.5}Expected output}{36}{subsubsection.6.1.4.5}%
+\contentsline {subsection}{\numberline {6.1.5}Summary}{36}{subsection.6.1.5}%
+\contentsline {section}{\numberline {6.2}Validation}{37}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}Spatial Variance}{37}{subsection.6.2.1}%
+\contentsline {subsection}{\numberline {6.2.2}Triple Collocation}{38}{subsection.6.2.2}%
+\contentsline {subsection}{\numberline {6.2.3}One\sphinxhyphen {}to\sphinxhyphen {}One Validation}{40}{subsection.6.2.3}%
+\contentsline {subsection}{\numberline {6.2.4}Spectral Analysis}{41}{subsection.6.2.4}%
+\contentsline {chapter}{\numberline {7}Uncertainty analysis}{43}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Introduction}{43}{section.7.1}%
+\contentsline {section}{\numberline {7.2}The GUM Principles: A review}{43}{section.7.2}%
+\contentsline {subsection}{\numberline {7.2.1}The International Vocabulary of Metrology (VIM)}{43}{subsection.7.2.1}%
+\contentsline {subsection}{\numberline {7.2.2}Guide to the Expression of Uncertainty in Measurement (GUM)}{44}{subsection.7.2.2}%
+\contentsline {subsection}{\numberline {7.2.3}Quality Assurance Framework for Earth Observation (QA4EO)}{44}{subsection.7.2.3}%
+\contentsline {section}{\numberline {7.3}Product\sphinxhyphen {}specific uncertainty estimation}{45}{section.7.3}%
+\contentsline {subsection}{\numberline {7.3.1}Azimuth wavelength cutoff}{45}{subsection.7.3.1}%
+\contentsline {subsection}{\numberline {7.3.2}MACS}{45}{subsection.7.3.2}%
+\contentsline {subsection}{\numberline {7.3.3}iMACS}{46}{subsection.7.3.3}%
+\contentsline {subsection}{\numberline {7.3.4}DCA}{46}{subsection.7.3.4}%
+\contentsline {subsection}{\numberline {7.3.5}Texture\sphinxhyphen {}based azimuth cutoff}{46}{subsection.7.3.5}%
+\contentsline {subsection}{\numberline {7.3.6}RVL}{46}{subsection.7.3.6}%
+\contentsline {subsection}{\numberline {7.3.7}Inverse Wave Age}{46}{subsection.7.3.7}%
+\contentsline {subsection}{\numberline {7.3.8}Wind products}{46}{subsection.7.3.8}%
+\contentsline {subsubsection}{\numberline {7.3.8.1}Wind speed, wind stress, and hub height wind speed}{46}{subsubsection.7.3.8.1}%
+\contentsline {subsection}{\numberline {7.3.9}Sea\sphinxhyphen {}state products}{47}{subsection.7.3.9}%
+\contentsline {subsection}{\numberline {7.3.10}Line\sphinxhyphen {}of\sphinxhyphen {}sight current products}{47}{subsection.7.3.10}%
+\contentsline {subsubsection}{\numberline {7.3.10.1}Line\sphinxhyphen {}of\sphinxhyphen {}sight wave Doppler and line\sphinxhyphen {}of\sphinxhyphen {}sight surface current component}{47}{subsubsection.7.3.10.1}%
+\contentsline {subsection}{\numberline {7.3.11}Summary}{47}{subsection.7.3.11}%
+\contentsline {section}{\numberline {7.4}References}{47}{section.7.4}%
+\contentsline {chapter}{Index}{49}{section*.83}%

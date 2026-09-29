@@ -5,78 +5,78 @@
 \let\spxextra \sphinxstyleindexextra
 
   \bigletter A
-  \item \spxentry{Accuracy}, \hyperindexformat{\spxpagem}{8}
+  \item \spxentry{Accuracy}, \hyperindexformat{\spxpagem}{6}
 
   \indexspace
   \bigletter C
-  \item \spxentry{CANVAS}, \hyperindexformat{\spxpagem}{7}
-  \item \spxentry{CEOS}, \hyperindexformat{\spxpagem}{7}
-  \item \spxentry{Comparison}, \hyperindexformat{\spxpagem}{8}
+  \item \spxentry{CANVAS}, \hyperindexformat{\spxpagem}{5}
+  \item \spxentry{CEOS}, \hyperindexformat{\spxpagem}{5}
+  \item \spxentry{Comparison}, \hyperindexformat{\spxpagem}{6}
 
   \indexspace
   \bigletter D
-  \item \spxentry{Dataset}, \hyperindexformat{\spxpagem}{8}
-  \item \spxentry{DC}, \hyperindexformat{\spxpagem}{7}
-  \item \spxentry{DCA}, \hyperindexformat{\spxpagem}{7}
-  \item \spxentry{DORIS}, \hyperindexformat{\spxpagem}{7}
+  \item \spxentry{Dataset}, \hyperindexformat{\spxpagem}{6}
+  \item \spxentry{DC}, \hyperindexformat{\spxpagem}{5}
+  \item \spxentry{DCA}, \hyperindexformat{\spxpagem}{5}
+  \item \spxentry{DORIS}, \hyperindexformat{\spxpagem}{5}
 
   \indexspace
   \bigletter E
-  \item \spxentry{EO}, \hyperindexformat{\spxpagem}{7}
-  \item \spxentry{ESA}, \hyperindexformat{\spxpagem}{7}
-  \item \spxentry{EU}, \hyperindexformat{\spxpagem}{7}
+  \item \spxentry{EO}, \hyperindexformat{\spxpagem}{5}
+  \item \spxentry{ESA}, \hyperindexformat{\spxpagem}{5}
+  \item \spxentry{EU}, \hyperindexformat{\spxpagem}{5}
 
   \indexspace
   \bigletter F
-  \item \spxentry{FDR}, \hyperindexformat{\spxpagem}{7}
-  \item \spxentry{FIDUCEO}, \hyperindexformat{\spxpagem}{7}
-  \item \spxentry{Fiducial Reference Measurement}, \hyperindexformat{\spxpagem}{8}
-  \item \spxentry{FP7}, \hyperindexformat{\spxpagem}{7}
-  \item \spxentry{FRM}, \hyperindexformat{\spxpagem}{7}
-  \item \spxentry{Fundamental Data Record}, \hyperindexformat{\spxpagem}{8}
+  \item \spxentry{FDR}, \hyperindexformat{\spxpagem}{5}
+  \item \spxentry{FIDUCEO}, \hyperindexformat{\spxpagem}{5}
+  \item \spxentry{Fiducial Reference Measurement}, \hyperindexformat{\spxpagem}{6}
+  \item \spxentry{FP7}, \hyperindexformat{\spxpagem}{5}
+  \item \spxentry{FRM}, \hyperindexformat{\spxpagem}{5}
+  \item \spxentry{Fundamental Data Record}, \hyperindexformat{\spxpagem}{6}
 
   \indexspace
   \bigletter G
-  \item \spxentry{GEO}, \hyperindexformat{\spxpagem}{7}
-  \item \spxentry{GEOSS}, \hyperindexformat{\spxpagem}{8}
-  \item \spxentry{GUM}, \hyperindexformat{\spxpagem}{8}
+  \item \spxentry{GEO}, \hyperindexformat{\spxpagem}{5}
+  \item \spxentry{GEOSS}, \hyperindexformat{\spxpagem}{5}
+  \item \spxentry{GUM}, \hyperindexformat{\spxpagem}{5}
 
   \indexspace
   \bigletter I
-  \item \spxentry{Interoperability}, \hyperindexformat{\spxpagem}{8}
-  \item \spxentry{Interoperable}, \hyperindexformat{\spxpagem}{8}
+  \item \spxentry{Interoperability}, \hyperindexformat{\spxpagem}{6}
+  \item \spxentry{Interoperable}, \hyperindexformat{\spxpagem}{6}
 
   \indexspace
   \bigletter J
-  \item \spxentry{JCGM}, \hyperindexformat{\spxpagem}{8}
+  \item \spxentry{JCGM}, \hyperindexformat{\spxpagem}{5}
 
   \indexspace
   \bigletter M
-  \item \spxentry{Measurand}, \hyperindexformat{\spxpagem}{8}
-  \item \spxentry{Metrology}, \hyperindexformat{\spxpagem}{8}
+  \item \spxentry{Measurand}, \hyperindexformat{\spxpagem}{6}
+  \item \spxentry{Metrology}, \hyperindexformat{\spxpagem}{6}
 
   \indexspace
   \bigletter Q
-  \item \spxentry{QA4EO}, \hyperindexformat{\spxpagem}{8}
+  \item \spxentry{QA4EO}, \hyperindexformat{\spxpagem}{6}
 
   \indexspace
   \bigletter S
-  \item \spxentry{SAR}, \hyperindexformat{\spxpagem}{8}
-  \item \spxentry{SI}, \hyperindexformat{\spxpagem}{8}
+  \item \spxentry{SAR}, \hyperindexformat{\spxpagem}{6}
+  \item \spxentry{SI}, \hyperindexformat{\spxpagem}{6}
 
   \indexspace
   \bigletter T
-  \item \spxentry{TDP}, \hyperindexformat{\spxpagem}{8}
-  \item \spxentry{Thematic Data Product}, \hyperindexformat{\spxpagem}{9}
-  \item \spxentry{Traceability}, \hyperindexformat{\spxpagem}{9}
+  \item \spxentry{TDP}, \hyperindexformat{\spxpagem}{6}
+  \item \spxentry{Thematic Data Product}, \hyperindexformat{\spxpagem}{6}
+  \item \spxentry{Traceability}, \hyperindexformat{\spxpagem}{6}
 
   \indexspace
   \bigletter U
-  \item \spxentry{Uncertainty analysis}, \hyperindexformat{\spxpagem}{9}
-  \item \spxentry{UTD}, \hyperindexformat{\spxpagem}{8}
+  \item \spxentry{Uncertainty analysis}, \hyperindexformat{\spxpagem}{7}
+  \item \spxentry{UTD}, \hyperindexformat{\spxpagem}{6}
 
   \indexspace
   \bigletter V
-  \item \spxentry{VIM}, \hyperindexformat{\spxpagem}{8}
+  \item \spxentry{VIM}, \hyperindexformat{\spxpagem}{6}
 
 \end{sphinxtheindex}

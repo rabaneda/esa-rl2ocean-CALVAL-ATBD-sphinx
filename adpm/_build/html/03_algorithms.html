@@ -6,22 +6,24 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>3. Algorithms description &mdash; RL2Ocean Calibration and Validation ATBD</title>
+  <title>6. Algorithms description &mdash; RL2Ocean Calibration and Validation ATBD</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
 
   
       <script src="_static/jquery.js?v=5d32c60e"></script>
       <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="_static/documentation_options.js?v=10f1778b"></script>
+      <script src="_static/documentation_options.js?v=f2a433a1"></script>
       <script src="_static/doctools.js?v=fd6eb6e6"></script>
       <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
       <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+      <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+      <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="3.1. Selected Calibration methods" href="alg-01-calibration.html" />
-    <link rel="prev" title="2. Processing model and data flow" href="02_processing_model.html" /> 
+    <link rel="next" title="6.1. Selected Calibration methods" href="alg-01-calibration.html" />
+    <link rel="prev" title="5. Reference datasets description" href="05_reference_datasets.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -64,102 +66,141 @@
 <li class="toctree-l2"><a class="reference internal" href="02_processing_model.html#end-to-end-data-flow">2.5. End-to-end data flow</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">3. Algorithms description</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="alg-01-calibration.html">3.1. Selected Calibration methods</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="alg-01-calibration.html#rose-l-l1-slc-products">3.1.1. ROSE-L L1 SLC products</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#short-description">3.1.1.1. Short description</a></li>
-<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#description-of-inputs">3.1.1.2. Description of inputs</a></li>
-<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#detailed-methodology">3.1.1.3. Detailed methodology</a></li>
-<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#performance-metrics">3.1.1.4. Performance metrics</a></li>
-<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#expected-output">3.1.1.5. Expected output</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03_lband_sar_datasets.html">3. L-band SAR datasets description</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="03_lband_sar_datasets.html#generated-datasets">3.1. Generated datasets</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="03_lband_sar_datasets.html#reconditioned">3.1.1. Reconditioned</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03_lband_sar_datasets.html#emulated">3.1.2. Emulated</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03_lband_sar_datasets.html#simulated">3.1.3. Simulated</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="alg-01-calibration.html#noc">3.1.2. NOC</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id1">3.1.2.1. Short description</a></li>
-<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id2">3.1.2.2. Description of inputs</a></li>
-<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id3">3.1.2.3. Detailed methodology</a></li>
-<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id4">3.1.2.4. Performance metrics</a></li>
-<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id5">3.1.2.5. Expected output</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="alg-01-calibration.html#gmf-tuning">3.1.3. GMF tuning</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id6">3.1.3.1. Short description</a></li>
-<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id7">3.1.3.2. Description of inputs</a></li>
-<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id8">3.1.3.3. Detailed methodology</a></li>
-<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id9">3.1.3.4. Performance metrics</a></li>
-<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id10">3.1.3.5. Expected output</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="alg-01-calibration.html#mtf-tuning">3.1.4. MTF tuning</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id11">3.1.4.1. Short description</a></li>
-<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id12">3.1.4.2. Description of inputs</a></li>
-<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id13">3.1.4.3. Detailed methodology</a></li>
-<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id14">3.1.4.4. Performance metrics</a></li>
-<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id15">3.1.4.5. Expected output</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="alg-01-calibration.html#summary">3.1.5. Summary</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="alg-02-validation.html">3.2. Selected Validation methods</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="alg-02-validation.html#one-to-one-validation">3.2.1. One-to-one validation</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="alg-02-validation.html#short-description">3.2.1.1. Short description</a></li>
-<li class="toctree-l4"><a class="reference internal" href="alg-02-validation.html#description-of-inputs">3.2.1.2. Description of inputs</a></li>
-<li class="toctree-l4"><a class="reference internal" href="alg-02-validation.html#detailed-methodology">3.2.1.3. Detailed methodology</a></li>
-<li class="toctree-l4"><a class="reference internal" href="alg-02-validation.html#performance-metrics">3.2.1.4. Performance metrics</a></li>
-<li class="toctree-l4"><a class="reference internal" href="alg-02-validation.html#expected-output">3.2.1.5. Expected output</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="alg-02-validation.html#triple-collocation">3.2.2. Triple collocation</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="alg-02-validation.html#id1">3.2.2.1. Short description</a></li>
-<li class="toctree-l4"><a class="reference internal" href="alg-02-validation.html#id2">3.2.2.2. Description of inputs</a></li>
-<li class="toctree-l4"><a class="reference internal" href="alg-02-validation.html#id3">3.2.2.3. Detailed methodology</a></li>
-<li class="toctree-l4"><a class="reference internal" href="alg-02-validation.html#id4">3.2.2.4. Performance metrics</a></li>
-<li class="toctree-l4"><a class="reference internal" href="alg-02-validation.html#id5">3.2.2.5. Expected output</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="alg-02-validation.html#spatial-variances">3.2.3. Spatial variances</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="alg-02-validation.html#id6">3.2.3.1. Short description</a></li>
-<li class="toctree-l4"><a class="reference internal" href="alg-02-validation.html#id7">3.2.3.2. Description of inputs</a></li>
-<li class="toctree-l4"><a class="reference internal" href="alg-02-validation.html#id8">3.2.3.3. Detailed methodology</a></li>
-<li class="toctree-l4"><a class="reference internal" href="alg-02-validation.html#id9">3.2.3.4. Performance metrics</a></li>
-<li class="toctree-l4"><a class="reference internal" href="alg-02-validation.html#id10">3.2.3.5. Expected output</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="alg-02-validation.html#summary">3.2.4. Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03_lband_sar_datasets.html#third-party-datasets">3.2. Third-party datasets</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="03_lband_sar_datasets.html#alos">3.2.1. ALOS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03_lband_sar_datasets.html#alos-2">3.2.2. ALOS-2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03_lband_sar_datasets.html#alos-4">3.2.3. ALOS-4</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03_lband_sar_datasets.html#saocom">3.2.4. SAOCOM</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03_lband_sar_datasets.html#nisar">3.2.5. NiSAR</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="04_uncertainty_analysis.html">4. Uncertainty analysis</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="04_uncertainty_analysis.html#introduction">4.1. Introduction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="04_uncertainty_analysis.html#the-gum-principles-a-review">4.2. The GUM Principles: A review</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="04_uncertainty_analysis.html#the-international-vocabulary-of-metrology-vim">4.2.1. The International Vocabulary of Metrology (VIM)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="04_uncertainty_analysis.html#guide-to-the-expression-of-uncertainty-in-measurement-gum">4.2.2. Guide to the Expression of Uncertainty in Measurement (GUM)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="04_uncertainty_analysis.html#quality-assurance-framework-for-earth-observation-qa4eo">4.2.3. Quality Assurance Framework for Earth Observation (QA4EO)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04_auxiliary_datasets.html">4. Auxiliary datasets description</a></li>
+<li class="toctree-l1"><a class="reference internal" href="05_reference_datasets.html">5. Reference datasets description</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="05_reference_datasets.html#ocean-surface-vector-stress">5.1. Ocean Surface Vector Stress</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="05_reference_datasets.html#wind-vector">5.1.1. Wind vector</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="05_reference_datasets.html#c-band-sar">5.1.1.1. C-band SAR</a></li>
+<li class="toctree-l4"><a class="reference internal" href="05_reference_datasets.html#numerical-prediction-model">5.1.1.2. Numerical Prediction Model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="05_reference_datasets.html#in-situ-observations">5.1.1.3. In-Situ Observations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="05_reference_datasets.html#scatterometers">5.1.1.4. Scatterometers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="05_reference_datasets.html#radiometers">5.1.1.5. Radiometers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="05_reference_datasets.html#plane">5.1.1.6. Plane</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="04_uncertainty_analysis.html#product-specific-uncertainty-estimation">4.3. Product-specific uncertainty estimation</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="04_uncertainty_analysis.html#azimuth-wavelength-cutoff">4.3.1. Azimuth wavelength cutoff</a></li>
-<li class="toctree-l3"><a class="reference internal" href="04_uncertainty_analysis.html#macs">4.3.2. MACS</a></li>
-<li class="toctree-l3"><a class="reference internal" href="04_uncertainty_analysis.html#imacs">4.3.3. iMACS</a></li>
-<li class="toctree-l3"><a class="reference internal" href="04_uncertainty_analysis.html#dca">4.3.4. DCA</a></li>
-<li class="toctree-l3"><a class="reference internal" href="04_uncertainty_analysis.html#texture-based-azimuth-cutoff">4.3.5. Texture-based azimuth cutoff</a></li>
-<li class="toctree-l3"><a class="reference internal" href="04_uncertainty_analysis.html#rvl">4.3.6. RVL</a></li>
-<li class="toctree-l3"><a class="reference internal" href="04_uncertainty_analysis.html#inverse-wave-age">4.3.7. Inverse Wave Age</a></li>
-<li class="toctree-l3"><a class="reference internal" href="04_uncertainty_analysis.html#wind-products">4.3.8. Wind products</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="04_uncertainty_analysis.html#wind-speed-wind-stress-and-hub-height-wind-speed">4.3.8.1. Wind speed, wind stress, and hub height wind speed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05_reference_datasets.html#wind-stress">5.1.2. Wind stress</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="04_uncertainty_analysis.html#sea-state-products">4.3.9. Sea-state products</a></li>
-<li class="toctree-l3"><a class="reference internal" href="04_uncertainty_analysis.html#line-of-sight-current-products">4.3.10. Line-of-sight current products</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="04_uncertainty_analysis.html#line-of-sight-wave-doppler-and-line-of-sight-surface-current-component">4.3.10.1. Line-of-sight wave Doppler and line-of-sight surface current component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="05_reference_datasets.html#sea-state">5.2. Sea State</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="05_reference_datasets.html#total-significant-wave-height">5.2.1. Total significant wave height</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="05_reference_datasets.html#nwp">5.2.1.1. NWP</a></li>
+<li class="toctree-l4"><a class="reference internal" href="05_reference_datasets.html#c-band-sar-1">5.2.1.2. C-band SAR</a></li>
+<li class="toctree-l4"><a class="reference internal" href="05_reference_datasets.html#in-situ-observations-1">5.2.1.3. In-Situ Observations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="05_reference_datasets.html#sea-ice-maps">5.2.1.4. Sea-ice maps</a></li>
+<li class="toctree-l4"><a class="reference internal" href="05_reference_datasets.html#altimeters">5.2.1.5. Altimeters</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="04_uncertainty_analysis.html#summary">4.3.11. Summary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05_reference_datasets.html#mean-period-wind-sea">5.2.2. Mean period wind-sea</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05_reference_datasets.html#first-moment-wave-period">5.2.3. First moment wave period</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05_reference_datasets.html#second-moment-wave-period">5.2.4. Second moment wave period</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05_reference_datasets.html#wave-height-swell-dominant-system">5.2.5. Wave height swell dominant system</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05_reference_datasets.html#wave-height-swell-secondary-system">5.2.6. Wave height swell secondary system</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05_reference_datasets.html#significant-wave-height-wind-sea">5.2.7. Significant wave height wind-sea</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05_reference_datasets.html#mean-period-wind-sea-1">5.2.8. Mean period wind-sea</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05_reference_datasets.html#wave-direction">5.2.9. Wave direction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05_reference_datasets.html#wave-directional-energy-spectrum">5.2.10. Wave directional energy spectrum</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="04_uncertainty_analysis.html#references">4.4. References</a></li>
+<li class="toctree-l2"><a class="reference internal" href="05_reference_datasets.html#line-of-sight-currents">5.3. Line-of-sight currents</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="05_reference_datasets.html#los-wave-doppler">5.3.1. LoS wave Doppler</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05_reference_datasets.html#los-surface-current-component">5.3.2. LoS surface current component</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="05_reference_datasets.html#nwp-1">5.3.2.1. NWP</a></li>
+<li class="toctree-l4"><a class="reference internal" href="05_reference_datasets.html#c-band-sar-2">5.3.2.2. C-band SAR</a></li>
+<li class="toctree-l4"><a class="reference internal" href="05_reference_datasets.html#hf-radars">5.3.2.3. HF radars</a></li>
+<li class="toctree-l4"><a class="reference internal" href="05_reference_datasets.html#in-situ-observations-copernicus-marine">5.3.2.4. In-Situ Observations (Copernicus Marine)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="05_reference_datasets.html#altimeters-1">5.3.2.5. Altimeters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="05_reference_datasets.html#iwrap">5.3.2.6. IWRAP</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">6. Algorithms description</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="alg-01-calibration.html">6.1. Selected Calibration methods</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="alg-01-calibration.html#rose-l-l1-slc-products">6.1.1. ROSE-L L1 SLC products</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#short-description">6.1.1.1. Short description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#description-of-inputs">6.1.1.2. Description of inputs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#detailed-methodology">6.1.1.3. Detailed methodology</a></li>
+<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#performance-metrics">6.1.1.4. Performance metrics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#expected-output">6.1.1.5. Expected output</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="alg-01-calibration.html#numerical-weather-prediction-ocean-calibration-of-sar-sigma-0">6.1.2. Numerical Weather Prediction Ocean Calibration of SAR <span class="math notranslate nohighlight">\(\sigma_0\)</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="alg-01-calibration.html#gmf-tuning">6.1.3. GMF tuning</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id1">6.1.3.1. Short description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id2">6.1.3.2. Description of inputs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id3">6.1.3.3. Detailed methodology</a></li>
+<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id4">6.1.3.4. Performance metrics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id5">6.1.3.5. Expected output</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="alg-01-calibration.html#mtf-tuning">6.1.4. MTF tuning</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id6">6.1.4.1. Short description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id7">6.1.4.2. Description of inputs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id8">6.1.4.3. Detailed methodology</a></li>
+<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id9">6.1.4.4. Performance metrics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id10">6.1.4.5. Expected output</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="alg-01-calibration.html#summary">6.1.5. Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="alg-02-validation.html">6.2. Validation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="alg-02-validation.html#spatial-variance">6.2.1. Spatial Variance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="alg-02-validation.html#triple-collocation">6.2.2. Triple Collocation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="alg-02-validation.html#one-to-one-validation">6.2.3. One-to-One Validation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="alg-02-validation.html#spectral-analysis">6.2.4. Spectral Analysis</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="04_uncertainty_analysis.html">7. Uncertainty analysis</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="04_uncertainty_analysis.html#introduction">7.1. Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04_uncertainty_analysis.html#the-gum-principles-a-review">7.2. The GUM Principles: A review</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="04_uncertainty_analysis.html#the-international-vocabulary-of-metrology-vim">7.2.1. The International Vocabulary of Metrology (VIM)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04_uncertainty_analysis.html#guide-to-the-expression-of-uncertainty-in-measurement-gum">7.2.2. Guide to the Expression of Uncertainty in Measurement (GUM)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04_uncertainty_analysis.html#quality-assurance-framework-for-earth-observation-qa4eo">7.2.3. Quality Assurance Framework for Earth Observation (QA4EO)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="04_uncertainty_analysis.html#product-specific-uncertainty-estimation">7.3. Product-specific uncertainty estimation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="04_uncertainty_analysis.html#azimuth-wavelength-cutoff">7.3.1. Azimuth wavelength cutoff</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04_uncertainty_analysis.html#macs">7.3.2. MACS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04_uncertainty_analysis.html#imacs">7.3.3. iMACS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04_uncertainty_analysis.html#dca">7.3.4. DCA</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04_uncertainty_analysis.html#texture-based-azimuth-cutoff">7.3.5. Texture-based azimuth cutoff</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04_uncertainty_analysis.html#rvl">7.3.6. RVL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04_uncertainty_analysis.html#inverse-wave-age">7.3.7. Inverse Wave Age</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04_uncertainty_analysis.html#wind-products">7.3.8. Wind products</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="04_uncertainty_analysis.html#wind-speed-wind-stress-and-hub-height-wind-speed">7.3.8.1. Wind speed, wind stress, and hub height wind speed</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="04_uncertainty_analysis.html#sea-state-products">7.3.9. Sea-state products</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04_uncertainty_analysis.html#line-of-sight-current-products">7.3.10. Line-of-sight current products</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="04_uncertainty_analysis.html#line-of-sight-wave-doppler-and-line-of-sight-surface-current-component">7.3.10.1. Line-of-sight wave Doppler and line-of-sight surface current component</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="04_uncertainty_analysis.html#summary">7.3.11. Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="04_uncertainty_analysis.html#references">7.4. References</a></li>
 </ul>
 </li>
 </ul>
@@ -178,7 +219,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active"><span class="section-number">3. </span>Algorithms description</li>
+      <li class="breadcrumb-item active"><span class="section-number">6. </span>Algorithms description</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/03_algorithms.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -189,74 +230,46 @@
            <div itemprop="articleBody">
              
   <section id="algorithms-description">
-<h1><span class="section-number">3. </span>Algorithms description<a class="headerlink" href="#algorithms-description" title="Link to this heading"></a></h1>
-<p>The source groups its method outlines into calibration and validation. The
-method-specific headings are retained in the following pages. Their details
-are not present in the source.</p>
+<h1><span class="section-number">6. </span>Algorithms description<a class="headerlink" href="#algorithms-description" title="Link to this heading"></a></h1>
+<p>The source describes calibration and validation methods for ROSE-L L2 ocean
+products. The NOC calibration method and four validation methods are described
+in the following pages.</p>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="alg-01-calibration.html">3.1. Selected Calibration methods</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="alg-01-calibration.html#rose-l-l1-slc-products">3.1.1. ROSE-L L1 SLC products</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="alg-01-calibration.html#short-description">3.1.1.1. Short description</a></li>
-<li class="toctree-l3"><a class="reference internal" href="alg-01-calibration.html#description-of-inputs">3.1.1.2. Description of inputs</a></li>
-<li class="toctree-l3"><a class="reference internal" href="alg-01-calibration.html#detailed-methodology">3.1.1.3. Detailed methodology</a></li>
-<li class="toctree-l3"><a class="reference internal" href="alg-01-calibration.html#performance-metrics">3.1.1.4. Performance metrics</a></li>
-<li class="toctree-l3"><a class="reference internal" href="alg-01-calibration.html#expected-output">3.1.1.5. Expected output</a></li>
+<li class="toctree-l1"><a class="reference internal" href="alg-01-calibration.html">6.1. Selected Calibration methods</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="alg-01-calibration.html#rose-l-l1-slc-products">6.1.1. ROSE-L L1 SLC products</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="alg-01-calibration.html#short-description">6.1.1.1. Short description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="alg-01-calibration.html#description-of-inputs">6.1.1.2. Description of inputs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="alg-01-calibration.html#detailed-methodology">6.1.1.3. Detailed methodology</a></li>
+<li class="toctree-l3"><a class="reference internal" href="alg-01-calibration.html#performance-metrics">6.1.1.4. Performance metrics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="alg-01-calibration.html#expected-output">6.1.1.5. Expected output</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="alg-01-calibration.html#noc">3.1.2. NOC</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="alg-01-calibration.html#id1">3.1.2.1. Short description</a></li>
-<li class="toctree-l3"><a class="reference internal" href="alg-01-calibration.html#id2">3.1.2.2. Description of inputs</a></li>
-<li class="toctree-l3"><a class="reference internal" href="alg-01-calibration.html#id3">3.1.2.3. Detailed methodology</a></li>
-<li class="toctree-l3"><a class="reference internal" href="alg-01-calibration.html#id4">3.1.2.4. Performance metrics</a></li>
-<li class="toctree-l3"><a class="reference internal" href="alg-01-calibration.html#id5">3.1.2.5. Expected output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="alg-01-calibration.html#numerical-weather-prediction-ocean-calibration-of-sar-sigma-0">6.1.2. Numerical Weather Prediction Ocean Calibration of SAR <span class="math notranslate nohighlight">\(\sigma_0\)</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="alg-01-calibration.html#gmf-tuning">6.1.3. GMF tuning</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="alg-01-calibration.html#id1">6.1.3.1. Short description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="alg-01-calibration.html#id2">6.1.3.2. Description of inputs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="alg-01-calibration.html#id3">6.1.3.3. Detailed methodology</a></li>
+<li class="toctree-l3"><a class="reference internal" href="alg-01-calibration.html#id4">6.1.3.4. Performance metrics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="alg-01-calibration.html#id5">6.1.3.5. Expected output</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="alg-01-calibration.html#gmf-tuning">3.1.3. GMF tuning</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="alg-01-calibration.html#id6">3.1.3.1. Short description</a></li>
-<li class="toctree-l3"><a class="reference internal" href="alg-01-calibration.html#id7">3.1.3.2. Description of inputs</a></li>
-<li class="toctree-l3"><a class="reference internal" href="alg-01-calibration.html#id8">3.1.3.3. Detailed methodology</a></li>
-<li class="toctree-l3"><a class="reference internal" href="alg-01-calibration.html#id9">3.1.3.4. Performance metrics</a></li>
-<li class="toctree-l3"><a class="reference internal" href="alg-01-calibration.html#id10">3.1.3.5. Expected output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="alg-01-calibration.html#mtf-tuning">6.1.4. MTF tuning</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="alg-01-calibration.html#id6">6.1.4.1. Short description</a></li>
+<li class="toctree-l3"><a class="reference internal" href="alg-01-calibration.html#id7">6.1.4.2. Description of inputs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="alg-01-calibration.html#id8">6.1.4.3. Detailed methodology</a></li>
+<li class="toctree-l3"><a class="reference internal" href="alg-01-calibration.html#id9">6.1.4.4. Performance metrics</a></li>
+<li class="toctree-l3"><a class="reference internal" href="alg-01-calibration.html#id10">6.1.4.5. Expected output</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="alg-01-calibration.html#mtf-tuning">3.1.4. MTF tuning</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="alg-01-calibration.html#id11">3.1.4.1. Short description</a></li>
-<li class="toctree-l3"><a class="reference internal" href="alg-01-calibration.html#id12">3.1.4.2. Description of inputs</a></li>
-<li class="toctree-l3"><a class="reference internal" href="alg-01-calibration.html#id13">3.1.4.3. Detailed methodology</a></li>
-<li class="toctree-l3"><a class="reference internal" href="alg-01-calibration.html#id14">3.1.4.4. Performance metrics</a></li>
-<li class="toctree-l3"><a class="reference internal" href="alg-01-calibration.html#id15">3.1.4.5. Expected output</a></li>
+<li class="toctree-l2"><a class="reference internal" href="alg-01-calibration.html#summary">6.1.5. Summary</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="alg-01-calibration.html#summary">3.1.5. Summary</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="alg-02-validation.html">3.2. Selected Validation methods</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="alg-02-validation.html#one-to-one-validation">3.2.1. One-to-one validation</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="alg-02-validation.html#short-description">3.2.1.1. Short description</a></li>
-<li class="toctree-l3"><a class="reference internal" href="alg-02-validation.html#description-of-inputs">3.2.1.2. Description of inputs</a></li>
-<li class="toctree-l3"><a class="reference internal" href="alg-02-validation.html#detailed-methodology">3.2.1.3. Detailed methodology</a></li>
-<li class="toctree-l3"><a class="reference internal" href="alg-02-validation.html#performance-metrics">3.2.1.4. Performance metrics</a></li>
-<li class="toctree-l3"><a class="reference internal" href="alg-02-validation.html#expected-output">3.2.1.5. Expected output</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="alg-02-validation.html#triple-collocation">3.2.2. Triple collocation</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="alg-02-validation.html#id1">3.2.2.1. Short description</a></li>
-<li class="toctree-l3"><a class="reference internal" href="alg-02-validation.html#id2">3.2.2.2. Description of inputs</a></li>
-<li class="toctree-l3"><a class="reference internal" href="alg-02-validation.html#id3">3.2.2.3. Detailed methodology</a></li>
-<li class="toctree-l3"><a class="reference internal" href="alg-02-validation.html#id4">3.2.2.4. Performance metrics</a></li>
-<li class="toctree-l3"><a class="reference internal" href="alg-02-validation.html#id5">3.2.2.5. Expected output</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="alg-02-validation.html#spatial-variances">3.2.3. Spatial variances</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="alg-02-validation.html#id6">3.2.3.1. Short description</a></li>
-<li class="toctree-l3"><a class="reference internal" href="alg-02-validation.html#id7">3.2.3.2. Description of inputs</a></li>
-<li class="toctree-l3"><a class="reference internal" href="alg-02-validation.html#id8">3.2.3.3. Detailed methodology</a></li>
-<li class="toctree-l3"><a class="reference internal" href="alg-02-validation.html#id9">3.2.3.4. Performance metrics</a></li>
-<li class="toctree-l3"><a class="reference internal" href="alg-02-validation.html#id10">3.2.3.5. Expected output</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="alg-02-validation.html#summary">3.2.4. Summary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="alg-02-validation.html">6.2. Validation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="alg-02-validation.html#spatial-variance">6.2.1. Spatial Variance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="alg-02-validation.html#triple-collocation">6.2.2. Triple Collocation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="alg-02-validation.html#one-to-one-validation">6.2.3. One-to-One Validation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="alg-02-validation.html#spectral-analysis">6.2.4. Spectral Analysis</a></li>
 </ul>
 </li>
 </ul>
@@ -267,8 +280,8 @@ are not present in the source.</p>
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="02_processing_model.html" class="btn btn-neutral float-left" title="2. Processing model and data flow" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="alg-01-calibration.html" class="btn btn-neutral float-right" title="3.1. Selected Calibration methods" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="05_reference_datasets.html" class="btn btn-neutral float-left" title="5. Reference datasets description" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="alg-01-calibration.html" class="btn btn-neutral float-right" title="6.1. Selected Calibration methods" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

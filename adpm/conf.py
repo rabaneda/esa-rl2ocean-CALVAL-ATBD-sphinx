@@ -28,7 +28,7 @@ processor = "ROSE-L L2 Ocean Processor (RL2Ocean)"
 project = "RL2Ocean Calibration and Validation ATBD"
 author = "RL2Ocean consortium"
 copyright = "RL2Ocean consortium"
-release = "0.2"
+release = "1.0"
 today = "2026-09-29"
 
 

@@ -2,9 +2,9 @@
  Algorithms description
 ########################
 
-The source groups its method outlines into calibration and validation. The
-method-specific headings are retained in the following pages. Their details
-are not present in the source.
+The source describes calibration and validation methods for ROSE-L L2 ocean
+products. The NOC calibration method and four validation methods are described
+in the following pages.
 
 .. toctree::
    :maxdepth: 4

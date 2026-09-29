@@ -6,22 +6,24 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>3.2. Selected Validation methods &mdash; RL2Ocean Calibration and Validation ATBD</title>
+  <title>6.2. Validation &mdash; RL2Ocean Calibration and Validation ATBD</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
 
   
       <script src="_static/jquery.js?v=5d32c60e"></script>
       <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
-      <script src="_static/documentation_options.js?v=10f1778b"></script>
+      <script src="_static/documentation_options.js?v=f2a433a1"></script>
       <script src="_static/doctools.js?v=fd6eb6e6"></script>
       <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
       <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+      <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+      <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="4. Uncertainty analysis" href="04_uncertainty_analysis.html" />
-    <link rel="prev" title="3.1. Selected Calibration methods" href="alg-01-calibration.html" /> 
+    <link rel="next" title="7. Uncertainty analysis" href="04_uncertainty_analysis.html" />
+    <link rel="prev" title="6.1. Selected Calibration methods" href="alg-01-calibration.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -64,102 +66,141 @@
 <li class="toctree-l2"><a class="reference internal" href="02_processing_model.html#end-to-end-data-flow">2.5. End-to-end data flow</a></li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="reference internal" href="03_algorithms.html">3. Algorithms description</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="alg-01-calibration.html">3.1. Selected Calibration methods</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="alg-01-calibration.html#rose-l-l1-slc-products">3.1.1. ROSE-L L1 SLC products</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#short-description">3.1.1.1. Short description</a></li>
-<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#description-of-inputs">3.1.1.2. Description of inputs</a></li>
-<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#detailed-methodology">3.1.1.3. Detailed methodology</a></li>
-<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#performance-metrics">3.1.1.4. Performance metrics</a></li>
-<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#expected-output">3.1.1.5. Expected output</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03_lband_sar_datasets.html">3. L-band SAR datasets description</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="03_lband_sar_datasets.html#generated-datasets">3.1. Generated datasets</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="03_lband_sar_datasets.html#reconditioned">3.1.1. Reconditioned</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03_lband_sar_datasets.html#emulated">3.1.2. Emulated</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03_lband_sar_datasets.html#simulated">3.1.3. Simulated</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="alg-01-calibration.html#noc">3.1.2. NOC</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id1">3.1.2.1. Short description</a></li>
-<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id2">3.1.2.2. Description of inputs</a></li>
-<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id3">3.1.2.3. Detailed methodology</a></li>
-<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id4">3.1.2.4. Performance metrics</a></li>
-<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id5">3.1.2.5. Expected output</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="alg-01-calibration.html#gmf-tuning">3.1.3. GMF tuning</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id6">3.1.3.1. Short description</a></li>
-<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id7">3.1.3.2. Description of inputs</a></li>
-<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id8">3.1.3.3. Detailed methodology</a></li>
-<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id9">3.1.3.4. Performance metrics</a></li>
-<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id10">3.1.3.5. Expected output</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="alg-01-calibration.html#mtf-tuning">3.1.4. MTF tuning</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id11">3.1.4.1. Short description</a></li>
-<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id12">3.1.4.2. Description of inputs</a></li>
-<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id13">3.1.4.3. Detailed methodology</a></li>
-<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id14">3.1.4.4. Performance metrics</a></li>
-<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id15">3.1.4.5. Expected output</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="alg-01-calibration.html#summary">3.1.5. Summary</a></li>
-</ul>
-</li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">3.2. Selected Validation methods</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#one-to-one-validation">3.2.1. One-to-one validation</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#short-description">3.2.1.1. Short description</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#description-of-inputs">3.2.1.2. Description of inputs</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#detailed-methodology">3.2.1.3. Detailed methodology</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#performance-metrics">3.2.1.4. Performance metrics</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#expected-output">3.2.1.5. Expected output</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#triple-collocation">3.2.2. Triple collocation</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id1">3.2.2.1. Short description</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id2">3.2.2.2. Description of inputs</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id3">3.2.2.3. Detailed methodology</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id4">3.2.2.4. Performance metrics</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id5">3.2.2.5. Expected output</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#spatial-variances">3.2.3. Spatial variances</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id6">3.2.3.1. Short description</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id7">3.2.3.2. Description of inputs</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id8">3.2.3.3. Detailed methodology</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id9">3.2.3.4. Performance metrics</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id10">3.2.3.5. Expected output</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#summary">3.2.4. Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03_lband_sar_datasets.html#third-party-datasets">3.2. Third-party datasets</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="03_lband_sar_datasets.html#alos">3.2.1. ALOS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03_lband_sar_datasets.html#alos-2">3.2.2. ALOS-2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03_lband_sar_datasets.html#alos-4">3.2.3. ALOS-4</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03_lband_sar_datasets.html#saocom">3.2.4. SAOCOM</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03_lband_sar_datasets.html#nisar">3.2.5. NiSAR</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="04_uncertainty_analysis.html">4. Uncertainty analysis</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="04_uncertainty_analysis.html#introduction">4.1. Introduction</a></li>
-<li class="toctree-l2"><a class="reference internal" href="04_uncertainty_analysis.html#the-gum-principles-a-review">4.2. The GUM Principles: A review</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="04_uncertainty_analysis.html#the-international-vocabulary-of-metrology-vim">4.2.1. The International Vocabulary of Metrology (VIM)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="04_uncertainty_analysis.html#guide-to-the-expression-of-uncertainty-in-measurement-gum">4.2.2. Guide to the Expression of Uncertainty in Measurement (GUM)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="04_uncertainty_analysis.html#quality-assurance-framework-for-earth-observation-qa4eo">4.2.3. Quality Assurance Framework for Earth Observation (QA4EO)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04_auxiliary_datasets.html">4. Auxiliary datasets description</a></li>
+<li class="toctree-l1"><a class="reference internal" href="05_reference_datasets.html">5. Reference datasets description</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="05_reference_datasets.html#ocean-surface-vector-stress">5.1. Ocean Surface Vector Stress</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="05_reference_datasets.html#wind-vector">5.1.1. Wind vector</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="05_reference_datasets.html#c-band-sar">5.1.1.1. C-band SAR</a></li>
+<li class="toctree-l4"><a class="reference internal" href="05_reference_datasets.html#numerical-prediction-model">5.1.1.2. Numerical Prediction Model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="05_reference_datasets.html#in-situ-observations">5.1.1.3. In-Situ Observations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="05_reference_datasets.html#scatterometers">5.1.1.4. Scatterometers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="05_reference_datasets.html#radiometers">5.1.1.5. Radiometers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="05_reference_datasets.html#plane">5.1.1.6. Plane</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="04_uncertainty_analysis.html#product-specific-uncertainty-estimation">4.3. Product-specific uncertainty estimation</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="04_uncertainty_analysis.html#azimuth-wavelength-cutoff">4.3.1. Azimuth wavelength cutoff</a></li>
-<li class="toctree-l3"><a class="reference internal" href="04_uncertainty_analysis.html#macs">4.3.2. MACS</a></li>
-<li class="toctree-l3"><a class="reference internal" href="04_uncertainty_analysis.html#imacs">4.3.3. iMACS</a></li>
-<li class="toctree-l3"><a class="reference internal" href="04_uncertainty_analysis.html#dca">4.3.4. DCA</a></li>
-<li class="toctree-l3"><a class="reference internal" href="04_uncertainty_analysis.html#texture-based-azimuth-cutoff">4.3.5. Texture-based azimuth cutoff</a></li>
-<li class="toctree-l3"><a class="reference internal" href="04_uncertainty_analysis.html#rvl">4.3.6. RVL</a></li>
-<li class="toctree-l3"><a class="reference internal" href="04_uncertainty_analysis.html#inverse-wave-age">4.3.7. Inverse Wave Age</a></li>
-<li class="toctree-l3"><a class="reference internal" href="04_uncertainty_analysis.html#wind-products">4.3.8. Wind products</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="04_uncertainty_analysis.html#wind-speed-wind-stress-and-hub-height-wind-speed">4.3.8.1. Wind speed, wind stress, and hub height wind speed</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05_reference_datasets.html#wind-stress">5.1.2. Wind stress</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="04_uncertainty_analysis.html#sea-state-products">4.3.9. Sea-state products</a></li>
-<li class="toctree-l3"><a class="reference internal" href="04_uncertainty_analysis.html#line-of-sight-current-products">4.3.10. Line-of-sight current products</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="04_uncertainty_analysis.html#line-of-sight-wave-doppler-and-line-of-sight-surface-current-component">4.3.10.1. Line-of-sight wave Doppler and line-of-sight surface current component</a></li>
+<li class="toctree-l2"><a class="reference internal" href="05_reference_datasets.html#sea-state">5.2. Sea State</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="05_reference_datasets.html#total-significant-wave-height">5.2.1. Total significant wave height</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="05_reference_datasets.html#nwp">5.2.1.1. NWP</a></li>
+<li class="toctree-l4"><a class="reference internal" href="05_reference_datasets.html#c-band-sar-1">5.2.1.2. C-band SAR</a></li>
+<li class="toctree-l4"><a class="reference internal" href="05_reference_datasets.html#in-situ-observations-1">5.2.1.3. In-Situ Observations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="05_reference_datasets.html#sea-ice-maps">5.2.1.4. Sea-ice maps</a></li>
+<li class="toctree-l4"><a class="reference internal" href="05_reference_datasets.html#altimeters">5.2.1.5. Altimeters</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="04_uncertainty_analysis.html#summary">4.3.11. Summary</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05_reference_datasets.html#mean-period-wind-sea">5.2.2. Mean period wind-sea</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05_reference_datasets.html#first-moment-wave-period">5.2.3. First moment wave period</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05_reference_datasets.html#second-moment-wave-period">5.2.4. Second moment wave period</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05_reference_datasets.html#wave-height-swell-dominant-system">5.2.5. Wave height swell dominant system</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05_reference_datasets.html#wave-height-swell-secondary-system">5.2.6. Wave height swell secondary system</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05_reference_datasets.html#significant-wave-height-wind-sea">5.2.7. Significant wave height wind-sea</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05_reference_datasets.html#mean-period-wind-sea-1">5.2.8. Mean period wind-sea</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05_reference_datasets.html#wave-direction">5.2.9. Wave direction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05_reference_datasets.html#wave-directional-energy-spectrum">5.2.10. Wave directional energy spectrum</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="04_uncertainty_analysis.html#references">4.4. References</a></li>
+<li class="toctree-l2"><a class="reference internal" href="05_reference_datasets.html#line-of-sight-currents">5.3. Line-of-sight currents</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="05_reference_datasets.html#los-wave-doppler">5.3.1. LoS wave Doppler</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05_reference_datasets.html#los-surface-current-component">5.3.2. LoS surface current component</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="05_reference_datasets.html#nwp-1">5.3.2.1. NWP</a></li>
+<li class="toctree-l4"><a class="reference internal" href="05_reference_datasets.html#c-band-sar-2">5.3.2.2. C-band SAR</a></li>
+<li class="toctree-l4"><a class="reference internal" href="05_reference_datasets.html#hf-radars">5.3.2.3. HF radars</a></li>
+<li class="toctree-l4"><a class="reference internal" href="05_reference_datasets.html#in-situ-observations-copernicus-marine">5.3.2.4. In-Situ Observations (Copernicus Marine)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="05_reference_datasets.html#altimeters-1">5.3.2.5. Altimeters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="05_reference_datasets.html#iwrap">5.3.2.6. IWRAP</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="03_algorithms.html">6. Algorithms description</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="alg-01-calibration.html">6.1. Selected Calibration methods</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="alg-01-calibration.html#rose-l-l1-slc-products">6.1.1. ROSE-L L1 SLC products</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#short-description">6.1.1.1. Short description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#description-of-inputs">6.1.1.2. Description of inputs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#detailed-methodology">6.1.1.3. Detailed methodology</a></li>
+<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#performance-metrics">6.1.1.4. Performance metrics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#expected-output">6.1.1.5. Expected output</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="alg-01-calibration.html#numerical-weather-prediction-ocean-calibration-of-sar-sigma-0">6.1.2. Numerical Weather Prediction Ocean Calibration of SAR <span class="math notranslate nohighlight">\(\sigma_0\)</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="alg-01-calibration.html#gmf-tuning">6.1.3. GMF tuning</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id1">6.1.3.1. Short description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id2">6.1.3.2. Description of inputs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id3">6.1.3.3. Detailed methodology</a></li>
+<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id4">6.1.3.4. Performance metrics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id5">6.1.3.5. Expected output</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="alg-01-calibration.html#mtf-tuning">6.1.4. MTF tuning</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id6">6.1.4.1. Short description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id7">6.1.4.2. Description of inputs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id8">6.1.4.3. Detailed methodology</a></li>
+<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id9">6.1.4.4. Performance metrics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id10">6.1.4.5. Expected output</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="alg-01-calibration.html#summary">6.1.5. Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">6.2. Validation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#spatial-variance">6.2.1. Spatial Variance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#triple-collocation">6.2.2. Triple Collocation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#one-to-one-validation">6.2.3. One-to-One Validation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#spectral-analysis">6.2.4. Spectral Analysis</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="04_uncertainty_analysis.html">7. Uncertainty analysis</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="04_uncertainty_analysis.html#introduction">7.1. Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04_uncertainty_analysis.html#the-gum-principles-a-review">7.2. The GUM Principles: A review</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="04_uncertainty_analysis.html#the-international-vocabulary-of-metrology-vim">7.2.1. The International Vocabulary of Metrology (VIM)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04_uncertainty_analysis.html#guide-to-the-expression-of-uncertainty-in-measurement-gum">7.2.2. Guide to the Expression of Uncertainty in Measurement (GUM)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04_uncertainty_analysis.html#quality-assurance-framework-for-earth-observation-qa4eo">7.2.3. Quality Assurance Framework for Earth Observation (QA4EO)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="04_uncertainty_analysis.html#product-specific-uncertainty-estimation">7.3. Product-specific uncertainty estimation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="04_uncertainty_analysis.html#azimuth-wavelength-cutoff">7.3.1. Azimuth wavelength cutoff</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04_uncertainty_analysis.html#macs">7.3.2. MACS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04_uncertainty_analysis.html#imacs">7.3.3. iMACS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04_uncertainty_analysis.html#dca">7.3.4. DCA</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04_uncertainty_analysis.html#texture-based-azimuth-cutoff">7.3.5. Texture-based azimuth cutoff</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04_uncertainty_analysis.html#rvl">7.3.6. RVL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04_uncertainty_analysis.html#inverse-wave-age">7.3.7. Inverse Wave Age</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04_uncertainty_analysis.html#wind-products">7.3.8. Wind products</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="04_uncertainty_analysis.html#wind-speed-wind-stress-and-hub-height-wind-speed">7.3.8.1. Wind speed, wind stress, and hub height wind speed</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="04_uncertainty_analysis.html#sea-state-products">7.3.9. Sea-state products</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04_uncertainty_analysis.html#line-of-sight-current-products">7.3.10. Line-of-sight current products</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="04_uncertainty_analysis.html#line-of-sight-wave-doppler-and-line-of-sight-surface-current-component">7.3.10.1. Line-of-sight wave Doppler and line-of-sight surface current component</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="04_uncertainty_analysis.html#summary">7.3.11. Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="04_uncertainty_analysis.html#references">7.4. References</a></li>
 </ul>
 </li>
 </ul>
@@ -178,8 +219,8 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
-          <li class="breadcrumb-item"><a href="03_algorithms.html"><span class="section-number">3. </span>Algorithms description</a></li>
-      <li class="breadcrumb-item active"><span class="section-number">3.2. </span>Selected Validation methods</li>
+          <li class="breadcrumb-item"><a href="03_algorithms.html"><span class="section-number">6. </span>Algorithms description</a></li>
+      <li class="breadcrumb-item active"><span class="section-number">6.2. </span>Validation</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/alg-02-validation.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -189,68 +230,427 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="selected-validation-methods">
-<h1><span class="section-number">3.2. </span>Selected Validation methods<a class="headerlink" href="#selected-validation-methods" title="Link to this heading"></a></h1>
-<p>The source provides the following section headings but no method descriptions,
-input specifications, processing details, performance metrics, or expected
-outputs.</p>
-<section id="one-to-one-validation">
-<h2><span class="section-number">3.2.1. </span>One-to-one validation<a class="headerlink" href="#one-to-one-validation" title="Link to this heading"></a></h2>
-<section id="short-description">
-<h3><span class="section-number">3.2.1.1. </span>Short description<a class="headerlink" href="#short-description" title="Link to this heading"></a></h3>
-</section>
-<section id="description-of-inputs">
-<h3><span class="section-number">3.2.1.2. </span>Description of inputs<a class="headerlink" href="#description-of-inputs" title="Link to this heading"></a></h3>
-</section>
-<section id="detailed-methodology">
-<h3><span class="section-number">3.2.1.3. </span>Detailed methodology<a class="headerlink" href="#detailed-methodology" title="Link to this heading"></a></h3>
-</section>
-<section id="performance-metrics">
-<h3><span class="section-number">3.2.1.4. </span>Performance metrics<a class="headerlink" href="#performance-metrics" title="Link to this heading"></a></h3>
-</section>
-<section id="expected-output">
-<h3><span class="section-number">3.2.1.5. </span>Expected output<a class="headerlink" href="#expected-output" title="Link to this heading"></a></h3>
-</section>
+  <section id="validation">
+<h1><span class="section-number">6.2. </span>Validation<a class="headerlink" href="#validation" title="Link to this heading"></a></h1>
+<section id="spatial-variance">
+<h2><span class="section-number">6.2.1. </span>Spatial Variance<a class="headerlink" href="#spatial-variance" title="Link to this heading"></a></h2>
+<p>Spatial Variance is a method used to estimate the representativeness error
+<span class="math notranslate nohighlight">\(r^2\)</span>, which is a key component for triple collocation (TC). This
+procedure estimates the spatial variance for a given geophysical parameter.
+Let <span class="math notranslate nohighlight">\(s_1\)</span> and <span class="math notranslate nohighlight">\(s_2\)</span> be two different sources characterized by
+different spatial resolutions, where <span class="math notranslate nohighlight">\(V_{s_1}(n)\)</span> and
+<span class="math notranslate nohighlight">\(V_{s_2}(n)\)</span> represent their spatial variances at spatial lag <span class="math notranslate nohighlight">\(n\)</span>.
+Given <span class="math notranslate nohighlight">\(n_{\max}\)</span>, the maximum lag, the representativeness error of
+<span class="math notranslate nohighlight">\(s_1\)</span> (the coarsest system) compared to <span class="math notranslate nohighlight">\(s_2\)</span> can be estimated as:</p>
+<div class="math notranslate nohighlight" id="equation-eq-cvtdd-r2-spatial-variance">
+<span class="eqno">(6.1)<a class="headerlink" href="#equation-eq-cvtdd-r2-spatial-variance" title="Link to this equation"></a></span>\[r^2 = \sum_{n=0}^{n_{\max}}
+\left[V_{s_2}(n)-V_{s_1}(n)\right] .\]</div>
+<p>Let <span class="math notranslate nohighlight">\(\tilde{n}&lt;n_{\max}\)</span> be the spatial-lag threshold above which both
+systems capture the same signal variability. The residual contribution then
+vanishes:</p>
+<div class="math notranslate nohighlight">
+\[V_{s_2}(n)-V_{s_1}(n) \to 0
+\qquad \forall n&gt;\tilde{n} .\]</div>
+<p><strong>Purpose</strong></p>
+<p>This method (<a class="reference internal" href="#ref-vogelzang-spatial-variance"><span class="std std-ref">Vogelzang et al. (2015)</span></a>)
+computes wind variances as a function of scale. Unlike the spectral-integration
+method, it operates in the spatial domain rather than the frequency domain. It
+is more tolerant to missing samples and provides a more intuitive
+interpretation. The representativeness error is the difference between the
+system 2 (e.g. satellite) spatial variance and that of system 3 (e.g. model).
+This value depends on the selected scale. Spatial variances increase
+monotonically with scale, and their difference also usually increases up to a
+certain scale.</p>
+<p><strong>Inputs</strong></p>
+<ul class="simple">
+<li><p>Vector samples of the required geophysical parameter.</p></li>
+</ul>
+<p><strong>Procedure</strong></p>
+<ol class="arabic">
+<li><p>Estimate the first-order moments for both components of the geophysical
+parameter of interest:</p>
+<div class="math notranslate nohighlight" id="equation-eq-cvtdd-spatial-first-moment">
+<span class="eqno">(6.2)<a class="headerlink" href="#equation-eq-cvtdd-spatial-first-moment" title="Link to this equation"></a></span>\[M_{w,i}(n)
+= \frac{1}{n+1}\sum_{j=0}^{n}w_{i+j} .\]</div>
+<p>Here, <span class="math notranslate nohighlight">\(w\)</span> is the component of the geophysical parameter of interest,
+<span class="math notranslate nohighlight">\(n\)</span> is the lag size, and <span class="math notranslate nohighlight">\(i\)</span> is an ancillary index identifying
+the starting element.</p>
+</li>
+<li><p>Estimate the second-order moments:</p>
+<div class="math notranslate nohighlight" id="equation-eq-cvtdd-spatial-second-moment">
+<span class="eqno">(6.3)<a class="headerlink" href="#equation-eq-cvtdd-spatial-second-moment" title="Link to this equation"></a></span>\[M_{ww,i}(n)
+= \frac{1}{n+1}\sum_{j=0}^{n}w^{2}_{i+j} .\]</div>
+<p>The subscript <span class="math notranslate nohighlight">\(w\)</span> denotes the first-order moment, while <span class="math notranslate nohighlight">\(ww\)</span>
+denotes the second-order moment.</p>
+</li>
+<li><p>Estimate the spatial variance:</p>
+<div class="math notranslate nohighlight" id="equation-eq-cvtdd-local-spatial-variance">
+<span class="eqno">(6.4)<a class="headerlink" href="#equation-eq-cvtdd-local-spatial-variance" title="Link to this equation"></a></span>\[V_{w,i}(n)
+= \left\langle M_{ww,i}(n)-M_{w,i}^{2}(n)\right\rangle .\]</div>
+<p>Here, angle brackets denote the expected-value operator.</p>
+</li>
+<li><p>Average <span class="math notranslate nohighlight">\(V_{w,i}\)</span> to reduce uncertainty:</p>
+<div class="math notranslate nohighlight" id="equation-eq-cvtdd-average-spatial-variance">
+<span class="eqno">(6.5)<a class="headerlink" href="#equation-eq-cvtdd-average-spatial-variance" title="Link to this equation"></a></span>\[V_w(n)=\frac{1}{M}\sum_{i=0}^{M}V_{w,i}(n),
+\qquad M=N-n .\]</div>
+</li>
+</ol>
+<p><strong>Outputs</strong></p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(V_{u,v}(n)\)</span>.</p></li>
+</ul>
 </section>
 <section id="triple-collocation">
-<h2><span class="section-number">3.2.2. </span>Triple collocation<a class="headerlink" href="#triple-collocation" title="Link to this heading"></a></h2>
-<section id="id1">
-<h3><span class="section-number">3.2.2.1. </span>Short description<a class="headerlink" href="#id1" title="Link to this heading"></a></h3>
+<h2><span class="section-number">6.2.2. </span>Triple Collocation<a class="headerlink" href="#triple-collocation" title="Link to this heading"></a></h2>
+<p><strong>Purpose</strong></p>
+<p>Triple collocation (TC) was conceived by Stoffelen (1998) as a tool for
+inter-calibration and individual error assessment of three different
+collocated sea-surface wind datasets
+(<a class="reference internal" href="#ref-stoffelen-triple-collocation"><span class="std std-ref">Stoffelen (1998)</span></a>). TC is generic
+and can be applied to any geophysical variable and data product, provided that
+errors are additive, linear calibration is sufficient, measurement errors are
+uncorrelated with each other, and measurement errors are constant over the
+range of measured values.</p>
+<p>SAR-derived wind products are recommended to be validated against buoy wind
+measurements, scatterometer-derived winds, and NWP winds. Collocations between
+SAR and scatterometers strictly depend on the Local Time Ascending Node (LTAN).
+TC analysis needs a reliable estimate of the representativeness error
+<span class="math notranslate nohighlight">\(r^2\)</span>; see <a class="reference internal" href="#spatial-variance">Spatial Variance</a> for its estimation.</p>
+<p><strong>Inputs</strong></p>
+<p>One or more triplets including the SAR-derived parameter of interest. For wind,
+the following sources are relevant:</p>
+<ul class="simple">
+<li><p>SAR-derived wind vector.</p></li>
+<li><p>Scatterometer-derived wind vector.</p></li>
+<li><p>Buoy wind vector.</p></li>
+<li><p>NWP wind vector.</p></li>
+</ul>
+<p>When available, buoy and scatterometer measurements are preferred to NWP
+winds, due to their higher spatial resolution.</p>
+<p>For sea-state parameters such as significant wave height (SWH), relevant
+validation sources are:</p>
+<ul class="simple">
+<li><p>SAR-derived SWH.</p></li>
+<li><p>Altimeter-derived SWH.</p></li>
+<li><p>Buoy SWH measurement.</p></li>
+<li><p>SWH from an NWP model.</p></li>
+</ul>
+<p>For LoS surface currents, relevant validation sources are:</p>
+<ul class="simple">
+<li><p>SAR-derived LoS surface currents.</p></li>
+<li><p>HF-radar total surface-current vector.</p></li>
+<li><p>Buoy total surface-current vector.</p></li>
+<li><p>LoS surface currents from an NWP model.</p></li>
+</ul>
+<p><strong>Procedure</strong></p>
+<p>Given three measurement systems, <span class="math notranslate nohighlight">\(i=1,2,3\)</span>, representing, for example,
+in-situ, satellite, and model estimates, the measurements and measurement
+errors are approximated by the following linear expression
+(<a class="reference internal" href="#ref-vogelzang-quadruple-collocation"><span class="std std-ref">Vogelzang and Stoffelen (2021)</span></a>;
+<a class="reference internal" href="#ref-vogelzang-quintuple-collocation"><span class="std std-ref">Vogelzang and Stoffelen (2022)</span></a>):</p>
+<div class="math notranslate nohighlight" id="equation-eq-cvtdd-tc-linear-model">
+<span class="eqno">(6.6)<a class="headerlink" href="#equation-eq-cvtdd-tc-linear-model" title="Link to this equation"></a></span>\[s_i=a_i(t+\delta_i)+b_i .\]</div>
+<p>Here, <span class="math notranslate nohighlight">\(t\)</span> is the common quantity, i.e. the true value of the parameter
+at the scales commonly resolved by all three data sources. <span class="math notranslate nohighlight">\(a_i\)</span> and
+<span class="math notranslate nohighlight">\(b_i\)</span> are the scaling and offset (bias) calibration coefficients,
+respectively, and <span class="math notranslate nohighlight">\(\delta_i\)</span> is the random measurement error. For a
+vector quantity such as wind, <span class="math notranslate nohighlight">\(s\)</span> can represent either the zonal
+(<span class="math notranslate nohighlight">\(u\)</span>) or meridional (<span class="math notranslate nohighlight">\(v\)</span>) component. Then:</p>
+<ol class="arabic">
+<li><p>Collocate triplets in space and time. For nominal wind regimes, the temporal
+constraint should be less than 30 minutes and the spatial constraint within
+25 km.</p></li>
+<li><p>Set the calibration reference data source (e.g. <span class="math notranslate nohighlight">\(i=1\)</span>), i.e.
+<span class="math notranslate nohighlight">\(a_1=1\)</span> and <span class="math notranslate nohighlight">\(b_1=0\)</span> (e.g. in situ).</p></li>
+<li><p>Estimate the variance common to these smaller scales,
+<span class="math notranslate nohighlight">\(r^2=\langle\delta_1\delta_2\rangle\)</span> (representativeness error). See
+<a class="reference internal" href="#spatial-variance">Spatial Variance</a> to compute <span class="math notranslate nohighlight">\(r^2\)</span>, ensuring that <span class="math notranslate nohighlight">\(s_1\)</span>,
+<span class="math notranslate nohighlight">\(s_2\)</span>, and <span class="math notranslate nohighlight">\(s_3\)</span> represent the higher-, intermediate-, and
+coarser-resolution systems, respectively (e.g. buoys, satellite, and NWP
+model).</p></li>
+<li><p>Compute the calibration coefficients iteratively until they satisfy a
+selected convergence threshold.</p></li>
+<li><p>Calibrate the original measurements <span class="math notranslate nohighlight">\(s_i^{\mathrm{uncal}}\)</span> with the
+new calibration coefficients:</p>
+<div class="math notranslate nohighlight">
+\[s_i=\frac{s_i^{\mathrm{uncal}}-b_i}{a_i},
+\qquad \forall i\in\{1,2,3\} .\]</div>
+<p>This is an inverse calibration. At the first iteration the scaling
+coefficients are one and the bias coefficients are zero.</p>
+</li>
+<li><p>Apply the <span class="math notranslate nohighlight">\(4\sigma\)</span> test to exclude possible outliers.</p></li>
+<li><p>Estimate the first- and second-order moments and the covariances using the
+calibrated measurements for every combination of <span class="math notranslate nohighlight">\(i,j=1,2,3\)</span>:</p>
+<div class="math notranslate nohighlight" id="equation-eq-cvtdd-tc-moments">
+<span class="eqno">(6.7)<a class="headerlink" href="#equation-eq-cvtdd-tc-moments" title="Link to this equation"></a></span>\[\begin{split}\begin{aligned}
+M_i &amp;= \langle s_i\rangle, \\
+M_{ij} &amp;= \langle s_i s_j\rangle, \\
+C_{ij} &amp;= M_{ij}-M_iM_j .
+\end{aligned}\end{split}\]</div>
+</li>
+<li><p>Estimate the true common variance <span class="math notranslate nohighlight">\(T\)</span>:</p>
+<div class="math notranslate nohighlight" id="equation-eq-cvtdd-tc-true-variance">
+<span class="eqno">(6.8)<a class="headerlink" href="#equation-eq-cvtdd-tc-true-variance" title="Link to this equation"></a></span>\[T=\frac{C_{12}C_{13}}{C_{23}}-r^2 .\]</div>
+</li>
+<li><p>Estimate the calibration coefficients:</p>
+<div class="math notranslate nohighlight">
+\[a_2=\frac{C_{23}}{C_{13}},
+\qquad b_2=M_2-a_2M_1 .\]</div>
+<div class="math notranslate nohighlight">
+\[a_3=\frac{C_{13}}{T},
+\qquad b_3=M_3-a_3M_1 .\]</div>
+</li>
+<li><p>Check convergence of <span class="math notranslate nohighlight">\(a_{2,3}\)</span> and <span class="math notranslate nohighlight">\(b_{2,3}\)</span>:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\left|a_i^k-a_i^{k-1}\right|\leq10^{-6}\)</span>
+for all <span class="math notranslate nohighlight">\(i\in\{2,3\}\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\left|b_i^k-b_i^{k-1}\right|\leq10^{-6}\)</span>
+for all <span class="math notranslate nohighlight">\(i\in\{2,3\}\)</span>, where <span class="math notranslate nohighlight">\(k\)</span> is the iteration index.</p></li>
+</ul>
+</li>
+<li><p>Iterate until convergence.</p></li>
+<li><p>Estimate the measurement-error variances of the three sources:</p>
+<div class="math notranslate nohighlight" id="equation-eq-cvtdd-tc-error-variances">
+<span class="eqno">(6.9)<a class="headerlink" href="#equation-eq-cvtdd-tc-error-variances" title="Link to this equation"></a></span>\[\begin{split}\begin{aligned}
+\epsilon_1^2 &amp;= \frac{C_{11}}{a_1^2}-T-r^2, \\
+\epsilon_2^2 &amp;= \frac{C_{22}}{a_2^2}-T-r^2, \\
+\epsilon_3^2 &amp;= \frac{C_{33}}{a_3^2}-T .
+\end{aligned}\end{split}\]</div>
+</li>
+</ol>
+<p><strong>Metrics</strong></p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\left|a_i^k-a_i^{k-1}\right|\)</span> for all <span class="math notranslate nohighlight">\(i\in\{2,3\}\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\left|b_i^k-b_i^{k-1}\right|\)</span> for all <span class="math notranslate nohighlight">\(i\in\{2,3\}\)</span>, where
+<span class="math notranslate nohighlight">\(k\)</span> is the iteration index.</p></li>
+</ul>
+<p><strong>Outputs</strong></p>
+<ul class="simple">
+<li><p>Calibration coefficients: <span class="math notranslate nohighlight">\(a_i,b_i\)</span> for all <span class="math notranslate nohighlight">\(i\in\{1,2,3\}\)</span>.</p></li>
+<li><p>Measurement-error variances: <span class="math notranslate nohighlight">\(\epsilon_i^2\)</span> for all
+<span class="math notranslate nohighlight">\(i\in\{1,2,3\}\)</span>.</p></li>
+</ul>
+<p>The error variances above are provided at the scale of the intermediate
+resolution system (e.g. satellite). They can also be computed at the scale of
+the coarser-resolution system (e.g. NWP model), using:</p>
+<div class="math notranslate nohighlight" id="equation-eq-cvtdd-tc-nwp-error-variances">
+<span class="eqno">(6.10)<a class="headerlink" href="#equation-eq-cvtdd-tc-nwp-error-variances" title="Link to this equation"></a></span>\[\begin{split}\begin{aligned}
+\epsilon_{\mathrm{NWP},1}^{2}
+  &amp;= \epsilon_{\mathrm{SAT},1}^{2}+r^{2}, \\
+\epsilon_{\mathrm{NWP},2}^{2}
+  &amp;= \epsilon_{\mathrm{SAT},2}^{2}+r^{2}, \\
+\epsilon_{\mathrm{NWP},3}^{2}
+  &amp;= \epsilon_{\mathrm{SAT},3}^{2}.
+\end{aligned}\end{split}\]</div>
+<p>The labels SAT and NWP indicate the intermediate- and coarser-resolution
+systems, respectively.</p>
 </section>
-<section id="id2">
-<h3><span class="section-number">3.2.2.2. </span>Description of inputs<a class="headerlink" href="#id2" title="Link to this heading"></a></h3>
+<section id="one-to-one-validation">
+<h2><span class="section-number">6.2.3. </span>One-to-One Validation<a class="headerlink" href="#one-to-one-validation" title="Link to this heading"></a></h2>
+<p>One-to-one (1-to-1) validation assesses the SAR-derived parameter against
+individual reference sources through linear correlation analysis. This
+approach is performed independently for each validation source, providing
+direct pairwise comparisons between SAR observations and reference data.</p>
+<p>One-to-one validation is particularly useful when TC is not feasible due to
+insufficient collocated triplets. This may occur, for example, if the SAR
+Local Time Ascending Node (LTAN) does not align with other altimeter or
+scatterometer platforms and the region lacks in-situ sampling from buoys or
+other point-based platforms. In such cases, validation against NWP models or
+other available reference sources provides an essential quality assessment of
+the SAR retrievals.</p>
+<p><strong>Purpose</strong></p>
+<p>Assess the retrieval performance of SAR retrievals against a reference
+validation source.</p>
+<p><strong>Input</strong></p>
+<ul class="simple">
+<li><p>SAR-derived parameter.</p></li>
+<li><p>NWP-model parameter or any other available validation source.</p></li>
+</ul>
+<p><strong>Procedure</strong></p>
+<ul>
+<li><p>Collocate the two sources in space and time. A spatial constraint within
+25 km and a temporal constraint within 30 minutes are recommended. For NWP
+models, collect hourly forecasts if available; otherwise interpolate model
+parameters bilinearly in space and time to the SAR wind-retrieval/vector cell
+and acquisition time.</p></li>
+<li><p>For circular variables such as wind direction, compute the differences
+<span class="math notranslate nohighlight">\(\Delta\phi\)</span> and map the resulting angular differences to
+<span class="math notranslate nohighlight">\([-180^\circ,180^\circ]\)</span>:</p>
+<div class="math notranslate nohighlight" id="equation-eq-cvtdd-direction-difference">
+<span class="eqno">(6.11)<a class="headerlink" href="#equation-eq-cvtdd-direction-difference" title="Link to this equation"></a></span>\[\begin{split}\begin{aligned}
+\Delta\phi_{\mathrm{raw}} &amp;= \phi_{\mathrm{SAR}}-\phi_{\mathrm{VS}}, \\
+\Delta\phi
+  &amp;= \Delta\phi_{\mathrm{raw}}-360^\circ
+  &amp;&amp;\text{if }\Delta\phi_{\mathrm{raw}}&gt;180^\circ, \\
+\Delta\phi
+  &amp;= \Delta\phi_{\mathrm{raw}}+360^\circ
+  &amp;&amp;\text{if }\Delta\phi_{\mathrm{raw}}&lt;-180^\circ .
+\end{aligned}\end{split}\]</div>
+</li>
+<li><p>Compute bias for all components.</p></li>
+<li><p>Compute root mean square difference (RMSD) for all components.</p></li>
+<li><p>For vector quantities, compute vector RMSD (vRMSD).</p></li>
+</ul>
+<p><strong>Metrics</strong></p>
+<ul>
+<li><p>Non-vector quantities:</p>
+<ul>
+<li><p>Bias: <span class="math notranslate nohighlight">\(b=\langle VAR_{\mathrm{SAR}}-VAR_{\mathrm{VS}}\rangle\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(RMSD=\sqrt{\langle(VAR_{\mathrm{SAR}}-VAR_{\mathrm{VS}})^2\rangle}\)</span>.</p></li>
+<li><p>Pearson correlation coefficient:</p>
+<div class="math notranslate nohighlight">
+\[r=
+\frac{\left\langle
+(VAR_{\mathrm{SAR}}-\overline{VAR}_{\mathrm{SAR}})
+(VAR_{\mathrm{VS}}-\overline{VAR}_{\mathrm{VS}})
+\right\rangle}
+{\sigma_{\mathrm{SAR}}\sigma_{\mathrm{VS}}} .\]</div>
+</li>
+</ul>
+</li>
+<li><p>Vector quantities (e.g. wind vector):</p>
+<ul>
+<li><p><span class="math notranslate nohighlight">\(b_w=\langle w_{\mathrm{SAR}}-w_{\mathrm{VS}}\rangle\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(RMSD_w=\sqrt{\langle(w_{\mathrm{SAR}}-w_{\mathrm{VS}})^2\rangle}\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(vRMDS=\sqrt{\langle
+(u_{\mathrm{SAR}}-u_{\mathrm{VS}})^2+
+(v_{\mathrm{SAR}}-v_{\mathrm{VS}})^2\rangle}\)</span>.</p></li>
+<li><p>Pearson correlation coefficient:</p>
+<div class="math notranslate nohighlight">
+\[r_w=
+\frac{\left\langle
+(w_{\mathrm{SAR}}-\overline{w}_{\mathrm{SAR}})
+(w_{\mathrm{VS}}-\overline{w}_{\mathrm{VS}})
+\right\rangle}
+{\sigma_{\mathrm{SAR}}\sigma_{\mathrm{VS}}} .\]</div>
+</li>
+</ul>
+</li>
+<li><p>Circular variables (e.g. wind direction):</p>
+<ul>
+<li><p><span class="math notranslate nohighlight">\(b_\phi=\langle\mathbf{mod}(\phi_{\mathrm{SAR}}-\phi_{\mathrm{VS}},360)\rangle\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(RMSD_\phi=\sqrt{\langle\mathbf{mod}(\phi_{\mathrm{SAR}}-\phi_{\mathrm{AS}},360)\rangle}\)</span>.</p></li>
+<li><p>Jammalamadaka–Sarma circular-circular correlation coefficient:</p>
+<div class="math notranslate nohighlight">
+\[\rho_c=
+\frac{\left\langle
+\sin(\phi_{\mathrm{SAR}}-\overline{\phi}_{\mathrm{SAR}})
+\sin(\phi_{\mathrm{VS}}-\overline{\phi}_{\mathrm{VS}})
+\right\rangle}
+{\sqrt{
+\left\langle\sin^2(\phi_{\mathrm{SAR}}-\overline{\phi}_{\mathrm{SAR}})\right\rangle
+\left\langle\sin^2(\phi_{\mathrm{VS}}-\overline{\phi}_{\mathrm{VS}})\right\rangle
+}} .\]</div>
+</li>
+</ul>
+</li>
+</ul>
+<p>Here, angle brackets denote the expected-value operator, <span class="math notranslate nohighlight">\(\mathbf{mod}\)</span>
+denotes modulus, and <span class="math notranslate nohighlight">\(VS\)</span> denotes validation source. <span class="math notranslate nohighlight">\(VAR\)</span> is the
+validation variable of interest. Formulas with subscript <span class="math notranslate nohighlight">\(w\)</span> apply to
+both components (<span class="math notranslate nohighlight">\(u,v\)</span>) and speed (<span class="math notranslate nohighlight">\(U\)</span>) for vector quantities.</p>
+<p><strong>Output</strong></p>
+<ul class="simple">
+<li><p>Non-vector quantities:</p>
+<ul>
+<li><p>Bias: <span class="math notranslate nohighlight">\(b\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(RMSD\)</span>.</p></li>
+<li><p>Pearson correlation coefficient: <span class="math notranslate nohighlight">\(r\)</span>.</p></li>
+</ul>
+</li>
+<li><p>Vector quantities:</p>
+<ul>
+<li><p>Bias for each component, speed, and direction:
+<span class="math notranslate nohighlight">\(b_u,b_v,b_U,b_\phi\)</span>.</p></li>
+<li><p>RMSD for each component, speed, and direction:
+<span class="math notranslate nohighlight">\(RMSD_u,RMSD_v,RMSD_U,RMSD_\phi\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(vRMDS\)</span>.</p></li>
+<li><p>Pearson correlation coefficient for each component and speed:
+<span class="math notranslate nohighlight">\(r_u,r_v,r_U\)</span>.</p></li>
+<li><p>Jammalamadaka–Sarma circular-circular correlation coefficient for
+direction: <span class="math notranslate nohighlight">\(\rho_{c,\phi}\)</span>.</p></li>
+</ul>
+</li>
+</ul>
 </section>
-<section id="id3">
-<h3><span class="section-number">3.2.2.3. </span>Detailed methodology<a class="headerlink" href="#id3" title="Link to this heading"></a></h3>
-</section>
-<section id="id4">
-<h3><span class="section-number">3.2.2.4. </span>Performance metrics<a class="headerlink" href="#id4" title="Link to this heading"></a></h3>
-</section>
-<section id="id5">
-<h3><span class="section-number">3.2.2.5. </span>Expected output<a class="headerlink" href="#id5" title="Link to this heading"></a></h3>
-</section>
-</section>
-<section id="spatial-variances">
-<h2><span class="section-number">3.2.3. </span>Spatial variances<a class="headerlink" href="#spatial-variances" title="Link to this heading"></a></h2>
-<section id="id6">
-<h3><span class="section-number">3.2.3.1. </span>Short description<a class="headerlink" href="#id6" title="Link to this heading"></a></h3>
-</section>
-<section id="id7">
-<h3><span class="section-number">3.2.3.2. </span>Description of inputs<a class="headerlink" href="#id7" title="Link to this heading"></a></h3>
-</section>
-<section id="id8">
-<h3><span class="section-number">3.2.3.3. </span>Detailed methodology<a class="headerlink" href="#id8" title="Link to this heading"></a></h3>
-</section>
-<section id="id9">
-<h3><span class="section-number">3.2.3.4. </span>Performance metrics<a class="headerlink" href="#id9" title="Link to this heading"></a></h3>
-</section>
-<section id="id10">
-<h3><span class="section-number">3.2.3.5. </span>Expected output<a class="headerlink" href="#id10" title="Link to this heading"></a></h3>
-</section>
-</section>
-<section id="summary">
-<h2><span class="section-number">3.2.4. </span>Summary<a class="headerlink" href="#summary" title="Link to this heading"></a></h2>
-<p>The source contains this heading without summary text.</p>
+<section id="spectral-analysis">
+<h2><span class="section-number">6.2.4. </span>Spectral Analysis<a class="headerlink" href="#spectral-analysis" title="Link to this heading"></a></h2>
+<p><strong>Purpose</strong></p>
+<p>Spectral analysis is a validation tool used to assess the spatial scales
+resolved by the retrievals
+(<a class="reference internal" href="#ref-vogelzang-spectral"><span class="std std-ref">Vogelzang et al. (2011)</span></a>).</p>
+<p><strong>Inputs</strong></p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(M\)</span> sets of <span class="math notranslate nohighlight">\(N\)</span> wind-component samples each, denoted
+<span class="math notranslate nohighlight">\(w_{ij}\)</span>, <span class="math notranslate nohighlight">\(i=1,\ldots,M\)</span>, <span class="math notranslate nohighlight">\(j=1,\ldots,N\)</span>.</p></li>
+</ul>
+<p><strong>Procedure</strong></p>
+<ul>
+<li><p>Check for missing values in each set. Remove sets with missing values or fill
+the gaps using an interpolation procedure.</p></li>
+<li><p>Compute the power spectral density (PSD):</p>
+<div class="math notranslate nohighlight" id="equation-eq-cvtdd-spectral-density">
+<span class="eqno">(6.12)<a class="headerlink" href="#equation-eq-cvtdd-spectral-density" title="Link to this equation"></a></span>\[\begin{split}\psi^{i}_{w,j}=\psi^{i}_{w,k_j}=
+\begin{cases}
+\dfrac{\Delta}{N}\left|\hat{w}(k_j)\right|^2,
+  &amp; j=0\ \text{or}\ j=\dfrac{N}{2},\\[4pt]
+\dfrac{\Delta}{N}\left(
+  \left|\hat{w}(k_j)\right|^2+
+  \left|\hat{w}(k_{-j})\right|^2
+\right),
+  &amp; j=1,\ldots,\dfrac{N}{2}-1,
+\end{cases}
+\qquad i=1,\ldots,M .\end{split}\]</div>
+<p>Here, <span class="math notranslate nohighlight">\(\hat{w}\)</span> is the Fast-Fourier transform (FFT) of the (vector)
+component <span class="math notranslate nohighlight">\(w\)</span>, <span class="math notranslate nohighlight">\(\Delta\)</span> is the spacing, and <span class="math notranslate nohighlight">\(k_j\)</span> is the
+wavenumber.</p>
+</li>
+<li><p>Average the PSD from each set:</p>
+<div class="math notranslate nohighlight" id="equation-eq-cvtdd-average-spectral-density">
+<span class="eqno">(6.13)<a class="headerlink" href="#equation-eq-cvtdd-average-spectral-density" title="Link to this equation"></a></span>\[\Psi_{w,j}=\frac{1}{M}\sum_{i=1}^{M}\psi^{i}_{w,j} .\]</div>
+<p>PSD units are the squared units of the analyzed variable multiplied by the
+spatial sampling interval <span class="math notranslate nohighlight">\(\Delta\)</span> (in metres). For wind components
+and LoS surface currents, whose units are <span class="math notranslate nohighlight">\(\mathrm{m\,s^{-1}}\)</span>, PSD
+units are <span class="math notranslate nohighlight">\(\mathrm{m^3\,s^{-2}}\)</span>; for SWH, whose units are
+<span class="math notranslate nohighlight">\(\mathrm{m}\)</span>, PSD units are <span class="math notranslate nohighlight">\(\mathrm{m^3}\)</span>.</p>
+</li>
+</ul>
+<p><strong>Metrics</strong></p>
+<p>In accordance with the Guide to the Expression of Uncertainty in Measurement
+(GUM) Type A evaluation principles for spectral estimators, the standard
+uncertainty <span class="math notranslate nohighlight">\(u(\Psi_{w,j})\)</span> of the averaged PSD is driven by the number
+of independent scenes <span class="math notranslate nohighlight">\(M\)</span>. Assuming a <span class="math notranslate nohighlight">\(\chi^2\)</span> distribution with
+<span class="math notranslate nohighlight">\(2M\)</span> degrees of freedom for each spectral bin <span class="math notranslate nohighlight">\(j\)</span>, the relative
+standard uncertainty is:</p>
+<div class="math notranslate nohighlight" id="equation-eq-cvtdd-psd-uncertainty">
+<span class="eqno">(6.14)<a class="headerlink" href="#equation-eq-cvtdd-psd-uncertainty" title="Link to this equation"></a></span>\[\frac{u(\Psi_{w,j})}{\Psi_{w,j}}=\frac{1}{\sqrt{M}} .\]</div>
+<p><strong>Outputs</strong></p>
+<ul class="simple">
+<li><p>PSD for each wind component: <span class="math notranslate nohighlight">\(\Psi_{u,j},\Psi_{v,j}\)</span>.</p></li>
+<li><p>Associated standard-uncertainty profiles derived from
+<a class="reference internal" href="#equation-eq-cvtdd-psd-uncertainty">(6.14)</a>.</p></li>
+</ul>
+<p class="rubric">References</p>
+<p id="ref-vogelzang-spatial-variance">Vogelzang, J., G. P. King, and A. Stoffelen (2015). “Spatial variances of wind
+fields and their relation to second-order structure functions and spectra.”
+<em>Journal of Geophysical Research: Oceans</em>, 120(2), 1048–1064.
+<a class="reference external" href="https://doi.org/10.1002/2014JC010239">doi:10.1002/2014JC010239</a>.</p>
+<p id="ref-stoffelen-triple-collocation">Stoffelen, A. (1998). “Toward the true near-surface wind speed: Error modeling
+and calibration using triple collocation.” <em>Journal of Geophysical Research:
+Oceans</em>, 103(C4), 7755–7766.
+<a class="reference external" href="https://doi.org/10.1029/97JC03180">doi:10.1029/97JC03180</a>.</p>
+<p id="ref-vogelzang-quadruple-collocation">Vogelzang, J., and A. Stoffelen (2021). “Quadruple collocation analysis of
+in-situ, scatterometer, and NWP winds.” <em>Journal of Geophysical Research:
+Oceans</em>, 126(5), e2021JC017189.
+<a class="reference external" href="https://doi.org/10.1029/2021JC017189">doi:10.1029/2021JC017189</a>.</p>
+<p id="ref-vogelzang-quintuple-collocation">Vogelzang, J., and A. Stoffelen (2022). “On the accuracy and consistency of
+quintuple collocation analysis of in situ, scatterometer, and NWP winds.”
+<em>Remote Sensing</em>, 14(18), 4552.
+<a class="reference external" href="https://doi.org/10.3390/rs14184552">doi:10.3390/rs14184552</a>.</p>
+<p id="ref-vogelzang-spectral">Vogelzang, J., A. Stoffelen, A. Verhoef, and J. Figa-Saldaña (2011). “On the
+quality of high-resolution scatterometer winds.” <em>Journal of Geophysical
+Research: Oceans</em>, 116(C10).
+<a class="reference external" href="https://doi.org/10.1029/2010JC006640">doi:10.1029/2010JC006640</a>.</p>
 </section>
 </section>
 
@@ -258,8 +658,8 @@ outputs.</p>
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="alg-01-calibration.html" class="btn btn-neutral float-left" title="3.1. Selected Calibration methods" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="04_uncertainty_analysis.html" class="btn btn-neutral float-right" title="4. Uncertainty analysis" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="alg-01-calibration.html" class="btn btn-neutral float-left" title="6.1. Selected Calibration methods" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="04_uncertainty_analysis.html" class="btn btn-neutral float-right" title="7. Uncertainty analysis" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

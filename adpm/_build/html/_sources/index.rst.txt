@@ -35,8 +35,7 @@ Calibration and Validation Algorithm Theoretical Basis Document
    :width: 20%
    :align: center
 
-Authors and approval
---------------------
+.. rubric:: Authors and approval
 
 The LaTeX cover lists author placeholders rather than individual names.
 
@@ -59,8 +58,7 @@ The LaTeX cover lists author placeholders rather than individual names.
 
 Approval and authorisation records are not specified in the source.
 
-Change records
---------------
+.. rubric:: Change records
 
 .. list-table::
    :header-rows: 1
@@ -98,5 +96,8 @@ Change records
 
    01_introduction
    02_processing_model
+   03_lband_sar_datasets
+   04_auxiliary_datasets
+   05_reference_datasets
    03_algorithms
    04_uncertainty_analysis

@@ -1,0 +1,1056 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>5. Reference datasets description &mdash; RL2Ocean Calibration and Validation ATBD</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=f2a433a1"></script>
+      <script src="_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+      <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+      <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="6. Algorithms description" href="03_algorithms.html" />
+    <link rel="prev" title="4. Auxiliary datasets description" href="04_auxiliary_datasets.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            RL2Ocean Calibration and Validation ATBD
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="01_introduction.html">1. Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="01_introduction.html#purpose-and-scope">1.1. Purpose and scope</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01_introduction.html#cal-val-context">1.2. Cal/Val context</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01_introduction.html#l2-product-scope">1.3. L2 product scope</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01_introduction.html#cal-val-objectives-and-performance">1.4. Cal/Val objectives and performance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01_introduction.html#atbd-purpose">1.5. ATBD purpose</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01_introduction.html#applicable-and-reference-documents">1.6. Applicable and reference documents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01_introduction.html#acronyms">1.7. Acronyms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01_introduction.html#definitions-and-conventions">1.8. Definitions and conventions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="02_processing_model.html">2. Processing model and data flow</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="02_processing_model.html#overview-and-top-down-decomposition">2.1. Overview and top-down decomposition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02_processing_model.html#pre-launch-phase-d">2.2. Pre-launch phase (D)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02_processing_model.html#commissioning-phase-ioc-or-e1">2.3. Commissioning phase (IOC or E1)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02_processing_model.html#exploitation-phase-e2">2.4. Exploitation phase (E2)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02_processing_model.html#end-to-end-data-flow">2.5. End-to-end data flow</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="03_lband_sar_datasets.html">3. L-band SAR datasets description</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="03_lband_sar_datasets.html#generated-datasets">3.1. Generated datasets</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="03_lband_sar_datasets.html#reconditioned">3.1.1. Reconditioned</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03_lband_sar_datasets.html#emulated">3.1.2. Emulated</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03_lband_sar_datasets.html#simulated">3.1.3. Simulated</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="03_lband_sar_datasets.html#third-party-datasets">3.2. Third-party datasets</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="03_lband_sar_datasets.html#alos">3.2.1. ALOS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03_lband_sar_datasets.html#alos-2">3.2.2. ALOS-2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03_lband_sar_datasets.html#alos-4">3.2.3. ALOS-4</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03_lband_sar_datasets.html#saocom">3.2.4. SAOCOM</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03_lband_sar_datasets.html#nisar">3.2.5. NiSAR</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="04_auxiliary_datasets.html">4. Auxiliary datasets description</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">5. Reference datasets description</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#ocean-surface-vector-stress">5.1. Ocean Surface Vector Stress</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#wind-vector">5.1.1. Wind vector</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#c-band-sar">5.1.1.1. C-band SAR</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#numerical-prediction-model">5.1.1.2. Numerical Prediction Model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#in-situ-observations">5.1.1.3. In-Situ Observations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#scatterometers">5.1.1.4. Scatterometers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#radiometers">5.1.1.5. Radiometers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#plane">5.1.1.6. Plane</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#wind-stress">5.1.2. Wind stress</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#sea-state">5.2. Sea State</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#total-significant-wave-height">5.2.1. Total significant wave height</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#nwp">5.2.1.1. NWP</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#c-band-sar-1">5.2.1.2. C-band SAR</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#in-situ-observations-1">5.2.1.3. In-Situ Observations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sea-ice-maps">5.2.1.4. Sea-ice maps</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#altimeters">5.2.1.5. Altimeters</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#mean-period-wind-sea">5.2.2. Mean period wind-sea</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#first-moment-wave-period">5.2.3. First moment wave period</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#second-moment-wave-period">5.2.4. Second moment wave period</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#wave-height-swell-dominant-system">5.2.5. Wave height swell dominant system</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#wave-height-swell-secondary-system">5.2.6. Wave height swell secondary system</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#significant-wave-height-wind-sea">5.2.7. Significant wave height wind-sea</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#mean-period-wind-sea-1">5.2.8. Mean period wind-sea</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#wave-direction">5.2.9. Wave direction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#wave-directional-energy-spectrum">5.2.10. Wave directional energy spectrum</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#line-of-sight-currents">5.3. Line-of-sight currents</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#los-wave-doppler">5.3.1. LoS wave Doppler</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#los-surface-current-component">5.3.2. LoS surface current component</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#nwp-1">5.3.2.1. NWP</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#c-band-sar-2">5.3.2.2. C-band SAR</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#hf-radars">5.3.2.3. HF radars</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#in-situ-observations-copernicus-marine">5.3.2.4. In-Situ Observations (Copernicus Marine)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#altimeters-1">5.3.2.5. Altimeters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#iwrap">5.3.2.6. IWRAP</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="03_algorithms.html">6. Algorithms description</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="alg-01-calibration.html">6.1. Selected Calibration methods</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="alg-01-calibration.html#rose-l-l1-slc-products">6.1.1. ROSE-L L1 SLC products</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#short-description">6.1.1.1. Short description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#description-of-inputs">6.1.1.2. Description of inputs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#detailed-methodology">6.1.1.3. Detailed methodology</a></li>
+<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#performance-metrics">6.1.1.4. Performance metrics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#expected-output">6.1.1.5. Expected output</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="alg-01-calibration.html#numerical-weather-prediction-ocean-calibration-of-sar-sigma-0">6.1.2. Numerical Weather Prediction Ocean Calibration of SAR <span class="math notranslate nohighlight">\(\sigma_0\)</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="alg-01-calibration.html#gmf-tuning">6.1.3. GMF tuning</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id1">6.1.3.1. Short description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id2">6.1.3.2. Description of inputs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id3">6.1.3.3. Detailed methodology</a></li>
+<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id4">6.1.3.4. Performance metrics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id5">6.1.3.5. Expected output</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="alg-01-calibration.html#mtf-tuning">6.1.4. MTF tuning</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id6">6.1.4.1. Short description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id7">6.1.4.2. Description of inputs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id8">6.1.4.3. Detailed methodology</a></li>
+<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id9">6.1.4.4. Performance metrics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id10">6.1.4.5. Expected output</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="alg-01-calibration.html#summary">6.1.5. Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="alg-02-validation.html">6.2. Validation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="alg-02-validation.html#spatial-variance">6.2.1. Spatial Variance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="alg-02-validation.html#triple-collocation">6.2.2. Triple Collocation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="alg-02-validation.html#one-to-one-validation">6.2.3. One-to-One Validation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="alg-02-validation.html#spectral-analysis">6.2.4. Spectral Analysis</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="04_uncertainty_analysis.html">7. Uncertainty analysis</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="04_uncertainty_analysis.html#introduction">7.1. Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04_uncertainty_analysis.html#the-gum-principles-a-review">7.2. The GUM Principles: A review</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="04_uncertainty_analysis.html#the-international-vocabulary-of-metrology-vim">7.2.1. The International Vocabulary of Metrology (VIM)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04_uncertainty_analysis.html#guide-to-the-expression-of-uncertainty-in-measurement-gum">7.2.2. Guide to the Expression of Uncertainty in Measurement (GUM)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04_uncertainty_analysis.html#quality-assurance-framework-for-earth-observation-qa4eo">7.2.3. Quality Assurance Framework for Earth Observation (QA4EO)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="04_uncertainty_analysis.html#product-specific-uncertainty-estimation">7.3. Product-specific uncertainty estimation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="04_uncertainty_analysis.html#azimuth-wavelength-cutoff">7.3.1. Azimuth wavelength cutoff</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04_uncertainty_analysis.html#macs">7.3.2. MACS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04_uncertainty_analysis.html#imacs">7.3.3. iMACS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04_uncertainty_analysis.html#dca">7.3.4. DCA</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04_uncertainty_analysis.html#texture-based-azimuth-cutoff">7.3.5. Texture-based azimuth cutoff</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04_uncertainty_analysis.html#rvl">7.3.6. RVL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04_uncertainty_analysis.html#inverse-wave-age">7.3.7. Inverse Wave Age</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04_uncertainty_analysis.html#wind-products">7.3.8. Wind products</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="04_uncertainty_analysis.html#wind-speed-wind-stress-and-hub-height-wind-speed">7.3.8.1. Wind speed, wind stress, and hub height wind speed</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="04_uncertainty_analysis.html#sea-state-products">7.3.9. Sea-state products</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04_uncertainty_analysis.html#line-of-sight-current-products">7.3.10. Line-of-sight current products</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="04_uncertainty_analysis.html#line-of-sight-wave-doppler-and-line-of-sight-surface-current-component">7.3.10.1. Line-of-sight wave Doppler and line-of-sight surface current component</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="04_uncertainty_analysis.html#summary">7.3.11. Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="04_uncertainty_analysis.html#references">7.4. References</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">RL2Ocean Calibration and Validation ATBD</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active"><span class="section-number">5. </span>Reference datasets description</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/05_reference_datasets.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="reference-datasets-description">
+<span id="sec-ref"></span><h1><span class="section-number">5. </span>Reference datasets description<a class="headerlink" href="#reference-datasets-description" title="Link to this heading"></a></h1>
+<p>In <code class="docutils literal notranslate"><span class="pre">l2o-qc</span></code>, reference data are used for both calibration and validation of SAR-derived geophysical parameters. The L2 calibration process is exclusively implemented through Numerical Weather Prediction Ocean Calibration (NOC), which is specifically applied to the wind vector under the OSVS thematic area. Validation is performed against multiple independent reference sources for all thematic areas. The following sections describe the reference datasets used for calibration and validation purposes.</p>
+<section id="ocean-surface-vector-stress">
+<h2><span class="section-number">5.1. </span>Ocean Surface Vector Stress<a class="headerlink" href="#ocean-surface-vector-stress" title="Link to this heading"></a></h2>
+<section id="wind-vector">
+<h3><span class="section-number">5.1.1. </span>Wind vector<a class="headerlink" href="#wind-vector" title="Link to this heading"></a></h3>
+<section id="c-band-sar">
+<h4><span class="section-number">5.1.1.1. </span>C-band SAR<a class="headerlink" href="#c-band-sar" title="Link to this heading"></a></h4>
+<section id="sentinel-1-l2-ocn-owi">
+<h5>Sentinel-1 L2 OCN - OWI<a class="headerlink" href="#sentinel-1-l2-ocn-owi" title="Link to this heading"></a></h5>
+<p><strong>Description:</strong></p>
+<p>Ocean Wind field (OWI) component of the Sentinel-1 Level-2 Ocean (L2_OCN) product, providing 10 m neutral wind speed and direction on a regular grid, derived from the Level-1 SAR backscatter using a CMOD5.N geophysical model function. The OWI component is available in Sentinel-1 Interferometric Wide (IW), Extra Wide (EW), and Stripmap (SM) acquisition modes.</p>
+<p>In general, L1 and L2 Sentinel-1 products are generated by the Instrument Processing Facility (IPF) and carry an <code class="docutils literal notranslate"><span class="pre">ipf_version</span></code> with them to distinguish between different processing versions.</p>
+<p><strong>Characteristics:</strong></p>
+<p>land pixels are masked in the source product. The OWI product is typically delivered at an 1x1 km grid for all acquisition modes. The nominal swath widths are mode dependent with IW <span class="math notranslate nohighlight">\(\sim 250\)</span> km, EW <span class="math notranslate nohighlight">\(\sim 400\)</span> km, and SM <span class="math notranslate nohighlight">\(\sim 80\)</span> km.</p>
+<p><strong>Data quality:</strong></p>
+<p>The OWI product carries a <code class="docutils literal notranslate"><span class="pre">wind_quality</span></code> flag and an <code class="docutils literal notranslate"><span class="pre">inversion_quality</span></code> flag. <code class="docutils literal notranslate"><span class="pre">inversion_quality</span></code> is related to the inversion, which depends on the NRCS, incidence angle, azimuth look angle and ancillary wind speed and direction. The <code class="docutils literal notranslate"><span class="pre">inversion_quality</span></code> flag indicates the consistency between SAR and ancillary winds. The <code class="docutils literal notranslate"><span class="pre">wind_quality</span></code> flag is more general including both the inversion quality as well as the geophysical quality for the whole product.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">inversion_quality</span></code> flag has the following values:</p>
+<ul class="simple">
+<li><p>0: high quality</p></li>
+<li><p>1: medium quality</p></li>
+<li><p>2: low quality</p></li>
+</ul>
+<p>The <code class="docutils literal notranslate"><span class="pre">wind_quality</span></code> flag has had several different classifications. Currently (<code class="docutils literal notranslate"><span class="pre">ipf_version</span></code> <span class="math notranslate nohighlight">\(= 4.03\)</span>) it ranges from 0 – 4, where:</p>
+<ul class="simple">
+<li><p>0: no data</p></li>
+<li><p>1: bad</p></li>
+<li><p>2: suspect</p></li>
+<li><p>3: acceptable</p></li>
+<li><p>4: good.</p></li>
+</ul>
+<p>In the past (<code class="docutils literal notranslate"><span class="pre">ipf_version</span></code> <span class="math notranslate nohighlight">\(&lt;4.03\)</span>), its range ran from 0 – 3, where:</p>
+<ul class="simple">
+<li><p>0: high quality</p></li>
+<li><p>1: medium quality</p></li>
+<li><p>2: low quality</p></li>
+<li><p>3: bad quality.</p></li>
+</ul>
+<p>To avoid interpreting the wrong meaning, <code class="docutils literal notranslate"><span class="pre">wq_flag_meanings</span></code> is read from the metadata before filtering.</p>
+<p>Only high/medium (acceptable/good) flags are accepted. In addition, data points are rejected when both flags are NaN.</p>
+<p><strong>Availability:</strong></p>
+<p>3 April 2014 - present with global coverage (6 days revisit rate).</p>
+<p><strong>Dataset acquisition:</strong></p>
+<p>Copernicus Data Space Ecosystem (<a class="reference external" href="https://dataspace.copernicus.eu/">https://dataspace.copernicus.eu/</a>); OData catalogue/download API at <a class="reference external" href="https://catalogue.dataspace.copernicus.eu/odata/v1/Products">https://catalogue.dataspace.copernicus.eu/odata/v1/Products</a>; free registration required.</p>
+</section>
+<section id="radarsat-2-wind">
+<h5>RADARSAT-2 Wind<a class="headerlink" href="#radarsat-2-wind" title="Link to this heading"></a></h5>
+<p><strong>Description:</strong></p>
+<p>An independently-derived high-resolution sea surface wind speed product distributed by NOAA/NCEI, derived from RADARSAT-2 C-band SAR backscatter. Wind speed at 10m height is retrieved by inverting the CMOD4 geophysical model function.</p>
+<p><strong>Characteristics:</strong></p>
+<p>wind speed only (sub-kilometer pixel resolution). The accompanying direction field is the NWP-model direction used to resolve the CMOD4 180<span class="math notranslate nohighlight">\(^\circ\)</span> ambiguity, not an independently retrieved SAR direction.</p>
+<p>Two distinct filename/metadata eras exist in the archive (pre- and post-2024).</p>
+<p><strong>Data quality:</strong></p>
+<p>Post-2024 RADARSAT-2 wind files carry <code class="docutils literal notranslate"><span class="pre">pixel_level_quality_flags</span></code> parameter that can be used to mask land/ice/quality. A cell is deemed valid when this flag equals 5 (“valid wind in valid water region”). Pre-2024 files only contain a coarser mask/ice-mask combination, which is used as fallback <code class="docutils literal notranslate"><span class="pre">mask==-1</span> <span class="pre">&amp;</span> <span class="pre">icemask==1</span></code>. All other cells are given <code class="docutils literal notranslate"><span class="pre">NaN</span></code> as value.</p>
+<p><strong>Availability:</strong></p>
+<p>May 2014 - present (<span class="math notranslate nohighlight">\(\sim 1\)</span> month latency). The available data via NOAA is heavily centered around the polar regions with most occurrences near Alaska and the Bering strait as can be seen in Figure <a class="reference internal" href="#fig-radarsat2-coverage"><span class="std std-numref">Fig. 5.1</span></a>.</p>
+<figure class="align-default" id="fig-radarsat2-coverage">
+<a class="reference internal image-reference" href="_images/radarsat2_global_coverage_density.png"><img alt="_images/radarsat2_global_coverage_density.png" src="_images/radarsat2_global_coverage_density.png" style="width: 100%;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Fig. 5.1 </span><span class="caption-text">Coverage of RADARSAT-2 high resolution sea surface winds via the NOAA/NCEI THREDDS archive. The center locations of all 32742 available RADARSAT-2 products from May 2014 - July 2026 have been plotted.</span><a class="headerlink" href="#fig-radarsat2-coverage" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p><strong>Dataset acquisition:</strong></p>
+<p>NOAA NCEI THREDDS catalogue, <a class="reference external" href="https://www.ncei.noaa.gov/thredds-ocean/catalog/sar-winds/radarsat2/catalog.html">https://www.ncei.noaa.gov/thredds-ocean/catalog/sar-winds/radarsat2/catalog.html</a> (public, no authentication); per-granule bounding boxes are available via THREDDS’ NCML metadata service, avoiding full-file downloads for non-overlapping scenes.</p>
+</section>
+</section>
+<section id="numerical-prediction-model">
+<h4><span class="section-number">5.1.1.2. </span>Numerical Prediction Model<a class="headerlink" href="#numerical-prediction-model" title="Link to this heading"></a></h4>
+<section id="era5-reanalysed-wind">
+<h5>ERA5 Reanalysed wind<a class="headerlink" href="#era5-reanalysed-wind" title="Link to this heading"></a></h5>
+<p><strong>Description:</strong></p>
+<p>hourly, global 10 m wind field from ECMWF’s ERA5 atmospheric reanalysis, produced under the Copernicus Climate Change Service (C3S) and distributed via the Copernicus Climate Data Store (CDS). Used as an independent, model-based reference wind field, collocated via bilinear spatial and hyperbolic temporal interpolation rather than point/swath matching.</p>
+<p><strong>Characteristics:</strong></p>
+<p>global regular latitude/longitude grid at 0.25° spacing, hourly output. The 10 m zonal and meridional wind components (<span class="math notranslate nohighlight">\(u_{10}\)</span>, <span class="math notranslate nohighlight">\(v_{10}\)</span>) are retrieved from the <code class="docutils literal notranslate"><span class="pre">reanalysis-era5-single-levels</span></code> dataset, together with a land-sea mask (<code class="docutils literal notranslate"><span class="pre">lsm</span></code>); wind speed and direction are derived after interpolation to the query location.</p>
+<p><strong>Data quality:</strong></p>
+<p>grid cells/query points with <span class="math notranslate nohighlight">\(\mathrm{lsm} &gt; 0.5\)</span> (land) are excluded before collocation. ERA5 is documented and evaluated in (Hersbach et al. 2020); an independent characterisation of its 10 m wind field (Belmonte Rivas and Stoffelen 2019) reports mean wind biases of up to 0.5 m/s in the zonal and meridional components, stable over time (interannual variability <span class="math notranslate nohighlight">\(\sim\)</span>0.1 m/s), and roughly 20% lower instantaneous RMS wind speed error than the preceding ERA-Interim reanalysis.</p>
+<p><strong>Availability:</strong></p>
+<p>1940 - present with global coverage. A preliminary near-real-time extension (ERA5T, <span class="math notranslate nohighlight">\(\sim\)</span>5 day latency) is later superseded by the quality-controlled final release (<span class="math notranslate nohighlight">\(\sim\)</span>3 month latency).</p>
+<p><strong>Dataset acquisition:</strong></p>
+<p>CDS dataset <code class="docutils literal notranslate"><span class="pre">reanalysis-era5-single-levels</span></code>, via the <code class="docutils literal notranslate"><span class="pre">cdsapi</span></code> Python client; requires free CDS registration, with the API key stored in <code class="docutils literal notranslate"><span class="pre">~/.cdsapirc</span></code>.</p>
+</section>
+</section>
+<section id="in-situ-observations">
+<h4><span class="section-number">5.1.1.3. </span>In-Situ Observations<a class="headerlink" href="#in-situ-observations" title="Link to this heading"></a></h4>
+<section id="ecmwf-mars-archive">
+<h5>ECMWF MARS archive<a class="headerlink" href="#ecmwf-mars-archive" title="Link to this heading"></a></h5>
+<p><strong>Description:</strong></p>
+<p>Buoy observations relayed onto the WMO Global Telecommunication System (GTS) and archived by ECMWF’s Meteorological Archival and Retrieval System (MARS), retrieved with <code class="docutils literal notranslate"><span class="pre">obstype=181/182</span></code> (BUFR moored and drifting buoys respectively). Relevant variables are near-surface wind speed (<code class="docutils literal notranslate"><span class="pre">WSPD</span></code>) and direction (<code class="docutils literal notranslate"><span class="pre">WDIR</span></code>). As default, <code class="docutils literal notranslate"><span class="pre">l2o-qc</span></code> validates against GTS. Copernicus Marine in-situ data (see <a class="reference internal" href="#subpar-cmems-insitu"><span class="std std-ref">Copernicus Marine</span></a>) can be used as alternative or a waterfall combining both: the waterfall downloads both sources for the full recipe bounding box and window, then at collocation-tree build time drops any Copernicus Marine station whose platform ID GTS already reported for that window, preferring GTS’s value wherever GTS itself reports.</p>
+<p><strong>Characteristics:</strong></p>
+<p>point observations at native platform sampling rate ranging from once every 3-hrs to every 6-minutes. Default collocation in <code class="docutils literal notranslate"><span class="pre">l2o-qc</span></code> uses the point vs layer scheme with aggregation windows of <span class="math notranslate nohighlight">\(\pm\)</span>30 min / 5 km default radii (user adjustable via the <code class="docutils literal notranslate"><span class="pre">.yaml</span></code> recipe file).</p>
+<p><strong>Data quality:</strong></p>
+<p>Individual GTS BUFR reports carry no per-observation quality flag, because GTS requires the data processing center that owns a buoy to run automatic real-time quality control before an observation is transmitted onto the GTS (Panel 2011). The mandated real-time checks include, among others:</p>
+<ul class="simple">
+<li><p>Gross error checks against fixed physical limits. For wind, 0–100 m/s (speed) and 0–360<span class="math notranslate nohighlight">\(^\circ\)</span> (direction).</p></li>
+<li><p>Climatological limit checks against operator- or International Comprehensive Ocean-Atmosphere Data Set (ICOADS)-supplied bounds for the platform’s location and season.</p></li>
+<li><p>Land/sea test; any observations that appear on land are rejected.</p></li>
+<li><p>Location sanity checks (rejecting <span class="math notranslate nohighlight">\((0,0)\)</span>, <span class="math notranslate nohighlight">\(\pm180^\circ\)</span>, <span class="math notranslate nohighlight">\(\pm90^\circ\)</span> sentinel coordinates; a drifting buoy’s position older than 48 hours, or a moored buoy’s position older than its own (re-)deployment age).</p></li>
+<li><p>Checksum/Cyclic Redundancy Checks (CRC) validation of the transmision link between platform, satellite, and ground station.</p></li>
+<li><p>Duplicate/near-duplicate observation suppression, and cascading rejection when an associated depth level or compensating sensor itself fails QC.</p></li>
+</ul>
+<p>In addition to the quality checks performed by the owners of the platforms before ingestion into the GTS database, there are delayed mdoe quality control guidelines in place. Principle meteorological and oceanographic centers, including ECMWF, compare buoy reports against NWP model analysis to check for erroneous or biased data, feeding corrections back to the platform operators (Panel 2011).</p>
+<p><strong>Availability:</strong></p>
+<p>The ECMWF MARS archive has archived data from 28-11-2016 - present.</p>
+<p><strong>Dataset acquisition:</strong></p>
+<p>ECMWF MARS archive (<a class="reference external" href="https://www.ecmwf.int/en/forecasts/access-forecasts/access-archive-datasets">https://www.ecmwf.int/en/forecasts/access-forecasts/access-archive-datasets</a>), <code class="docutils literal notranslate"><span class="pre">obstype=181/182</span></code> (BUFR moored and drifting buoys), retrieved via the <code class="docutils literal notranslate"><span class="pre">ecmwf-api-client</span></code> Python package (<code class="docutils literal notranslate"><span class="pre">ecmwfapi.ECMWFService</span></code>); credentials read from <code class="docutils literal notranslate"><span class="pre">~/.ecmwfapirc</span></code> (ECMWF’s standard Web API key file), obtained through an ECMWF Member/Co-operating-State-affiliated account. The request shape is day-based and global, meaning that each retrieval contains all wind, wave, and currents sections a given buoy reported for that day. Data is provided in daily BUFR files.</p>
+</section>
+<section id="copernicus-marine">
+<span id="subpar-cmems-insitu"></span><h5>Copernicus Marine<a class="headerlink" href="#copernicus-marine" title="Link to this heading"></a></h5>
+<p><strong>Description:</strong></p>
+<p>Dataset ID INSITU_GLO_PHYBGCWAV_DISCRETE_MYNRT_013_030, which contains in-situ observations. Relevant platforms reporting near-surface wind speed (<code class="docutils literal notranslate"><span class="pre">WSPD</span></code>) and direction (<code class="docutils literal notranslate"><span class="pre">WDIR</span></code>) are moored buoys, drifting buoys, ferryboxes, and tidal gauges.</p>
+<p><strong>Characteristics:</strong></p>
+<p>point observations at native platform sampling rate, which is typically hourly or every 10-minutes. Default collocation in <code class="docutils literal notranslate"><span class="pre">l2o-qc</span></code> uses point vs layer collocation. The aggregation windows, which are user adjustable via the <code class="docutils literal notranslate"><span class="pre">.yaml</span></code> file, utilize <span class="math notranslate nohighlight">\(\pm\)</span>30 min / 5 km aggregation radii.</p>
+<p><strong>Data quality:</strong></p>
+<p>Copernicus Marine in situ Thematic Assembly Centre (TAC) has no commitment to manage in situ meteorological observations. Reported quality flags are kept in the NetCDF files, with no additional quality control (Wehde et al. 2025). The QC flag ranges from 0 – 9 (Copernicus In Situ Tac Data Management Team 2025):</p>
+<ul class="simple">
+<li><p>0: No QC was performed</p></li>
+<li><p>1: Good data</p></li>
+<li><p>2: Probably good data</p></li>
+<li><p>3: Bad data although potentially correctable</p></li>
+<li><p>4: Bad data</p></li>
+<li><p>5: Value changed</p></li>
+<li><p>6: Value below detection/quantification</p></li>
+<li><p>7: Nominal value (e.g. reported rather than observed value like instrument target depth)</p></li>
+<li><p>8: Interpolated value</p></li>
+<li><p>9: Missing value</p></li>
+</ul>
+<p>Due to the lack of additional quality control, buoy data from the ECMWF MARS archive is preferred.</p>
+<p><strong>Availability:</strong></p>
+<p>Platform dependent, the Copernicus marine environment monitoring services (CMEMS) dataset provides both historical data per platform and recent data. Not all platforms have both <code class="docutils literal notranslate"><span class="pre">WSPD</span></code> and <code class="docutils literal notranslate"><span class="pre">WDIR</span></code> available. Geographical coverage in 2026 can be seen in Figure <a class="reference internal" href="#fig-in-situ-wind-coverage"><span class="std std-numref">Fig. 5.2</span></a>.</p>
+<figure class="align-default" id="fig-in-situ-wind-coverage">
+<a class="reference internal image-reference" href="_images/insitu_wind_global_coverage_2026-08-01_2026-08-15.png"><img alt="_images/insitu_wind_global_coverage_2026-08-01_2026-08-15.png" src="_images/insitu_wind_global_coverage_2026-08-01_2026-08-15.png" style="width: 100%;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Fig. 5.2 </span><span class="caption-text">Coverage of Copernicus Marine in-situ platforms that provided wind speed and direction during the first half of August 2026.</span><a class="headerlink" href="#fig-in-situ-wind-coverage" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p><strong>Dataset acquisition:</strong></p>
+<p>Copernicus Marine in-situ dataset (<a class="reference external" href="https://data.marine.copernicus.eu/product/INSITU_GLO_PHYBGCWAV_DISCRETE_MYNRT_013_030/">https://data.marine.copernicus.eu/product/INSITU_GLO_PHYBGCWAV_DISCRETE_MYNRT_013_030/</a>), download via the <code class="docutils literal notranslate"><span class="pre">copernicusmarine</span></code> Python client (free registration).</p>
+</section>
+</section>
+<section id="scatterometers">
+<h4><span class="section-number">5.1.1.4. </span>Scatterometers<a class="headerlink" href="#scatterometers" title="Link to this heading"></a></h4>
+<section id="ascat">
+<h5>ASCAT<a class="headerlink" href="#ascat" title="Link to this heading"></a></h5>
+<p><strong>Description:</strong></p>
+<p>L2 product of 10 m neutral wind speed and direction wind-vector cells (WVCs) retrieved from C-band backscatter measured by the Advanced Scatterometer (ASCAT) aboard MetOp-B and MetOp-C, processed and distributed by EUMETSAT’s Ocean and Sea Ice Satellite Application Facility (OSI-SAF) as product OSI-104 (“ASCAT Wind Product”).</p>
+<p><strong>Characteristics:</strong></p>
+<p>dual fan-beam swath geometry, two <span class="math notranslate nohighlight">\(\sim\)</span>550 km wide swaths either side of the sub-satellite track separated by a <span class="math notranslate nohighlight">\(\sim\)</span>360 km nadir gap; wind-vector cells are provided on a regular along-/across-track grid at 12.5 km spacing. Data are distributed as 2-D swath NetCDF files and flattened to a point-geometry representation before collocation.</p>
+<p><strong>Data quality:</strong></p>
+<p>each WVC carries a bitmask <code class="docutils literal notranslate"><span class="pre">wvc_quality_flag</span></code>; cells for which any of the following bits are set are rejected before collocation:</p>
+<ul class="simple">
+<li><p>some portion of the WVC is over land</p></li>
+<li><p>some portion of the WVC is over ice</p></li>
+<li><p>wind inversion not successful</p></li>
+<li><p>not enough good <span class="math notranslate nohighlight">\(\sigma_0\)</span> measurements for wind retrieval</p></li>
+<li><p>distance to the geophysical model function (GMF) too large</p></li>
+</ul>
+<p>Furthermore, the OSI-SAF ASCAT (Metop-B/C) global 25 km and coastal 12.5 km wind products have been validated using buoys and triple collocation (Verspeek et al. 2019), showing wind quality well within the OSI-SAF product requirements (<span class="math notranslate nohighlight">\(&lt;2\)</span> m/s wind component standard deviation, <span class="math notranslate nohighlight">\(&lt;0.5\)</span> m/s speed bias). Against buoys, speed bias of 0.10/0.08 m/s and u-/v-component standard deviations of 1.62/1.90 (Metop-B) and 1.59/1.89 m/s (Metop-C) were found at 12.5 km. Triple collocation gives scatterometer-perspective errors of 0.62/0.78 (Metop-B) and 0.67/0.78 m/s (Metop-C) in the u-/v-components at 12.5 km (Verspeek et al. 2019).</p>
+<p><strong>Availability:</strong></p>
+<p>MetOp-B (launched 2012) and MetOp-C (launched 2018) provide continuous global coverage.</p>
+<p><strong>Dataset acquisition:</strong></p>
+<p>EUMETSAT Data Store, collection <code class="docutils literal notranslate"><span class="pre">EO:EUM:DAT:METOP:OSI-104</span></code>, via the <code class="docutils literal notranslate"><span class="pre">eumdac</span></code> Python client (free registration).</p>
+</section>
+<section id="hy-2b-hy-2c">
+<h5>HY-2B/HY-2C<a class="headerlink" href="#hy-2b-hy-2c" title="Link to this heading"></a></h5>
+<p><strong>Description:</strong></p>
+<p>10 m wind speed and direction wind-vector cells retrieved from Ku-band backscatter measured by the scatterometers aboard Haiyang-2B (HY-2B) and Haiyang-2C (HY-2C) ocean satellites (CNSA/NSOAS), reprocessed into the same OSI-SAF wind-product format/flag conventions as ASCAT and redistributed via KNMI’s OSI-SAF wind FTP server.</p>
+<p><strong>Characteristics:</strong></p>
+<p>HY-2B/HY-2C carry a Ku-band, wide-swath (<span class="math notranslate nohighlight">\(\sim\)</span>1700 km) pencil-beam scatterometer; wind-vector cells are provided at 25 km spacing/resolution.</p>
+<p><strong>Data quality:</strong></p>
+<p>the same <code class="docutils literal notranslate"><span class="pre">wvc_quality_flag</span></code> bitmask and rejection criteria as ASCAT (see above) apply, capable of flagging rainy WVCs. Furthermore, the OSI-SAF HY-2B and HY-2C wind products have been validated using buoys and triple collocation (Verhoef et al. 2024), showing wind quality well within the OSI-SAF product requirements (<span class="math notranslate nohighlight">\(&lt;2\)</span> m/s wind component standard deviation , <span class="math notranslate nohighlight">\(&lt;0.5\)</span> m/s speed bias). Against buoys, speed bias of -0.09/-0.06 m/s and u-/v-component standard deviations of 1.68/1.64 m/s (HY-2B) and 1.75/1.76 m/s (HY-2C) were found. Triple collocation gives scatterometer-perspective errors of 0.59/0.39 (HY-2B) and 0.81/0.65 (HY-2C) in the u-/v-components (Verhoef et al. 2024).</p>
+<p><strong>Availability:</strong></p>
+<p>HY-2B (launched 2018) and HY-2C (launched 2020) are operational and provide global coverage. However, currently only the most recent 3 days with a <span class="math notranslate nohighlight">\(\sim2.5\)</span> hour latency (rolling window) are automatically available in <code class="docutils literal notranslate"><span class="pre">l2o-qc</span></code>. Data is available in both NetCDF and BUFR format.</p>
+<p><strong>Dataset acquisition:</strong></p>
+<p>OSI-SAF wind FTP server (<code class="docutils literal notranslate"><span class="pre">ftppro.knmi.nl</span></code>), directories <code class="docutils literal notranslate"><span class="pre">/scat/netcdf/hy2b</span></code> and <code class="docutils literal notranslate"><span class="pre">/scat/netcdf/hy2c</span></code>; registered OSI-SAF FTP credentials required. Only a 3-day rolling window is available.</p>
+</section>
+<section id="oceansat-3">
+<h5>Oceansat-3<a class="headerlink" href="#oceansat-3" title="Link to this heading"></a></h5>
+<p><strong>Description:</strong></p>
+<p>10 m sea surface wind speed and direction wind-vector cells retrieved from the Ku-band scatterometer aboard ISRO’s Oceansat-3 (EOS-06), reprocessed into the OSI-SAF wind-product format and redistributed via the same KNMI FTP server as HY-2B/HY-2C.</p>
+<p><strong>Characteristics:</strong></p>
+<p>same 25 km wind-vector-cell spacing and Ku-band, wide-swath pencil-beam geometry as HY-2B/HY-2C.</p>
+<p><strong>Data quality:</strong></p>
+<p>same <code class="docutils literal notranslate"><span class="pre">wvc_quality_flag</span></code>-based rejection criteria as ASCAT/HY-2B/HY-2C. Furthermore, the OSI-SAF Oceansat-3 wind products have been validated using buoys and triple collocation (Verhoef et al. 2024), showing wind quality well within the OSI-SAF product requirements (<span class="math notranslate nohighlight">\(&lt;2\)</span> m/s wind component standard deviation , <span class="math notranslate nohighlight">\(&lt;0.5\)</span> m/s speed bias). Against buoys, speed bias of -0.16 m/s and u/v component standard deviations of 1.72/1.68 m/s were found (Verhoef et al. 2024). Triple collocation gives scatterometer-perspective errors of 0.68/0.54 in the u-/v-components (Verhoef et al. 2024).</p>
+<p><strong>Availability:</strong></p>
+<p>Oceansat-3 launched November 2022 and provides global coverage. Similarly to HY-2B and HY-2C, currently only the most recent 3 days with a <span class="math notranslate nohighlight">\(\sim2.5\)</span> hour latency (rolling window) are available in <code class="docutils literal notranslate"><span class="pre">l2o-qc</span></code>. Data is available in both NetCDF and BUFR format.</p>
+<p><strong>Dataset acquisition:</strong></p>
+<p>OSI-SAF wind FTP server (<code class="docutils literal notranslate"><span class="pre">ftppro.knmi.nl</span></code>), directory <code class="docutils literal notranslate"><span class="pre">/scat/netcdf/oceansat3</span></code>; registered OSI-SAF FTP credentials required. Only a 3-day rolling window is available.</p>
+</section>
+</section>
+<section id="radiometers">
+<h4><span class="section-number">5.1.1.5. </span>Radiometers<a class="headerlink" href="#radiometers" title="Link to this heading"></a></h4>
+<section id="rss-microwave-radiometers-amsr2-gmi-ssmis-windsat">
+<h5>RSS microwave radiometers (AMSR2, GMI, SSMIS, WindSat)<a class="headerlink" href="#rss-microwave-radiometers-amsr2-gmi-ssmis-windsat" title="Link to this heading"></a></h5>
+<p><strong>Description:</strong></p>
+<p>Level-3 (L3), daily, global 10 m ocean surface wind speed products retrieved from passive microwave brightness temperatures, produced by Remote Sensing Systems (RSS) for six sensors: AMSR2 (GCOM-W1, JAXA), GMI (GPM, NASA/JAXA), SSMIS (DMSP F16/F17/F18; NASA), and WindSat (Coriolis, US Navy). WindSat additionally provides wind direction via its polarimetric channels; the other sensors are wind-speed-only.</p>
+<p><strong>Characteristics:</strong></p>
+<p>each sensor is distributed as a daily file already resampled to a common global 0.25° grid, with two passes (ascending/descending) per file and a per-cell measurement time. AMSR2 is published in NetCDF; GMI, SSMIS, and WindSat are distributed as gzipped RSS binary bytemaps. Wind speed is retrieved from a shared physical emissivity model (Meissner and Wentz 2012); cells under rain, land, or ice are already set to fill/NaN by RSS.</p>
+<p><strong>Data quality:</strong></p>
+<p>no per-cell quality bitmask is exposed; instead, invalid retrievals (rain-, land-, or ice-contaminated cells) are already flagged as fill values by RSS and dropped on read. Under rain-free conditions, RSS radiometer wind speed retrievals have a reported accuracy of <span class="math notranslate nohighlight">\(\sim\)</span>1 m/s RMS against buoys (Meissner and Wentz 2012); WindSat wind direction retrieval accuracy (all-weather algorithm) ranges from <span class="math notranslate nohighlight">\(\sim\)</span>10° in light rain to <span class="math notranslate nohighlight">\(\sim\)</span>30° at the onset of heavy rain, with wind speed accuracy degrading from 2 m/s to 4 m/s over the same range (Meissner and Wentz 2009).</p>
+<p><strong>Availability:</strong></p>
+<p>AMSR2 (2012-present), GMI (2014-present), SSMIS F16 (2003-present), SSMIS F17 (2006-present), SSMIS F18 (2009-present), WindSat (2003-present); all provide global coverage via twice-daily (ascending/descending) overpasses.</p>
+<p><strong>Dataset acquisition:</strong></p>
+<p>Remote Sensing Systems public HTTPS archive (<a class="reference external" href="https://data.remss.com/">https://data.remss.com/</a>), no account required; AMSR2 as NetCDF, GMI/SSMIS/WindSat as gzipped binary bytemaps.</p>
+</section>
+</section>
+<section id="plane">
+<h4><span class="section-number">5.1.1.6. </span>Plane<a class="headerlink" href="#plane" title="Link to this heading"></a></h4>
+<section id="sfmr">
+<h5>SFMR<a class="headerlink" href="#sfmr" title="Link to this heading"></a></h5>
+</section>
+<section id="dropsonde">
+<h5>Dropsonde<a class="headerlink" href="#dropsonde" title="Link to this heading"></a></h5>
+</section>
+</section>
+</section>
+<section id="wind-stress">
+<h3><span class="section-number">5.1.2. </span>Wind stress<a class="headerlink" href="#wind-stress" title="Link to this heading"></a></h3>
+</section>
+</section>
+<section id="sea-state">
+<h2><span class="section-number">5.2. </span>Sea State<a class="headerlink" href="#sea-state" title="Link to this heading"></a></h2>
+<section id="total-significant-wave-height">
+<h3><span class="section-number">5.2.1. </span>Total significant wave height<a class="headerlink" href="#total-significant-wave-height" title="Link to this heading"></a></h3>
+<section id="nwp">
+<h4><span class="section-number">5.2.1.1. </span>NWP<a class="headerlink" href="#nwp" title="Link to this heading"></a></h4>
+<section id="wavewatch-iii">
+<h5>WAVEWATCH III<a class="headerlink" href="#wavewatch-iii" title="Link to this heading"></a></h5>
+<p><strong>Description:</strong></p>
+<p>NOAA/NCEP’s operational third-generation spectral wave model WAVEWATCH III (WW3), currently run as GFS-Wave and one-way coupled into the Global Forecast System (GFS) v16 via the NEMS/NUOPC coupling infrastructure. Used as an independent, physics-based wave-model reference, collocated via bilinear spatial and hyperbolic temporal interpolation. The current operational code version (v6.07, released by the WAVEWATCH III Development Group in 2019 as the model’s first open-development GitHub release), run with the ST4 source-term physics package (wind input and dissipation) of (Ardhuin et al. 2010).</p>
+<p><strong>Characteristics:</strong></p>
+<p>global 0.16° regular latitude/longitude grid, with finer nested regional grids covering the Atlantic, East Pacific, and West Coast (all 0.16°), the Arctic (9 km), and the Southern Ocean (0.25°); the finest grid whose bounding box fully contains the query region is selected, falling back to the global grid otherwise. GFS-Wave initialises four times daily (00/06/12/18 UTC); <code class="docutils literal notranslate"><span class="pre">l2o-qc</span></code> reconstructs an hourly series from each cycle’s short-range forecast leads. The model parameter significant height of combined wind waves and swell (<code class="docutils literal notranslate"><span class="pre">HTSGW</span></code>) is used as validation against SAR significant wave height.</p>
+<p><strong>Data quality:</strong></p>
+<p>no per-cell quality flag is provided in the GRIB2 output; land points are implicitly absent from the ocean model grid. The ST4 physics package used by the current operational configuration has been shown to outperform the older ST2 (Tolman–Chalikov) package used by earlier WAVEWATCH III code versions across most sea states, with the largest improvement in storm/extreme conditions add citation.</p>
+<p><strong>Availability:</strong></p>
+<p>From March 2021 (GFSv16/v6.07 implementation) – present, global coverage, published four times daily with hourly archived output between cycles.</p>
+<p><strong>Dataset acquisition:</strong></p>
+<p>NOAA Open Data on AWS, bucket <code class="docutils literal notranslate"><span class="pre">noaa-gfs-bdp-pds</span></code> (<a class="reference external" href="https://noaa-gfs-bdp-pds.s3.amazonaws.com">https://noaa-gfs-bdp-pds.s3.amazonaws.com</a>), public and unsigned HTTPS/S3 access, no authentication required; GRIB2 format, parsed via the <code class="docutils literal notranslate"><span class="pre">eccodes</span></code>/<code class="docutils literal notranslate"><span class="pre">cfgrib</span></code> libraries.</p>
+</section>
+</section>
+<section id="c-band-sar-1">
+<span id="id1"></span><h4><span class="section-number">5.2.1.2. </span>C-band SAR<a class="headerlink" href="#c-band-sar-1" title="Link to this heading"></a></h4>
+<section id="sentinel-1-l2-ocn-osw">
+<h5>Sentinel-1 L2 OCN - OSW<a class="headerlink" href="#sentinel-1-l2-ocn-osw" title="Link to this heading"></a></h5>
+<p><strong>Description:</strong></p>
+<p>The OSW component of the S1 L2_OCN product provides partition-based wave parameters, including a significant wave height <code class="docutils literal notranslate"><span class="pre">hs</span></code> for each identified wave partition, as well as a vignette-level total significant wave height [m], <code class="docutils literal notranslate"><span class="pre">total_hs</span></code>, and its standard deviation, <code class="docutils literal notranslate"><span class="pre">total_hs_standard_deviation</span></code>. The partition quantities describe individual wave systems resolved in the OSW wave spectrum, whereas <code class="docutils literal notranslate"><span class="pre">total_hs</span></code> represents an integrated sea-state estimate for the vignette. From IPF 3.9.0 onward the <code class="docutils literal notranslate"><span class="pre">total_hs</span></code> implementation is based on a variant of the deep-learning approach of Quach et al. (Quach et al. 2021). The OSW component is generated for Stripmap (SM) and Wave (WV) acquisition modes.</p>
+<p><strong>Characteristics:</strong></p>
+<p>in WV mode, acquisitions consist of isolated <span class="math notranslate nohighlight">\(\sim 20 \times 20\)</span> km vignettes roughly 200 km apart along the orbit track, rather than a continuous swath, with one wave spectrum estimate per vignette.</p>
+<p>In SM mode, the  80×170 km swath itself is tiled into a grid of  20×20 km OSW cells without gaps in between, unlike WV’s sparse sampling. Each OSW cell contains its own independent wave spectrum/partition estimate.</p>
+<p><strong>Data quality:</strong></p>
+<p>The OSW product carries a total <code class="docutils literal notranslate"><span class="pre">quality_flag</span></code> (0 – 3), a per-partition <code class="docutils literal notranslate"><span class="pre">partition_quality_flag</span></code> (0 – 4), a <code class="docutils literal notranslate"><span class="pre">land_flag</span></code>, a per-partition <code class="docutils literal notranslate"><span class="pre">wave_direction_partition_ambiguity</span></code> flag, and a scalar <code class="docutils literal notranslate"><span class="pre">snr</span></code>, where for the total quality flag:</p>
+<ul class="simple">
+<li><p>0: high quality</p></li>
+<li><p>1: medium quality</p></li>
+<li><p>2: low quality</p></li>
+<li><p>3: bad quality</p></li>
+</ul>
+<p>and, similarly but more finely graded, for the per-partition quality flag:</p>
+<ul class="simple">
+<li><p>0: very good</p></li>
+<li><p>1: good</p></li>
+<li><p>2: medium</p></li>
+<li><p>3: low</p></li>
+<li><p>4: poor</p></li>
+</ul>
+<p>The <code class="docutils literal notranslate"><span class="pre">wave_direction_partition_ambiguity</span></code> flag (0 or 1) indicates, per partition, whether the retrieved wave propagation direction is uniquely resolved or subject to the inherent <span class="math notranslate nohighlight">\(180^\circ\)</span> ambiguity of SAR-derived wave direction; as it concerns direction rather than the wave height itself, it is not used for filtering <code class="docutils literal notranslate"><span class="pre">total_hs</span></code>.</p>
+<p>Data points are rejected when the total quality flag (<code class="docutils literal notranslate"><span class="pre">quality_flag</span></code>) is <span class="math notranslate nohighlight">\(\geq 2\)</span>, or when the land flag is set. However, the total quality flag currently only contains fill values as it does not seem to be populated by the operational processor.</p>
+<p><strong>Availability:</strong></p>
+<p>3 April 2014 – present. Unlike OWI’s continuous-swath coverage, WV mode acquires sparse, isolated vignettes along the orbit track rather than continuous global coverage. Note that the total significant wave height, <code class="docutils literal notranslate"><span class="pre">total_hs</span></code>, is only available since 2022 (Johnsen et al. 2022). In addition, <code class="docutils literal notranslate"><span class="pre">total_hs</span></code> was unavailable for <code class="docutils literal notranslate"><span class="pre">ipf_version</span></code> 3.8.0, after which it was reactivated from <code class="docutils literal notranslate"><span class="pre">ipf_version</span></code> 3.9.0 onwards. The significant wave height partition, <code class="docutils literal notranslate"><span class="pre">hs</span></code>, was not affected by these changes.</p>
+<p><strong>Dataset acquisition:</strong></p>
+<p>Copernicus Data Space Ecosystem (<a class="reference external" href="https://dataspace.copernicus.eu/">https://dataspace.copernicus.eu/</a>); OData catalogue/download API at <a class="reference external" href="https://catalogue.dataspace.copernicus.eu/odata/v1/Products">https://catalogue.dataspace.copernicus.eu/odata/v1/Products</a>; free registration required.</p>
+</section>
+</section>
+<section id="in-situ-observations-1">
+<span id="id2"></span><h4><span class="section-number">5.2.1.3. </span>In-Situ Observations<a class="headerlink" href="#in-situ-observations-1" title="Link to this heading"></a></h4>
+<section id="ecmwf-mars-archive-1">
+<span id="id3"></span><h5>ECMWF MARS archive<a class="headerlink" href="#ecmwf-mars-archive-1" title="Link to this heading"></a></h5>
+<p><strong>Description:</strong></p>
+<p><strong>Characteristics:</strong></p>
+<p><strong>Data quality:</strong></p>
+<p><strong>Availability:</strong></p>
+<p><strong>Dataset acquisition:</strong></p>
+</section>
+<section id="subpar-cmems-insitu-waves">
+<span id="id4"></span><h5>Copernicus Marine<a class="headerlink" href="#subpar-cmems-insitu-waves" title="Link to this heading"></a></h5>
+<p><strong>Description:</strong></p>
+<p>Dataset ID INSITU_GLO_PHYBGCWAV_DISCRETE_MYNRT_013_030, which contains in-situ observations. Relevant platforms reporting significant wave height are buoys, moorings, and tidal gauges.</p>
+<p><strong>Characteristics:</strong></p>
+<p>point observations at native platform sampling rate; default collocation, which is user adjustable, is <span class="math notranslate nohighlight">\(\pm\)</span>30 min / 5 km aggregation radius.</p>
+<p><strong>Data quality:</strong></p>
+<p>Copernicus Marine in situ TAC aggregates operational oceanography data and metadata from multiple providers, ingested with varying confidence depending on the data source (Copernicus In Situ Tac Data Management Team 2025). Bad flags are preserved and an additional quality control is performed that may result in a QC flag degradation (never an upgrade). For waves, this additional quality control procedure applies 7 different tests to wave parameters as described in the Copernicus Marine In Situ TAC quality control procedure (2025) (Copernicus In Situ Tac Data Management Team 2025).</p>
+<p>The quality flag ranges from 0 – 9:</p>
+<ul class="simple">
+<li><p>0: No QC was performed</p></li>
+<li><p>1: Good data</p></li>
+<li><p>2: Probably good data</p></li>
+<li><p>3: Bad data although potentially correctable</p></li>
+<li><p>4: Bad data</p></li>
+<li><p>5: Value changed</p></li>
+<li><p>6: Value below detection/quantification</p></li>
+<li><p>7: Nominal value (e.g. reported rather than observed value like instrument target depth)</p></li>
+<li><p>8: Interpolated value</p></li>
+<li><p>9: Missing value</p></li>
+</ul>
+<p>Accepted QC flag codes are <span class="math notranslate nohighlight">\(\{1,2,5,7,8\}\)</span>. A significant part of the data available on Copernicus Marine In situ lacks a QC and is thus dropped before validation.</p>
+<p>Accuracy of the measurements provided by Copernicus Marine is sensor dependent, but all sensors have an uncertainty of maximum 1% or 0.1 m (Wehde et al. 2025). The estimated accuracy due to statistical variability is <span class="math notranslate nohighlight">\(&lt; 5\)</span>% for SWH (Wehde et al. 2025).</p>
+<p><strong>Availability:</strong></p>
+<p>Platform dependent, some platforms provide a long history. Not all platforms have both <code class="docutils literal notranslate"><span class="pre">WSPD</span></code> and <code class="docutils literal notranslate"><span class="pre">WDIR</span></code> available. Geographical coverage can be seen in Figure <a class="reference internal" href="#fig-in-situ-waves-coverage"><span class="std std-numref">Fig. 5.3</span></a> for the first half of August 2026. Moorings and tidal gauges have fixed locations, while the buoys drift.</p>
+<figure class="align-default" id="fig-in-situ-waves-coverage">
+<a class="reference internal image-reference" href="_images/insitu_waves_global_coverage_2026-08-01_2026-08-15.png"><img alt="_images/insitu_waves_global_coverage_2026-08-01_2026-08-15.png" src="_images/insitu_waves_global_coverage_2026-08-01_2026-08-15.png" style="width: 100%;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Fig. 5.3 </span><span class="caption-text">Coverage of Copernicus Marine in-situ platforms that provided significant wave height during the first half of August 2026.</span><a class="headerlink" href="#fig-in-situ-waves-coverage" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p><strong>Dataset acquisition:</strong></p>
+<p>Copernicus Marine in-situ dataset (<a class="reference external" href="https://data.marine.copernicus.eu/product/INSITU_GLO_PHYBGCWAV_DISCRETE_MYNRT_013_030/">https://data.marine.copernicus.eu/product/INSITU_GLO_PHYBGCWAV_DISCRETE_MYNRT_013_030/</a>), download via the <code class="docutils literal notranslate"><span class="pre">copernicusmarine</span></code> Python client (free registration).</p>
+</section>
+</section>
+<section id="sea-ice-maps">
+<h4><span class="section-number">5.2.1.4. </span>Sea-ice maps<a class="headerlink" href="#sea-ice-maps" title="Link to this heading"></a></h4>
+<p>TBD</p>
+</section>
+<section id="altimeters">
+<h4><span class="section-number">5.2.1.5. </span>Altimeters<a class="headerlink" href="#altimeters" title="Link to this heading"></a></h4>
+<p>SWH altimeter observations are divided into a reprocessed version that currently has 1 Hz altimeter data from 03-08-1991 - 31-12-2023 (Charles and Ollivier, n.d.) and a near-real time (NRT) version that contains 1 Hz sampled altimeter data from 28-12-2023 - present and 5 Hz sampled altimeter data from 09-03-2026 - present (Philip et al., n.d.).</p>
+<section id="global-ocean-l3-significant-wave-height-from-reprocessed-satellite-measurements">
+<h5>Global Ocean L3 Significant Wave Height from Reprocessed Satellite Measurements<a class="headerlink" href="#global-ocean-l3-significant-wave-height-from-reprocessed-satellite-measurements" title="Link to this heading"></a></h5>
+<p><strong>Description:</strong></p>
+<p>This reprocessed dataset provides significant wave height data derived from satellite altimeter data including the Topex, ERS-1/2, Jason-1/2/3, Envisat, Saral/AltiKa, Cryosat-2, and Sentinel-3A/3B/6A missions as well as altimeter L3 V4 data from the ESA Climate Change Initiative (CCI) Sea State project. The along-track measurements from the different missions are combined into a single daily file, thus resulting in a unified dataset combining all available missions. The dataset includes distance to coast, sea floor depth below mean sea level, sea surface wave significant height (regular, adjusted, denoised) and its uncertainty (Charles and Ollivier, n.d.).</p>
+<p><strong>Characteristics:</strong></p>
+<p>The 1 Hz sampling corresponds to an along track resolution of 7 km, resulting in a default aggregation window of 7 km and 180 min in the <code class="docutils literal notranslate"><span class="pre">l2o-qc</span></code> tool. Jason-2 serves as a calibration anchor and CCIv4 improves cross-calibration across all missions. The denoised SWH is used as validation dataset. Denoising means cross-mission bias correction and Empirical Mode Decomposition (EMD) denoising following Quilfen and Chapron (2019) (Quilfen and Chapron 2021).</p>
+<p>For Topex, Jason-1/2/3, and Sentinel 6-A, the coverage is maximum 66°S/66°N in latitude; for SARAL/AltiKa 81.5°S/81.5 °N; for Cryosat-2 88°S/88°N; for ERS-1/2, Envisat, and Sentinel-3A/3B 90°S/90°N (Charles and Ollivier, n.d.).</p>
+<p><strong>Data Quality:</strong></p>
+<p>A strict QC filter is applied before creating of the dataset, only allowing <code class="docutils literal notranslate"><span class="pre">swh_quality_level</span></code> <span class="math notranslate nohighlight">\(= 3\)</span> (good data) to be included. No QC filtering is needed in the <code class="docutils literal notranslate"><span class="pre">l2o-qc</span></code> tool and no quality flags themselves are not provided in the dataset.</p>
+<p><strong>Availability:</strong></p>
+<p>03-08-1991 - 31-12-2023; 1 Hz sampling frequency.</p>
+<p><strong>Dataset acquisition:</strong></p>
+<p>Copernicus Marine satellite altimetry dataset (<a class="reference external" href="https://data.marine.copernicus.eu/product/WAVE_GLO_PHY_SWH_L3_MY_014_005/">https://data.marine.copernicus.eu/product/WAVE_GLO_PHY_SWH_L3_MY_014_005/</a>), download via the <code class="docutils literal notranslate"><span class="pre">copernicusmarine</span></code> Python client (free registration).</p>
+</section>
+<section id="global-ocean-l3-significant-wave-height-from-nrt-satellite-measurements">
+<h5>Global Ocean L3 Significant Wave Height from NRT Satellite Measurements<a class="headerlink" href="#global-ocean-l3-significant-wave-height-from-nrt-satellite-measurements" title="Link to this heading"></a></h5>
+<p><strong>Description:</strong></p>
+<p>The product consists of an inter-calibrated, denoised multi-mission altimeter-derived along-track SWH dataset. It combines 1 Hz sampling data from CFOSAT, CryoSat-2, HY-2B/2C, Jason-3, Saral/AltiKa, Sentinel-3A/3B/6A, and SWOT nadir producing sea surface wave significant height (filtered and unfiltered) as well as sea surface wind speed. The 5 Hz sampling contains data from CryoSat-2, Jason-3, Saral/AltiKa, and Sentinel-3A/3B/6A and produces sea surface wave significant height (filtered and unfiltered).</p>
+<p><strong>Characteristics:</strong></p>
+<p>The data from the different missions are homogenized with respect to a reference mission (Jason-3 until April 2022, Sentinel-6A afterwards). The 1 Hz sampling corresponds to an along track resolution of 7 km, resulting in a default aggregation window of 7 km and 180 min. The 5 Hz sampling has an along track resolution of 1.4 km, resulting in a default aggregation window of 1.4 km and 180 min in the <code class="docutils literal notranslate"><span class="pre">l2o-qc</span></code> tool.</p>
+<p>For Jason-3, Sentinel-6A and Hai Yang-2C, the coverage is maximum 66°S/66°N in latitude; for Sentinel-3A, Sentinel-3B and AltiKa, 81.5°S/81.5°N; for Cryosat-2, 88°S/88°N; for HaiYang-2B, 81°S/81°N; for CFOSAT, 83°S/83°N and for SWOT, 78°S/78°N. Note that for Sentinel-3A and B, the altimeter wave measurements are deduced from both SAR measurements.</p>
+<p><strong>Data Quality:</strong></p>
+<p>Prior to inclusion in the dataset, data is selected based on a combination of various criteria such as quality flags and parameter thresholds, including surface flag, presence of ice, sigma0 (mission dependent), SWH (min: 0 m; max: 30 m), wind speed (min: 0 m/s; max: 30 m/s), sigma0 standard deviation (min: 0 dB; max 3 dB), shoreline distance (<span class="math notranslate nohighlight">\(\geq 0\)</span>) (Philip et al., n.d.). Only data points passing these criteria are included in the dataset. No QC filtering is needed in the <code class="docutils literal notranslate"><span class="pre">l2o-qc</span></code> tool and no quality flags themselves are not provided in the dataset.</p>
+<p><strong>Availability:</strong></p>
+<p>1 Hz sampling rate: late 2023 - present; note that the NRT 1 Hz dataset is used from 01-01-2024 onward to replace the reprocessed one that ends 31-12-2013. 5 Hz sampling rate: 09-03-2026 - present. Availability delay is 3 hours for all satellites other than HY-2B/2C, which are provided with a delay of 7 hours.</p>
+<p><strong>Dataset acquisition:</strong></p>
+<p>Copernicus Marine satellite altimetry dataset (<a class="reference external" href="https://data.marine.copernicus.eu/product/WAVE_GLO_PHY_SWH_L3_NRT_014_001/">https://data.marine.copernicus.eu/product/WAVE_GLO_PHY_SWH_L3_NRT_014_001/</a>), download via the <code class="docutils literal notranslate"><span class="pre">copernicusmarine</span></code> Python client (free registration).</p>
+</section>
+</section>
+</section>
+<section id="mean-period-wind-sea">
+<h3><span class="section-number">5.2.2. </span>Mean period wind-sea<a class="headerlink" href="#mean-period-wind-sea" title="Link to this heading"></a></h3>
+</section>
+<section id="first-moment-wave-period">
+<h3><span class="section-number">5.2.3. </span>First moment wave period<a class="headerlink" href="#first-moment-wave-period" title="Link to this heading"></a></h3>
+</section>
+<section id="second-moment-wave-period">
+<h3><span class="section-number">5.2.4. </span>Second moment wave period<a class="headerlink" href="#second-moment-wave-period" title="Link to this heading"></a></h3>
+</section>
+<section id="wave-height-swell-dominant-system">
+<h3><span class="section-number">5.2.5. </span>Wave height swell dominant system<a class="headerlink" href="#wave-height-swell-dominant-system" title="Link to this heading"></a></h3>
+</section>
+<section id="wave-height-swell-secondary-system">
+<h3><span class="section-number">5.2.6. </span>Wave height swell secondary system<a class="headerlink" href="#wave-height-swell-secondary-system" title="Link to this heading"></a></h3>
+</section>
+<section id="significant-wave-height-wind-sea">
+<h3><span class="section-number">5.2.7. </span>Significant wave height wind-sea<a class="headerlink" href="#significant-wave-height-wind-sea" title="Link to this heading"></a></h3>
+</section>
+<section id="mean-period-wind-sea-1">
+<span id="id5"></span><h3><span class="section-number">5.2.8. </span>Mean period wind-sea<a class="headerlink" href="#mean-period-wind-sea-1" title="Link to this heading"></a></h3>
+</section>
+<section id="wave-direction">
+<h3><span class="section-number">5.2.9. </span>Wave direction<a class="headerlink" href="#wave-direction" title="Link to this heading"></a></h3>
+</section>
+<section id="wave-directional-energy-spectrum">
+<h3><span class="section-number">5.2.10. </span>Wave directional energy spectrum<a class="headerlink" href="#wave-directional-energy-spectrum" title="Link to this heading"></a></h3>
+</section>
+</section>
+<section id="line-of-sight-currents">
+<h2><span class="section-number">5.3. </span>Line-of-sight currents<a class="headerlink" href="#line-of-sight-currents" title="Link to this heading"></a></h2>
+<section id="los-wave-doppler">
+<h3><span class="section-number">5.3.1. </span>LoS wave Doppler<a class="headerlink" href="#los-wave-doppler" title="Link to this heading"></a></h3>
+</section>
+<section id="los-surface-current-component">
+<h3><span class="section-number">5.3.2. </span>LoS surface current component<a class="headerlink" href="#los-surface-current-component" title="Link to this heading"></a></h3>
+<section id="nwp-1">
+<span id="id6"></span><h4><span class="section-number">5.3.2.1. </span>NWP<a class="headerlink" href="#nwp-1" title="Link to this heading"></a></h4>
+<section id="hycom">
+<h5>HYCOM<a class="headerlink" href="#hycom" title="Link to this heading"></a></h5>
+<p><strong>Description:</strong></p>
+<p>The HYbrid Coordinate Ocean Model (HYCOM) is a data-assimilative, eddy-resolving global ocean general circulation model producing three-dimensional fields of ocean state (Chassignet et al. 2009). Its vertical coordinate is hybrid, blending isopycnal (density-following) layers in the stratified open ocean, terrain-following layers in shallow coastal regions, and fixed pressure-level coordinates in the surface mixed layer and/or unstratified open seas. This toolbox uses HYCOM’s surface-level (<span class="math notranslate nohighlight">\(z=0\)</span>) horizontal current velocity, <code class="docutils literal notranslate"><span class="pre">water_u</span></code>/<code class="docutils literal notranslate"><span class="pre">water_v</span></code>, drawn from two HYCOM configurations: Global Ocean Forecasting System (GOFS) 3.1 Analysis (<code class="docutils literal notranslate"><span class="pre">GLBy0.08/expt_93.0</span></code>; 04-12-2018 - 10-08-2024) (Metzger et al. 2017), and its higher-resolution successor ESPC-D-V02 (10-08-2024 onwards), the ocean component of the Navy’s Earth System Prediction Capability (Navy-ESPC) (Barton et al. 2021). The eastward/northward current vector at each grid cell is projected onto the local SAR LoS (radial) direction for direct comparison against radial surface-velocity measurements, using the same heading-based projection of the SAR satellite applied throughout this validation component.</p>
+<p><strong>Characteristics:</strong></p>
+<p>GOFS 3.1 Analysis runs at a <span class="math notranslate nohighlight">\(1/12\)</span>° global HYCOM resolution (<span class="math notranslate nohighlight">\(\sim 9\)</span> km at equator, <span class="math notranslate nohighlight">\(\sim7\)</span> km at mid-latitudes, <span class="math notranslate nohighlight">\(\sim 3.5\)</span> km at North Pole); ESPC-D-V02’s can run at a higher, <span class="math notranslate nohighlight">\(1/25\)</span>° (<span class="math notranslate nohighlight">\(\sim\)</span>3–4 km at mid-latitudes), resolution (Barton et al. 2021). However, the version used by <code class="docutils literal notranslate"><span class="pre">l2o-qc</span></code> is regridded onto the same grid as GOFS 3.1. HYCOM consists of 3-hourly instantaneous analyses with 40 standard <span class="math notranslate nohighlight">\(z\)</span>-levels of which <code class="docutils literal notranslate"><span class="pre">l2o-qc</span></code> selects the surface level (<span class="math notranslate nohighlight">\(\texttt{depth}=0.0\)</span>). <code class="docutils literal notranslate"><span class="pre">GLBy0.08/expt_93.0</span></code> publishes one combined <code class="docutils literal notranslate"><span class="pre">water_u</span></code>+<code class="docutils literal notranslate"><span class="pre">water_v</span></code> NetCDF/OPeNDAP dataset per calendar year; <code class="docutils literal notranslate"><span class="pre">ESPC-D-V02</span></code> publishes one continuous OPeNDAP dataset per component spanning its whole coverage range.</p>
+<p><strong>Data Quality:</strong></p>
+<p>As a data-assimilative reanalysis/forecast product rather than a direct retrieval, HYCOM carries no per-cell observational quality flag. Instead its data quality depends on the underlying model, its initial state, and data assimilation checks. For ESPC-D-V02, all assimilated data go through a quality control system checking for gross error and assigning a likelihood of error based on comparison to ocean analyses (instrument error and representativeness error) (Barton et al. 2021).</p>
+<p><strong>Availability:</strong></p>
+<p>GOFS 3.1 Analysis (<code class="docutils literal notranslate"><span class="pre">expt_93.0</span></code>): 04-12-2018 - 04-09-2024 (used by <code class="docutils literal notranslate"><span class="pre">l2o-qc</span></code> until 10-08-2024 12:00 UT). ESPC-D-V02: 10-08-2024 - present.</p>
+<p><strong>Dataset acquisition:</strong></p>
+<p>HYCOM public THREDDS Data Server (<a class="reference external" href="https://tds.hycom.org/thredds/">https://tds.hycom.org/thredds/</a>), OPeNDAP endpoints <a class="reference external" href="https://tds.hycom.org/thredds/dodsC/ESPC-D-V02/u3z">https://tds.hycom.org/thredds/dodsC/ESPC-D-V02/u3z</a> (+<code class="docutils literal notranslate"><span class="pre">v3z</span></code>) and <a class="reference external" href="https://tds.hycom.org/thredds/dodsC/GLBy0.08/expt_93.0/uv3z/{year}">https://tds.hycom.org/thredds/dodsC/GLBy0.08/expt_93.0/uv3z/{year}</a>; openly accessible, no registration required. See also <a class="reference external" href="https://www.hycom.org/dataserver">https://www.hycom.org/dataserver</a>.</p>
+</section>
+</section>
+<section id="c-band-sar-2">
+<span id="id7"></span><h4><span class="section-number">5.3.2.2. </span>C-band SAR<a class="headerlink" href="#c-band-sar-2" title="Link to this heading"></a></h4>
+<section id="sentinel-1-l2-ocn-rvl">
+<h5>Sentinel-1 L2 OCN - RVL<a class="headerlink" href="#sentinel-1-l2-ocn-rvl" title="Link to this heading"></a></h5>
+<p><strong>Description:</strong></p>
+<p>The RVL (Radial Velocity) component of the Sentinel-1 L2_OCN product provides an estimate of the total Doppler frequency [Hz] and the corresponding radial LoS surface velocity [m/s], <code class="docutils literal notranslate"><span class="pre">rvlRadVel</span></code>, obtained by fitting (least square minimization) the antenna model to the observed azimuth Doppler spectrum of the Level-1 SLC image. The estimated Doppler frequency is then corrected for antenna mis-pointing (as a function of elevation angle) and the attitude/orbit Doppler error (Engen and Johnsen 2011). Other relevant parameters in the RVL component include standard deviation, <code class="docutils literal notranslate"><span class="pre">rvlRadVelStd</span></code>, and the acquisition geometry variables <code class="docutils literal notranslate"><span class="pre">rvlHeading</span></code> (along-track heading) and <code class="docutils literal notranslate"><span class="pre">rvlIncidenceAngle</span></code>. The RVL component is generated for all four Sentinel-1 imaging modes: WV, SM, IW, and EW (Engen and Johnsen 2011).</p>
+<p><strong>Characteristics:</strong></p>
+<p>The spatial coverage of the RVL product equals that of the corresponding mode. In WV mode, RVL is thus computed on the same isolated <span class="math notranslate nohighlight">\(\sim20\times20\)</span> km vignette used by the rest of that mode’s OCN product, at roughly 200 km spacing along the orbit track. In SM/IW/EW mode, RVL is produced on a grid <span class="math notranslate nohighlight">\(\sim 1 \times 1\)</span> km similar to the OWI products. To compare an in-situ or model current vector (<code class="docutils literal notranslate"><span class="pre">EWCT</span></code>, <code class="docutils literal notranslate"><span class="pre">NSCT</span></code>) against this scalar radial measurement, the vector is projected onto the SAR line-of-sight in the <code class="docutils literal notranslate"><span class="pre">l2o-qc</span></code> toolbox using</p>
+<div class="math notranslate nohighlight">
+\[v_{\text{projection}} = \texttt{EWCT}\cdot\cos(\texttt{rvlHeading} - 90^{\circ}) + \texttt{NSCT}\cdot\sin(\texttt{rvlHeading} - 90^{\circ}),\]</div>
+<p>where <code class="docutils literal notranslate"><span class="pre">rvlHeading</span></code> is stored in mathematical convention (counter-clockwise from East) and the <span class="math notranslate nohighlight">\(-90^{\circ}\)</span> term converts the along-track heading to the (right-looking) range direction.</p>
+<p><strong>Data Quality:</strong></p>
+<p>In the RVL component, <code class="docutils literal notranslate"><span class="pre">rvlLandFlag</span></code> is automatically set to 1 where a cell’s land coverage exceeds 10% (Engen and Johnsen 2011). <code class="docutils literal notranslate"><span class="pre">l2o-qc</span></code> then masks both <code class="docutils literal notranslate"><span class="pre">rvlRadVel</span></code> and <code class="docutils literal notranslate"><span class="pre">rvlRadVelStd</span></code> as NaN’d at flagged cells. No separate per-cell QC-code flag exists for RVL beyond the land flag. Note that the operational <code class="docutils literal notranslate"><span class="pre">rvlRadVel</span></code> is known to carry substantial platform-induced biases, up to <span class="math notranslate nohighlight">\(\sim\)</span>2 m/s, from residual antenna mis-pointing and instrument effects (Martin et al. 2022). This is currently not compensated for in the <code class="docutils literal notranslate"><span class="pre">l2o-qc</span></code> toolbox.</p>
+<p><strong>Availability:</strong></p>
+<p>3 April 2014 – present, across all four imaging modes (WV, SM, IW, EW).</p>
+<p><strong>Dataset acquisition:</strong></p>
+<p>Copernicus Data Space Ecosystem (<a class="reference external" href="https://dataspace.copernicus.eu/">https://dataspace.copernicus.eu/</a>); OData catalogue/download API at <a class="reference external" href="https://catalogue.dataspace.copernicus.eu/odata/v1/Products">https://catalogue.dataspace.copernicus.eu/odata/v1/Products</a>; free registration required.</p>
+</section>
+</section>
+<section id="hf-radars">
+<h4><span class="section-number">5.3.2.3. </span>HF radars<a class="headerlink" href="#hf-radars" title="Link to this heading"></a></h4>
+<section id="copernicus-marine-global-radar-coverage">
+<span id="subpar-hfr-cmems"></span><h5>Copernicus Marine - global radar coverage<a class="headerlink" href="#copernicus-marine-global-radar-coverage" title="Link to this heading"></a></h5>
+<p><strong>Description:</strong></p>
+<p>Gridded, total-vector surface-current field (<code class="docutils literal notranslate"><span class="pre">EWCT</span></code> and <code class="docutils literal notranslate"><span class="pre">NSCT</span></code>) from Copernicus Marine. Contributors are mainly European national HF-radar networks together with NOAA (further described in Section <a class="reference internal" href="#subpar-hfr-noaa"><span class="std std-ref">NOAA - US radar coverage</span></a>); every European region is processed through a single, centrally-coordinated pipeline, the EU HFR Node (Lorente et al. 2022). Additional variables are per-cell standard deviations <code class="docutils literal notranslate"><span class="pre">EWCS</span></code>/<code class="docutils literal notranslate"><span class="pre">NSCS</span></code>, a geometric-dilution-of-precision field <code class="docutils literal notranslate"><span class="pre">GDOP</span></code>, and several QC flags including an overall <code class="docutils literal notranslate"><span class="pre">QCflag</span></code>.</p>
+<p><strong>Characteristics:</strong></p>
+<p>25 named regions, spanning the Mediterranean, Atlantic, North Sea, and Norwegian coasts (e.g. Galicia, Gibraltar, DeltaEbro, COSYNA, Skagerrak, Finnmark, Vestlandet) as well as the five US coastal areas also served by NOAA (Figures <a class="reference internal" href="#fig-hf-radar-coverage-europe"><span class="std std-numref">Fig. 5.4</span></a> and <a class="reference internal" href="#fig-hf-radar-coverage-us"><span class="std std-numref">Fig. 5.5</span></a>), each operated by a different national institution (Table <a class="reference internal" href="#tab-copernicus-hfr-resolutions"><span class="std std-numref">Table 5.1</span></a>) but converging on the same EU HFR Node distribution pipeline for the European regions. Near-real-time (<code class="docutils literal notranslate"><span class="pre">latest-radar-total</span></code>) coverage exists for 19 of the 25 regions; the remaining seven, ARPAS, COSYNA, Finnmark, US-Alaska, US-Hawaii, and WHub, are available only through the monthly/delayed-mode feed. Default layer-vs-layer collocation against the SAR grid is <span class="math notranslate nohighlight">\(\pm\)</span>30 min with a 6 km cell-averaging aggregation window and equal spatial weighting. This is adjustable through the <code class="docutils literal notranslate"><span class="pre">.yaml</span></code> recipe file. Native grid resolution and cadence vary by region, where most regions contain hourly data. Exceptions are <code class="docutils literal notranslate"><span class="pre">COSYNA</span></code> (20 min) and <code class="docutils literal notranslate"><span class="pre">NAdr</span></code> (30 min). All available resolution are listed in Table <a class="reference internal" href="#tab-copernicus-hfr-resolutions"><span class="std std-numref">Table 5.1</span></a>.</p>
+<figure class="align-default" id="fig-hf-radar-coverage-europe">
+<a class="reference internal image-reference" href="_images/hf_radar_coverage_europe.png"><img alt="_images/hf_radar_coverage_europe.png" src="_images/hf_radar_coverage_europe.png" style="width: 100%;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Fig. 5.4 </span><span class="caption-text">Bounding boxes of regions available in Copernicus Marine HF-radar dataset across Europe and the Mediterranean. Regions that are no longer available in real-time (delayed-mode only) have dashed lines.</span><a class="headerlink" href="#fig-hf-radar-coverage-europe" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="fig-hf-radar-coverage-us">
+<a class="reference internal image-reference" href="_images/hf_radar_coverage_us.png"><img alt="_images/hf_radar_coverage_us.png" src="_images/hf_radar_coverage_us.png" style="width: 100%;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Fig. 5.5 </span><span class="caption-text">Bounding boxes of the 5 Copernicus Marine HF-radar regions and 6 NOAA regions. Regions with that have overlapping coverage from both are purple, while the region only provided by NOAA is red.</span><a class="headerlink" href="#fig-hf-radar-coverage-us" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<div class="threeparttable docutils container">
+<table class="docutils align-default" id="tab-copernicus-hfr-resolutions">
+<caption><span class="caption-number">Table 5.1 </span><span class="caption-text">Copernicus Marine HF-radar region grid resolution and upstream QC thresholds, read directly from each region’s <code class="docutils literal notranslate"><span class="pre">monthly-radar-total</span></code> metadata and EU HFR Node dataset attributes. Regions without footnote have self descriptive place names.</span><a class="headerlink" href="#tab-copernicus-hfr-resolutions" title="Link to this table"></a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Region</strong></p></th>
+<th class="head"><p><strong>Spatial res.</strong></p></th>
+<th class="head"><p><strong>Temporal res.</strong></p></th>
+<th class="head"><p><strong>Max GDOP</strong></p></th>
+<th class="head"><p><strong>Max speed</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">ARPAS</span></code></p></td>
+<td><p>2 km</p></td>
+<td><p>60 min</p></td>
+<td><p>2.0</p></td>
+<td><p>1.2 m/s</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">CALYPSO</span></code></p></td>
+<td><p>3 km</p></td>
+<td><p>60 min</p></td>
+<td><p>20.0</p></td>
+<td><p>1.0 m/s</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">COSYNA</span></code></p></td>
+<td><p>2 km</p></td>
+<td><p>20 min</p></td>
+<td><p>2.0</p></td>
+<td><p>1.2 m/s</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">DeltaEbro</span></code></p></td>
+<td><p>3 km</p></td>
+<td><p>60 min</p></td>
+<td><p>2.0</p></td>
+<td><p>1.2 m/s</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">EUSKOOS</span></code></p></td>
+<td><p>5 km</p></td>
+<td><p>60 min</p></td>
+<td><p>2.0</p></td>
+<td><p>1.2 m/s</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Finnmark</span></code></p></td>
+<td><p>5 km</p></td>
+<td><p>60 min</p></td>
+<td><p>2.0</p></td>
+<td><p>1.2 m/s</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Galicia</span></code></p></td>
+<td><p>6 km</p></td>
+<td><p>60 min</p></td>
+<td><p>2.0</p></td>
+<td><p>1.2 m/s</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Gibraltar</span></code></p></td>
+<td><p>1 km</p></td>
+<td><p>60 min</p></td>
+<td><p>2.0</p></td>
+<td><p>2.5 m/s</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">GoS</span></code></p></td>
+<td><p>2 km</p></td>
+<td><p>60 min</p></td>
+<td><p>2.0</p></td>
+<td><p>1.2 m/s</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Granitola</span></code></p></td>
+<td><p>1.5 km</p></td>
+<td><p>60 min</p></td>
+<td><p>2.0</p></td>
+<td><p>1.2 m/s</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">ICATMAR</span></code></p></td>
+<td><p>3 km</p></td>
+<td><p>60 min</p></td>
+<td><p>2.0</p></td>
+<td><p>1.7 m/s</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Ibiza</span></code></p></td>
+<td><p>3 km</p></td>
+<td><p>60 min</p></td>
+<td><p>2.83</p></td>
+<td><p>0.7 m/s</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Lisboa</span></code></p></td>
+<td><p>1.4 km</p></td>
+<td><p>60 min</p></td>
+<td><p>2.0</p></td>
+<td><p>1.2 m/s</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">NAdr</span></code></p></td>
+<td><p>1.5 km</p></td>
+<td><p>30 min</p></td>
+<td><p>2.0</p></td>
+<td><p>1.0 m/s</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">PLOCAN</span></code></p></td>
+<td><p>0.75 km</p></td>
+<td><p>60 min</p></td>
+<td><p>2.0</p></td>
+<td><p>1.2 m/s</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Skagerrak</span></code></p></td>
+<td><p>3 km</p></td>
+<td><p>60 min</p></td>
+<td><p>2.0</p></td>
+<td><p>1.2 m/s</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">South</span></code></p></td>
+<td><p>1.5 km</p></td>
+<td><p>60 min</p></td>
+<td><p>2.0</p></td>
+<td><p>1.2 m/s</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">TirLig</span></code></p></td>
+<td><p>2 km</p></td>
+<td><p>60 min</p></td>
+<td><p>2.0</p></td>
+<td><p>1.2 m/s</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">US-Alaska</span></code></p></td>
+<td><p>6 km</p></td>
+<td><p>60 min</p></td>
+<td><p>2.0</p></td>
+<td><p>5.0 m/s</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">US-EastGulfCoast</span></code></p></td>
+<td><p>6 km</p></td>
+<td><p>60 min</p></td>
+<td><p>2.0</p></td>
+<td><p>5.0 m/s</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">US-Hawaii</span></code></p></td>
+<td><p>6 km</p></td>
+<td><p>60 min</p></td>
+<td><p>2.0</p></td>
+<td><p>5.0 m/s</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">US-PuertoRicoVirginIslands</span></code></p></td>
+<td><p>6 km</p></td>
+<td><p>60 min</p></td>
+<td><p>2.0</p></td>
+<td><p>5.0 m/s</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">US-WestCoast</span></code></p></td>
+<td><p>6 km</p></td>
+<td><p>60 min</p></td>
+<td><p>2.0</p></td>
+<td><p>5.0 m/s</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Vestlandet</span></code></p></td>
+<td><p>5 km</p></td>
+<td><p>60 min</p></td>
+<td><p>2.0</p></td>
+<td><p>1.2 m/s</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">WHub</span></code></p></td>
+<td><p>1 km</p></td>
+<td><p>60 min</p></td>
+<td><p>2.0</p></td>
+<td><p>1.2 m/s</p></td>
+</tr>
+</tbody>
+</table>
+<div class="tablenotes docutils container">
+<p>Northern Sardinia, Tyrrhenian Sea. Malta Channel, Western Mediterranean. German Bight, Germany. Ebro River Delta, SE Spain. Basque Country coast, Spain. Gulf of Salerno, Tyrrhenian Sea, Italy. Catalan coast, Spain. Gulf of Trieste, Northern Adriatic Sea. North-east coast of Gran Canaria, Spain. Portuguese/Spanish south coast, 4 sites. North-western Tyrrhenian and Ligurian Sea, Italy. Wave Hub test site, off North Cornwall, UK.</p>
+</div>
+</div>
+<p><strong>Data quality:</strong></p>
+<p>Cells are kept only where the overall <code class="docutils literal notranslate"><span class="pre">QCflag</span></code>, for value meaning see section <a class="reference internal" href="#subpar-cmems-insitu"><span class="std std-ref">Copernicus Marine</span></a>, is equal to <span class="math notranslate nohighlight">\(\{1,2,5,7,8\}\)</span>(Copernicus In Situ Tac Data Management Team 2025)). Per-parameter flags (<code class="docutils literal notranslate"><span class="pre">CSPD_QC</span></code>, <code class="docutils literal notranslate"><span class="pre">DDNS_QC</span></code>, <code class="docutils literal notranslate"><span class="pre">GDOP_QC</span></code>, <code class="docutils literal notranslate"><span class="pre">VART_QC</span></code>, <code class="docutils literal notranslate"><span class="pre">POSITION_QC</span></code>) are retained but not used for filtering. QC flagging uses a maximum Geometric Dilution of Precision (GDOP) threshold and a maximum velocity for each radar, which are listed in Table <a class="reference internal" href="#tab-copernicus-hfr-resolutions"><span class="std std-numref">Table 5.1</span></a>. Any data point exceeding those values gets flagged.</p>
+<p><strong>Data quality:</strong></p>
+<p>Cells are kept only where the overall <code class="docutils literal notranslate"><span class="pre">QCflag</span></code>, for value meaning see section <a class="reference internal" href="#subpar-cmems-insitu"><span class="std std-ref">Copernicus Marine</span></a>, is equal to <span class="math notranslate nohighlight">\(\{1,2,5,7,8\}\)</span>(Copernicus In Situ Tac Data Management Team 2025)). Per-parameter flags (<code class="docutils literal notranslate"><span class="pre">CSPD_QC</span></code>, <code class="docutils literal notranslate"><span class="pre">DDNS_QC</span></code>, <code class="docutils literal notranslate"><span class="pre">GDOP_QC</span></code>, <code class="docutils literal notranslate"><span class="pre">VART_QC</span></code>, <code class="docutils literal notranslate"><span class="pre">POSITION_QC</span></code>) are retained but not used for filtering. Five upstream tests, defined by the EU HFR Node’s own QC recommendations (Corgnati et al. 2024, Table 2), feed into the overall <code class="docutils literal notranslate"><span class="pre">QCflag</span></code>: <code class="docutils literal notranslate"><span class="pre">DDNS_QC</span></code> (Data Density Threshold) checks that at least a minimum number of three radial velocities contributed to the total-vector solution; <code class="docutils literal notranslate"><span class="pre">CSPD_QC</span></code> (Velocity Threshold) checks the total current speed against a region-specific maximum (see Table <a class="reference internal" href="#tab-copernicus-hfr-resolutions"><span class="std std-numref">Table 5.1</span></a>; <code class="docutils literal notranslate"><span class="pre">VART_QC</span></code> (Variance Threshold or Temporal Derivative) checks the solution’s own temporal variance (only relevant for beam-forming systems); <code class="docutils literal notranslate"><span class="pre">GDOP_QC</span></code> (Geometric Dilution of Precision (GDOP) Threshold) checks the GDOP against a region-specific maximum (see Table <a class="reference internal" href="#tab-copernicus-hfr-resolutions"><span class="std std-numref">Table 5.1</span></a>); and <code class="docutils literal notranslate"><span class="pre">POSITION_QC</span></code> independently checks the solution’s own reported latitude/longitude, unrelated to the four velocity-based tests. Any data point failing at least one of the QC tests gets flagged.</p>
+<p><strong>Availability:</strong></p>
+<p>Region-dependent. The near-real-time feed (last 30 days) is available for 19 of the 25 regions; the monthly feed (from up to 01-01-2020 - present (<span class="math notranslate nohighlight">\(&lt;30\)</span> day latency)) and historic archive (typically large single file per radar) are available for all 25 regions.</p>
+<p><strong>Dataset acquisition:</strong></p>
+<p>Copernicus Marine near-real-time in-situ dataset (<a class="reference external" href="https://data.marine.copernicus.eu/product/INSITU_GLO_PHYBGCWAV_DISCRETE_MYNRT_013_030/description">https://data.marine.copernicus.eu/product/INSITU_GLO_PHYBGCWAV_DISCRETE_MYNRT_013_030/description</a>; lastest (last 30 days) and monthly (from 01-01-2020) available), <code class="docutils literal notranslate"><span class="pre">radar-total</span></code> <code class="docutils literal notranslate"><span class="pre">dataset_part</span></code>; delayed-mode currents dataset (<a class="reference external" href="https://data.marine.copernicus.eu/product/INSITU_GLO_PHY_UV_DISCRETE_MY_013_044/description">https://data.marine.copernicus.eu/product/INSITU_GLO_PHY_UV_DISCRETE_MY_013_044/description</a>), <code class="docutils literal notranslate"><span class="pre">radar-total</span></code> product; both via the <code class="docutils literal notranslate"><span class="pre">copernicusmarine</span></code> Python client (free registration).</p>
+</section>
+<section id="noaa-us-radar-coverage">
+<span id="subpar-hfr-noaa"></span><h5>NOAA - US radar coverage<a class="headerlink" href="#noaa-us-radar-coverage" title="Link to this heading"></a></h5>
+<p><strong>Description:</strong></p>
+<p>Gridded, hourly total-vector surface-current fields (<code class="docutils literal notranslate"><span class="pre">water_u</span></code> and <code class="docutils literal notranslate"><span class="pre">water_v</span></code>) from the US Integrated Ocean Observing System (IOOS) National HF Radar Network (HFRNet), combined from individual radial-current sites and distributed by NOAA. The dataset is distributed via two different backends, ERDDAP griddap endpoint covering a rolling <span class="math notranslate nohighlight">\(\sim\)</span>90-day real-time window, and an NCEI THREDDS archive spanning 2006-present (latency of a few weeks). The <code class="docutils literal notranslate"><span class="pre">l2o-qc</span></code> toolbox tries the ERDDAP backend first, falling back to THREDDS for older dates the rolling window no longer covers. In case of no availability via NOAA, the Copernicus Marine HF radar database, as described in Section <a class="reference internal" href="#subpar-hfr-cmems"><span class="std std-ref">Copernicus Marine - global radar coverage</span></a>, is tried.</p>
+<p><strong>Characteristics:</strong></p>
+<p>A regular (<code class="docutils literal notranslate"><span class="pre">time</span></code>, <code class="docutils literal notranslate"><span class="pre">lat</span></code>, <code class="docutils literal notranslate"><span class="pre">lon</span></code>) grid at region-dependent resolutions of 0.5, 1, 2, or 6 km, at hourly cadence, across six regions: US West Coast, US East Coast/Gulf, Great Lakes, Hawaii, Puerto Rico/US Virgin Islands, and the Gulf of Alaska. See Table <a class="reference internal" href="#tab-hf-radar-res-noaa"><span class="std std-numref">Table 5.2</span></a> for available resolutions per region and retrieval mechanism. The locations of these regions can be seen in Figure <a class="reference internal" href="#fig-hf-radar-coverage-us"><span class="std std-numref">Fig. 5.5</span></a> shows their bounding boxes).</p>
+<div class="threeparttable docutils container">
+<table class="docutils align-default" id="tab-hf-radar-res-noaa">
+<caption><span class="caption-number">Table 5.2 </span><span class="caption-text">NOAA HF-radar resolution availability per region, by backend.</span><a class="headerlink" href="#tab-hf-radar-res-noaa" title="Link to this table"></a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Region</strong></p></th>
+<th class="head"><p><strong>ERDDAP</strong></p></th>
+<th class="head"><p><strong>THREDDS</strong></p></th>
+<th class="head"><p><strong>Default</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">US_WEST</span></code></p></td>
+<td><p>0.5, 1, 2, 6 km</p></td>
+<td><p>0.5, 1, 2, 6 km</p></td>
+<td><p>6 km</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">US_GREAT_LAKES</span></code></p></td>
+<td><p>none</p></td>
+<td><p>0.5, 1, 2, 6 km</p></td>
+<td><p>6 km</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">US_EAST_GULF</span></code></p></td>
+<td><p>1, 2, 6 km</p></td>
+<td><p>1, 2, 6 km</p></td>
+<td><p>6 km</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">US_HAWAII</span></code></p></td>
+<td><p>1 km only</p></td>
+<td><p>1, 2, 6 km</p></td>
+<td><p>1 km</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">US_PRVI</span></code></p></td>
+<td><p>2, 6 km</p></td>
+<td><p>2, 6 km</p></td>
+<td><p>6 km</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">US_GULF_OF_ALASKA</span></code></p></td>
+<td><p>none</p></td>
+<td><p>2, 6 km</p></td>
+<td><p>6 km</p></td>
+</tr>
+</tbody>
+</table>
+<div class="tablenotes docutils container">
+<p>West Coast</p>
+<p>East Coast/Gulf</p>
+<p>Puerto Rico/US Virgin Islands</p>
+<p>Resolutions the ERDDAP backend supports per its own catalogue definition, not always live accessible as individual region/resolution datasets on NOAA’s rolling real-time feed can transiently 404.</p>
+</div>
+</div>
+<p><strong>Data quality:</strong></p>
+<p>NOAA’s HF-radar product carries no discrete per-cell QC flag on the delivered total-vector grid. Individual radials are filtered upstream before total-vector computation including among others a maximum-magnitude threshold, and a land mask (Otero 2021). Therefore, any value present in the retrieved data has already passed filtering.</p>
+<p><strong>Availability:</strong></p>
+<p>ERDDAP: rolling <span class="math notranslate nohighlight">\(\sim\)</span>90-day window ending near real time. THREDDS archive: 2006 – present (latency of a few weeks). See the per region availability in Table <a class="reference internal" href="#tab-hf-radar-res-noaa"><span class="std std-numref">Table 5.2</span></a>. Together these archives cover a span of 2006 – present for most of the regions.</p>
+<p><strong>Dataset acquisition:</strong></p>
+<p>NOAA CoastWatch ERDDAP griddap server (<a class="reference external" href="https://coastwatch.pfeg.noaa.gov/erddap/griddap/">https://coastwatch.pfeg.noaa.gov/erddap/griddap/</a>); NOAA NCEI THREDDS HF-radar archive (<a class="reference external" href="https://www.ncei.noaa.gov/thredds-ocean/">https://www.ncei.noaa.gov/thredds-ocean/</a>); both public, no registration required.</p>
+</section>
+</section>
+<section id="in-situ-observations-copernicus-marine">
+<h4><span class="section-number">5.3.2.4. </span>In-Situ Observations (Copernicus Marine)<a class="headerlink" href="#in-situ-observations-copernicus-marine" title="Link to this heading"></a></h4>
+<p><strong>Description:</strong></p>
+<p>Dataset ID INSITU_GLO_PHYBGCWAV_DISCRETE_MYNRT_013_030, which contains in-situ observations. Relevant platforms reporting surface currents are buoys, moorings, drifters, and ferryboxes.</p>
+<p><strong>Characteristics:</strong></p>
+<p>point observations at native platform sampling rate; default collocation, which is user adjustable, is <span class="math notranslate nohighlight">\(\pm\)</span>30 min / 5 km aggregation radius.</p>
+<p><strong>Data quality:</strong></p>
+<p>Real time quality control procedure subjects the currents (meta)data to 21 tests as described in the Copernicus Marine In Situ TAC quality control procedure (2025) (Copernicus In Situ Tac Data Management Team 2025). The resulting QC flag for current parameters, ranging from 0 – 9, is the same as the one described in Section <a class="reference internal" href="#subpar-cmems-insitu-waves"><span class="std std-ref">Copernicus Marine</span></a>. Accepted QC flag codes are again <span class="math notranslate nohighlight">\(\{1,2,5,7,8\}\)</span>.</p>
+<p>Accuracy of current measurements are expected to be 0.5 - 1 cm/s (Wehde et al. 2025).</p>
+<p><strong>Availability:</strong></p>
+<p>Platform dependent, the Copernicus Marine dataset provides data from 1 January 2020 - present. Not all platforms measure surface currents. The geographical coverage of the platforms that do can be seen in Figure <a class="reference internal" href="#fig-in-situ-currents-coverage"><span class="std std-numref">Fig. 5.6</span></a> for the first half of August 2026. Moorings have fixed locations, while the other platforms drift with the currents.</p>
+<figure class="align-default" id="fig-in-situ-currents-coverage">
+<a class="reference internal image-reference" href="_images/insitu_currents_global_coverage_2026-08-01_2026-08-15.png"><img alt="_images/insitu_currents_global_coverage_2026-08-01_2026-08-15.png" src="_images/insitu_currents_global_coverage_2026-08-01_2026-08-15.png" style="width: 100%;" />
+</a>
+<figcaption>
+<p><span class="caption-number">Fig. 5.6 </span><span class="caption-text">Coverage of Copernicus Marine in-situ platforms that provided sea surface currents during the first half of August 2026.</span><a class="headerlink" href="#fig-in-situ-currents-coverage" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+<p><strong>Dataset acquisition:</strong></p>
+<p>Copernicus Marine in-situ dataset (<a class="reference external" href="https://data.marine.copernicus.eu/product/INSITU_GLO_PHYBGCWAV_DISCRETE_MYNRT_013_030/">https://data.marine.copernicus.eu/product/INSITU_GLO_PHYBGCWAV_DISCRETE_MYNRT_013_030/</a>), download via the <code class="docutils literal notranslate"><span class="pre">copernicusmarine</span></code> Python client (free registration).</p>
+</section>
+<section id="altimeters-1">
+<span id="id8"></span><h4><span class="section-number">5.3.2.5. </span>Altimeters<a class="headerlink" href="#altimeters-1" title="Link to this heading"></a></h4>
+</section>
+<section id="iwrap">
+<h4><span class="section-number">5.3.2.6. </span>IWRAP<a class="headerlink" href="#iwrap" title="Link to this heading"></a></h4>
+<div class="references csl-bib-body hanging-indent docutils container" id="refs">
+<div class="csl-entry docutils container" id="ref-ardhuin-semiempirical-2010">
+<p>Ardhuin, Fabrice, Erick Rogers, Alexander V. Babanin, et al. 2010. “Semiempirical Dissipation Source Functions for Ocean Waves. Part I: Definition, Calibration, and Validation.” <em>Journal of Physical Oceanography</em> 40 (9): 1917–41. <a class="reference external" href="https://doi.org/10.1175/2010JPO4324.1">https://doi.org/10.1175/2010JPO4324.1</a>.</p>
+</div>
+<div class="csl-entry docutils container" id="ref-barton-navys-2021">
+<p>Barton, Neil, E. Joseph Metzger, Carolyn A. Reynolds, et al. 2021. “The Navy’s Earth System Prediction Capability: A New Global Coupled Atmosphere‐Ocean‐Sea Ice Prediction System Designed for Daily to Subseasonal Forecasting.” <em>Earth and Space Science</em> 8 (4): e2020EA001199. <a class="reference external" href="https://doi.org/10.1029/2020EA001199">https://doi.org/10.1029/2020EA001199</a>.</p>
+</div>
+<div class="csl-entry docutils container" id="ref-belmonterivas2019era5-wind-bias">
+<p>Belmonte Rivas, Maria, and Ad Stoffelen. 2019. “Characterizing ERA-Interim and ERA5 Surface Wind Biases Using ASCAT.” <em>Ocean Science</em> 15 (3): 831–52. <a class="reference external" href="https://doi.org/10.5194/os-15-831-2019">https://doi.org/10.5194/os-15-831-2019</a>.</p>
+</div>
+<div class="csl-entry docutils container" id="ref-cmemswave005-reprocessed">
+<p>Charles, E., and A. Ollivier. n.d. <em>Global Ocean L3 Significant Wave Height from Reprocessed Satellite Measurements</em>. CMEMS-WAVE-QUID-014-005. Version 2.0. Copernicus Marine Service WAVE Thematic Assembly Center. <a class="reference external" href="https://doi.org/https://doi.org/10.48670/moi-00176">https://doi.org/https://doi.org/10.48670/moi-00176</a>.</p>
+</div>
+<div class="csl-entry docutils container" id="ref-chassignet-us-2009">
+<p>Chassignet, Eric, Harley Hurlburt, E. Joseph Metzger, et al. 2009. “US GODAE: Global Ocean Prediction with the HYbrid Coordinate Ocean Model (HYCOM).” <em>Oceanography</em> 22 (2): 64–75. <a class="reference external" href="https://doi.org/10.5670/oceanog.2009.39">https://doi.org/10.5670/oceanog.2009.39</a>.</p>
+</div>
+<div class="csl-entry docutils container" id="ref-copernicus-marine-qc-2025">
+<p>Copernicus In Situ Tac Data Management Team. 2025. <em>Copernicus Marine In Situ TAC. Quality Control Procedure</em>. Copernicus Marine In Situ TAC. <a class="reference external" href="https://doi.org/10.13155/106219">https://doi.org/10.13155/106219</a>.</p>
+</div>
+<div class="csl-entry docutils container" id="ref-corgnati-hfr-2024">
+<p>Corgnati, Lorenzo, Carlo Mantovani, Antonio Novellino, Anna Rubio, and Julien Mader. 2024. <em>Recommendation Report 2 on Improved Common Procedures for HFR QC Analysis</em>. JERICO-NEXT-WP5-D5.14-V2.0. EuroGOOS HFR Task Team. <a class="reference external" href="https://doi.org/10.25607/10.25607/OBP-944.2">https://doi.org/10.25607/10.25607/OBP-944.2</a>.</p>
+</div>
+<div class="csl-entry docutils container" id="ref-esa-s1-rvl-atbd">
+<p>Engen, G., and H. Johnsen. 2011. <em>Sentinel-1 Doppler and Ocean Radial Velocity Algorithm Definition</em>. S1-TN-NRT-53-0658. Version 1.2. European Space Agency. <a class="reference external" href="https://sentinels.copernicus.eu/documents/247904/349449/S1_L2_RVL_AlgoDef_v1+2.pdf">https://sentinels.copernicus.eu/documents/247904/349449/S1_L2_RVL_AlgoDef_v1+2.pdf</a>.</p>
+</div>
+<div class="csl-entry docutils container" id="ref-hersbach2020era5">
+<p>Hersbach, Hans, Bill Bell, Paul Berrisford, et al. 2020. “The ERA5 Global Reanalysis.” <em>Quarterly Journal of the Royal Meteorological Society</em> 146 (730): 1999–2049. <a class="reference external" href="https://doi.org/10.1002/qj.3803">https://doi.org/10.1002/qj.3803</a>.</p>
+</div>
+<div class="csl-entry docutils container" id="ref-johnsen2022osw">
+<p>Johnsen, Harald, Fabrice Collard, Romain Husson, Grégory Hajduch, Abdelmajid Benchaabane, and Pierre Vincent. 2022. <em>Sentinel-1 Ocean Swell Wave Spectra (OSW) Algorithm Definition</em>. Technical Note S1-TN-NRT-52-7450. CLS (Collecte Localisation Satellites). <a class="reference external" href="https://sentiwiki.copernicus.eu/__attachments/a_ed2fac9f988de7e6bd8cc55dfddf1900e368a53796c6cedfbde3e8e0195504ee/S1-TN-NRT-52-7450%20-%20Sentinel-1%20Ocean%20Swell%20Wave%20Spectra%20OSW%20ATBD%202022%20-%201.5.pdf">https://sentiwiki.copernicus.eu/__attachments/a_ed2fac9f988de7e6bd8cc55dfddf1900e368a53796c6cedfbde3e8e0195504ee/S1-TN-NRT-52-7450%20-%20Sentinel-1%20Ocean%20Swell%20Wave%20Spectra%20OSW%20ATBD%202022%20-%201.5.pdf</a>.</p>
+</div>
+<div class="csl-entry docutils container" id="ref-lorente-coastal-2022">
+<p>Lorente, Pablo, Eva Aguiar, Michele Bendoni, et al. 2022. “Coastal High-Frequency Radars in the Mediterranean – Part 1: Status of Operations and a Framework for Future Development.” <em>Ocean Science</em> 18 (3): 761–95. <a class="reference external" href="https://doi.org/10.5194/os-18-761-2022">https://doi.org/10.5194/os-18-761-2022</a>.</p>
+</div>
+<div class="csl-entry docutils container" id="ref-martin-first-2022">
+<p>Martin, Adrien C. H., Christine P. Gommenginger, Benjamin Jacob, and Joanna Staneva. 2022. “First Multi-Year Assessment of Sentinel-1 Radial Velocity Products Using HF Radar Currents in a Coastal Environment.” <em>Remote Sensing of Environment</em> 268 (January): 112758. <a class="reference external" href="https://doi.org/10.1016/j.rse.2021.112758">https://doi.org/10.1016/j.rse.2021.112758</a>.</p>
+</div>
+<div class="csl-entry docutils container" id="ref-meissner2009wind-vector">
+<p>Meissner, Thomas, and Frank J. Wentz. 2009. “Wind-Vector Retrievals Under Rain with Passive Satellite Microwave Radiometers.” <em>IEEE Transactions on Geoscience and Remote Sensing</em> 47 (9): 3065–83. <a class="reference external" href="https://doi.org/10.1109/TGRS.2009.2027012">https://doi.org/10.1109/TGRS.2009.2027012</a>.</p>
+</div>
+<div class="csl-entry docutils container" id="ref-meissner2012ocean-emissivity">
+<p>Meissner, Thomas, and Frank J. Wentz. 2012. “The Emissivity of the Ocean Surface Between 6 and 90 GHz over a Large Range of Wind Speeds and Earth Incidence Angles.” <em>IEEE Transactions on Geoscience and Remote Sensing</em> 50 (8): 3004–26. <a class="reference external" href="https://doi.org/10.1109/TGRS.2011.2179662">https://doi.org/10.1109/TGRS.2011.2179662</a>.</p>
+</div>
+<div class="csl-entry docutils container" id="ref-metzger-gofs31-2017">
+<p>Metzger, E. Joseph, Robert W. Helber, Patrick J. Hogan, et al. 2017. <em>Global Ocean Forecast System 3.1 Validation Testing</em>. NRL/MR/7320–17-9722. Naval Research Laboratory. <a class="reference external" href="https://www7320.nrlssc.navy.mil/pubs/2017/metzger-2017.pdf">https://www7320.nrlssc.navy.mil/pubs/2017/metzger-2017.pdf</a>.</p>
+</div>
+<div class="csl-entry docutils container" id="ref-otero-hfrnet-rtvnetcdf-2021">
+<p>Otero, Mark. 2021. <em>NetCDF Description for Near Real-Time Surface Currents Produced by the HF-Radar Network</em>. Scripps Institution of Oceanography, Coastal Observing Research; Development Center (CORDC). <a class="reference external" href="https://hfradar.ioos.us/hfrnet/documents/HFRNet_RTV-NetCDF.pdf">https://hfradar.ioos.us/hfrnet/documents/HFRNet_RTV-NetCDF.pdf</a>.</p>
+</div>
+<div class="csl-entry docutils container" id="ref-wmogts">
+<p>Panel, Data Buoy Cooperation. 2011. <em>GUIDE TO BUOY DATA QUALITY CONTROL TESTS TO PERFORM IN REAL TIME BY a GTS DATA PROCESSING CENTRE - DBCP Technical Document No. 37</em>. Version 1. Intergovernmental Oceanographic Commission of UNESCO - World Meteorological Organization.</p>
+</div>
+<div class="csl-entry docutils container" id="ref-cmemswave001-nrt">
+<p>Philip, A., N. Taburet, E. Husson, et al. n.d. <em>Global Ocean L3 Significant Wave Height from NRT Satellite Measurements</em>. CMEMS-WAVE-QUID-014-001. Version 1.0. Copernicus Marine Service WAVE Thematic Assembly Center. <a class="reference external" href="https://doi.org/https://doi.org/10.48670/moi-00179">https://doi.org/https://doi.org/10.48670/moi-00179</a>.</p>
+</div>
+<div class="csl-entry docutils container" id="ref-quach-deep-2021">
+<p>Quach, Brandon, Yannik Glaser, Justin Edward Stopa, Alexis Aurelien Mouche, and Peter Sadowski. 2021. “Deep Learning for Predicting Significant Wave Height From Synthetic Aperture Radar.” <em>IEEE Transactions on Geoscience and Remote Sensing</em> 59 (3): 1859–67. <a class="reference external" href="https://doi.org/10.1109/TGRS.2020.3003839">https://doi.org/10.1109/TGRS.2020.3003839</a>.</p>
+</div>
+<div class="csl-entry docutils container" id="ref-quilfen-denoising-2021">
+<p>Quilfen, Y., and B. Chapron. 2021. “On Denoising Satellite Altimeter Measurements for High-Resolution Geophysical Signal Analysis.” <em>Advances in Space Research</em> 68 (2): 875–91. <a class="reference external" href="https://doi.org/10.1016/j.asr.2020.01.005">https://doi.org/10.1016/j.asr.2020.01.005</a>.</p>
+</div>
+<div class="csl-entry docutils container" id="ref-verhoef2024osisaf-hscat-oscat-winds">
+<p>Verhoef, Anton, Jeroen Verspeek, and Ad Stoffelen. 2024. <em>Scientific Validation Report (SVR) for the HSCAT/OSCAT Winds</em>. Scientific Validation Report SAF/OSI/CDOP4/KNMI/TEC/RP/434. EUMETSAT Ocean; Sea Ice Satellite Application Facility (OSI SAF), Royal Netherlands Meteorological Institute (KNMI). <a class="reference external" href="https://scatterometer.knmi.nl/publications/pdf/osisaf_svr_hscat_oscat_winds.pdf">https://scatterometer.knmi.nl/publications/pdf/osisaf_svr_hscat_oscat_winds.pdf</a>.</p>
+</div>
+<div class="csl-entry docutils container" id="ref-verspeek2019ascat-c-calval">
+<p>Verspeek, Jeroen, Anton Verhoef, and Ad Stoffelen. 2019. <em>ASCAT-c Wind Product Calibration and Validation</em>. Scientific Validation Report SAF/OSI/CDOP3/KNMI/TEC/RP/345. EUMETSAT Ocean; Sea Ice Satellite Application Facility (OSI SAF), Royal Netherlands Meteorological Institute (KNMI). <a class="reference external" href="https://scatterometer.knmi.nl/publications/pdf/osisaf_cdop3_ss3_valrep_ascat_c_winds_1.3.pdf">https://scatterometer.knmi.nl/publications/pdf/osisaf_cdop3_ss3_valrep_ascat_c_winds_1.3.pdf</a>.</p>
+</div>
+<div class="csl-entry docutils container" id="ref-cmems-quid-013-030-036">
+<p>Wehde, H., K. V. Schuckmann, S. Pouliquen, et al. 2025. <em>Quality Information Document for in Situ Products, Regional Multiparameter MYNRT Products (INSITU_GLO_PHYBGCWAV_DISCRETE_MYNRT_013_030, _013_031, _013_032, _013_033, _013_034, _013_035, _013_036)</em>. Quality Information Document (QUID) CMEMS-INS-QUID-013-030-036. E.U. Copernicus Marine Service. <a class="reference external" href="https://documentation.marine.copernicus.eu/QUID/CMEMS-INS-QUID-013-030-036.pdf">https://documentation.marine.copernicus.eu/QUID/CMEMS-INS-QUID-013-030-036.pdf</a>.</p>
+</div>
+</div>
+</section>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="04_auxiliary_datasets.html" class="btn btn-neutral float-left" title="4. Auxiliary datasets description" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="03_algorithms.html" class="btn btn-neutral float-right" title="6. Algorithms description" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright RL2Ocean consortium.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
