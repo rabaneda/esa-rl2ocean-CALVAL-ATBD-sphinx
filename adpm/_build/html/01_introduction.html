@@ -1,0 +1,385 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>1. Introduction &mdash; RL2Ocean Calibration and Validation ATBD</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=10f1778b"></script>
+      <script src="_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="2. Processing model and data flow" href="02_processing_model.html" />
+    <link rel="prev" title="Calibration and Validation Algorithm Theoretical Basis Document" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            RL2Ocean Calibration and Validation ATBD
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">1. Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#purpose-and-scope">1.1. Purpose and scope</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cal-val-context">1.2. Cal/Val context</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#l2-product-scope">1.3. L2 product scope</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cal-val-objectives-and-performance">1.4. Cal/Val objectives and performance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#atbd-purpose">1.5. ATBD purpose</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#applicable-and-reference-documents">1.6. Applicable and reference documents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#acronyms">1.7. Acronyms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#definitions-and-conventions">1.8. Definitions and conventions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="02_processing_model.html">2. Processing model and data flow</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="02_processing_model.html#overview-and-top-down-decomposition">2.1. Overview and top-down decomposition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02_processing_model.html#pre-launch-phase-d">2.2. Pre-launch phase (D)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02_processing_model.html#commissioning-phase-ioc-or-e1">2.3. Commissioning phase (IOC or E1)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02_processing_model.html#exploitation-phase-e2">2.4. Exploitation phase (E2)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02_processing_model.html#end-to-end-data-flow">2.5. End-to-end data flow</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="03_algorithms.html">3. Algorithms description</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="alg-01-calibration.html">3.1. Selected Calibration methods</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="alg-01-calibration.html#rose-l-l1-slc-products">3.1.1. ROSE-L L1 SLC products</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#short-description">3.1.1.1. Short description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#description-of-inputs">3.1.1.2. Description of inputs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#detailed-methodology">3.1.1.3. Detailed methodology</a></li>
+<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#performance-metrics">3.1.1.4. Performance metrics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#expected-output">3.1.1.5. Expected output</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="alg-01-calibration.html#noc">3.1.2. NOC</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id1">3.1.2.1. Short description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id2">3.1.2.2. Description of inputs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id3">3.1.2.3. Detailed methodology</a></li>
+<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id4">3.1.2.4. Performance metrics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id5">3.1.2.5. Expected output</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="alg-01-calibration.html#gmf-tuning">3.1.3. GMF tuning</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id6">3.1.3.1. Short description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id7">3.1.3.2. Description of inputs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id8">3.1.3.3. Detailed methodology</a></li>
+<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id9">3.1.3.4. Performance metrics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id10">3.1.3.5. Expected output</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="alg-01-calibration.html#mtf-tuning">3.1.4. MTF tuning</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id11">3.1.4.1. Short description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id12">3.1.4.2. Description of inputs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id13">3.1.4.3. Detailed methodology</a></li>
+<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id14">3.1.4.4. Performance metrics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id15">3.1.4.5. Expected output</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="alg-01-calibration.html#summary">3.1.5. Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="alg-02-validation.html">3.2. Selected Validation methods</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="alg-02-validation.html#one-to-one-validation">3.2.1. One-to-one validation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="alg-02-validation.html#short-description">3.2.1.1. Short description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="alg-02-validation.html#description-of-inputs">3.2.1.2. Description of inputs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="alg-02-validation.html#detailed-methodology">3.2.1.3. Detailed methodology</a></li>
+<li class="toctree-l4"><a class="reference internal" href="alg-02-validation.html#performance-metrics">3.2.1.4. Performance metrics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="alg-02-validation.html#expected-output">3.2.1.5. Expected output</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="alg-02-validation.html#triple-collocation">3.2.2. Triple collocation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="alg-02-validation.html#id1">3.2.2.1. Short description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="alg-02-validation.html#id2">3.2.2.2. Description of inputs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="alg-02-validation.html#id3">3.2.2.3. Detailed methodology</a></li>
+<li class="toctree-l4"><a class="reference internal" href="alg-02-validation.html#id4">3.2.2.4. Performance metrics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="alg-02-validation.html#id5">3.2.2.5. Expected output</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="alg-02-validation.html#spatial-variances">3.2.3. Spatial variances</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="alg-02-validation.html#id6">3.2.3.1. Short description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="alg-02-validation.html#id7">3.2.3.2. Description of inputs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="alg-02-validation.html#id8">3.2.3.3. Detailed methodology</a></li>
+<li class="toctree-l4"><a class="reference internal" href="alg-02-validation.html#id9">3.2.3.4. Performance metrics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="alg-02-validation.html#id10">3.2.3.5. Expected output</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="alg-02-validation.html#summary">3.2.4. Summary</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="04_uncertainty_analysis.html">4. Uncertainty analysis</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="04_uncertainty_analysis.html#introduction">4.1. Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04_uncertainty_analysis.html#the-gum-principles-a-review">4.2. The GUM Principles: A review</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="04_uncertainty_analysis.html#the-international-vocabulary-of-metrology-vim">4.2.1. The International Vocabulary of Metrology (VIM)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04_uncertainty_analysis.html#guide-to-the-expression-of-uncertainty-in-measurement-gum">4.2.2. Guide to the Expression of Uncertainty in Measurement (GUM)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04_uncertainty_analysis.html#quality-assurance-framework-for-earth-observation-qa4eo">4.2.3. Quality Assurance Framework for Earth Observation (QA4EO)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="04_uncertainty_analysis.html#product-specific-uncertainty-estimation">4.3. Product-specific uncertainty estimation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="04_uncertainty_analysis.html#azimuth-wavelength-cutoff">4.3.1. Azimuth wavelength cutoff</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04_uncertainty_analysis.html#macs">4.3.2. MACS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04_uncertainty_analysis.html#imacs">4.3.3. iMACS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04_uncertainty_analysis.html#dca">4.3.4. DCA</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04_uncertainty_analysis.html#texture-based-azimuth-cutoff">4.3.5. Texture-based azimuth cutoff</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04_uncertainty_analysis.html#rvl">4.3.6. RVL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04_uncertainty_analysis.html#inverse-wave-age">4.3.7. Inverse Wave Age</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04_uncertainty_analysis.html#wind-products">4.3.8. Wind products</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="04_uncertainty_analysis.html#wind-speed-wind-stress-and-hub-height-wind-speed">4.3.8.1. Wind speed, wind stress, and hub height wind speed</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="04_uncertainty_analysis.html#sea-state-products">4.3.9. Sea-state products</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04_uncertainty_analysis.html#line-of-sight-current-products">4.3.10. Line-of-sight current products</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="04_uncertainty_analysis.html#line-of-sight-wave-doppler-and-line-of-sight-surface-current-component">4.3.10.1. Line-of-sight wave Doppler and line-of-sight surface current component</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="04_uncertainty_analysis.html#summary">4.3.11. Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="04_uncertainty_analysis.html#references">4.4. References</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">RL2Ocean Calibration and Validation ATBD</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active"><span class="section-number">1. </span>Introduction</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/01_introduction.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="introduction">
+<h1><span class="section-number">1. </span>Introduction<a class="headerlink" href="#introduction" title="Link to this heading"></a></h1>
+<section id="purpose-and-scope">
+<h2><span class="section-number">1.1. </span>Purpose and scope<a class="headerlink" href="#purpose-and-scope" title="Link to this heading"></a></h2>
+<p>The Copernicus Programme, established by the European Union, is a framework for Earth Observation and Monitoring, designed to support environmental protection, civil protection, and civil security efforts. At the heart of this programme is the Copernicus Space Component (CSC), which comprises the Sentinel missions. These missions are integral to providing essential data across various thematic domains, thereby facilitating informed decision-making and policy development.</p>
+<p>One of the new advancements within this framework is the Copernicus Radar Observing System for Europe – L-Band (ROSE-L). This initiative is aimed at enhancing existing capabilities by introducing L-band Synthetic Aperture Radar (SAR) data. The L-band SAR is set to complement the C-band radar data provided by Sentinel-1, thus addressing specific observational needs within environmental and maritime surveillance.</p>
+</section>
+<section id="cal-val-context">
+<h2><span class="section-number">1.2. </span>Cal/Val context<a class="headerlink" href="#cal-val-context" title="Link to this heading"></a></h2>
+<p>Quality Assessment (QA) is required for remote sensing and Earth Observation (EO) instruments in order to produce reliable measurements and ensure accuracy. Quality of products are commonly assessed through a Calibration and Validation process (Cal/Val). Consequently, the development of the prototype and operational ROSE-L Ocean products processors (L2O-GPP and L2O-IPF respectively) must be followed by the validation of products. A validation strategy is meant to be planned prior the calibration and validation activities. The required strategy shall cover different stages of the processor and different phases of ROSE-L mission, from pre-launch (phase D) to exploitation (phase E2). The strategy shall include methodologies, datasets, performance and uncertainty metrics.</p>
+<p>The ROSE-L instrument will operate in scanning synthetic aperture radar (ScanSAR) mode. The system will support Dual-Pol, Quad-Pol and Wave modes. The Cal/Val strategy is also meant to cover all modes and polarizations. ROSE-L will not be the first SAR system functioning within L-band. ALOS, ALOS-2, ALOS-4, SAOCOM and NiSAR are, or have been, operating in L-band too. However, there are differences between those systems and the ROSE-L system, e.g. incidence angle, range bandwith, swath width, among others. Furthermore, ROSE-L incorporates the use of a new technique, the Scan-On-Receive (SCORE) technique with Multiple Azimuth Phase Centers (MAPS). The different instrument design will impose differences in the retrievals at low level which are meant to influence the inversion into L2 products.</p>
+<p>Regarding the development of a retrieval algorithm but also Cal/Val activities, instrument differences between ROSE-L and previous SAR L-band instruments impose a challenge; the need of producing and validating ocean products from ROSE-L scenes during the pre-launch phase. The lack of real ROSE-L data will be mitigated by the use of similar acquisitions by the above-mentioned systems; although this introduces a non-negligible degree of uncertainty. For Cal/Val purposes, simulated ROSE-L scenes will be produced. The achievable accuracy of simulated ROSE-L will also be analysed during the In-Orbit-Commissioning (IOC) phase, E1. Once real ROSE-L data is available, the outputs from the L2O-IPF processor will need to be validated again, with the possibility to encounter a need for a readjustment of the processor or introduction of supplementary calibration steps.</p>
+<p>A tool for assessing the quality of the ocean products is vital. The Cal/Val tool, L2O-QC, is meant to be developed in parallel to the development of the ocean processors, L2O-GPP and L2O-IPF. The L2O-QC software is required to be able to ingest datasets of different nature; ROSE-L acquisitions, reference datasets (either in-situ or remote), and auxiliary data. The goal is to collocate the different datasets in order to undertake the quality assessment, where the accuracy and reliability of the ROSE-L L2 ocean products will be determined and ensured. The underlying objective is to provide users with a set of performance and uncertainty metrics necessary for a deep understanding of the products and posterior correct usage and application.</p>
+</section>
+<section id="l2-product-scope">
+<h2><span class="section-number">1.3. </span>L2 product scope<a class="headerlink" href="#l2-product-scope" title="Link to this heading"></a></h2>
+<p>The L2 products to validate are already listed in the objectives of L2O-GPP and L2O-IPF: Ocean Surface Vector Stress (OSVS), Sea State, and line-of-sight (LoS) surface currents. Within each of the three thematic products, the following L2 variables are meant to be produced and therefore validated:</p>
+<ul class="simple">
+<li><p>OSVS:</p>
+<ul>
+<li><p>Wind vector</p></li>
+<li><p>Wind stress</p></li>
+<li><p>Hub height wind speed</p></li>
+</ul>
+</li>
+<li><p>Sea state:</p>
+<ul>
+<li><p>Total significant wave height</p></li>
+<li><p>Mean period wind-sea</p></li>
+<li><p>First moment wave period</p></li>
+<li><p>Second moment wave period</p></li>
+<li><p>Wave height swell dominant system</p></li>
+<li><p>Wave height swell secondary system</p></li>
+<li><p>Significant wave height wind-sea</p></li>
+<li><p>Mean period wind-sea</p></li>
+<li><p>Wave direction</p></li>
+<li><p>Wave directional energy spectrum</p></li>
+</ul>
+</li>
+<li><p>LoS currents:</p>
+<ul>
+<li><p>LoS wave Doppler</p></li>
+<li><p>LoS surface current component</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="cal-val-objectives-and-performance">
+<h2><span class="section-number">1.4. </span>Cal/Val objectives and performance<a class="headerlink" href="#cal-val-objectives-and-performance" title="Link to this heading"></a></h2>
+<p>The key objectives of the Calibration and Validation (Cal/Val) phase include ensuring that all L2 geophysical products meet internationally recognized standards, such as SI traceability, and align with QA4EO principles to guarantee high data quality. Cal/Val aims to validate the accuracy, precision, and stability of L2 products using independent datasets, such as Fiducial Reference Measurements (FRM), and cross-sensor harmonization. A critical focus is on quantifying and documenting uncertainty propagation from instrument measurements to retrievals while ensuring the retrieval algorithms are robust under diverse environmental conditions.</p>
+<p>To meet performance requirements, L2 products must achieve predefined thresholds in accuracy, precision, and stability, with uncertainties traceable and reliable across pixel and aggregate levels. Products must demonstrate consistency over full mission coverage, addressing global, regional, and temporal scales, and maintain defined operational latencies (e.g., near-real-time or reprocessed outputs). Validation activities use measurable metrics, including statistical bias, RMS error, and spatial-temporal coverage rates, to assess product quality systematically. Lastly, the outputs should be delivered in user-ready formats with comprehensive documentation while maintaining version control and data provenance.</p>
+</section>
+<section id="atbd-purpose">
+<h2><span class="section-number">1.5. </span>ATBD purpose<a class="headerlink" href="#atbd-purpose" title="Link to this heading"></a></h2>
+<p>The aim of the Calibration and Validation Algorithm Theoretical Basis Document (ATBD) is to provide a comprehensive and transparent description of the scientific principles, mathematical methods, and processing steps used to generate ROSE-L L2 ocean products. It ensures that the algorithms are well-documented, reproducible, and traceable, facilitating a clear understanding of how measurements are transformed into geophysical quantities. The ATBD serves as a foundation for ensuring data quality, guiding calibration/validation efforts, and supporting user confidence in the satellite mission’s outputs.</p>
+</section>
+<section id="applicable-and-reference-documents">
+<h2><span class="section-number">1.6. </span>Applicable and reference documents<a class="headerlink" href="#applicable-and-reference-documents" title="Link to this heading"></a></h2>
+<p>The source contains no separate applicable-document list. References cited in the uncertainty-analysis material are listed in that chapter, and the complete source BibTeX database is included as <code class="docutils literal notranslate"><span class="pre">bibliography.bib</span></code>.</p>
+</section>
+<section id="acronyms">
+<h2><span class="section-number">1.7. </span>Acronyms<a class="headerlink" href="#acronyms" title="Link to this heading"></a></h2>
+<dl class="simple glossary">
+<dt id="term-CANVAS">CANVAS<a class="headerlink" href="#term-CANVAS" title="Link to this term"></a></dt><dd><p>CAlibration aNd VAlidation for Sar.</p>
+</dd>
+<dt id="term-CEOS">CEOS<a class="headerlink" href="#term-CEOS" title="Link to this term"></a></dt><dd><p>Committee on Earth Observation Satellites.</p>
+</dd>
+<dt id="term-DC">DC<a class="headerlink" href="#term-DC" title="Link to this term"></a></dt><dd><p>Doppler Centroid.</p>
+</dd>
+<dt id="term-DCA">DCA<a class="headerlink" href="#term-DCA" title="Link to this term"></a></dt><dd><p>Doppler Centroid Anomaly.</p>
+</dd>
+<dt id="term-DORIS">DORIS<a class="headerlink" href="#term-DORIS" title="Link to this term"></a></dt><dd><p>Doppler Orbitography and Radiopositioning Integrated by Satellite.</p>
+</dd>
+<dt id="term-EO">EO<a class="headerlink" href="#term-EO" title="Link to this term"></a></dt><dd><p>Earth observation.</p>
+</dd>
+<dt id="term-ESA">ESA<a class="headerlink" href="#term-ESA" title="Link to this term"></a></dt><dd><p>European Space Agency.</p>
+</dd>
+<dt id="term-EU">EU<a class="headerlink" href="#term-EU" title="Link to this term"></a></dt><dd><p>European Union.</p>
+</dd>
+<dt id="term-FDR">FDR<a class="headerlink" href="#term-FDR" title="Link to this term"></a></dt><dd><p>Fundamental Data Record.</p>
+</dd>
+<dt id="term-FIDUCEO">FIDUCEO<a class="headerlink" href="#term-FIDUCEO" title="Link to this term"></a></dt><dd><p>Fidelity and Uncertainty in Climate Data Records from Earth Observation.</p>
+</dd>
+<dt id="term-FP7">FP7<a class="headerlink" href="#term-FP7" title="Link to this term"></a></dt><dd><p>Seventh Framework Programme.</p>
+</dd>
+<dt id="term-FRM">FRM<a class="headerlink" href="#term-FRM" title="Link to this term"></a></dt><dd><p>Fiducial Reference Measurement.</p>
+</dd>
+<dt id="term-GEO">GEO<a class="headerlink" href="#term-GEO" title="Link to this term"></a></dt><dd><p>Group on Earth Observations.</p>
+</dd>
+<dt id="term-GEOSS">GEOSS<a class="headerlink" href="#term-GEOSS" title="Link to this term"></a></dt><dd><p>Global Earth Observation System of Systems.</p>
+</dd>
+<dt id="term-GUM">GUM<a class="headerlink" href="#term-GUM" title="Link to this term"></a></dt><dd><p>Guide to the expression of Uncertainty in Measurement.</p>
+</dd>
+<dt id="term-JCGM">JCGM<a class="headerlink" href="#term-JCGM" title="Link to this term"></a></dt><dd><p>Joint Committee for Guides in Metrology.</p>
+</dd>
+<dt id="term-QA4EO">QA4EO<a class="headerlink" href="#term-QA4EO" title="Link to this term"></a></dt><dd><p>Quality Assurance Framework for Earth Observation.</p>
+</dd>
+<dt id="term-SAR">SAR<a class="headerlink" href="#term-SAR" title="Link to this term"></a></dt><dd><p>Synthetic Aperture Radar.</p>
+</dd>
+<dt id="term-SI">SI<a class="headerlink" href="#term-SI" title="Link to this term"></a></dt><dd><p>International System of Units.</p>
+</dd>
+<dt id="term-TDP">TDP<a class="headerlink" href="#term-TDP" title="Link to this term"></a></dt><dd><p>Thematic Data Product.</p>
+</dd>
+<dt id="term-UTD">UTD<a class="headerlink" href="#term-UTD" title="Link to this term"></a></dt><dd><p>Uncertainty Tree Diagram.</p>
+</dd>
+<dt id="term-VIM">VIM<a class="headerlink" href="#term-VIM" title="Link to this term"></a></dt><dd><p>International Vocabulary of Metrology.</p>
+</dd>
+</dl>
+</section>
+<section id="definitions-and-conventions">
+<h2><span class="section-number">1.8. </span>Definitions and conventions<a class="headerlink" href="#definitions-and-conventions" title="Link to this heading"></a></h2>
+<dl class="simple glossary">
+<dt id="term-Accuracy">Accuracy<a class="headerlink" href="#term-Accuracy" title="Link to this term"></a></dt><dd><p>The quality of being near to the true value. The source marks this
+definition as requiring a reference.</p>
+</dd>
+<dt id="term-Comparison">Comparison<a class="headerlink" href="#term-Comparison" title="Link to this term"></a></dt><dd><p>Metrologists validate uncertainty analysis and confirm traceability
+through comparisons. The Mutual Recognition Arrangement requires
+regular, formal international comparisons to establish the degree of
+equivalence between SI realisations and disseminations in different
+countries.</p>
+</dd>
+<dt id="term-Dataset">Dataset<a class="headerlink" href="#term-Dataset" title="Link to this term"></a></dt><dd><p>A combination of data records, such as numerical values needed to analyse
+and interpret a natural process, and the related information content.</p>
+</dd>
+<dt id="term-Fiducial-Reference-Measurement">Fiducial Reference Measurement<a class="headerlink" href="#term-Fiducial-Reference-Measurement" title="Link to this term"></a></dt><dd><p>A suite of independent, fully characterised, and traceable sub-orbital
+measurements, relevant to space-based observations, following the
+guidelines of the GEO/CEOS Quality Assurance Framework for Earth
+Observation (QA4EO).</p>
+</dd>
+<dt id="term-Fundamental-Data-Record">Fundamental Data Record<a class="headerlink" href="#term-Fundamental-Data-Record" title="Link to this term"></a></dt><dd><p>A record, of sufficient duration for its application, of
+uncertainty-quantified sensor observations calibrated to physical units
+and located in time and space, together with ancillary and lower-level
+instrument data used to calibrate and locate the observations and to
+estimate uncertainty (<a class="reference internal" href="04_uncertainty_analysis.html#ref-qa4eo1"><span class="std std-ref">Woolliams et al. 2025a</span></a>).</p>
+</dd>
+<dt id="term-Interoperability">Interoperability<a class="headerlink" href="#term-Interoperability" title="Link to this term"></a></dt><dd><p>The ability of data or tools from non-cooperating resources to integrate
+or work together with minimal effort (<a class="reference external" href="https://doi.org/10.1038/sdata.2016.18">Wilkinson et al. (2016)</a>).</p>
+</dd>
+<dt id="term-Interoperable">Interoperable<a class="headerlink" href="#term-Interoperable" title="Link to this term"></a></dt><dd><p>Describes data or tools from non-cooperating resources that can integrate
+or work together with minimal effort (<a class="reference external" href="https://doi.org/10.1038/sdata.2016.18">Wilkinson et al. (2016)</a>).</p>
+</dd>
+<dt id="term-Measurand">Measurand<a class="headerlink" href="#term-Measurand" title="Link to this term"></a></dt><dd><p>The quantity intended to be measured, and the single output quantity from
+a measurement model.</p>
+</dd>
+<dt id="term-Metrology">Metrology<a class="headerlink" href="#term-Metrology" title="Link to this term"></a></dt><dd><p>The science of measurement and its application
+(<a class="reference internal" href="04_uncertainty_analysis.html#ref-jcgmvim"><span class="std std-ref">BIPM et al., n.d.-b</span></a>).</p>
+</dd>
+<dt id="term-Thematic-Data-Product">Thematic Data Product<a class="headerlink" href="#term-Thematic-Data-Product" title="Link to this term"></a></dt><dd><p>A record, of sufficient duration for its application, of
+uncertainty-quantified retrieved values of a geophysical variable, along
+with ancillary data used in retrieval and uncertainty estimation.</p>
+</dd>
+<dt id="term-Traceability">Traceability<a class="headerlink" href="#term-Traceability" title="Link to this term"></a></dt><dd><p>A property of a measurement relating its value to a stated metrological
+reference through an unbroken chain of calibrations or comparisons, with
+uncertainties evaluated and methodologies documented at each step.</p>
+</dd>
+<dt id="term-Uncertainty-analysis">Uncertainty analysis<a class="headerlink" href="#term-Uncertainty-analysis" title="Link to this term"></a></dt><dd><p>The review of uncertainty sources and their propagation through the
+traceability chain, based on the suite of documents prepared by the JCGM
+and known as the GUM.</p>
+</dd>
+</dl>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Calibration and Validation Algorithm Theoretical Basis Document" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="02_processing_model.html" class="btn btn-neutral float-right" title="2. Processing model and data flow" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright RL2Ocean consortium.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
