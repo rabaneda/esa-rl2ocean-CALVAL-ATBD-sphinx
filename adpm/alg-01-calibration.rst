@@ -31,7 +31,7 @@ The aim of the Numerical Weather Prediction Ocean Calibration (NOC)
 calibration step to the SAR averaged normalized radar cross section
 (:math:`\sigma_0`) values used to retrieve the wind vector. These values are
 generally averaged on a grid of a few kilometres (approximately
-:math:`1\text{--}2 \times 1\text{--}2\ \mathrm{km}^2`).
+:math:`1-2 \times 1-2\ \mathrm{km}^2`).
 
 This calibration procedure is not applicable to sea-state parameters, since
 these are derived spectrally. Therefore, an absolute :math:`\sigma_0`
