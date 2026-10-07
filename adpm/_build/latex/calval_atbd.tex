@@ -228,9 +228,6 @@ Distribution and license
 \noindent{\hspace*{\fill}\sphinxincludegraphics[width=0.200\linewidth]{{rl2ocean_logo}.png}\hspace*{\fill}}
 \subsubsection*{Authors and approval}
 
-\sphinxAtStartPar
-The LaTeX cover lists author placeholders rather than individual names.
-
 
 \begin{savenotes}\sphinxattablestart
 \sphinxthistablewithglobalstyle
@@ -308,9 +305,6 @@ German Aerospace Center (DLR)
 \end{tabular}
 \sphinxtableafterendhook\par
 \sphinxattableend\end{savenotes}
-
-\sphinxAtStartPar
-Approval and authorisation records are not specified in the source.
 \subsubsection*{Change records}
 
 
@@ -414,16 +408,16 @@ One of the new advancements within this framework is the Copernicus Radar Observ
 \section{Cal/Val context}
 \label{\detokenize{01_introduction:cal-val-context}}
 \sphinxAtStartPar
-Quality Assessment (QA) is required for remote sensing and Earth Observation (EO) instruments in order to produce reliable measurements and ensure accuracy. Quality of products are commonly assessed through a Calibration and Validation process (Cal/Val). Consequently, the development of the prototype and operational ROSE\sphinxhyphen{}L Ocean products processors (L2O\sphinxhyphen{}GPP and L2O\sphinxhyphen{}IPF respectively) must be followed by the validation of products. A validation strategy is meant to be planned prior the calibration and validation activities. The required strategy shall cover different stages of the processor and different phases of ROSE\sphinxhyphen{}L mission, from pre\sphinxhyphen{}launch (phase D) to exploitation (phase E2). The strategy shall include methodologies, datasets, performance and uncertainty metrics.
+Quality Assessment (QA) is required for remote sensing and Earth Observation (EO) instruments in order to produce reliable measurements and ensure accuracy. Quality of products are commonly assessed through a Calibration and Validation process (Cal/Val). Consequently, the development of the prototype and operational ROSE\sphinxhyphen{}L Ocean products processors (L2O\sphinxhyphen{}GPP and L2O\sphinxhyphen{}IPF respectively) must be followed by the validation of products. A validation strategy is meant to be planned prior to calibration and validation activities. The required strategy shall cover different stages of the processor and different phases of ROSE\sphinxhyphen{}L mission, from pre\sphinxhyphen{}launch (phase D) to exploitation (phase E2). The strategy shall include methodologies, datasets, performance and uncertainty metrics.
 
 \sphinxAtStartPar
-The ROSE\sphinxhyphen{}L instrument will operate in scanning synthetic aperture radar (ScanSAR) mode. The system will support Dual\sphinxhyphen{}Pol, Quad\sphinxhyphen{}Pol and Wave modes. The Cal/Val strategy is also meant to cover all modes and polarizations. ROSE\sphinxhyphen{}L will not be the first SAR system functioning within L\sphinxhyphen{}band. ALOS, ALOS\sphinxhyphen{}2, ALOS\sphinxhyphen{}4, SAOCOM and NiSAR are, or have been, operating in L\sphinxhyphen{}band too. However, there are differences between those systems and the ROSE\sphinxhyphen{}L system, e.g. incidence angle, range bandwith, swath width, among others. Furthermore, ROSE\sphinxhyphen{}L incorporates the use of a new technique, the Scan\sphinxhyphen{}On\sphinxhyphen{}Receive (SCORE) technique with Multiple Azimuth Phase Centers (MAPS). The different instrument design will impose differences in the retrievals at low level which are meant to influence the inversion into L2 products.
+The ROSE\sphinxhyphen{}L instrument will operate in scanning synthetic aperture radar (ScanSAR) mode. The system will support Dual\sphinxhyphen{}Pol, Quad\sphinxhyphen{}Pol and Wave modes. The Cal/Val strategy is also meant to cover all modes and polarizations. ROSE\sphinxhyphen{}L will not be the first SAR system functioning within L\sphinxhyphen{}band. ALOS, ALOS\sphinxhyphen{}2, ALOS\sphinxhyphen{}4, SAOCOM and NiSAR are, or have been, operating in L\sphinxhyphen{}band too. However, there are differences between those systems and the ROSE\sphinxhyphen{}L system, e.g. incidence angle, range bandwidth, swath width, among others. Furthermore, ROSE\sphinxhyphen{}L incorporates the use of a new technique, the Scan\sphinxhyphen{}On\sphinxhyphen{}Receive (SCORE) technique with Multiple Azimuth Phase Centers (MAPS). The different instrument design will impose differences in the retrievals at low level which are meant to influence the inversion into L2 products.
 
 \sphinxAtStartPar
 Regarding the development of a retrieval algorithm but also Cal/Val activities, instrument differences between ROSE\sphinxhyphen{}L and previous SAR L\sphinxhyphen{}band instruments impose a challenge; the need of producing and validating ocean products from ROSE\sphinxhyphen{}L scenes during the pre\sphinxhyphen{}launch phase. The lack of real ROSE\sphinxhyphen{}L data will be mitigated by the use of similar acquisitions by the above\sphinxhyphen{}mentioned systems; although this introduces a non\sphinxhyphen{}negligible degree of uncertainty. For Cal/Val purposes, simulated ROSE\sphinxhyphen{}L scenes will be produced. The achievable accuracy of simulated ROSE\sphinxhyphen{}L will also be analysed during the In\sphinxhyphen{}Orbit\sphinxhyphen{}Commissioning (IOC) phase, E1. Once real ROSE\sphinxhyphen{}L data is available, the outputs from the L2O\sphinxhyphen{}IPF processor will need to be validated again, with the possibility to encounter a need for a readjustment of the processor or introduction of supplementary calibration steps.
 
 \sphinxAtStartPar
-A tool for assessing the quality of the ocean products is vital. The Cal/Val tool, L2O\sphinxhyphen{}QC, is meant to be developed in parallel to the development of the ocean processors, L2O\sphinxhyphen{}GPP and L2O\sphinxhyphen{}IPF. The L2O\sphinxhyphen{}QC software is required to be able to ingest datasets of different nature; ROSE\sphinxhyphen{}L acquisitions, reference datasets (either in\sphinxhyphen{}situ or remote), and auxiliary data. The goal is to collocate the different datasets in order to undertake the quality assessment, where the accuracy and reliability of the ROSE\sphinxhyphen{}L L2 ocean products will be determined and ensured. The underlying objective is to provide users with a set of performance and uncertainty metrics necessary for a deep understanding of the products and posterior correct usage and application.
+A tool for assessing the quality of the ocean products is vital. The Cal/Val tool, L2O\sphinxhyphen{}QC, is meant to be developed in parallel to the development of the ocean processors, L2O\sphinxhyphen{}GPP and L2O\sphinxhyphen{}IPF. The L2O\sphinxhyphen{}QC software is required to be able to ingest datasets of different nature; ROSE\sphinxhyphen{}L acquisitions, reference datasets (either in\sphinxhyphen{}situ or remote), and auxiliary data. The goal is to collocate the different datasets in order to undertake the quality assessment, where the accuracy and reliability of the ROSE\sphinxhyphen{}L L2 ocean products will be determined and ensured. The underlying objective is to provide users with a set of performance and uncertainty metrics necessary for a deep understanding of the products and subsequent appropriate use and application.
 
 
 \section{L2 product scope}
@@ -483,10 +477,6 @@ Significant wave height wind\sphinxhyphen{}sea
 
 \item {} 
 \sphinxAtStartPar
-Mean period wind\sphinxhyphen{}sea
-
-\item {} 
-\sphinxAtStartPar
 Wave direction
 
 \item {} 
@@ -529,9 +519,6 @@ The aim of the Calibration and Validation Algorithm Theoretical Basis Document (
 
 \section{Applicable and reference documents}
 \label{\detokenize{01_introduction:applicable-and-reference-documents}}
-\sphinxAtStartPar
-The source contains no separate applicable\sphinxhyphen{}document list. References cited in the uncertainty\sphinxhyphen{}analysis material are listed in that chapter, and the complete source BibTeX database is included as \sphinxcode{\sphinxupquote{bibliography.bib}}.
-
 
 \section{Acronyms}
 \label{\detokenize{01_introduction:acronyms}}\begin{description}
@@ -715,14 +702,6 @@ and known as the GUM.
 \chapter{Processing model and data flow}
 \label{\detokenize{02_processing_model:processing-model-and-data-flow}}\label{\detokenize{02_processing_model::doc}}
 
-\section{Overview and top\sphinxhyphen{}down decomposition}
-\label{\detokenize{02_processing_model:overview-and-top-down-decomposition}}
-\sphinxAtStartPar
-The source describes the calibration and validation activities across the
-ROSE\sphinxhyphen{}L mission phases. It does not provide a detailed processing\sphinxhyphen{}block
-decomposition or an algorithm\sphinxhyphen{}level data\sphinxhyphen{}flow diagram.
-
-
 \section{Pre\sphinxhyphen{}launch phase (D)}
 \label{\detokenize{02_processing_model:pre-launch-phase-d}}
 \sphinxAtStartPar
@@ -768,17 +747,14 @@ ensuring high\sphinxhyphen{}quality data for science and operational application
 \section{End\sphinxhyphen{}to\sphinxhyphen{}end data flow}
 \label{\detokenize{02_processing_model:end-to-end-data-flow}}
 \sphinxAtStartPar
-No end\sphinxhyphen{}to\sphinxhyphen{}end processing\sphinxhyphen{}flow diagram, processing\sphinxhyphen{}step mapping, or algorithm
-identifiers are provided in the source LaTeX document.
+Processing\sphinxhyphen{}flow diagram, processing\sphinxhyphen{}step mapping, or algorithm
+identifiers still missinng.
 
 \sphinxstepscope
 
 
 \chapter{L\sphinxhyphen{}band SAR datasets description}
 \label{\detokenize{03_lband_sar_datasets:l-band-sar-datasets-description}}\label{\detokenize{03_lband_sar_datasets::doc}}
-\sphinxAtStartPar
-The source outlines these dataset categories but does not provide descriptions.
-
 
 \section{Generated datasets}
 \label{\detokenize{03_lband_sar_datasets:generated-datasets}}
@@ -814,10 +790,6 @@ The source outlines these dataset categories but does not provide descriptions.
 
 \chapter{Auxiliary datasets description}
 \label{\detokenize{04_auxiliary_datasets:auxiliary-datasets-description}}\label{\detokenize{04_auxiliary_datasets::doc}}
-\sphinxAtStartPar
-The source does not provide dataset descriptions in this section. An internal
-comment lists ionosphere, sea\sphinxhyphen{}ice mask, and land mask as intended topics.
-
 \sphinxstepscope
 
 
@@ -1061,7 +1033,7 @@ Location sanity checks (rejecting \((0,0)\), \(\pm180^\circ\), \(\pm90^\circ\) s
 
 \item {} 
 \sphinxAtStartPar
-Checksum/Cyclic Redundancy Checks (CRC) validation of the transmision link between platform, satellite, and ground station.
+Checksum/Cyclic Redundancy Checks (CRC) validation of the transmission link between platform, satellite, and ground station.
 
 \item {} 
 \sphinxAtStartPar
@@ -1070,7 +1042,7 @@ Duplicate/near\sphinxhyphen{}duplicate observation suppression, and cascading re
 \end{itemize}
 
 \sphinxAtStartPar
-In addition to the quality checks performed by the owners of the platforms before ingestion into the GTS database, there are delayed mdoe quality control guidelines in place. Principle meteorological and oceanographic centers, including ECMWF, compare buoy reports against NWP model analysis to check for erroneous or biased data, feeding corrections back to the platform operators (Panel 2011).
+In addition to the quality checks performed by the owners of the platforms before ingestion into the GTS database, there are delayed mode quality control guidelines in place. Principle meteorological and oceanographic centers, including ECMWF, compare buoy reports against NWP model analysis to check for erroneous or biased data, feeding corrections back to the platform operators (Panel 2011).
 
 \sphinxAtStartPar
 \sphinxstylestrong{Availability:}
@@ -1620,7 +1592,7 @@ For Topex, Jason\sphinxhyphen{}1/2/3, and Sentinel 6\sphinxhyphen{}A, the covera
 \sphinxstylestrong{Data Quality:}
 
 \sphinxAtStartPar
-A strict QC filter is applied before creating of the dataset, only allowing \sphinxcode{\sphinxupquote{swh\_quality\_level}} \(= 3\) (good data) to be included. No QC filtering is needed in the \sphinxcode{\sphinxupquote{l2o\sphinxhyphen{}qc}} tool and no quality flags themselves are not provided in the dataset.
+A strict QC filter is applied before creation of the dataset, only allowing \sphinxcode{\sphinxupquote{swh\_quality\_level}} \(= 3\) (good data) to be included. No QC filtering is needed in the \sphinxcode{\sphinxupquote{l2o\sphinxhyphen{}qc}} tool and no quality flags themselves are provided in the dataset.
 
 \sphinxAtStartPar
 \sphinxstylestrong{Availability:}
@@ -1656,7 +1628,7 @@ For Jason\sphinxhyphen{}3, Sentinel\sphinxhyphen{}6A and Hai Yang\sphinxhyphen{}
 \sphinxstylestrong{Data Quality:}
 
 \sphinxAtStartPar
-Prior to inclusion in the dataset, data is selected based on a combination of various criteria such as quality flags and parameter thresholds, including surface flag, presence of ice, sigma0 (mission dependent), SWH (min: 0 m; max: 30 m), wind speed (min: 0 m/s; max: 30 m/s), sigma0 standard deviation (min: 0 dB; max 3 dB), shoreline distance (\(\geq 0\)) (Philip et al., n.d.). Only data points passing these criteria are included in the dataset. No QC filtering is needed in the \sphinxcode{\sphinxupquote{l2o\sphinxhyphen{}qc}} tool and no quality flags themselves are not provided in the dataset.
+Prior to inclusion in the dataset, data is selected based on a combination of various criteria such as quality flags and parameter thresholds, including surface flag, presence of ice, sigma0 (mission dependent), SWH (min: 0 m; max: 30 m), wind speed (min: 0 m/s; max: 30 m/s), sigma0 standard deviation (min: 0 dB; max 3 dB), shoreline distance (\(\geq 0\)) (Philip et al., n.d.). Only data points passing these criteria are included in the dataset. No QC filtering is needed in the \sphinxcode{\sphinxupquote{l2o\sphinxhyphen{}qc}} tool and no quality flags themselves are provided in the dataset.
 
 \sphinxAtStartPar
 \sphinxstylestrong{Availability:}
@@ -2536,7 +2508,7 @@ Region\sphinxhyphen{}dependent. The near\sphinxhyphen{}real\sphinxhyphen{}time f
 \sphinxstylestrong{Dataset acquisition:}
 
 \sphinxAtStartPar
-Copernicus Marine near\sphinxhyphen{}real\sphinxhyphen{}time in\sphinxhyphen{}situ dataset (\sphinxurl{https://data.marine.copernicus.eu/product/INSITU\_GLO\_PHYBGCWAV\_DISCRETE\_MYNRT\_013\_030/description}; lastest (last 30 days) and monthly (from 01\sphinxhyphen{}01\sphinxhyphen{}2020) available), \sphinxcode{\sphinxupquote{radar\sphinxhyphen{}total}} \sphinxcode{\sphinxupquote{dataset\_part}}; delayed\sphinxhyphen{}mode currents dataset (\sphinxurl{https://data.marine.copernicus.eu/product/INSITU\_GLO\_PHY\_UV\_DISCRETE\_MY\_013\_044/description}), \sphinxcode{\sphinxupquote{radar\sphinxhyphen{}total}} product; both via the \sphinxcode{\sphinxupquote{copernicusmarine}} Python client (free registration).
+Copernicus Marine near\sphinxhyphen{}real\sphinxhyphen{}time in\sphinxhyphen{}situ dataset (\sphinxurl{https://data.marine.copernicus.eu/product/INSITU\_GLO\_PHYBGCWAV\_DISCRETE\_MYNRT\_013\_030/description}; latest (last 30 days) and monthly (from 01\sphinxhyphen{}01\sphinxhyphen{}2020) available), \sphinxcode{\sphinxupquote{radar\sphinxhyphen{}total}} \sphinxcode{\sphinxupquote{dataset\_part}}; delayed\sphinxhyphen{}mode currents dataset (\sphinxurl{https://data.marine.copernicus.eu/product/INSITU\_GLO\_PHY\_UV\_DISCRETE\_MY\_013\_044/description}), \sphinxcode{\sphinxupquote{radar\sphinxhyphen{}total}} product; both via the \sphinxcode{\sphinxupquote{copernicusmarine}} Python client (free registration).
 
 
 \paragraph{NOAA \sphinxhyphen{} US radar coverage}
@@ -2926,8 +2898,7 @@ Wehde, H., K. V. Schuckmann, S. Pouliquen, et al. 2025. \sphinxstyleemphasis{Qua
 \chapter{Algorithms description}
 \label{\detokenize{03_algorithms:algorithms-description}}\label{\detokenize{03_algorithms::doc}}
 \sphinxAtStartPar
-The source describes calibration and validation methods for ROSE\sphinxhyphen{}L L2 ocean
-products. The NOC calibration method and four validation methods are described
+The NOC calibration method and four validation methods are described
 in the following pages.
 
 \sphinxstepscope
@@ -2935,11 +2906,6 @@ in the following pages.
 
 \section{Selected Calibration methods}
 \label{\detokenize{alg-01-calibration:selected-calibration-methods}}\label{\detokenize{alg-01-calibration::doc}}
-\sphinxAtStartPar
-The source provides the following section headings but no method descriptions,
-input specifications, processing details, performance metrics, or expected
-outputs.
-
 
 \subsection{ROSE\sphinxhyphen{}L L1 SLC products}
 \label{\detokenize{alg-01-calibration:rose-l-l1-slc-products}}
@@ -2967,7 +2933,7 @@ The aim of the Numerical Weather Prediction Ocean Calibration (NOC)
 calibration step to the SAR averaged normalized radar cross section
 (\(\sigma_0\)) values used to retrieve the wind vector. These values are
 generally averaged on a grid of a few kilometres (approximately
-\(1\text{--}2 \times 1\text{--}2\ \mathrm{km}^2\)).
+\(1-2 \times 1-2\ \mathrm{km}^2\)).
 
 \sphinxAtStartPar
 This calibration procedure is not applicable to sea\sphinxhyphen{}state parameters, since
@@ -3025,8 +2991,7 @@ Here, \(\vec{u}^{\mathrm{NWP}}\) is the NWP wind vector, and
 angle, carrier frequency of the transmitted signal, and polarization
 channel, respectively. The intended model is an L\sphinxhyphen{}band GMF (LMOD), analogous
 to the CMOD7 GMF used for C\sphinxhyphen{}band SAR satellites such as Sentinel\sphinxhyphen{}1
-({\hyperref[\detokenize{alg-01-calibration:ref-stoffelen-cmod7}]{\sphinxcrossref{\DUrole{std}{\DUrole{std-ref}{Stoffelen et al. (2017)}}}}}). The source marks
-further LMOD specification as to be determined.
+({\hyperref[\detokenize{alg-01-calibration:ref-stoffelen-cmod7}]{\sphinxcrossref{\DUrole{std}{\DUrole{std-ref}{Stoffelen et al. (2017)}}}}}). LMOD specification needs to be determined.
 
 \item {} 
 \sphinxAtStartPar
@@ -3135,10 +3100,7 @@ Calibration residuals: \(\Delta_{\alpha}\).
 \label{\detokenize{alg-01-calibration:id10}}
 
 \subsection{Summary}
-\label{\detokenize{alg-01-calibration:summary}}
-\sphinxAtStartPar
-The source contains this heading without summary text.
-\subsubsection*{References}
+\label{\detokenize{alg-01-calibration:summary}}\subsubsection*{References}
 \phantomsection\label{\detokenize{alg-01-calibration:ref-verspeek-noc}}
 \sphinxAtStartPar
 Verspeek, J., A. Stoffelen, A. Verhoef, and M. Portabella (2012). “Improved
@@ -3924,7 +3886,7 @@ The GEO is an international partnership of governments and organizations acting 
 To support its mission, GEOSS needs a metrological framework. As such, the 2010 endorsement of the QA4EO by the CEOS (part of GEOSS), has defined guidelines for EO applications based on principles adapted from the metrology community {\hyperref[\detokenize{04_uncertainty_analysis:ref-qa4eo1}]{\sphinxcrossref{\DUrole{std}{\DUrole{std-ref}{(Woolliams et al. 2025a)}}}}}. QA4EO aims to ensure that EO data are accessible, of known and documented quality, traceable to reference standards, in particular the SI, and suitable for user application (“fit for purpose”).
 
 \sphinxAtStartPar
-This section applies the GUM principles to SAR data and reviews the existing frameworks supporting metrology: the VIM {\hyperref[\detokenize{04_uncertainty_analysis:ref-jcgmvim}]{\sphinxcrossref{\DUrole{std}{\DUrole{std-ref}{(BIPM et al., n.d.\sphinxhyphen{}b)}}}}}, the GUM {\hyperref[\detokenize{04_uncertainty_analysis:ref-jcgmgum}]{\sphinxcrossref{\DUrole{std}{\DUrole{std-ref}{(BIPM et al., n.d.\sphinxhyphen{}a)}}}}}, and QA4EO. The LaTeX source also refers to section labels for level\sphinxhyphen{}1, level\sphinxhyphen{}2, error propagation, and conclusions that are not defined there. Its product\sphinxhyphen{}specific uncertainty\sphinxhyphen{}estimation headings are retained below.
+This section applies the GUM principles to SAR data and reviews the existing frameworks supporting metrology: the VIM {\hyperref[\detokenize{04_uncertainty_analysis:ref-jcgmvim}]{\sphinxcrossref{\DUrole{std}{\DUrole{std-ref}{(BIPM et al., n.d.\sphinxhyphen{}b)}}}}}, the GUM {\hyperref[\detokenize{04_uncertainty_analysis:ref-jcgmgum}]{\sphinxcrossref{\DUrole{std}{\DUrole{std-ref}{(BIPM et al., n.d.\sphinxhyphen{}a)}}}}}, and QA4EO.
 
 
 \section{The GUM Principles: A review}
@@ -4032,16 +3994,11 @@ Step 5: Record information about the uncertainty analysis for long term data pre
 \end{itemize}
 
 \sphinxAtStartPar
-These steps are discussed in detail in {\hyperref[\detokenize{04_uncertainty_analysis:ref-qa4eo3}]{\sphinxcrossref{\DUrole{std}{\DUrole{std-ref}{Woolliams et al. 2025c}}}}}. The product\sphinxhyphen{}specific headings below retain the source’s intended level\sphinxhyphen{}1 and level\sphinxhyphen{}2 uncertainty\sphinxhyphen{}estimation scope.
+These steps are discussed in detail in {\hyperref[\detokenize{04_uncertainty_analysis:ref-qa4eo3}]{\sphinxcrossref{\DUrole{std}{\DUrole{std-ref}{Woolliams et al. 2025c}}}}}.
 
 
 \section{Product\sphinxhyphen{}specific uncertainty estimation}
 \label{\detokenize{04_uncertainty_analysis:product-specific-uncertainty-estimation}}
-\sphinxAtStartPar
-The source provides headings for the following product analyses, but no detailed
-measurement models, traceability matrices, effect evaluations, uncertainty
-calculations, or output documentation beneath them.
-
 
 \subsection{Azimuth wavelength cutoff}
 \label{\detokenize{04_uncertainty_analysis:azimuth-wavelength-cutoff}}\begin{itemize}
@@ -4307,9 +4264,6 @@ Documentation and outputs
 
 \subsection{Summary}
 \label{\detokenize{04_uncertainty_analysis:summary}}
-\sphinxAtStartPar
-The source contains this heading without summary text.
-
 
 \section{References}
 \label{\detokenize{04_uncertainty_analysis:references}}\phantomsection\label{\detokenize{04_uncertainty_analysis:ref-jcgmgum}}
