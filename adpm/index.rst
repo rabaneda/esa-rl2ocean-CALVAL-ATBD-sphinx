@@ -37,7 +37,7 @@ Calibration and Validation Algorithm Theoretical Basis Document
 
 .. rubric:: Authors and approval
 
-The LaTeX cover lists author placeholders rather than individual names.
+
 
 .. list-table::
    :header-rows: 1
@@ -56,7 +56,7 @@ The LaTeX cover lists author placeholders rather than individual names.
    * - Author 5 (name not provided)
      - German Aerospace Center (DLR)
 
-Approval and authorisation records are not specified in the source.
+
 
 .. rubric:: Change records
 

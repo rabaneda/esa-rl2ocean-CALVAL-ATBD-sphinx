@@ -2,13 +2,6 @@
  Processing model and data flow
 ################################
 
-Overview and top-down decomposition
-===================================
-
-The source describes the calibration and validation activities across the
-ROSE-L mission phases. It does not provide a detailed processing-block
-decomposition or an algorithm-level data-flow diagram.
-
 Pre-launch phase (D)
 ====================
 
@@ -51,5 +44,5 @@ ensuring high-quality data for science and operational applications.
 End-to-end data flow
 ====================
 
-No end-to-end processing-flow diagram, processing-step mapping, or algorithm
-identifiers are provided in the source LaTeX document.
+Processing-flow diagram, processing-step mapping, or algorithm
+identifiers still missinng.

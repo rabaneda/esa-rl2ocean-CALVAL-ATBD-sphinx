@@ -1,9 +1,6 @@
 Selected Calibration methods
 ============================
 
-The source provides the following section headings but no method descriptions,
-input specifications, processing details, performance metrics, or expected
-outputs.
 
 ROSE-L L1 SLC products
 ----------------------
@@ -71,8 +68,7 @@ of the ``l2o`` processor.
    angle, carrier frequency of the transmitted signal, and polarization
    channel, respectively. The intended model is an L-band GMF (LMOD), analogous
    to the CMOD7 GMF used for C-band SAR satellites such as Sentinel-1
-   (:ref:`Stoffelen et al. (2017) <ref-stoffelen-cmod7>`). The source marks
-   further LMOD specification as to be determined.
+   (:ref:`Stoffelen et al. (2017) <ref-stoffelen-cmod7>`). LMOD specification needs to be determined.
 #. Obtain the final calibration-coefficient profile by weight-averaging the
    ratios of simulated and measured :math:`\sigma_0^W` values over wind
    direction and then wind speed:
@@ -174,7 +170,6 @@ Expected output
 Summary
 -------
 
-The source contains this heading without summary text.
 
 .. rubric:: References
 

@@ -73,7 +73,6 @@ The aim of the Calibration and Validation Algorithm Theoretical Basis Document (
 Applicable and reference documents
 ----------------------------------
 
-The source contains no separate applicable-document list. References cited in the uncertainty-analysis material are listed in that chapter, and the complete source BibTeX database is included as ``bibliography.bib``.
 
 Acronyms
 --------

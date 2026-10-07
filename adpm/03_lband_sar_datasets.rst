@@ -1,7 +1,7 @@
 L-band SAR datasets description
 ===============================
 
-The source outlines these dataset categories but does not provide descriptions.
+
 
 Generated datasets
 ------------------
