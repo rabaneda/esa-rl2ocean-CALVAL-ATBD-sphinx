@@ -58,11 +58,10 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="02_processing_model.html">2. Processing model and data flow</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="02_processing_model.html#overview-and-top-down-decomposition">2.1. Overview and top-down decomposition</a></li>
-<li class="toctree-l2"><a class="reference internal" href="02_processing_model.html#pre-launch-phase-d">2.2. Pre-launch phase (D)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="02_processing_model.html#commissioning-phase-ioc-or-e1">2.3. Commissioning phase (IOC or E1)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="02_processing_model.html#exploitation-phase-e2">2.4. Exploitation phase (E2)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="02_processing_model.html#end-to-end-data-flow">2.5. End-to-end data flow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02_processing_model.html#pre-launch-phase-d">2.1. Pre-launch phase (D)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02_processing_model.html#commissioning-phase-ioc-or-e1">2.2. Commissioning phase (IOC or E1)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02_processing_model.html#exploitation-phase-e2">2.3. Exploitation phase (E2)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02_processing_model.html#end-to-end-data-flow">2.4. End-to-end data flow</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="03_lband_sar_datasets.html">3. L-band SAR datasets description</a><ul>
@@ -235,7 +234,7 @@
 <p>The “Evaluation of measurement data – GUM” <a class="reference internal" href="#ref-jcgmgum"><span class="std std-ref">(BIPM et al., n.d.-a)</span></a>, or the “GUM bible”, is a foundational international document that provides a conceptual and mathematical framework for identifying sources of uncertainty, quantifying them in a consistent way (as standard deviations), combining them into a single uncertainty figure, and reporting the result and its uncertainty clearly and comparably across disciplines and countries. Focusing on evaluation and expression of uncertainty in measurement it is an important component of the science of measurement and application, known as metrology (e.g., <a class="reference internal" href="#ref-jcgmvim"><span class="std std-ref">BIPM et al., n.d.-b</span></a>).</p>
 <p>The GEO is an international partnership of governments and organizations acting as a policy and coordination body to promote global sharing and use of EO data, for example to support work on climate, disaster management, agriculture, water, and ecosystems. The GEOSS is the global, distributed infrastructure that GEO is building and coordinating. Rather than being a single system, it connects many independent EO systems – such as satellites, ground networks, and ocean buoys – from different countries and agencies, and aims to make them interoperable, accessible through common standards and interfaces, and accompanied by information about data quality and uncertainty. As such, GEO is the partnership, and GEOSS is the “system of systems” that GEO oversees.</p>
 <p>To support its mission, GEOSS needs a metrological framework. As such, the 2010 endorsement of the QA4EO by the CEOS (part of GEOSS), has defined guidelines for EO applications based on principles adapted from the metrology community <a class="reference internal" href="#ref-qa4eo1"><span class="std std-ref">(Woolliams et al. 2025a)</span></a>. QA4EO aims to ensure that EO data are accessible, of known and documented quality, traceable to reference standards, in particular the SI, and suitable for user application (“fit for purpose”).</p>
-<p>This section applies the GUM principles to SAR data and reviews the existing frameworks supporting metrology: the VIM <a class="reference internal" href="#ref-jcgmvim"><span class="std std-ref">(BIPM et al., n.d.-b)</span></a>, the GUM <a class="reference internal" href="#ref-jcgmgum"><span class="std std-ref">(BIPM et al., n.d.-a)</span></a>, and QA4EO. The LaTeX source also refers to section labels for level-1, level-2, error propagation, and conclusions that are not defined there. Its product-specific uncertainty-estimation headings are retained below.</p>
+<p>This section applies the GUM principles to SAR data and reviews the existing frameworks supporting metrology: the VIM <a class="reference internal" href="#ref-jcgmvim"><span class="std std-ref">(BIPM et al., n.d.-b)</span></a>, the GUM <a class="reference internal" href="#ref-jcgmgum"><span class="std std-ref">(BIPM et al., n.d.-a)</span></a>, and QA4EO.</p>
 </section>
 <section id="the-gum-principles-a-review">
 <h2><span class="section-number">7.2. </span>The GUM Principles: A review<a class="headerlink" href="#the-gum-principles-a-review" title="Link to this heading"></a></h2>
@@ -278,14 +277,11 @@
 <li><p>Step 4: Calculate the data product and uncertainties.</p></li>
 <li><p>Step 5: Record information about the uncertainty analysis for long term data preservation purposes and summarise for today’s users.</p></li>
 </ul>
-<p>These steps are discussed in detail in <a class="reference internal" href="#ref-qa4eo3"><span class="std std-ref">Woolliams et al. 2025c</span></a>. The product-specific headings below retain the source’s intended level-1 and level-2 uncertainty-estimation scope.</p>
+<p>These steps are discussed in detail in <a class="reference internal" href="#ref-qa4eo3"><span class="std std-ref">Woolliams et al. 2025c</span></a>.</p>
 </section>
 </section>
 <section id="product-specific-uncertainty-estimation">
 <h2><span class="section-number">7.3. </span>Product-specific uncertainty estimation<a class="headerlink" href="#product-specific-uncertainty-estimation" title="Link to this heading"></a></h2>
-<p>The source provides headings for the following product analyses, but no detailed
-measurement models, traceability matrices, effect evaluations, uncertainty
-calculations, or output documentation beneath them.</p>
 <section id="azimuth-wavelength-cutoff">
 <h3><span class="section-number">7.3.1. </span>Azimuth wavelength cutoff<a class="headerlink" href="#azimuth-wavelength-cutoff" title="Link to this heading"></a></h3>
 <ul class="simple">
@@ -398,7 +394,6 @@ spectrum.</p>
 </section>
 <section id="summary">
 <h3><span class="section-number">7.3.11. </span>Summary<a class="headerlink" href="#summary" title="Link to this heading"></a></h3>
-<p>The source contains this heading without summary text.</p>
 </section>
 </section>
 <section id="references">

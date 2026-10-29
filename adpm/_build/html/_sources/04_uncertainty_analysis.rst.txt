@@ -10,7 +10,7 @@ The GEO is an international partnership of governments and organizations acting 
 
 To support its mission, GEOSS needs a metrological framework. As such, the 2010 endorsement of the QA4EO by the CEOS (part of GEOSS), has defined guidelines for EO applications based on principles adapted from the metrology community :ref:`(Woolliams et al. 2025a) <ref-QA4EO1>`. QA4EO aims to ensure that EO data are accessible, of known and documented quality, traceable to reference standards, in particular the SI, and suitable for user application (“fit for purpose”).
 
-This section applies the GUM principles to SAR data and reviews the existing frameworks supporting metrology: the VIM :ref:`(BIPM et al., n.d.-b) <ref-JCGMVIM>`, the GUM :ref:`(BIPM et al., n.d.-a) <ref-JCGMGUM>`, and QA4EO. The LaTeX source also refers to section labels for level-1, level-2, error propagation, and conclusions that are not defined there. Its product-specific uncertainty-estimation headings are retained below.
+This section applies the GUM principles to SAR data and reviews the existing frameworks supporting metrology: the VIM :ref:`(BIPM et al., n.d.-b) <ref-JCGMVIM>`, the GUM :ref:`(BIPM et al., n.d.-a) <ref-JCGMGUM>`, and QA4EO. 
 
 The GUM Principles: A review
 ----------------------------
@@ -74,14 +74,11 @@ In order to establish a systematic process for generating uncertainty budgets, a
 
 - Step 5: Record information about the uncertainty analysis for long term data preservation purposes and summarise for today’s users.
 
-These steps are discussed in detail in :ref:`Woolliams et al. 2025c <ref-QA4EO3>`. The product-specific headings below retain the source's intended level-1 and level-2 uncertainty-estimation scope.
+These steps are discussed in detail in :ref:`Woolliams et al. 2025c <ref-QA4EO3>`.
 
 Product-specific uncertainty estimation
 ----------------------------------------
 
-The source provides headings for the following product analyses, but no detailed
-measurement models, traceability matrices, effect evaluations, uncertainty
-calculations, or output documentation beneath them.
 
 Azimuth wavelength cutoff
 ~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -187,7 +184,6 @@ Line-of-sight wave Doppler and line-of-sight surface current component
 Summary
 ~~~~~~~
 
-The source contains this heading without summary text.
 
 References
 ----------

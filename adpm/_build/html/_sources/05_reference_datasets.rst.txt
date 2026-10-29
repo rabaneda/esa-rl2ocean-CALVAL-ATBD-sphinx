@@ -157,11 +157,11 @@ Individual GTS BUFR reports carry no per-observation quality flag, because GTS r
 
 - Location sanity checks (rejecting :math:`(0,0)`, :math:`\pm180^\circ`, :math:`\pm90^\circ` sentinel coordinates; a drifting buoy’s position older than 48 hours, or a moored buoy’s position older than its own (re-)deployment age).
 
-- Checksum/Cyclic Redundancy Checks (CRC) validation of the transmision link between platform, satellite, and ground station.
+- Checksum/Cyclic Redundancy Checks (CRC) validation of the transmission link between platform, satellite, and ground station.
 
 - Duplicate/near-duplicate observation suppression, and cascading rejection when an associated depth level or compensating sensor itself fails QC.
 
-In addition to the quality checks performed by the owners of the platforms before ingestion into the GTS database, there are delayed mdoe quality control guidelines in place. Principle meteorological and oceanographic centers, including ECMWF, compare buoy reports against NWP model analysis to check for erroneous or biased data, feeding corrections back to the platform operators (Panel 2011).
+In addition to the quality checks performed by the owners of the platforms before ingestion into the GTS database, there are delayed mode quality control guidelines in place. Principle meteorological and oceanographic centers, including ECMWF, compare buoy reports against NWP model analysis to check for erroneous or biased data, feeding corrections back to the platform operators (Panel 2011).
 
 **Availability:**
 
@@ -534,7 +534,7 @@ For Topex, Jason-1/2/3, and Sentinel 6-A, the coverage is maximum 66°S/66°N in
 
 **Data Quality:**
 
-A strict QC filter is applied before creating of the dataset, only allowing ``swh_quality_level`` :math:`= 3` (good data) to be included. No QC filtering is needed in the ``l2o-qc`` tool and no quality flags themselves are not provided in the dataset.
+A strict QC filter is applied before creation of the dataset, only allowing ``swh_quality_level`` :math:`= 3` (good data) to be included. No QC filtering is needed in the ``l2o-qc`` tool and no quality flags themselves are provided in the dataset.
 
 **Availability:**
 
@@ -559,7 +559,7 @@ For Jason-3, Sentinel-6A and Hai Yang-2C, the coverage is maximum 66°S/66°N in
 
 **Data Quality:**
 
-Prior to inclusion in the dataset, data is selected based on a combination of various criteria such as quality flags and parameter thresholds, including surface flag, presence of ice, sigma0 (mission dependent), SWH (min: 0 m; max: 30 m), wind speed (min: 0 m/s; max: 30 m/s), sigma0 standard deviation (min: 0 dB; max 3 dB), shoreline distance (:math:`\geq 0`) (Philip et al., n.d.). Only data points passing these criteria are included in the dataset. No QC filtering is needed in the ``l2o-qc`` tool and no quality flags themselves are not provided in the dataset.
+Prior to inclusion in the dataset, data is selected based on a combination of various criteria such as quality flags and parameter thresholds, including surface flag, presence of ice, sigma0 (mission dependent), SWH (min: 0 m; max: 30 m), wind speed (min: 0 m/s; max: 30 m/s), sigma0 standard deviation (min: 0 dB; max 3 dB), shoreline distance (:math:`\geq 0`) (Philip et al., n.d.). Only data points passing these criteria are included in the dataset. No QC filtering is needed in the ``l2o-qc`` tool and no quality flags themselves are provided in the dataset.
 
 **Availability:**
 
@@ -774,7 +774,7 @@ Region-dependent. The near-real-time feed (last 30 days) is available for 19 of 
 
 **Dataset acquisition:**
 
-Copernicus Marine near-real-time in-situ dataset (https://data.marine.copernicus.eu/product/INSITU_GLO_PHYBGCWAV_DISCRETE_MYNRT_013_030/description; lastest (last 30 days) and monthly (from 01-01-2020) available), ``radar-total`` ``dataset_part``; delayed-mode currents dataset (https://data.marine.copernicus.eu/product/INSITU_GLO_PHY_UV_DISCRETE_MY_013_044/description), ``radar-total`` product; both via the ``copernicusmarine`` Python client (free registration).
+Copernicus Marine near-real-time in-situ dataset (https://data.marine.copernicus.eu/product/INSITU_GLO_PHYBGCWAV_DISCRETE_MYNRT_013_030/description; latest (last 30 days) and monthly (from 01-01-2020) available), ``radar-total`` ``dataset_part``; delayed-mode currents dataset (https://data.marine.copernicus.eu/product/INSITU_GLO_PHY_UV_DISCRETE_MY_013_044/description), ``radar-total`` product; both via the ``copernicusmarine`` Python client (free registration).
 
 .. _`subpar:hfr_noaa`:
 

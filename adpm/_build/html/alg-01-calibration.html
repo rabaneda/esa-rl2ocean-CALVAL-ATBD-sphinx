@@ -59,11 +59,10 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="02_processing_model.html">2. Processing model and data flow</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="02_processing_model.html#overview-and-top-down-decomposition">2.1. Overview and top-down decomposition</a></li>
-<li class="toctree-l2"><a class="reference internal" href="02_processing_model.html#pre-launch-phase-d">2.2. Pre-launch phase (D)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="02_processing_model.html#commissioning-phase-ioc-or-e1">2.3. Commissioning phase (IOC or E1)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="02_processing_model.html#exploitation-phase-e2">2.4. Exploitation phase (E2)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="02_processing_model.html#end-to-end-data-flow">2.5. End-to-end data flow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02_processing_model.html#pre-launch-phase-d">2.1. Pre-launch phase (D)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02_processing_model.html#commissioning-phase-ioc-or-e1">2.2. Commissioning phase (IOC or E1)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02_processing_model.html#exploitation-phase-e2">2.3. Exploitation phase (E2)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02_processing_model.html#end-to-end-data-flow">2.4. End-to-end data flow</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="03_lband_sar_datasets.html">3. L-band SAR datasets description</a><ul>
@@ -232,9 +231,6 @@
              
   <section id="selected-calibration-methods">
 <h1><span class="section-number">6.1. </span>Selected Calibration methods<a class="headerlink" href="#selected-calibration-methods" title="Link to this heading"></a></h1>
-<p>The source provides the following section headings but no method descriptions,
-input specifications, processing details, performance metrics, or expected
-outputs.</p>
 <section id="rose-l-l1-slc-products">
 <h2><span class="section-number">6.1.1. </span>ROSE-L L1 SLC products<a class="headerlink" href="#rose-l-l1-slc-products" title="Link to this heading"></a></h2>
 <section id="short-description">
@@ -260,7 +256,7 @@ outputs.</p>
 calibration step to the SAR averaged normalized radar cross section
 (<span class="math notranslate nohighlight">\(\sigma_0\)</span>) values used to retrieve the wind vector. These values are
 generally averaged on a grid of a few kilometres (approximately
-<span class="math notranslate nohighlight">\(1\text{--}2 \times 1\text{--}2\ \mathrm{km}^2\)</span>).</p>
+<span class="math notranslate nohighlight">\(1-2 \times 1-2\ \mathrm{km}^2\)</span>).</p>
 <p>This calibration procedure is not applicable to sea-state parameters, since
 these are derived spectrally. Therefore, an absolute <span class="math notranslate nohighlight">\(\sigma_0\)</span>
 calibration is not necessary before retrieval. Instead, inter-calibration
@@ -295,8 +291,7 @@ appropriate geophysical model function (GMF):</p>
 angle, carrier frequency of the transmitted signal, and polarization
 channel, respectively. The intended model is an L-band GMF (LMOD), analogous
 to the CMOD7 GMF used for C-band SAR satellites such as Sentinel-1
-(<a class="reference internal" href="#ref-stoffelen-cmod7"><span class="std std-ref">Stoffelen et al. (2017)</span></a>). The source marks
-further LMOD specification as to be determined.</p>
+(<a class="reference internal" href="#ref-stoffelen-cmod7"><span class="std std-ref">Stoffelen et al. (2017)</span></a>). LMOD specification needs to be determined.</p>
 </li>
 <li><p>Obtain the final calibration-coefficient profile by weight-averaging the
 ratios of simulated and measured <span class="math notranslate nohighlight">\(\sigma_0^W\)</span> values over wind
@@ -385,7 +380,6 @@ the selected threshold:</p>
 </section>
 <section id="summary">
 <h2><span class="section-number">6.1.5. </span>Summary<a class="headerlink" href="#summary" title="Link to this heading"></a></h2>
-<p>The source contains this heading without summary text.</p>
 <p class="rubric">References</p>
 <p id="ref-verspeek-noc">Verspeek, J., A. Stoffelen, A. Verhoef, and M. Portabella (2012). “Improved
 ASCAT wind retrieval using NWP ocean calibration.” <em>IEEE Transactions on

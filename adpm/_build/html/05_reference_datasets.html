@@ -59,11 +59,10 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="02_processing_model.html">2. Processing model and data flow</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="02_processing_model.html#overview-and-top-down-decomposition">2.1. Overview and top-down decomposition</a></li>
-<li class="toctree-l2"><a class="reference internal" href="02_processing_model.html#pre-launch-phase-d">2.2. Pre-launch phase (D)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="02_processing_model.html#commissioning-phase-ioc-or-e1">2.3. Commissioning phase (IOC or E1)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="02_processing_model.html#exploitation-phase-e2">2.4. Exploitation phase (E2)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="02_processing_model.html#end-to-end-data-flow">2.5. End-to-end data flow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02_processing_model.html#pre-launch-phase-d">2.1. Pre-launch phase (D)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02_processing_model.html#commissioning-phase-ioc-or-e1">2.2. Commissioning phase (IOC or E1)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02_processing_model.html#exploitation-phase-e2">2.3. Exploitation phase (E2)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02_processing_model.html#end-to-end-data-flow">2.4. End-to-end data flow</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="03_lband_sar_datasets.html">3. L-band SAR datasets description</a><ul>
@@ -328,10 +327,10 @@
 <li><p>Climatological limit checks against operator- or International Comprehensive Ocean-Atmosphere Data Set (ICOADS)-supplied bounds for the platform’s location and season.</p></li>
 <li><p>Land/sea test; any observations that appear on land are rejected.</p></li>
 <li><p>Location sanity checks (rejecting <span class="math notranslate nohighlight">\((0,0)\)</span>, <span class="math notranslate nohighlight">\(\pm180^\circ\)</span>, <span class="math notranslate nohighlight">\(\pm90^\circ\)</span> sentinel coordinates; a drifting buoy’s position older than 48 hours, or a moored buoy’s position older than its own (re-)deployment age).</p></li>
-<li><p>Checksum/Cyclic Redundancy Checks (CRC) validation of the transmision link between platform, satellite, and ground station.</p></li>
+<li><p>Checksum/Cyclic Redundancy Checks (CRC) validation of the transmission link between platform, satellite, and ground station.</p></li>
 <li><p>Duplicate/near-duplicate observation suppression, and cascading rejection when an associated depth level or compensating sensor itself fails QC.</p></li>
 </ul>
-<p>In addition to the quality checks performed by the owners of the platforms before ingestion into the GTS database, there are delayed mdoe quality control guidelines in place. Principle meteorological and oceanographic centers, including ECMWF, compare buoy reports against NWP model analysis to check for erroneous or biased data, feeding corrections back to the platform operators (Panel 2011).</p>
+<p>In addition to the quality checks performed by the owners of the platforms before ingestion into the GTS database, there are delayed mode quality control guidelines in place. Principle meteorological and oceanographic centers, including ECMWF, compare buoy reports against NWP model analysis to check for erroneous or biased data, feeding corrections back to the platform operators (Panel 2011).</p>
 <p><strong>Availability:</strong></p>
 <p>The ECMWF MARS archive has archived data from 28-11-2016 - present.</p>
 <p><strong>Dataset acquisition:</strong></p>
@@ -565,7 +564,7 @@
 <p>The 1 Hz sampling corresponds to an along track resolution of 7 km, resulting in a default aggregation window of 7 km and 180 min in the <code class="docutils literal notranslate"><span class="pre">l2o-qc</span></code> tool. Jason-2 serves as a calibration anchor and CCIv4 improves cross-calibration across all missions. The denoised SWH is used as validation dataset. Denoising means cross-mission bias correction and Empirical Mode Decomposition (EMD) denoising following Quilfen and Chapron (2019) (Quilfen and Chapron 2021).</p>
 <p>For Topex, Jason-1/2/3, and Sentinel 6-A, the coverage is maximum 66°S/66°N in latitude; for SARAL/AltiKa 81.5°S/81.5 °N; for Cryosat-2 88°S/88°N; for ERS-1/2, Envisat, and Sentinel-3A/3B 90°S/90°N (Charles and Ollivier, n.d.).</p>
 <p><strong>Data Quality:</strong></p>
-<p>A strict QC filter is applied before creating of the dataset, only allowing <code class="docutils literal notranslate"><span class="pre">swh_quality_level</span></code> <span class="math notranslate nohighlight">\(= 3\)</span> (good data) to be included. No QC filtering is needed in the <code class="docutils literal notranslate"><span class="pre">l2o-qc</span></code> tool and no quality flags themselves are not provided in the dataset.</p>
+<p>A strict QC filter is applied before creation of the dataset, only allowing <code class="docutils literal notranslate"><span class="pre">swh_quality_level</span></code> <span class="math notranslate nohighlight">\(= 3\)</span> (good data) to be included. No QC filtering is needed in the <code class="docutils literal notranslate"><span class="pre">l2o-qc</span></code> tool and no quality flags themselves are provided in the dataset.</p>
 <p><strong>Availability:</strong></p>
 <p>03-08-1991 - 31-12-2023; 1 Hz sampling frequency.</p>
 <p><strong>Dataset acquisition:</strong></p>
@@ -579,7 +578,7 @@
 <p>The data from the different missions are homogenized with respect to a reference mission (Jason-3 until April 2022, Sentinel-6A afterwards). The 1 Hz sampling corresponds to an along track resolution of 7 km, resulting in a default aggregation window of 7 km and 180 min. The 5 Hz sampling has an along track resolution of 1.4 km, resulting in a default aggregation window of 1.4 km and 180 min in the <code class="docutils literal notranslate"><span class="pre">l2o-qc</span></code> tool.</p>
 <p>For Jason-3, Sentinel-6A and Hai Yang-2C, the coverage is maximum 66°S/66°N in latitude; for Sentinel-3A, Sentinel-3B and AltiKa, 81.5°S/81.5°N; for Cryosat-2, 88°S/88°N; for HaiYang-2B, 81°S/81°N; for CFOSAT, 83°S/83°N and for SWOT, 78°S/78°N. Note that for Sentinel-3A and B, the altimeter wave measurements are deduced from both SAR measurements.</p>
 <p><strong>Data Quality:</strong></p>
-<p>Prior to inclusion in the dataset, data is selected based on a combination of various criteria such as quality flags and parameter thresholds, including surface flag, presence of ice, sigma0 (mission dependent), SWH (min: 0 m; max: 30 m), wind speed (min: 0 m/s; max: 30 m/s), sigma0 standard deviation (min: 0 dB; max 3 dB), shoreline distance (<span class="math notranslate nohighlight">\(\geq 0\)</span>) (Philip et al., n.d.). Only data points passing these criteria are included in the dataset. No QC filtering is needed in the <code class="docutils literal notranslate"><span class="pre">l2o-qc</span></code> tool and no quality flags themselves are not provided in the dataset.</p>
+<p>Prior to inclusion in the dataset, data is selected based on a combination of various criteria such as quality flags and parameter thresholds, including surface flag, presence of ice, sigma0 (mission dependent), SWH (min: 0 m; max: 30 m), wind speed (min: 0 m/s; max: 30 m/s), sigma0 standard deviation (min: 0 dB; max 3 dB), shoreline distance (<span class="math notranslate nohighlight">\(\geq 0\)</span>) (Philip et al., n.d.). Only data points passing these criteria are included in the dataset. No QC filtering is needed in the <code class="docutils literal notranslate"><span class="pre">l2o-qc</span></code> tool and no quality flags themselves are provided in the dataset.</p>
 <p><strong>Availability:</strong></p>
 <p>1 Hz sampling rate: late 2023 - present; note that the NRT 1 Hz dataset is used from 01-01-2024 onward to replace the reprocessed one that ends 31-12-2013. 5 Hz sampling rate: 09-03-2026 - present. Availability delay is 3 hours for all satellites other than HY-2B/2C, which are provided with a delay of 7 hours.</p>
 <p><strong>Dataset acquisition:</strong></p>
@@ -854,7 +853,7 @@
 <p><strong>Availability:</strong></p>
 <p>Region-dependent. The near-real-time feed (last 30 days) is available for 19 of the 25 regions; the monthly feed (from up to 01-01-2020 - present (<span class="math notranslate nohighlight">\(&lt;30\)</span> day latency)) and historic archive (typically large single file per radar) are available for all 25 regions.</p>
 <p><strong>Dataset acquisition:</strong></p>
-<p>Copernicus Marine near-real-time in-situ dataset (<a class="reference external" href="https://data.marine.copernicus.eu/product/INSITU_GLO_PHYBGCWAV_DISCRETE_MYNRT_013_030/description">https://data.marine.copernicus.eu/product/INSITU_GLO_PHYBGCWAV_DISCRETE_MYNRT_013_030/description</a>; lastest (last 30 days) and monthly (from 01-01-2020) available), <code class="docutils literal notranslate"><span class="pre">radar-total</span></code> <code class="docutils literal notranslate"><span class="pre">dataset_part</span></code>; delayed-mode currents dataset (<a class="reference external" href="https://data.marine.copernicus.eu/product/INSITU_GLO_PHY_UV_DISCRETE_MY_013_044/description">https://data.marine.copernicus.eu/product/INSITU_GLO_PHY_UV_DISCRETE_MY_013_044/description</a>), <code class="docutils literal notranslate"><span class="pre">radar-total</span></code> product; both via the <code class="docutils literal notranslate"><span class="pre">copernicusmarine</span></code> Python client (free registration).</p>
+<p>Copernicus Marine near-real-time in-situ dataset (<a class="reference external" href="https://data.marine.copernicus.eu/product/INSITU_GLO_PHYBGCWAV_DISCRETE_MYNRT_013_030/description">https://data.marine.copernicus.eu/product/INSITU_GLO_PHYBGCWAV_DISCRETE_MYNRT_013_030/description</a>; latest (last 30 days) and monthly (from 01-01-2020) available), <code class="docutils literal notranslate"><span class="pre">radar-total</span></code> <code class="docutils literal notranslate"><span class="pre">dataset_part</span></code>; delayed-mode currents dataset (<a class="reference external" href="https://data.marine.copernicus.eu/product/INSITU_GLO_PHY_UV_DISCRETE_MY_013_044/description">https://data.marine.copernicus.eu/product/INSITU_GLO_PHY_UV_DISCRETE_MY_013_044/description</a>), <code class="docutils literal notranslate"><span class="pre">radar-total</span></code> product; both via the <code class="docutils literal notranslate"><span class="pre">copernicusmarine</span></code> Python client (free registration).</p>
 </section>
 <section id="noaa-us-radar-coverage">
 <span id="subpar-hfr-noaa"></span><h5>NOAA - US radar coverage<a class="headerlink" href="#noaa-us-radar-coverage" title="Link to this heading"></a></h5>
