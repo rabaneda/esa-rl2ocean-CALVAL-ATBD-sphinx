@@ -44,5 +44,4 @@ ensuring high-quality data for science and operational applications.
 End-to-end data flow
 ====================
 
-Processing-flow diagram, processing-step mapping, or algorithm
-identifiers still missinng.
+:tbd:`Processing-flow diagram | processing-flow diagram, processing-step mapping and algorithm identifiers still missing`

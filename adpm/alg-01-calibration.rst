@@ -5,6 +5,8 @@ Selected Calibration methods
 ROSE-L L1 SLC products
 ----------------------
 
+:tbd:`L1 SLC calibration | all subsections below still to be written`
+
 Short description
 ~~~~~~~~~~~~~~~~~
 
@@ -24,7 +26,7 @@ Numerical Weather Prediction Ocean Calibration of SAR :math:`\sigma_0`
 -----------------------------------------------------------------------
 
 The aim of the Numerical Weather Prediction Ocean Calibration (NOC)
-(:ref:`Verspeek et al. (2012) <ref-verspeek-noc>`) is to provide an additional
+(:cite:`VerspeekTGRS2012`) is to provide an additional
 calibration step to the SAR averaged normalized radar cross section
 (:math:`\sigma_0`) values used to retrieve the wind vector. These values are
 generally averaged on a grid of a few kilometres (approximately
@@ -59,6 +61,7 @@ of the ``l2o`` processor.
    appropriate geophysical model function (GMF):
 
    .. math::
+      :label: eq-noc-gmf
 
       \sigma_{0}^{W,\mathrm{sim}}
       = \mathrm{GMF}(\vec{u}^{\mathrm{NWP}}, \theta, f_c, \mathrm{pol})
@@ -68,12 +71,13 @@ of the ``l2o`` processor.
    angle, carrier frequency of the transmitted signal, and polarization
    channel, respectively. The intended model is an L-band GMF (LMOD), analogous
    to the CMOD7 GMF used for C-band SAR satellites such as Sentinel-1
-   (:ref:`Stoffelen et al. (2017) <ref-stoffelen-cmod7>`). LMOD specification needs to be determined.
+   (:cite:`StoffelenJSTARS2017`). LMOD specification needs to be determined.
 #. Obtain the final calibration-coefficient profile by weight-averaging the
    ratios of simulated and measured :math:`\sigma_0^W` values over wind
    direction and then wind speed:
 
    .. math::
+      :label: eq-noc-alpha
 
       \alpha(\theta)
       = \left\langle
@@ -94,6 +98,7 @@ Iterate the procedure until :math:`\alpha(\theta)` is close to 1, according to
 the selected threshold:
 
 .. math::
+   :label: eq-noc-threshold
 
    \Delta_{\alpha}
    = \left|
@@ -104,6 +109,7 @@ the selected threshold:
 The corrected :math:`\sigma_0^W` values are:
 
 .. math::
+   :label: eq-noc-corrected
 
    \sigma_{0}^{W,c}(\theta)
    = \alpha(\theta)\sigma_{0}^{W,m}(\theta) .
@@ -111,6 +117,7 @@ The corrected :math:`\sigma_0^W` values are:
 In logarithmic space:
 
 .. math::
+   :label: eq-noc-corrected-db
 
    \sigma_{0,\mathrm{dB}}^{W,c}(\theta)
    = \alpha_{\mathrm{dB}}(\theta)
@@ -119,6 +126,7 @@ In logarithmic space:
 **Metrics**
 
 .. math::
+   :label: eq-noc-metric
 
    \Delta_{\alpha}
    = \left|
@@ -131,8 +139,42 @@ In logarithmic space:
   :math:`\alpha_{\mathrm{dB}}(\theta)`).
 - Calibration residuals: :math:`\Delta_{\alpha}`.
 
+**Variable Description Table**
+
+.. _tab:vdt_noc:
+
+:tbd:`VDT skeleton | table structure copied from ADPM v1.0, content to be defined`
+
+.. list-table:: NOC Variable Description Table (VDT).
+    :header-rows: 1
+    :class: longtable
+    :widths: 16 7 8 16 16 7 12 10 12 12
+
+    * - Name
+      - Sym
+      - Role
+      - Origin
+      - Destination
+      - Units
+      - Type
+      - Dim
+      - Range
+      - Default
+    * - [Variable name]
+      - [Symbol]
+      - [IN/OUT]
+      - [Origin]
+      - [Destination]
+      - [Units]
+      - [Type]
+      - [Dim]
+      - [Range]
+      - [Default]
+
 GMF tuning
 ----------
+
+:tbd:`GMF tuning description | all subsections below still to be written`
 
 Short description
 ~~~~~~~~~~~~~~~~~
@@ -148,10 +190,43 @@ Performance metrics
 
 Expected output
 ~~~~~~~~~~~~~~~
+
+Variable Description Table
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+:tbd:`VDT skeleton | table structure copied from ADPM v1.0, content to be defined`
+
+.. list-table:: GMF tuning Variable Description Table (VDT).
+    :header-rows: 1
+    :class: longtable
+    :widths: 16 7 8 16 16 7 12 10 12 12
+
+    * - Name
+      - Sym
+      - Role
+      - Origin
+      - Destination
+      - Units
+      - Type
+      - Dim
+      - Range
+      - Default
+    * - [Variable name]
+      - [Symbol]
+      - [IN/OUT]
+      - [Origin]
+      - [Destination]
+      - [Units]
+      - [Type]
+      - [Dim]
+      - [Range]
+      - [Default]
 
 MTF tuning
 ----------
 
+:tbd:`MTF tuning description | all subsections below still to be written`
+
 Short description
 ~~~~~~~~~~~~~~~~~
 
@@ -167,23 +242,36 @@ Performance metrics
 Expected output
 ~~~~~~~~~~~~~~~
 
+Variable Description Table
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+:tbd:`VDT skeleton | table structure copied from ADPM v1.0, content to be defined`
+
+.. list-table:: MTF tuning Variable Description Table (VDT).
+    :header-rows: 1
+    :class: longtable
+    :widths: 16 7 8 16 16 7 12 10 12 12
+
+    * - Name
+      - Sym
+      - Role
+      - Origin
+      - Destination
+      - Units
+      - Type
+      - Dim
+      - Range
+      - Default
+    * - [Variable name]
+      - [Symbol]
+      - [IN/OUT]
+      - [Origin]
+      - [Destination]
+      - [Units]
+      - [Type]
+      - [Dim]
+      - [Range]
+      - [Default]
+
 Summary
 -------
-
-
-.. rubric:: References
-
-.. _ref-verspeek-noc:
-
-Verspeek, J., A. Stoffelen, A. Verhoef, and M. Portabella (2012). “Improved
-ASCAT wind retrieval using NWP ocean calibration.” *IEEE Transactions on
-Geoscience and Remote Sensing*, 50(7), 2488--2494.
-`doi:10.1109/TGRS.2011.2180730 <https://doi.org/10.1109/TGRS.2011.2180730>`_.
-
-.. _ref-stoffelen-cmod7:
-
-Stoffelen, A., J. A. Verspeek, J. Vogelzang, and A. Verhoef (2017). “The CMOD7
-geophysical model function for ASCAT and ERS wind retrievals.” *IEEE Journal
-of Selected Topics in Applied Earth Observations and Remote Sensing*, 10(5),
-2123--2134.
-`doi:10.1109/JSTARS.2017.2681806 <https://doi.org/10.1109/JSTARS.2017.2681806>`_.

@@ -121,7 +121,7 @@ global regular latitude/longitude grid at 0.25° spacing, hourly output. The 10�
 
 **Data quality:**
 
-grid cells/query points with :math:`\mathrm{lsm} > 0.5` (land) are excluded before collocation. ERA5 is documented and evaluated in (Hersbach et al. 2020); an independent characterisation of its 10 m wind field (Belmonte Rivas and Stoffelen 2019) reports mean wind biases of up to 0.5 m/s in the zonal and meridional components, stable over time (interannual variability :math:`\sim`\ 0.1 m/s), and roughly 20% lower instantaneous RMS wind speed error than the preceding ERA-Interim reanalysis.
+grid cells/query points with :math:`\mathrm{lsm} > 0.5` (land) are excluded before collocation. ERA5 is documented and evaluated in :cite:`hersbach2020era5`; an independent characterisation of its 10 m wind field :cite:`belmonterivas2019era5_wind_bias` reports mean wind biases of up to 0.5 m/s in the zonal and meridional components, stable over time (interannual variability :math:`\sim`\ 0.1 m/s), and roughly 20% lower instantaneous RMS wind speed error than the preceding ERA-Interim reanalysis.
 
 **Availability:**
 
@@ -147,7 +147,7 @@ point observations at native platform sampling rate ranging from once every 3-hr
 
 **Data quality:**
 
-Individual GTS BUFR reports carry no per-observation quality flag, because GTS requires the data processing center that owns a buoy to run automatic real-time quality control before an observation is transmitted onto the GTS (Panel 2011). The mandated real-time checks include, among others:
+Individual GTS BUFR reports carry no per-observation quality flag, because GTS requires the data processing center that owns a buoy to run automatic real-time quality control before an observation is transmitted onto the GTS :cite:`WMOGTS`. The mandated real-time checks include, among others:
 
 - Gross error checks against fixed physical limits. For wind, 0–100 m/s (speed) and 0–360\ :math:`^\circ` (direction).
 
@@ -161,7 +161,7 @@ Individual GTS BUFR reports carry no per-observation quality flag, because GTS r
 
 - Duplicate/near-duplicate observation suppression, and cascading rejection when an associated depth level or compensating sensor itself fails QC.
 
-In addition to the quality checks performed by the owners of the platforms before ingestion into the GTS database, there are delayed mode quality control guidelines in place. Principle meteorological and oceanographic centers, including ECMWF, compare buoy reports against NWP model analysis to check for erroneous or biased data, feeding corrections back to the platform operators (Panel 2011).
+In addition to the quality checks performed by the owners of the platforms before ingestion into the GTS database, there are delayed mode quality control guidelines in place. Principle meteorological and oceanographic centers, including ECMWF, compare buoy reports against NWP model analysis to check for erroneous or biased data, feeding corrections back to the platform operators :cite:`WMOGTS`.
 
 **Availability:**
 
@@ -186,7 +186,7 @@ point observations at native platform sampling rate, which is typically hourly o
 
 **Data quality:**
 
-Copernicus Marine in situ Thematic Assembly Centre (TAC) has no commitment to manage in situ meteorological observations. Reported quality flags are kept in the NetCDF files, with no additional quality control (Wehde et al. 2025). The QC flag ranges from 0 – 9 (Copernicus In Situ Tac Data Management Team 2025):
+Copernicus Marine in situ Thematic Assembly Centre (TAC) has no commitment to manage in situ meteorological observations. Reported quality flags are kept in the NetCDF files, with no additional quality control :cite:`CMEMS_QUID_013_030_036`. The QC flag ranges from 0 – 9 :cite:`Copernicus_marine_qc_2025`:
 
 - 0: No QC was performed
 
@@ -252,7 +252,7 @@ each WVC carries a bitmask ``wvc_quality_flag``; cells for which any of the foll
 
 - distance to the geophysical model function (GMF) too large
 
-Furthermore, the OSI-SAF ASCAT (Metop-B/C) global 25 km and coastal 12.5 km wind products have been validated using buoys and triple collocation (Verspeek et al. 2019), showing wind quality well within the OSI-SAF product requirements (:math:`<2` m/s wind component standard deviation, :math:`<0.5` m/s speed bias). Against buoys, speed bias of 0.10/0.08 m/s and u-/v-component standard deviations of 1.62/1.90 (Metop-B) and 1.59/1.89 m/s (Metop-C) were found at 12.5 km. Triple collocation gives scatterometer-perspective errors of 0.62/0.78 (Metop-B) and 0.67/0.78 m/s (Metop-C) in the u-/v-components at 12.5 km (Verspeek et al. 2019).
+Furthermore, the OSI-SAF ASCAT (Metop-B/C) global 25 km and coastal 12.5 km wind products have been validated using buoys and triple collocation :cite:`verspeek2019ascat_c_calval`, showing wind quality well within the OSI-SAF product requirements (:math:`<2` m/s wind component standard deviation, :math:`<0.5` m/s speed bias). Against buoys, speed bias of 0.10/0.08 m/s and u-/v-component standard deviations of 1.62/1.90 (Metop-B) and 1.59/1.89 m/s (Metop-C) were found at 12.5 km. Triple collocation gives scatterometer-perspective errors of 0.62/0.78 (Metop-B) and 0.67/0.78 m/s (Metop-C) in the u-/v-components at 12.5 km :cite:`verspeek2019ascat_c_calval`.
 
 **Availability:**
 
@@ -275,7 +275,7 @@ HY-2B/HY-2C carry a Ku-band, wide-swath (:math:`\sim`\ 1700 km) pencil-beam sca
 
 **Data quality:**
 
-the same ``wvc_quality_flag`` bitmask and rejection criteria as ASCAT (see above) apply, capable of flagging rainy WVCs. Furthermore, the OSI-SAF HY-2B and HY-2C wind products have been validated using buoys and triple collocation (Verhoef et al. 2024), showing wind quality well within the OSI-SAF product requirements (:math:`<2` m/s wind component standard deviation , :math:`<0.5` m/s speed bias). Against buoys, speed bias of -0.09/-0.06 m/s and u-/v-component standard deviations of 1.68/1.64 m/s (HY-2B) and 1.75/1.76 m/s (HY-2C) were found. Triple collocation gives scatterometer-perspective errors of 0.59/0.39 (HY-2B) and 0.81/0.65 (HY-2C) in the u-/v-components (Verhoef et al. 2024).
+the same ``wvc_quality_flag`` bitmask and rejection criteria as ASCAT (see above) apply, capable of flagging rainy WVCs. Furthermore, the OSI-SAF HY-2B and HY-2C wind products have been validated using buoys and triple collocation :cite:`verhoef2024osisaf_hscat_oscat_winds`, showing wind quality well within the OSI-SAF product requirements (:math:`<2` m/s wind component standard deviation , :math:`<0.5` m/s speed bias). Against buoys, speed bias of -0.09/-0.06 m/s and u-/v-component standard deviations of 1.68/1.64 m/s (HY-2B) and 1.75/1.76 m/s (HY-2C) were found. Triple collocation gives scatterometer-perspective errors of 0.59/0.39 (HY-2B) and 0.81/0.65 (HY-2C) in the u-/v-components :cite:`verhoef2024osisaf_hscat_oscat_winds`.
 
 **Availability:**
 
@@ -298,7 +298,7 @@ same 25 km wind-vector-cell spacing and Ku-band, wide-swath pencil-beam geometr
 
 **Data quality:**
 
-same ``wvc_quality_flag``-based rejection criteria as ASCAT/HY-2B/HY-2C. Furthermore, the OSI-SAF Oceansat-3 wind products have been validated using buoys and triple collocation (Verhoef et al. 2024), showing wind quality well within the OSI-SAF product requirements (:math:`<2` m/s wind component standard deviation , :math:`<0.5` m/s speed bias). Against buoys, speed bias of -0.16 m/s and u/v component standard deviations of 1.72/1.68 m/s were found (Verhoef et al. 2024). Triple collocation gives scatterometer-perspective errors of 0.68/0.54 in the u-/v-components (Verhoef et al. 2024).
+same ``wvc_quality_flag``-based rejection criteria as ASCAT/HY-2B/HY-2C. Furthermore, the OSI-SAF Oceansat-3 wind products have been validated using buoys and triple collocation :cite:`verhoef2024osisaf_hscat_oscat_winds`, showing wind quality well within the OSI-SAF product requirements (:math:`<2` m/s wind component standard deviation , :math:`<0.5` m/s speed bias). Against buoys, speed bias of -0.16 m/s and u/v component standard deviations of 1.72/1.68 m/s were found :cite:`verhoef2024osisaf_hscat_oscat_winds`. Triple collocation gives scatterometer-perspective errors of 0.68/0.54 in the u-/v-components :cite:`verhoef2024osisaf_hscat_oscat_winds`.
 
 **Availability:**
 
@@ -320,11 +320,11 @@ Level-3 (L3), daily, global 10 m ocean surface wind speed products retrieved fr
 
 **Characteristics:**
 
-each sensor is distributed as a daily file already resampled to a common global 0.25° grid, with two passes (ascending/descending) per file and a per-cell measurement time. AMSR2 is published in NetCDF; GMI, SSMIS, and WindSat are distributed as gzipped RSS binary bytemaps. Wind speed is retrieved from a shared physical emissivity model (Meissner and Wentz 2012); cells under rain, land, or ice are already set to fill/NaN by RSS.
+each sensor is distributed as a daily file already resampled to a common global 0.25° grid, with two passes (ascending/descending) per file and a per-cell measurement time. AMSR2 is published in NetCDF; GMI, SSMIS, and WindSat are distributed as gzipped RSS binary bytemaps. Wind speed is retrieved from a shared physical emissivity model :cite:`meissner2012ocean_emissivity`; cells under rain, land, or ice are already set to fill/NaN by RSS.
 
 **Data quality:**
 
-no per-cell quality bitmask is exposed; instead, invalid retrievals (rain-, land-, or ice-contaminated cells) are already flagged as fill values by RSS and dropped on read. Under rain-free conditions, RSS radiometer wind speed retrievals have a reported accuracy of :math:`\sim`\ 1 m/s RMS against buoys (Meissner and Wentz 2012); WindSat wind direction retrieval accuracy (all-weather algorithm) ranges from :math:`\sim`\ 10° in light rain to :math:`\sim`\ 30° at the onset of heavy rain, with wind speed accuracy degrading from 2 m/s to 4 m/s over the same range (Meissner and Wentz 2009).
+no per-cell quality bitmask is exposed; instead, invalid retrievals (rain-, land-, or ice-contaminated cells) are already flagged as fill values by RSS and dropped on read. Under rain-free conditions, RSS radiometer wind speed retrievals have a reported accuracy of :math:`\sim`\ 1 m/s RMS against buoys :cite:`meissner2012ocean_emissivity`; WindSat wind direction retrieval accuracy (all-weather algorithm) ranges from :math:`\sim`\ 10° in light rain to :math:`\sim`\ 30° at the onset of heavy rain, with wind speed accuracy degrading from 2 m/s to 4 m/s over the same range :cite:`meissner2009wind-vector`.
 
 **Availability:**
 
@@ -360,7 +360,7 @@ WAVEWATCH III
 
 **Description:**
 
-NOAA/NCEP’s operational third-generation spectral wave model WAVEWATCH III (WW3), currently run as GFS-Wave and one-way coupled into the Global Forecast System (GFS) v16 via the NEMS/NUOPC coupling infrastructure. Used as an independent, physics-based wave-model reference, collocated via bilinear spatial and hyperbolic temporal interpolation. The current operational code version (v6.07, released by the WAVEWATCH III Development Group in 2019 as the model’s first open-development GitHub release), run with the ST4 source-term physics package (wind input and dissipation) of (Ardhuin et al. 2010).
+NOAA/NCEP’s operational third-generation spectral wave model WAVEWATCH III (WW3), currently run as GFS-Wave and one-way coupled into the Global Forecast System (GFS) v16 via the NEMS/NUOPC coupling infrastructure. Used as an independent, physics-based wave-model reference, collocated via bilinear spatial and hyperbolic temporal interpolation. The current operational code version (v6.07, released by the WAVEWATCH III Development Group in 2019 as the model’s first open-development GitHub release), run with the ST4 source-term physics package (wind input and dissipation) of :cite:`ardhuin_semiempirical_2010`.
 
 **Characteristics:**
 
@@ -388,7 +388,7 @@ Sentinel-1 L2 OCN - OSW
 
 **Description:**
 
-The OSW component of the S1 L2_OCN product provides partition-based wave parameters, including a significant wave height ``hs`` for each identified wave partition, as well as a vignette-level total significant wave height [m], ``total_hs``, and its standard deviation, ``total_hs_standard_deviation``. The partition quantities describe individual wave systems resolved in the OSW wave spectrum, whereas ``total_hs`` represents an integrated sea-state estimate for the vignette. From IPF 3.9.0 onward the ``total_hs`` implementation is based on a variant of the deep-learning approach of Quach et al. (Quach et al. 2021). The OSW component is generated for Stripmap (SM) and Wave (WV) acquisition modes.
+The OSW component of the S1 L2_OCN product provides partition-based wave parameters, including a significant wave height ``hs`` for each identified wave partition, as well as a vignette-level total significant wave height [m], ``total_hs``, and its standard deviation, ``total_hs_standard_deviation``. The partition quantities describe individual wave systems resolved in the OSW wave spectrum, whereas ``total_hs`` represents an integrated sea-state estimate for the vignette. From IPF 3.9.0 onward the ``total_hs`` implementation is based on a variant of the deep-learning approach of Quach et al. :cite:`quach_deep_2021`. The OSW component is generated for Stripmap (SM) and Wave (WV) acquisition modes.
 
 **Characteristics:**
 
@@ -426,7 +426,7 @@ Data points are rejected when the total quality flag (``quality_flag``) is :math
 
 **Availability:**
 
-3 April 2014 – present. Unlike OWI’s continuous-swath coverage, WV mode acquires sparse, isolated vignettes along the orbit track rather than continuous global coverage. Note that the total significant wave height, ``total_hs``, is only available since 2022 (Johnsen et al. 2022). In addition, ``total_hs`` was unavailable for ``ipf_version`` 3.8.0, after which it was reactivated from ``ipf_version`` 3.9.0 onwards. The significant wave height partition, ``hs``, was not affected by these changes.
+3 April 2014 – present. Unlike OWI’s continuous-swath coverage, WV mode acquires sparse, isolated vignettes along the orbit track rather than continuous global coverage. Note that the total significant wave height, ``total_hs``, is only available since 2022 :cite:`Johnsen2022OSW`. In addition, ``total_hs`` was unavailable for ``ipf_version`` 3.8.0, after which it was reactivated from ``ipf_version`` 3.9.0 onwards. The significant wave height partition, ``hs``, was not affected by these changes.
 
 **Dataset acquisition:**
 
@@ -467,7 +467,7 @@ point observations at native platform sampling rate; default collocation, which 
 
 **Data quality:**
 
-Copernicus Marine in situ TAC aggregates operational oceanography data and metadata from multiple providers, ingested with varying confidence depending on the data source (Copernicus In Situ Tac Data Management Team 2025). Bad flags are preserved and an additional quality control is performed that may result in a QC flag degradation (never an upgrade). For waves, this additional quality control procedure applies 7 different tests to wave parameters as described in the Copernicus Marine In Situ TAC quality control procedure (2025) (Copernicus In Situ Tac Data Management Team 2025).
+Copernicus Marine in situ TAC aggregates operational oceanography data and metadata from multiple providers, ingested with varying confidence depending on the data source :cite:`Copernicus_marine_qc_2025`. Bad flags are preserved and an additional quality control is performed that may result in a QC flag degradation (never an upgrade). For waves, this additional quality control procedure applies 7 different tests to wave parameters as described in the Copernicus Marine In Situ TAC quality control procedure :cite:`Copernicus_marine_qc_2025`.
 
 The quality flag ranges from 0 – 9:
 
@@ -493,7 +493,7 @@ The quality flag ranges from 0 – 9:
 
 Accepted QC flag codes are :math:`\{1,2,5,7,8\}`. A significant part of the data available on Copernicus Marine In situ lacks a QC and is thus dropped before validation.
 
-Accuracy of the measurements provided by Copernicus Marine is sensor dependent, but all sensors have an uncertainty of maximum 1% or 0.1 m (Wehde et al. 2025). The estimated accuracy due to statistical variability is :math:`< 5`\ % for SWH (Wehde et al. 2025).
+Accuracy of the measurements provided by Copernicus Marine is sensor dependent, but all sensors have an uncertainty of maximum 1% or 0.1 m :cite:`CMEMS_QUID_013_030_036`. The estimated accuracy due to statistical variability is :math:`< 5`\ % for SWH :cite:`CMEMS_QUID_013_030_036`.
 
 **Availability:**
 
@@ -512,25 +512,25 @@ Copernicus Marine in-situ dataset (https://data.marine.copernicus.eu/product/INS
 Sea-ice maps
 ^^^^^^^^^^^^
 
-TBD
+:tbd:`Sea-ice maps reference dataset | description of the sea-ice reference dataset still to be provided`
 
 Altimeters
 ^^^^^^^^^^
 
-SWH altimeter observations are divided into a reprocessed version that currently has 1 Hz altimeter data from 03-08-1991 - 31-12-2023 (Charles and Ollivier, n.d.) and a near-real time (NRT) version that contains 1 Hz sampled altimeter data from 28-12-2023 - present and 5 Hz sampled altimeter data from 09-03-2026 - present (Philip et al., n.d.).
+SWH altimeter observations are divided into a reprocessed version that currently has 1 Hz altimeter data from 03-08-1991 - 31-12-2023 :cite:`CMEMSWAVE005_reprocessed` and a near-real time (NRT) version that contains 1 Hz sampled altimeter data from 28-12-2023 - present and 5 Hz sampled altimeter data from 09-03-2026 - present :cite:`CMEMSWAVE001_NRT`.
 
 Global Ocean L3 Significant Wave Height from Reprocessed Satellite Measurements
 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 **Description:**
 
-This reprocessed dataset provides significant wave height data derived from satellite altimeter data including the Topex, ERS-1/2, Jason-1/2/3, Envisat, Saral/AltiKa, Cryosat-2, and Sentinel-3A/3B/6A missions as well as altimeter L3 V4 data from the ESA Climate Change Initiative (CCI) Sea State project. The along-track measurements from the different missions are combined into a single daily file, thus resulting in a unified dataset combining all available missions. The dataset includes distance to coast, sea floor depth below mean sea level, sea surface wave significant height (regular, adjusted, denoised) and its uncertainty (Charles and Ollivier, n.d.).
+This reprocessed dataset provides significant wave height data derived from satellite altimeter data including the Topex, ERS-1/2, Jason-1/2/3, Envisat, Saral/AltiKa, Cryosat-2, and Sentinel-3A/3B/6A missions as well as altimeter L3 V4 data from the ESA Climate Change Initiative (CCI) Sea State project. The along-track measurements from the different missions are combined into a single daily file, thus resulting in a unified dataset combining all available missions. The dataset includes distance to coast, sea floor depth below mean sea level, sea surface wave significant height (regular, adjusted, denoised) and its uncertainty :cite:`CMEMSWAVE005_reprocessed`.
 
 **Characteristics:**
 
-The 1 Hz sampling corresponds to an along track resolution of 7 km, resulting in a default aggregation window of 7 km and 180 min in the ``l2o-qc`` tool. Jason-2 serves as a calibration anchor and CCIv4 improves cross-calibration across all missions. The denoised SWH is used as validation dataset. Denoising means cross-mission bias correction and Empirical Mode Decomposition (EMD) denoising following Quilfen and Chapron (2019) (Quilfen and Chapron 2021).
+The 1 Hz sampling corresponds to an along track resolution of 7 km, resulting in a default aggregation window of 7 km and 180 min in the ``l2o-qc`` tool. Jason-2 serves as a calibration anchor and CCIv4 improves cross-calibration across all missions. The denoised SWH is used as validation dataset. Denoising means cross-mission bias correction and Empirical Mode Decomposition (EMD) denoising following Quilfen and Chapron :cite:`quilfen_denoising_2021`.
 
-For Topex, Jason-1/2/3, and Sentinel 6-A, the coverage is maximum 66°S/66°N in latitude; for SARAL/AltiKa 81.5°S/81.5 °N; for Cryosat-2 88°S/88°N; for ERS-1/2, Envisat, and Sentinel-3A/3B 90°S/90°N (Charles and Ollivier, n.d.).
+For Topex, Jason-1/2/3, and Sentinel 6-A, the coverage is maximum 66°S/66°N in latitude; for SARAL/AltiKa 81.5°S/81.5 °N; for Cryosat-2 88°S/88°N; for ERS-1/2, Envisat, and Sentinel-3A/3B 90°S/90°N :cite:`CMEMSWAVE005_reprocessed`.
 
 **Data Quality:**
 
@@ -559,7 +559,7 @@ For Jason-3, Sentinel-6A and Hai Yang-2C, the coverage is maximum 66°S/66°N in
 
 **Data Quality:**
 
-Prior to inclusion in the dataset, data is selected based on a combination of various criteria such as quality flags and parameter thresholds, including surface flag, presence of ice, sigma0 (mission dependent), SWH (min: 0 m; max: 30 m), wind speed (min: 0 m/s; max: 30 m/s), sigma0 standard deviation (min: 0 dB; max 3 dB), shoreline distance (:math:`\geq 0`) (Philip et al., n.d.). Only data points passing these criteria are included in the dataset. No QC filtering is needed in the ``l2o-qc`` tool and no quality flags themselves are provided in the dataset.
+Prior to inclusion in the dataset, data is selected based on a combination of various criteria such as quality flags and parameter thresholds, including surface flag, presence of ice, sigma0 (mission dependent), SWH (min: 0 m; max: 30 m), wind speed (min: 0 m/s; max: 30 m/s), sigma0 standard deviation (min: 0 dB; max 3 dB), shoreline distance (:math:`\geq 0`) :cite:`CMEMSWAVE001_NRT`. Only data points passing these criteria are included in the dataset. No QC filtering is needed in the ``l2o-qc`` tool and no quality flags themselves are provided in the dataset.
 
 **Availability:**
 
@@ -617,15 +617,15 @@ HYCOM
 
 **Description:**
 
-The HYbrid Coordinate Ocean Model (HYCOM) is a data-assimilative, eddy-resolving global ocean general circulation model producing three-dimensional fields of ocean state (Chassignet et al. 2009). Its vertical coordinate is hybrid, blending isopycnal (density-following) layers in the stratified open ocean, terrain-following layers in shallow coastal regions, and fixed pressure-level coordinates in the surface mixed layer and/or unstratified open seas. This toolbox uses HYCOM’s surface-level (:math:`z=0`) horizontal current velocity, ``water_u``/``water_v``, drawn from two HYCOM configurations: Global Ocean Forecasting System (GOFS) 3.1 Analysis (``GLBy0.08/expt_93.0``; 04-12-2018 - 10-08-2024) (Metzger et al. 2017), and its higher-resolution successor ESPC-D-V02 (10-08-2024 onwards), the ocean component of the Navy’s Earth System Prediction Capability (Navy-ESPC) (Barton et al. 2021). The eastward/northward current vector at each grid cell is projected onto the local SAR LoS (radial) direction for direct comparison against radial surface-velocity measurements, using the same heading-based projection of the SAR satellite applied throughout this validation component.
+The HYbrid Coordinate Ocean Model (HYCOM) is a data-assimilative, eddy-resolving global ocean general circulation model producing three-dimensional fields of ocean state :cite:`chassignet_us_2009`. Its vertical coordinate is hybrid, blending isopycnal (density-following) layers in the stratified open ocean, terrain-following layers in shallow coastal regions, and fixed pressure-level coordinates in the surface mixed layer and/or unstratified open seas. This toolbox uses HYCOM’s surface-level (:math:`z=0`) horizontal current velocity, ``water_u``/``water_v``, drawn from two HYCOM configurations: Global Ocean Forecasting System (GOFS) 3.1 Analysis (``GLBy0.08/expt_93.0``; 04-12-2018 - 10-08-2024) :cite:`metzger_GOFS31_2017`, and its higher-resolution successor ESPC-D-V02 (10-08-2024 onwards), the ocean component of the Navy’s Earth System Prediction Capability (Navy-ESPC) :cite:`barton_navys_2021`. The eastward/northward current vector at each grid cell is projected onto the local SAR LoS (radial) direction for direct comparison against radial surface-velocity measurements, using the same heading-based projection of the SAR satellite applied throughout this validation component.
 
 **Characteristics:**
 
-GOFS 3.1 Analysis runs at a :math:`1/12`\ ° global HYCOM resolution (:math:`\sim 9` km at equator, :math:`\sim7` km at mid-latitudes, :math:`\sim 3.5` km at North Pole); ESPC-D-V02’s can run at a higher, :math:`1/25`\ ° (:math:`\sim`\ 3–4 km at mid-latitudes), resolution (Barton et al. 2021). However, the version used by ``l2o-qc`` is regridded onto the same grid as GOFS 3.1. HYCOM consists of 3-hourly instantaneous analyses with 40 standard :math:`z`-levels of which ``l2o-qc`` selects the surface level (:math:`\texttt{depth}=0.0`). ``GLBy0.08/expt_93.0`` publishes one combined ``water_u``\ +\ ``water_v`` NetCDF/OPeNDAP dataset per calendar year; ``ESPC-D-V02`` publishes one continuous OPeNDAP dataset per component spanning its whole coverage range.
+GOFS 3.1 Analysis runs at a :math:`1/12`\ ° global HYCOM resolution (:math:`\sim 9` km at equator, :math:`\sim7` km at mid-latitudes, :math:`\sim 3.5` km at North Pole); ESPC-D-V02’s can run at a higher, :math:`1/25`\ ° (:math:`\sim`\ 3–4 km at mid-latitudes), resolution :cite:`barton_navys_2021`. However, the version used by ``l2o-qc`` is regridded onto the same grid as GOFS 3.1. HYCOM consists of 3-hourly instantaneous analyses with 40 standard :math:`z`-levels of which ``l2o-qc`` selects the surface level (:math:`\texttt{depth}=0.0`). ``GLBy0.08/expt_93.0`` publishes one combined ``water_u``\ +\ ``water_v`` NetCDF/OPeNDAP dataset per calendar year; ``ESPC-D-V02`` publishes one continuous OPeNDAP dataset per component spanning its whole coverage range.
 
 **Data Quality:**
 
-As a data-assimilative reanalysis/forecast product rather than a direct retrieval, HYCOM carries no per-cell observational quality flag. Instead its data quality depends on the underlying model, its initial state, and data assimilation checks. For ESPC-D-V02, all assimilated data go through a quality control system checking for gross error and assigning a likelihood of error based on comparison to ocean analyses (instrument error and representativeness error) (Barton et al. 2021).
+As a data-assimilative reanalysis/forecast product rather than a direct retrieval, HYCOM carries no per-cell observational quality flag. Instead its data quality depends on the underlying model, its initial state, and data assimilation checks. For ESPC-D-V02, all assimilated data go through a quality control system checking for gross error and assigning a likelihood of error based on comparison to ocean analyses (instrument error and representativeness error) :cite:`barton_navys_2021`.
 
 **Availability:**
 
@@ -645,7 +645,7 @@ Sentinel-1 L2 OCN - RVL
 
 **Description:**
 
-The RVL (Radial Velocity) component of the Sentinel-1 L2_OCN product provides an estimate of the total Doppler frequency [Hz] and the corresponding radial LoS surface velocity [m/s], ``rvlRadVel``, obtained by fitting (least square minimization) the antenna model to the observed azimuth Doppler spectrum of the Level-1 SLC image. The estimated Doppler frequency is then corrected for antenna mis-pointing (as a function of elevation angle) and the attitude/orbit Doppler error (Engen and Johnsen 2011). Other relevant parameters in the RVL component include standard deviation, ``rvlRadVelStd``, and the acquisition geometry variables ``rvlHeading`` (along-track heading) and ``rvlIncidenceAngle``. The RVL component is generated for all four Sentinel-1 imaging modes: WV, SM, IW, and EW (Engen and Johnsen 2011).
+The RVL (Radial Velocity) component of the Sentinel-1 L2_OCN product provides an estimate of the total Doppler frequency [Hz] and the corresponding radial LoS surface velocity [m/s], ``rvlRadVel``, obtained by fitting (least square minimization) the antenna model to the observed azimuth Doppler spectrum of the Level-1 SLC image. The estimated Doppler frequency is then corrected for antenna mis-pointing (as a function of elevation angle) and the attitude/orbit Doppler error :cite:`esa_s1_rvl_atbd`. Other relevant parameters in the RVL component include standard deviation, ``rvlRadVelStd``, and the acquisition geometry variables ``rvlHeading`` (along-track heading) and ``rvlIncidenceAngle``. The RVL component is generated for all four Sentinel-1 imaging modes: WV, SM, IW, and EW :cite:`esa_s1_rvl_atbd`.
 
 **Characteristics:**
 
@@ -659,7 +659,7 @@ where ``rvlHeading`` is stored in mathematical convention (counter-clockwise fro
 
 **Data Quality:**
 
-In the RVL component, ``rvlLandFlag`` is automatically set to 1 where a cell’s land coverage exceeds 10% (Engen and Johnsen 2011). ``l2o-qc`` then masks both ``rvlRadVel`` and ``rvlRadVelStd`` as NaN’d at flagged cells. No separate per-cell QC-code flag exists for RVL beyond the land flag. Note that the operational ``rvlRadVel`` is known to carry substantial platform-induced biases, up to :math:`\sim`\ 2 m/s, from residual antenna mis-pointing and instrument effects (Martin et al. 2022). This is currently not compensated for in the ``l2o-qc`` toolbox.
+In the RVL component, ``rvlLandFlag`` is automatically set to 1 where a cell’s land coverage exceeds 10% :cite:`esa_s1_rvl_atbd`. ``l2o-qc`` then masks both ``rvlRadVel`` and ``rvlRadVelStd`` as NaN’d at flagged cells. No separate per-cell QC-code flag exists for RVL beyond the land flag. Note that the operational ``rvlRadVel`` is known to carry substantial platform-induced biases, up to :math:`\sim`\ 2 m/s, from residual antenna mis-pointing and instrument effects :cite:`martin_first_2022`. This is currently not compensated for in the ``l2o-qc`` toolbox.
 
 **Availability:**
 
@@ -679,7 +679,7 @@ Copernicus Marine - global radar coverage
 
 **Description:**
 
-Gridded, total-vector surface-current field (``EWCT`` and ``NSCT``) from Copernicus Marine. Contributors are mainly European national HF-radar networks together with NOAA (further described in Section :ref:`subpar:hfr_noaa`); every European region is processed through a single, centrally-coordinated pipeline, the EU HFR Node (Lorente et al. 2022). Additional variables are per-cell standard deviations ``EWCS``/``NSCS``, a geometric-dilution-of-precision field ``GDOP``, and several QC flags including an overall ``QCflag``.
+Gridded, total-vector surface-current field (``EWCT`` and ``NSCT``) from Copernicus Marine. Contributors are mainly European national HF-radar networks together with NOAA (further described in Section :ref:`subpar:hfr_noaa`); every European region is processed through a single, centrally-coordinated pipeline, the EU HFR Node :cite:`lorente_coastal_2022`. Additional variables are per-cell standard deviations ``EWCS``/``NSCS``, a geometric-dilution-of-precision field ``GDOP``, and several QC flags including an overall ``QCflag``.
 
 **Characteristics:**
 
@@ -762,11 +762,7 @@ Gridded, total-vector surface-current field (``EWCT`` and ``NSCT``) from Coperni
 
 **Data quality:**
 
-Cells are kept only where the overall ``QCflag``, for value meaning see section :ref:`subpar:cmems_insitu`, is equal to :math:`\{1,2,5,7,8\}`\ (Copernicus In Situ Tac Data Management Team 2025)). Per-parameter flags (``CSPD_QC``, ``DDNS_QC``, ``GDOP_QC``, ``VART_QC``, ``POSITION_QC``) are retained but not used for filtering. QC flagging uses a maximum Geometric Dilution of Precision (GDOP) threshold and a maximum velocity for each radar, which are listed in Table :numref:`tab:copernicus_hfr_resolutions`. Any data point exceeding those values gets flagged.
-
-**Data quality:**
-
-Cells are kept only where the overall ``QCflag``, for value meaning see section :ref:`subpar:cmems_insitu`, is equal to :math:`\{1,2,5,7,8\}`\ (Copernicus In Situ Tac Data Management Team 2025)). Per-parameter flags (``CSPD_QC``, ``DDNS_QC``, ``GDOP_QC``, ``VART_QC``, ``POSITION_QC``) are retained but not used for filtering. Five upstream tests, defined by the EU HFR Node’s own QC recommendations (Corgnati et al. 2024, Table 2), feed into the overall ``QCflag``: ``DDNS_QC`` (Data Density Threshold) checks that at least a minimum number of three radial velocities contributed to the total-vector solution; ``CSPD_QC`` (Velocity Threshold) checks the total current speed against a region-specific maximum (see Table :numref:`tab:copernicus_hfr_resolutions`; ``VART_QC`` (Variance Threshold or Temporal Derivative) checks the solution’s own temporal variance (only relevant for beam-forming systems); ``GDOP_QC`` (Geometric Dilution of Precision (GDOP) Threshold) checks the GDOP against a region-specific maximum (see Table :numref:`tab:copernicus_hfr_resolutions`); and ``POSITION_QC`` independently checks the solution’s own reported latitude/longitude, unrelated to the four velocity-based tests. Any data point failing at least one of the QC tests gets flagged.
+Cells are kept only where the overall ``QCflag``, for value meaning see section :ref:`subpar:cmems_insitu`, is equal to :math:`\{1,2,5,7,8\}`\ :cite:`Copernicus_marine_qc_2025`. Per-parameter flags (``CSPD_QC``, ``DDNS_QC``, ``GDOP_QC``, ``VART_QC``, ``POSITION_QC``) are retained but not used for filtering. Five upstream tests, defined by the EU HFR Node’s own QC recommendations :cite:`corgnati_hfr_2024` (Table 2), feed into the overall ``QCflag``: ``DDNS_QC`` (Data Density Threshold) checks that at least a minimum number of three radial velocities contributed to the total-vector solution; ``CSPD_QC`` (Velocity Threshold) checks the total current speed against a region-specific maximum (see Table :numref:`tab:copernicus_hfr_resolutions`; ``VART_QC`` (Variance Threshold or Temporal Derivative) checks the solution’s own temporal variance (only relevant for beam-forming systems); ``GDOP_QC`` (Geometric Dilution of Precision (GDOP) Threshold) checks the GDOP against a region-specific maximum (see Table :numref:`tab:copernicus_hfr_resolutions`); and ``POSITION_QC`` independently checks the solution’s own reported latitude/longitude, unrelated to the four velocity-based tests. Any data point failing at least one of the QC tests gets flagged.
 
 **Availability:**
 
@@ -817,7 +813,7 @@ A regular (``time``, ``lat``, ``lon``) grid at region-dependent resolutions of 0
 
 **Data quality:**
 
-NOAA’s HF-radar product carries no discrete per-cell QC flag on the delivered total-vector grid. Individual radials are filtered upstream before total-vector computation including among others a maximum-magnitude threshold, and a land mask (Otero 2021). Therefore, any value present in the retrieved data has already passed filtering.
+NOAA’s HF-radar product carries no discrete per-cell QC flag on the delivered total-vector grid. Individual radials are filtered upstream before total-vector computation including among others a maximum-magnitude threshold, and a land mask :cite:`Otero_HFRNet_RTVNetCDF_2021`. Therefore, any value present in the retrieved data has already passed filtering.
 
 **Availability:**
 
@@ -840,9 +836,9 @@ point observations at native platform sampling rate; default collocation, which 
 
 **Data quality:**
 
-Real time quality control procedure subjects the currents (meta)data to 21 tests as described in the Copernicus Marine In Situ TAC quality control procedure (2025) (Copernicus In Situ Tac Data Management Team 2025). The resulting QC flag for current parameters, ranging from 0 – 9, is the same as the one described in Section :ref:`subpar:cmems_insitu_waves`. Accepted QC flag codes are again :math:`\{1,2,5,7,8\}`.
+Real time quality control procedure subjects the currents (meta)data to 21 tests as described in the Copernicus Marine In Situ TAC quality control procedure :cite:`Copernicus_marine_qc_2025`. The resulting QC flag for current parameters, ranging from 0 – 9, is the same as the one described in Section :ref:`subpar:cmems_insitu_waves`. Accepted QC flag codes are again :math:`\{1,2,5,7,8\}`.
 
-Accuracy of current measurements are expected to be 0.5 - 1 cm/s (Wehde et al. 2025).
+Accuracy of current measurements are expected to be 0.5 - 1 cm/s :cite:`CMEMS_QUID_013_030_036`.
 
 **Availability:**
 
@@ -866,120 +862,3 @@ Altimeters
 IWRAP
 ^^^^^
 
-.. container:: references csl-bib-body hanging-indent
-   :name: refs
-
-   .. container:: csl-entry
-      :name: ref-ardhuin_semiempirical_2010
-
-      Ardhuin, Fabrice, Erick Rogers, Alexander V. Babanin, et al. 2010. “Semiempirical Dissipation Source Functions for Ocean Waves. Part I: Definition, Calibration, and Validation.” *Journal of Physical Oceanography* 40 (9): 1917–41. https://doi.org/10.1175/2010JPO4324.1.
-
-   .. container:: csl-entry
-      :name: ref-barton_navys_2021
-
-      Barton, Neil, E. Joseph Metzger, Carolyn A. Reynolds, et al. 2021. “The Navy’s Earth System Prediction Capability: A New Global Coupled Atmosphere‐Ocean‐Sea Ice Prediction System Designed for Daily to Subseasonal Forecasting.” *Earth and Space Science* 8 (4): e2020EA001199. https://doi.org/10.1029/2020EA001199.
-
-   .. container:: csl-entry
-      :name: ref-belmonterivas2019era5_wind_bias
-
-      Belmonte Rivas, Maria, and Ad Stoffelen. 2019. “Characterizing ERA-Interim and ERA5 Surface Wind Biases Using ASCAT.” *Ocean Science* 15 (3): 831–52. https://doi.org/10.5194/os-15-831-2019.
-
-   .. container:: csl-entry
-      :name: ref-CMEMSWAVE005_reprocessed
-
-      Charles, E., and A. Ollivier. n.d. *Global Ocean L3 Significant Wave Height from Reprocessed Satellite Measurements*. CMEMS-WAVE-QUID-014-005. Version 2.0. Copernicus Marine Service WAVE Thematic Assembly Center. https://doi.org/https://doi.org/10.48670/moi-00176.
-
-   .. container:: csl-entry
-      :name: ref-chassignet_us_2009
-
-      Chassignet, Eric, Harley Hurlburt, E. Joseph Metzger, et al. 2009. “US GODAE: Global Ocean Prediction with the HYbrid Coordinate Ocean Model (HYCOM).” *Oceanography* 22 (2): 64–75. https://doi.org/10.5670/oceanog.2009.39.
-
-   .. container:: csl-entry
-      :name: ref-Copernicus_marine_qc_2025
-
-      Copernicus In Situ Tac Data Management Team. 2025. *Copernicus Marine In Situ TAC. Quality Control Procedure*. Copernicus Marine In Situ TAC. https://doi.org/10.13155/106219.
-
-   .. container:: csl-entry
-      :name: ref-corgnati_hfr_2024
-
-      Corgnati, Lorenzo, Carlo Mantovani, Antonio Novellino, Anna Rubio, and Julien Mader. 2024. *Recommendation Report 2 on Improved Common Procedures for HFR QC Analysis*. JERICO-NEXT-WP5-D5.14-V2.0. EuroGOOS HFR Task Team. https://doi.org/10.25607/10.25607/OBP-944.2.
-
-   .. container:: csl-entry
-      :name: ref-esa_s1_rvl_atbd
-
-      Engen, G., and H. Johnsen. 2011. *Sentinel-1 Doppler and Ocean Radial Velocity Algorithm Definition*. S1-TN-NRT-53-0658. Version 1.2. European Space Agency. https://sentinels.copernicus.eu/documents/247904/349449/S1_L2_RVL_AlgoDef_v1+2.pdf.
-
-   .. container:: csl-entry
-      :name: ref-hersbach2020era5
-
-      Hersbach, Hans, Bill Bell, Paul Berrisford, et al. 2020. “The ERA5 Global Reanalysis.” *Quarterly Journal of the Royal Meteorological Society* 146 (730): 1999–2049. https://doi.org/10.1002/qj.3803.
-
-   .. container:: csl-entry
-      :name: ref-Johnsen2022OSW
-
-      Johnsen, Harald, Fabrice Collard, Romain Husson, Grégory Hajduch, Abdelmajid Benchaabane, and Pierre Vincent. 2022. *Sentinel-1 Ocean Swell Wave Spectra (OSW) Algorithm Definition*. Technical Note S1-TN-NRT-52-7450. CLS (Collecte Localisation Satellites). https://sentiwiki.copernicus.eu/__attachments/a_ed2fac9f988de7e6bd8cc55dfddf1900e368a53796c6cedfbde3e8e0195504ee/S1-TN-NRT-52-7450%20-%20Sentinel-1%20Ocean%20Swell%20Wave%20Spectra%20OSW%20ATBD%202022%20-%201.5.pdf.
-
-   .. container:: csl-entry
-      :name: ref-lorente_coastal_2022
-
-      Lorente, Pablo, Eva Aguiar, Michele Bendoni, et al. 2022. “Coastal High-Frequency Radars in the Mediterranean – Part 1: Status of Operations and a Framework for Future Development.” *Ocean Science* 18 (3): 761–95. https://doi.org/10.5194/os-18-761-2022.
-
-   .. container:: csl-entry
-      :name: ref-martin_first_2022
-
-      Martin, Adrien C. H., Christine P. Gommenginger, Benjamin Jacob, and Joanna Staneva. 2022. “First Multi-Year Assessment of Sentinel-1 Radial Velocity Products Using HF Radar Currents in a Coastal Environment.” *Remote Sensing of Environment* 268 (January): 112758. https://doi.org/10.1016/j.rse.2021.112758.
-
-   .. container:: csl-entry
-      :name: ref-meissner2009wind-vector
-
-      Meissner, Thomas, and Frank J. Wentz. 2009. “Wind-Vector Retrievals Under Rain with Passive Satellite Microwave Radiometers.” *IEEE Transactions on Geoscience and Remote Sensing* 47 (9): 3065–83. https://doi.org/10.1109/TGRS.2009.2027012.
-
-   .. container:: csl-entry
-      :name: ref-meissner2012ocean_emissivity
-
-      Meissner, Thomas, and Frank J. Wentz. 2012. “The Emissivity of the Ocean Surface Between 6 and 90 GHz over a Large Range of Wind Speeds and Earth Incidence Angles.” *IEEE Transactions on Geoscience and Remote Sensing* 50 (8): 3004–26. https://doi.org/10.1109/TGRS.2011.2179662.
-
-   .. container:: csl-entry
-      :name: ref-metzger_GOFS31_2017
-
-      Metzger, E. Joseph, Robert W. Helber, Patrick J. Hogan, et al. 2017. *Global Ocean Forecast System 3.1 Validation Testing*. NRL/MR/7320–17-9722. Naval Research Laboratory. https://www7320.nrlssc.navy.mil/pubs/2017/metzger-2017.pdf.
-
-   .. container:: csl-entry
-      :name: ref-Otero_HFRNet_RTVNetCDF_2021
-
-      Otero, Mark. 2021. *NetCDF Description for Near Real-Time Surface Currents Produced by the HF-Radar Network*. Scripps Institution of Oceanography, Coastal Observing Research; Development Center (CORDC). https://hfradar.ioos.us/hfrnet/documents/HFRNet_RTV-NetCDF.pdf.
-
-   .. container:: csl-entry
-      :name: ref-WMOGTS
-
-      Panel, Data Buoy Cooperation. 2011. *GUIDE TO BUOY DATA QUALITY CONTROL TESTS TO PERFORM IN REAL TIME BY a GTS DATA PROCESSING CENTRE - DBCP Technical Document No. 37*. Version 1. Intergovernmental Oceanographic Commission of UNESCO - World Meteorological Organization.
-
-   .. container:: csl-entry
-      :name: ref-CMEMSWAVE001_NRT
-
-      Philip, A., N. Taburet, E. Husson, et al. n.d. *Global Ocean L3 Significant Wave Height from NRT Satellite Measurements*. CMEMS-WAVE-QUID-014-001. Version 1.0. Copernicus Marine Service WAVE Thematic Assembly Center. https://doi.org/https://doi.org/10.48670/moi-00179.
-
-   .. container:: csl-entry
-      :name: ref-quach_deep_2021
-
-      Quach, Brandon, Yannik Glaser, Justin Edward Stopa, Alexis Aurelien Mouche, and Peter Sadowski. 2021. “Deep Learning for Predicting Significant Wave Height From Synthetic Aperture Radar.” *IEEE Transactions on Geoscience and Remote Sensing* 59 (3): 1859–67. https://doi.org/10.1109/TGRS.2020.3003839.
-
-   .. container:: csl-entry
-      :name: ref-quilfen_denoising_2021
-
-      Quilfen, Y., and B. Chapron. 2021. “On Denoising Satellite Altimeter Measurements for High-Resolution Geophysical Signal Analysis.” *Advances in Space Research* 68 (2): 875–91. https://doi.org/10.1016/j.asr.2020.01.005.
-
-   .. container:: csl-entry
-      :name: ref-verhoef2024osisaf_hscat_oscat_winds
-
-      Verhoef, Anton, Jeroen Verspeek, and Ad Stoffelen. 2024. *Scientific Validation Report (SVR) for the HSCAT/OSCAT Winds*. Scientific Validation Report SAF/OSI/CDOP4/KNMI/TEC/RP/434. EUMETSAT Ocean; Sea Ice Satellite Application Facility (OSI SAF), Royal Netherlands Meteorological Institute (KNMI). https://scatterometer.knmi.nl/publications/pdf/osisaf_svr_hscat_oscat_winds.pdf.
-
-   .. container:: csl-entry
-      :name: ref-verspeek2019ascat_c_calval
-
-      Verspeek, Jeroen, Anton Verhoef, and Ad Stoffelen. 2019. *ASCAT-c Wind Product Calibration and Validation*. Scientific Validation Report SAF/OSI/CDOP3/KNMI/TEC/RP/345. EUMETSAT Ocean; Sea Ice Satellite Application Facility (OSI SAF), Royal Netherlands Meteorological Institute (KNMI). https://scatterometer.knmi.nl/publications/pdf/osisaf_cdop3_ss3_valrep_ascat_c_winds_1.3.pdf.
-
-   .. container:: csl-entry
-      :name: ref-CMEMS_QUID_013_030_036
-
-      Wehde, H., K. V. Schuckmann, S. Pouliquen, et al. 2025. *Quality Information Document for in Situ Products, Regional Multiparameter MYNRT Products (INSITU_GLO_PHYBGCWAV_DISCRETE_MYNRT_013_030, \_013_031, \_013_032, \_013_033, \_013_034, \_013_035, \_013_036)*. Quality Information Document (QUID) CMEMS-INS-QUID-013-030-036. E.U. Copernicus Marine Service. https://documentation.marine.copernicus.eu/QUID/CMEMS-INS-QUID-013-030-036.pdf.

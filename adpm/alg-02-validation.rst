@@ -24,18 +24,20 @@ systems capture the same signal variability. The residual contribution then
 vanishes:
 
 .. math::
+   :label: eq-cvtdd-lag-threshold
 
    V_{s_2}(n)-V_{s_1}(n) \to 0
    \qquad \forall n>\tilde{n} .
 
 **Purpose**
 
-This method (:ref:`Vogelzang et al. (2015) <ref-vogelzang-spatial-variance>`)
+This method (:cite:`VogelzangJGRO2015`)
 computes wind variances as a function of scale. Unlike the spectral-integration
 method, it operates in the spatial domain rather than the frequency domain. It
 is more tolerant to missing samples and provides a more intuitive
 interpretation. The representativeness error is the difference between the
-system 2 (e.g. satellite) spatial variance and that of system 3 (e.g. model).
+spatial variance of :math:`s_2` (e.g. model) and that of :math:`s_1` (the
+coarsest system, e.g. satellite).
 This value depends on the selected scale. Spatial variances increase
 monotonically with scale, and their difference also usually increases up to a
 certain scale.
@@ -82,12 +84,57 @@ certain scale.
    .. math::
       :label: eq-cvtdd-average-spatial-variance
 
-      V_w(n)=\frac{1}{M}\sum_{i=0}^{M}V_{w,i}(n),
-      \qquad M=N-n .
+      V_w(n)=\frac{1}{K}\sum_{i=0}^{K-1}V_{w,i}(n),
+      \qquad K=N-n .
+
+   Here, :math:`K` is the number of windows of lag size :math:`n` that are
+   averaged and :math:`N` is the total number of samples.
 
 **Outputs**
 
-- :math:`V_{u,v}(n)`.
+- :math:`V_w(n)`.
+
+**Variable to component mapping**
+
+:tbd:`Variable-to-component mapping | mapping of RL2Ocean variables to geophysical components still to be defined`
+
+.. list-table:: Mapping of RL2Ocean variables to geophysical components.
+    :header-rows: 1
+
+    * - Variable
+      - Component :math:`w`
+    * - [Variable name]
+      - [Component]
+
+**Variable Description Table**
+
+:tbd:`VDT skeleton | table structure copied from ADPM v1.0, content to be defined`
+
+.. list-table:: Spatial Variance Variable Description Table (VDT).
+    :header-rows: 1
+    :class: longtable
+    :widths: 16 7 8 16 16 7 12 10 12 12
+
+    * - Name
+      - Sym
+      - Role
+      - Origin
+      - Destination
+      - Units
+      - Type
+      - Dim
+      - Range
+      - Default
+    * - [Variable name]
+      - [Symbol]
+      - [IN/OUT]
+      - [Origin]
+      - [Destination]
+      - [Units]
+      - [Type]
+      - [Dim]
+      - [Range]
+      - [Default]
 
 Triple Collocation
 ------------------
@@ -97,7 +144,7 @@ Triple Collocation
 Triple collocation (TC) was conceived by Stoffelen (1998) as a tool for
 inter-calibration and individual error assessment of three different
 collocated sea-surface wind datasets
-(:ref:`Stoffelen (1998) <ref-stoffelen-triple-collocation>`). TC is generic
+(:cite:`StoffelenJGRO1998`). TC is generic
 and can be applied to any geophysical variable and data product, provided that
 errors are additive, linear calibration is sufficient, measurement errors are
 uncorrelated with each other, and measurement errors are constant over the
@@ -142,9 +189,8 @@ For LoS surface currents, relevant validation sources are:
 Given three measurement systems, :math:`i=1,2,3`, representing, for example,
 in-situ, satellite, and model estimates, the measurements and measurement
 errors are approximated by the following linear expression
-(:ref:`Vogelzang and Stoffelen (2021) <ref-vogelzang-quadruple-collocation>`;
-:ref:`Vogelzang and Stoffelen (2022)
-<ref-vogelzang-quintuple-collocation>`):
+(:cite:`VogelzangJGRO2021`;
+:cite:`VogelzangRS2022`):
 
 .. math::
    :label: eq-cvtdd-tc-linear-model
@@ -175,6 +221,7 @@ vector quantity such as wind, :math:`s` can represent either the zonal
    new calibration coefficients:
 
    .. math::
+      :label: eq-cvtdd-tc-inverse-calibration
 
       s_i=\frac{s_i^{\mathrm{uncal}}-b_i}{a_i},
       \qquad \forall i\in\{1,2,3\} .
@@ -204,11 +251,13 @@ vector quantity such as wind, :math:`s` can represent either the zonal
 #. Estimate the calibration coefficients:
 
    .. math::
+      :label: eq-cvtdd-tc-coefficients-2
 
       a_2=\frac{C_{23}}{C_{13}},
       \qquad b_2=M_2-a_2M_1 .
 
    .. math::
+      :label: eq-cvtdd-tc-coefficients-3
 
       a_3=\frac{C_{13}}{T},
       \qquad b_3=M_3-a_3M_1 .
@@ -262,6 +311,36 @@ the coarser-resolution system (e.g. NWP model), using:
 The labels SAT and NWP indicate the intermediate- and coarser-resolution
 systems, respectively.
 
+**Variable Description Table**
+
+:tbd:`VDT skeleton | table structure copied from ADPM v1.0, content to be defined`
+
+.. list-table:: Triple Collocation Variable Description Table (VDT).
+    :header-rows: 1
+    :class: longtable
+    :widths: 16 7 8 16 16 7 12 10 12 12
+
+    * - Name
+      - Sym
+      - Role
+      - Origin
+      - Destination
+      - Units
+      - Type
+      - Dim
+      - Range
+      - Default
+    * - [Variable name]
+      - [Symbol]
+      - [IN/OUT]
+      - [Origin]
+      - [Destination]
+      - [Units]
+      - [Type]
+      - [Dim]
+      - [Range]
+      - [Default]
+
 One-to-One Validation
 ---------------------
 
@@ -294,7 +373,10 @@ validation source.
   25 km and a temporal constraint within 30 minutes are recommended. For NWP
   models, collect hourly forecasts if available; otherwise interpolate model
   parameters bilinearly in space and time to the SAR wind-retrieval/vector cell
-  and acquisition time.
+  and acquisition time. The finest available temporal sampling of the
+  validation source is used.
+- Compute differences between the two sources: linear differences for scalar
+  quantities, and component-wise differences for vector quantities.
 - For circular variables such as wind direction, compute the differences
   :math:`\Delta\phi` and map the resulting angular differences to
   :math:`[-180^\circ,180^\circ]`:
@@ -325,6 +407,7 @@ validation source.
   - Pearson correlation coefficient:
 
     .. math::
+       :label: eq-cvtdd-pearson
 
        r=
        \frac{\left\langle
@@ -337,12 +420,13 @@ validation source.
 
   - :math:`b_w=\langle w_{\mathrm{SAR}}-w_{\mathrm{VS}}\rangle`.
   - :math:`RMSD_w=\sqrt{\langle(w_{\mathrm{SAR}}-w_{\mathrm{VS}})^2\rangle}`.
-  - :math:`vRMDS=\sqrt{\langle
+  - :math:`vRMSD=\sqrt{\langle
     (u_{\mathrm{SAR}}-u_{\mathrm{VS}})^2+
     (v_{\mathrm{SAR}}-v_{\mathrm{VS}})^2\rangle}`.
   - Pearson correlation coefficient:
 
     .. math::
+       :label: eq-cvtdd-pearson-w
 
        r_w=
        \frac{\left\langle
@@ -354,10 +438,11 @@ validation source.
 - Circular variables (e.g. wind direction):
 
   - :math:`b_\phi=\langle\mathbf{mod}(\phi_{\mathrm{SAR}}-\phi_{\mathrm{VS}},360)\rangle`.
-  - :math:`RMSD_\phi=\sqrt{\langle\mathbf{mod}(\phi_{\mathrm{SAR}}-\phi_{\mathrm{AS}},360)\rangle}`.
+  - :math:`RMSD_\phi=\sqrt{\langle\mathbf{mod}(\phi_{\mathrm{SAR}}-\phi_{\mathrm{VS}},360)^2\rangle}`.
   - Jammalamadaka--Sarma circular-circular correlation coefficient:
 
     .. math::
+       :label: eq-cvtdd-circular-correlation
 
        \rho_c=
        \frac{\left\langle
@@ -371,7 +456,9 @@ validation source.
 
 Here, angle brackets denote the expected-value operator, :math:`\mathbf{mod}`
 denotes modulus, and :math:`VS` denotes validation source. :math:`VAR` is the
-validation variable of interest. Formulas with subscript :math:`w` apply to
+validation variable of interest. :math:`\sigma_{\mathrm{SAR}}` and
+:math:`\sigma_{\mathrm{VS}}` are the standard deviations of the collocated SAR
+samples and of the collocated validation-source samples, respectively. Formulas with subscript :math:`w` apply to
 both components (:math:`u,v`) and speed (:math:`U`) for vector quantities.
 
 **Output**
@@ -388,11 +475,41 @@ both components (:math:`u,v`) and speed (:math:`U`) for vector quantities.
     :math:`b_u,b_v,b_U,b_\phi`.
   - RMSD for each component, speed, and direction:
     :math:`RMSD_u,RMSD_v,RMSD_U,RMSD_\phi`.
-  - :math:`vRMDS`.
+  - :math:`vRMSD`.
   - Pearson correlation coefficient for each component and speed:
     :math:`r_u,r_v,r_U`.
   - Jammalamadaka--Sarma circular-circular correlation coefficient for
     direction: :math:`\rho_{c,\phi}`.
+
+**Variable Description Table**
+
+:tbd:`VDT skeleton | table structure copied from ADPM v1.0, content to be defined`
+
+.. list-table:: One-to-One Validation Variable Description Table (VDT).
+    :header-rows: 1
+    :class: longtable
+    :widths: 16 7 8 16 16 7 12 10 12 12
+
+    * - Name
+      - Sym
+      - Role
+      - Origin
+      - Destination
+      - Units
+      - Type
+      - Dim
+      - Range
+      - Default
+    * - [Variable name]
+      - [Symbol]
+      - [IN/OUT]
+      - [Origin]
+      - [Destination]
+      - [Units]
+      - [Type]
+      - [Dim]
+      - [Range]
+      - [Default]
 
 Spectral Analysis
 -----------------
@@ -401,7 +518,7 @@ Spectral Analysis
 
 Spectral analysis is a validation tool used to assess the spatial scales
 resolved by the retrievals
-(:ref:`Vogelzang et al. (2011) <ref-vogelzang-spectral>`).
+(:cite:`VogelzangJGRO2011`).
 
 **Inputs**
 
@@ -465,39 +582,32 @@ standard uncertainty is:
 - Associated standard-uncertainty profiles derived from
   :eq:`eq-cvtdd-psd-uncertainty`.
 
-.. rubric:: References
+**Variable Description Table**
 
-.. _ref-vogelzang-spatial-variance:
+:tbd:`VDT skeleton | table structure copied from ADPM v1.0, content to be defined`
 
-Vogelzang, J., G. P. King, and A. Stoffelen (2015). “Spatial variances of wind
-fields and their relation to second-order structure functions and spectra.”
-*Journal of Geophysical Research: Oceans*, 120(2), 1048--1064.
-`doi:10.1002/2014JC010239 <https://doi.org/10.1002/2014JC010239>`_.
+.. list-table:: Spectral Analysis Variable Description Table (VDT).
+    :header-rows: 1
+    :class: longtable
+    :widths: 16 7 8 16 16 7 12 10 12 12
 
-.. _ref-stoffelen-triple-collocation:
-
-Stoffelen, A. (1998). “Toward the true near-surface wind speed: Error modeling
-and calibration using triple collocation.” *Journal of Geophysical Research:
-Oceans*, 103(C4), 7755--7766.
-`doi:10.1029/97JC03180 <https://doi.org/10.1029/97JC03180>`_.
-
-.. _ref-vogelzang-quadruple-collocation:
-
-Vogelzang, J., and A. Stoffelen (2021). “Quadruple collocation analysis of
-in-situ, scatterometer, and NWP winds.” *Journal of Geophysical Research:
-Oceans*, 126(5), e2021JC017189.
-`doi:10.1029/2021JC017189 <https://doi.org/10.1029/2021JC017189>`_.
-
-.. _ref-vogelzang-quintuple-collocation:
-
-Vogelzang, J., and A. Stoffelen (2022). “On the accuracy and consistency of
-quintuple collocation analysis of in situ, scatterometer, and NWP winds.”
-*Remote Sensing*, 14(18), 4552.
-`doi:10.3390/rs14184552 <https://doi.org/10.3390/rs14184552>`_.
-
-.. _ref-vogelzang-spectral:
-
-Vogelzang, J., A. Stoffelen, A. Verhoef, and J. Figa-Saldaña (2011). “On the
-quality of high-resolution scatterometer winds.” *Journal of Geophysical
-Research: Oceans*, 116(C10).
-`doi:10.1029/2010JC006640 <https://doi.org/10.1029/2010JC006640>`_.
+    * - Name
+      - Sym
+      - Role
+      - Origin
+      - Destination
+      - Units
+      - Type
+      - Dim
+      - Range
+      - Default
+    * - [Variable name]
+      - [Symbol]
+      - [IN/OUT]
+      - [Origin]
+      - [Destination]
+      - [Units]
+      - [Type]
+      - [Dim]
+      - [Range]
+      - [Default]

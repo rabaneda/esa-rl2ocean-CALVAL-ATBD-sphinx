@@ -15,7 +15,7 @@ Quality Assessment (QA) is required for remote sensing and Earth Observation (EO
 
 The ROSE-L instrument will operate in scanning synthetic aperture radar (ScanSAR) mode. The system will support Dual-Pol, Quad-Pol and Wave modes. The Cal/Val strategy is also meant to cover all modes and polarizations. ROSE-L will not be the first SAR system functioning within L-band. ALOS, ALOS-2, ALOS-4, SAOCOM and NiSAR are, or have been, operating in L-band too. However, there are differences between those systems and the ROSE-L system, e.g. incidence angle, range bandwidth, swath width, among others. Furthermore, ROSE-L incorporates the use of a new technique, the Scan-On-Receive (SCORE) technique with Multiple Azimuth Phase Centers (MAPS). The different instrument design will impose differences in the retrievals at low level which are meant to influence the inversion into L2 products.
 
-Regarding the development of a retrieval algorithm but also Cal/Val activities, instrument differences between ROSE-L and previous SAR L-band instruments impose a challenge; the need of producing and validating ocean products from ROSE-L scenes during the pre-launch phase. The lack of real ROSE-L data will be mitigated by the use of similar acquisitions by the above-mentioned systems; although this introduces a non-negligible degree of uncertainty. For Cal/Val purposes, simulated ROSE-L scenes will be produced. The achievable accuracy of simulated ROSE-L will also be analysed during the In-Orbit-Commissioning (IOC) phase, E1. Once real ROSE-L data is available, the outputs from the L2O-IPF processor will need to be validated again, with the possibility to encounter a need for a readjustment of the processor or introduction of supplementary calibration steps.
+Regarding both the development of the retrieval algorithms and the Cal/Val activities, pre-launch work is limited by the inherent differences between ROSE-L and existing L-band SAR data, and by the lack of real ROSE-L data. This limitation is mitigated by the use of similar acquisitions by the above-mentioned systems and by simulated ROSE-L scenes, although this introduces a non-negligible degree of uncertainty. The approach should therefore be refined in phase E: the achievable accuracy of simulated ROSE-L data will be analysed during the In-Orbit-Commissioning (IOC) phase, E1, and once real ROSE-L data is available, the outputs from the L2O-IPF processor will need to be validated again, with the possibility to encounter a need for a readjustment of the processor or introduction of supplementary calibration steps.
 
 A tool for assessing the quality of the ocean products is vital. The Cal/Val tool, L2O-QC, is meant to be developed in parallel to the development of the ocean processors, L2O-GPP and L2O-IPF. The L2O-QC software is required to be able to ingest datasets of different nature; ROSE-L acquisitions, reference datasets (either in-situ or remote), and auxiliary data. The goal is to collocate the different datasets in order to undertake the quality assessment, where the accuracy and reliability of the ROSE-L L2 ocean products will be determined and ensured. The underlying objective is to provide users with a set of performance and uncertainty metrics necessary for a deep understanding of the products and subsequent appropriate use and application.
 
@@ -68,17 +68,94 @@ To meet performance requirements, L2 products must achieve predefined thresholds
 ATBD purpose
 ------------
 
-The aim of the Calibration and Validation Algorithm Theoretical Basis Document (ATBD) is to provide a comprehensive and transparent description of the scientific principles, mathematical methods, and processing steps used to generate ROSE-L L2 ocean products. It ensures that the algorithms are well-documented, reproducible, and traceable, facilitating a clear understanding of how measurements are transformed into geophysical quantities. The ATBD serves as a foundation for ensuring data quality, guiding calibration/validation efforts, and supporting user confidence in the satellite mission’s outputs.
+The aim of the Calibration and Validation Algorithm Theoretical Basis Document (ATBD) is to provide a comprehensive and transparent description of the scientific principles, mathematical methods, and processing steps used to calibrate and validate ROSE-L L2 ocean products. It ensures that the algorithms are well-documented, reproducible, and traceable, facilitating a clear understanding of how measurements are transformed into geophysical quantities. The ATBD serves as a foundation for ensuring data quality, guiding calibration/validation efforts, and supporting user confidence in the satellite mission’s outputs.
 
 Applicable and reference documents
 ----------------------------------
 
+References are included in the main reference list below and are cross-referenced from the relevant chapters.
+
+**Applicable documents**
+
+:tbd:`Applicable documents | list of applicable documents (AD) still to be provided`
+
+**Reference documents**
+
+:tbd:`Reference documents | list of reference documents (RD) still to be provided`
+
+**References**
+
+.. bibliography::
+   :cited:
 
 Acronyms
 --------
 
 .. glossary::
    :sorted:
+
+   ATBD
+      Algorithm Theoretical Basis Document.
+
+   GMF
+      Geophysical Model Function.
+
+   GPP
+      Ground Prototype Processor.
+
+   HFR
+      High-Frequency Radar.
+
+   IOC
+      In-Orbit Commissioning.
+
+   IPF
+      Instrument Processing Facility.
+
+   LoS
+      Line of Sight.
+
+   MTF
+      Modulation Transfer Function.
+
+   NOC
+      Numerical Weather Prediction Ocean Calibration.
+
+   NRT
+      Near Real Time.
+
+   NWP
+      Numerical Weather Prediction.
+
+   OSVS
+      Ocean Surface Vector Stress.
+
+   OSW
+      Ocean Swell Spectra component of the Sentinel-1 Level-2 OCN product.
+
+   OWI
+      Ocean Wind field component of the Sentinel-1 Level-2 OCN product.
+
+   QC
+      Quality Control.
+
+   RMSD
+      Root Mean Square Difference.
+
+   RVL
+      Radial Surface Velocity component of the Sentinel-1 Level-2 OCN product.
+
+   SWH
+      Significant Wave Height.
+
+   TC
+      Triple Collocation.
+
+   VS
+      Validation Source.
+
+   vRMSD
+      Vector Root Mean Square Difference.
 
    CANVAS
       CAlibration aNd VAlidation for Sar.
@@ -172,7 +249,7 @@ Definitions and conventions
       uncertainty-quantified sensor observations calibrated to physical units
       and located in time and space, together with ancillary and lower-level
       instrument data used to calibrate and locate the observations and to
-      estimate uncertainty (:ref:`Woolliams et al. 2025a <ref-QA4EO1>`).
+      estimate uncertainty :cite:`QA4EO1`.
 
    Fiducial Reference Measurement
       A suite of independent, fully characterised, and traceable sub-orbital
@@ -196,7 +273,7 @@ Definitions and conventions
 
    Metrology
       The science of measurement and its application
-      (:ref:`BIPM et al., n.d.-b <ref-JCGMVIM>`).
+      (:cite:`JCGMVIM`).
 
    Thematic Data Product
       A record, of sufficient duration for its application, of

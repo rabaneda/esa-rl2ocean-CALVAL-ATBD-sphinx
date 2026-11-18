@@ -4,7 +4,10 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html
 
 import os
+import sys
 from string import Template
+
+sys.path.insert(0, os.path.abspath("."))  # so Sphinx finds tbdtrack_sphinx.py
 
 try:
     from pathlib import Path
@@ -44,7 +47,17 @@ extensions = [
     "sphinx.ext.todo",
     "sphinx_rtd_theme",
     "nbsphinx",
+    "sphinxcontrib.bibtex",
+    "tbdtrack_sphinx",
 ]
+
+# --- sphinxcontrib-bibtex -----------------------------------------------------
+bibtex_bibfiles = ["bibliography_calval_atbd.bib"]
+bibtex_default_style = "unsrt"
+
+# --- tbdtrack_sphinx ----------------------------------------------------------
+tbd_doc_abbrev = "CALVAL-ATBD"  # document abbreviation used in automatic IDs
+# tbd_final = True               # hide all markings and the table (final version)
 
 try:
     import sphinxcontrib.spelling  # noqa: F401
