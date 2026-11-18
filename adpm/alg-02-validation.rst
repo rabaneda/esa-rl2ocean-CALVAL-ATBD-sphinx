@@ -376,8 +376,7 @@ validation source.
   and acquisition time. The finest available temporal sampling of the
   validation source is used.
 - Compute differences between the two sources: linear differences for scalar
-  quantities, and component-wise differences for vector quantities.
-- For circular variables such as wind direction, compute the differences
+  quantities, and component-wise differences for vector quantities. For circular variables such as wind direction, compute the differences
   :math:`\Delta\phi` and map the resulting angular differences to
   :math:`[-180^\circ,180^\circ]`:
 

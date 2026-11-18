@@ -1,0 +1,419 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+<style>
+.tbd-word {color: #c00; font-weight: bold;}
+.tbd-id, .tbd-id:visited {color: #c00; font-size: 70%; font-family: monospace;}
+</style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>8. TBD table &mdash; RL2Ocean Calibration and Validation ATBD</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=f2a433a1"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="7. Uncertainty analysis" href="04_uncertainty_analysis.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            RL2Ocean Calibration and Validation ATBD
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="01_introduction.html">1. Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="01_introduction.html#purpose-and-scope">1.1. Purpose and scope</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01_introduction.html#cal-val-context">1.2. Cal/Val context</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01_introduction.html#l2-product-scope">1.3. L2 product scope</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01_introduction.html#cal-val-objectives-and-performance">1.4. Cal/Val objectives and performance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01_introduction.html#calval-atbd-purpose">1.5. CALVAL-ATBD purpose</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01_introduction.html#applicable-and-reference-documents">1.6. Applicable and reference documents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01_introduction.html#acronyms">1.7. Acronyms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01_introduction.html#definitions-and-conventions">1.8. Definitions and conventions</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="02_processing_model.html">2. Processing model and data flow</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="02_processing_model.html#pre-launch-phase-d">2.1. Pre-launch phase (D)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02_processing_model.html#commissioning-phase-ioc-or-e1">2.2. Commissioning phase (IOC or E1)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02_processing_model.html#exploitation-phase-e2">2.3. Exploitation phase (E2)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02_processing_model.html#end-to-end-data-flow">2.4. End-to-end data flow</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="03_lband_sar_datasets.html">3. L-band SAR datasets description</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="03_lband_sar_datasets.html#pre-launch-synthetic-datasets">3.1. Pre-launch synthetic datasets</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="03_lband_sar_datasets.html#reconditioned">3.1.1. Reconditioned</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03_lband_sar_datasets.html#emulated">3.1.2. Emulated</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03_lband_sar_datasets.html#simulated">3.1.3. Simulated</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="03_lband_sar_datasets.html#third-party-datasets">3.2. Third-party datasets</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="03_lband_sar_datasets.html#alos">3.2.1. ALOS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03_lband_sar_datasets.html#alos-2">3.2.2. ALOS-2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03_lband_sar_datasets.html#alos-4">3.2.3. ALOS-4</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03_lband_sar_datasets.html#saocom">3.2.4. SAOCOM</a></li>
+<li class="toctree-l3"><a class="reference internal" href="03_lband_sar_datasets.html#nisar">3.2.5. NiSAR</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="04_auxiliary_datasets.html">4. Auxiliary datasets description</a></li>
+<li class="toctree-l1"><a class="reference internal" href="05_reference_datasets.html">5. Reference datasets description</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="05_reference_datasets.html#ocean-surface-vector-stress">5.1. Ocean Surface Vector Stress</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="05_reference_datasets.html#wind-vector">5.1.1. Wind vector</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="05_reference_datasets.html#c-band-sar">5.1.1.1. C-band SAR</a></li>
+<li class="toctree-l4"><a class="reference internal" href="05_reference_datasets.html#numerical-prediction-model">5.1.1.2. Numerical Prediction Model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="05_reference_datasets.html#in-situ-observations">5.1.1.3. In-Situ Observations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="05_reference_datasets.html#scatterometers">5.1.1.4. Scatterometers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="05_reference_datasets.html#radiometers">5.1.1.5. Radiometers</a></li>
+<li class="toctree-l4"><a class="reference internal" href="05_reference_datasets.html#plane">5.1.1.6. Plane</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="05_reference_datasets.html#wind-stress">5.1.2. Wind stress</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="05_reference_datasets.html#sea-state">5.2. Sea State</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="05_reference_datasets.html#total-significant-wave-height">5.2.1. Total significant wave height</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="05_reference_datasets.html#nwp">5.2.1.1. NWP</a></li>
+<li class="toctree-l4"><a class="reference internal" href="05_reference_datasets.html#c-band-sar-1">5.2.1.2. C-band SAR</a></li>
+<li class="toctree-l4"><a class="reference internal" href="05_reference_datasets.html#in-situ-observations-1">5.2.1.3. In-Situ Observations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="05_reference_datasets.html#sea-ice-maps">5.2.1.4. Sea-ice maps</a></li>
+<li class="toctree-l4"><a class="reference internal" href="05_reference_datasets.html#altimeters">5.2.1.5. Altimeters</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="05_reference_datasets.html#mean-period-wind-sea">5.2.2. Mean period wind-sea</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05_reference_datasets.html#first-moment-wave-period">5.2.3. First moment wave period</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05_reference_datasets.html#second-moment-wave-period">5.2.4. Second moment wave period</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05_reference_datasets.html#wave-height-swell-dominant-system">5.2.5. Wave height swell dominant system</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05_reference_datasets.html#wave-height-swell-secondary-system">5.2.6. Wave height swell secondary system</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05_reference_datasets.html#significant-wave-height-wind-sea">5.2.7. Significant wave height wind-sea</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05_reference_datasets.html#mean-period-wind-sea-1">5.2.8. Mean period wind-sea</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05_reference_datasets.html#wave-direction">5.2.9. Wave direction</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05_reference_datasets.html#wave-directional-energy-spectrum">5.2.10. Wave directional energy spectrum</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="05_reference_datasets.html#line-of-sight-currents">5.3. Line-of-sight currents</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="05_reference_datasets.html#los-wave-doppler">5.3.1. LoS wave Doppler</a></li>
+<li class="toctree-l3"><a class="reference internal" href="05_reference_datasets.html#los-surface-current-component">5.3.2. LoS surface current component</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="05_reference_datasets.html#nwp-1">5.3.2.1. NWP</a></li>
+<li class="toctree-l4"><a class="reference internal" href="05_reference_datasets.html#c-band-sar-2">5.3.2.2. C-band SAR</a></li>
+<li class="toctree-l4"><a class="reference internal" href="05_reference_datasets.html#hf-radars">5.3.2.3. HF radars</a></li>
+<li class="toctree-l4"><a class="reference internal" href="05_reference_datasets.html#in-situ-observations-copernicus-marine">5.3.2.4. In-Situ Observations (Copernicus Marine)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="05_reference_datasets.html#altimeters-1">5.3.2.5. Altimeters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="05_reference_datasets.html#iwrap">5.3.2.6. IWRAP</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="03_algorithms.html">6. Algorithms description</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="alg-01-calibration.html">6.1. Selected Calibration methods</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="alg-01-calibration.html#rose-l-l1-slc-products">6.1.1. ROSE-L L1 SLC products</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#short-description">6.1.1.1. Short description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#description-of-inputs">6.1.1.2. Description of inputs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#detailed-methodology">6.1.1.3. Detailed methodology</a></li>
+<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#performance-metrics">6.1.1.4. Performance metrics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#expected-output">6.1.1.5. Expected output</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="alg-01-calibration.html#numerical-weather-prediction-ocean-calibration-of-sar-sigma-0">6.1.2. Numerical Weather Prediction Ocean Calibration of SAR <span class="math notranslate nohighlight">\(\sigma_0\)</span></a></li>
+<li class="toctree-l3"><a class="reference internal" href="alg-01-calibration.html#gmf-tuning">6.1.3. GMF tuning</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id3">6.1.3.1. Short description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id4">6.1.3.2. Description of inputs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id5">6.1.3.3. Detailed methodology</a></li>
+<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id6">6.1.3.4. Performance metrics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id7">6.1.3.5. Expected output</a></li>
+<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#variable-description-table">6.1.3.6. Variable Description Table</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="alg-01-calibration.html#mtf-tuning">6.1.4. MTF tuning</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id8">6.1.4.1. Short description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id9">6.1.4.2. Description of inputs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id10">6.1.4.3. Detailed methodology</a></li>
+<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id11">6.1.4.4. Performance metrics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id12">6.1.4.5. Expected output</a></li>
+<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id13">6.1.4.6. Variable Description Table</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="alg-01-calibration.html#summary">6.1.5. Summary</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="alg-02-validation.html">6.2. Validation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="alg-02-validation.html#spatial-variance">6.2.1. Spatial Variance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="alg-02-validation.html#triple-collocation">6.2.2. Triple Collocation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="alg-02-validation.html#one-to-one-validation">6.2.3. One-to-One Validation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="alg-02-validation.html#spectral-analysis">6.2.4. Spectral Analysis</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="alg-03-wind.html">6.3. Wind</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="alg-03-wind.html#bayesian-wind-retrieval-alg-007">6.3.1. Bayesian Wind Retrieval - ALG-007</a></li>
+<li class="toctree-l3"><a class="reference internal" href="alg-03-wind.html#storm-centric-processing-alg-008-tbc">6.3.2. Storm-centric Processing - ALG-008 [TBC]</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="alg-04-sea-state.html">6.4. Sea State</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="alg-04-sea-state.html#empirical-retrieval-of-wave-parameters-alg-009">6.4.1. Empirical retrieval of wave parameters - ALG-009</a></li>
+<li class="toctree-l3"><a class="reference internal" href="alg-04-sea-state.html#reconstruction-of-wave-spectra-alg-009b">6.4.2. Reconstruction of wave spectra - ALG-009b</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="alg-05-currents.html">6.5. Total Surface Currents</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="alg-05-currents.html#wave-doppler-estimation-alg-010">6.5.1. Wave Doppler estimation - ALG-010</a></li>
+<li class="toctree-l3"><a class="reference internal" href="alg-05-currents.html#ocean-surface-current-estimation-alg-011">6.5.2. Ocean Surface Current estimation - ALG-011</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="04_uncertainty_analysis.html">7. Uncertainty analysis</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="04_uncertainty_analysis.html#introduction">7.1. Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04_uncertainty_analysis.html#the-gum-principles-a-review">7.2. The GUM Principles: A review</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="04_uncertainty_analysis.html#the-international-vocabulary-of-metrology-vim">7.2.1. The International Vocabulary of Metrology (VIM)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04_uncertainty_analysis.html#guide-to-the-expression-of-uncertainty-in-measurement-gum">7.2.2. Guide to the Expression of Uncertainty in Measurement (GUM)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04_uncertainty_analysis.html#quality-assurance-framework-for-earth-observation-qa4eo">7.2.3. Quality Assurance Framework for Earth Observation (QA4EO)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="04_uncertainty_analysis.html#product-specific-uncertainty-estimation">7.3. Product-specific uncertainty estimation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="04_uncertainty_analysis.html#azimuth-wavelength-cutoff">7.3.1. Azimuth wavelength cutoff</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04_uncertainty_analysis.html#macs">7.3.2. MACS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04_uncertainty_analysis.html#imacs">7.3.3. iMACS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04_uncertainty_analysis.html#dca">7.3.4. DCA</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04_uncertainty_analysis.html#texture-based-azimuth-cutoff">7.3.5. Texture-based azimuth cutoff</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04_uncertainty_analysis.html#rvl">7.3.6. RVL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04_uncertainty_analysis.html#inverse-wave-age">7.3.7. Inverse Wave Age</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04_uncertainty_analysis.html#wind-products">7.3.8. Wind products</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="04_uncertainty_analysis.html#wind-speed-wind-stress-and-hub-height-wind-speed">7.3.8.1. Wind speed, wind stress, and hub height wind speed</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="04_uncertainty_analysis.html#sea-state-products">7.3.9. Sea-state products</a></li>
+<li class="toctree-l3"><a class="reference internal" href="04_uncertainty_analysis.html#line-of-sight-current-products">7.3.10. Line-of-sight current products</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="04_uncertainty_analysis.html#line-of-sight-wave-doppler-and-line-of-sight-surface-current-component">7.3.10.1. Line-of-sight wave Doppler and line-of-sight surface current component</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="04_uncertainty_analysis.html#summary">7.3.11. Summary</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">8. TBD table</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">RL2Ocean Calibration and Validation ATBD</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active"><span class="section-number">8. </span>TBD table</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/tbd_table.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="tbd-table">
+<h1><span class="section-number">8. </span>TBD table<a class="headerlink" href="#tbd-table" title="Link to this heading"></a></h1>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 22.0%" />
+<col style="width: 38.0%" />
+<col style="width: 14.0%" />
+<col style="width: 26.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>ID</strong></p></th>
+<th class="head"><p><strong>Details</strong></p></th>
+<th class="head"><p><strong>Target date</strong></p></th>
+<th class="head"><p><strong>Location</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><span id="tbdrow-1"><a class="reference external" href="01_introduction.html#tbd-1">TBD_CALVAL-ATBD_1</a></span></p></td>
+<td><p><em>Applicable documents</em>: list of applicable documents (AD) still to be provided</p></td>
+<td><p></p></td>
+<td><p><a class="reference external" href="01_introduction.html#tbd-1">1.6 Applicable and reference documents</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><span id="tbdrow-2"><a class="reference external" href="01_introduction.html#tbd-2">TBD_CALVAL-ATBD_2</a></span></p></td>
+<td><p><em>Reference documents</em>: list of reference documents (RD) still to be provided</p></td>
+<td><p></p></td>
+<td><p><a class="reference external" href="01_introduction.html#tbd-2">1.6 Applicable and reference documents</a></p></td>
+</tr>
+<tr class="row-even"><td><p><span id="tbdrow-3"><a class="reference external" href="02_processing_model.html#tbd-3">TBD_CALVAL-ATBD_3</a></span></p></td>
+<td><p><em>Processing-flow diagram</em>: processing-flow diagram, processing-step mapping and algorithm identifiers still missing</p></td>
+<td><p></p></td>
+<td><p><a class="reference external" href="02_processing_model.html#tbd-3">2.4 End-to-end data flow</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><span id="tbdrow-4"><a class="reference external" href="03_lband_sar_datasets.html#tbd-4">TBD_CALVAL-ATBD_4</a></span></p></td>
+<td><p><em>Pre-launch synthetic datasets</em>: description of reconditioned, emulated and simulated datasets still to be written</p></td>
+<td><p></p></td>
+<td><p><a class="reference external" href="03_lband_sar_datasets.html#tbd-4">3.1 Pre-launch synthetic datasets</a></p></td>
+</tr>
+<tr class="row-even"><td><p><span id="tbdrow-5"><a class="reference external" href="03_lband_sar_datasets.html#tbd-5">TBD_CALVAL-ATBD_5</a></span></p></td>
+<td><p><em>Third-party L-band datasets</em>: ALOS, ALOS-2, ALOS-4, SAOCOM and NiSAR descriptions still to be written</p></td>
+<td><p></p></td>
+<td><p><a class="reference external" href="03_lband_sar_datasets.html#tbd-5">3.2 Third-party datasets</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><span id="tbdrow-6"><a class="reference external" href="04_auxiliary_datasets.html#tbd-6">TBD_CALVAL-ATBD_6</a></span></p></td>
+<td><p><em>Auxiliary datasets</em>: chapter content still to be written</p></td>
+<td><p></p></td>
+<td><p><a class="reference external" href="04_auxiliary_datasets.html#tbd-6">4 Auxiliary datasets description</a></p></td>
+</tr>
+<tr class="row-even"><td><p><span id="tbdrow-7"><a class="reference external" href="05_reference_datasets.html#tbd-7">TBD_CALVAL-ATBD_7</a></span></p></td>
+<td><p><em>Sea-ice maps reference dataset</em>: description of the sea-ice reference dataset still to be provided</p></td>
+<td><p></p></td>
+<td><p><a class="reference external" href="05_reference_datasets.html#tbd-7">5.2.1.4 Sea-ice maps</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><span id="tbdrow-8"><a class="reference external" href="alg-01-calibration.html#tbd-8">TBD_CALVAL-ATBD_8</a></span></p></td>
+<td><p><em>L1 SLC calibration</em>: all subsections below still to be written</p></td>
+<td><p></p></td>
+<td><p><a class="reference external" href="alg-01-calibration.html#tbd-8">6.1.1 ROSE-L L1 SLC products</a></p></td>
+</tr>
+<tr class="row-even"><td><p><span id="tbdrow-9"><a class="reference external" href="alg-01-calibration.html#tbd-9">TBD_CALVAL-ATBD_9</a></span></p></td>
+<td><p><em>VDT skeleton</em>: table structure copied from ADPM v1.0, content to be defined</p></td>
+<td><p></p></td>
+<td><p><a class="reference external" href="alg-01-calibration.html#tbd-9">6.1.2 Numerical Weather Prediction Ocean Calibration of SAR \sigma_0</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><span id="tbdrow-10"><a class="reference external" href="alg-01-calibration.html#tbd-10">TBD_CALVAL-ATBD_10</a></span></p></td>
+<td><p><em>GMF tuning description</em>: all subsections below still to be written</p></td>
+<td><p></p></td>
+<td><p><a class="reference external" href="alg-01-calibration.html#tbd-10">6.1.3 GMF tuning</a></p></td>
+</tr>
+<tr class="row-even"><td><p><span id="tbdrow-11"><a class="reference external" href="alg-01-calibration.html#tbd-11">TBD_CALVAL-ATBD_11</a></span></p></td>
+<td><p><em>VDT skeleton</em>: table structure copied from ADPM v1.0, content to be defined</p></td>
+<td><p></p></td>
+<td><p><a class="reference external" href="alg-01-calibration.html#tbd-11">6.1.3.6 Variable Description Table</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><span id="tbdrow-12"><a class="reference external" href="alg-01-calibration.html#tbd-12">TBD_CALVAL-ATBD_12</a></span></p></td>
+<td><p><em>MTF tuning description</em>: all subsections below still to be written</p></td>
+<td><p></p></td>
+<td><p><a class="reference external" href="alg-01-calibration.html#tbd-12">6.1.4 MTF tuning</a></p></td>
+</tr>
+<tr class="row-even"><td><p><span id="tbdrow-13"><a class="reference external" href="alg-01-calibration.html#tbd-13">TBD_CALVAL-ATBD_13</a></span></p></td>
+<td><p><em>VDT skeleton</em>: table structure copied from ADPM v1.0, content to be defined</p></td>
+<td><p></p></td>
+<td><p><a class="reference external" href="alg-01-calibration.html#tbd-13">6.1.4.6 Variable Description Table</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><span id="tbdrow-14"><a class="reference external" href="alg-02-validation.html#tbd-14">TBD_CALVAL-ATBD_14</a></span></p></td>
+<td><p><em>Variable-to-component mapping</em>: mapping of RL2Ocean variables to geophysical components still to be defined</p></td>
+<td><p></p></td>
+<td><p><a class="reference external" href="alg-02-validation.html#tbd-14">6.2.1 Spatial Variance</a></p></td>
+</tr>
+<tr class="row-even"><td><p><span id="tbdrow-15"><a class="reference external" href="alg-02-validation.html#tbd-15">TBD_CALVAL-ATBD_15</a></span></p></td>
+<td><p><em>VDT skeleton</em>: table structure copied from ADPM v1.0, content to be defined</p></td>
+<td><p></p></td>
+<td><p><a class="reference external" href="alg-02-validation.html#tbd-15">6.2.1 Spatial Variance</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><span id="tbdrow-16"><a class="reference external" href="alg-02-validation.html#tbd-16">TBD_CALVAL-ATBD_16</a></span></p></td>
+<td><p><em>VDT skeleton</em>: table structure copied from ADPM v1.0, content to be defined</p></td>
+<td><p></p></td>
+<td><p><a class="reference external" href="alg-02-validation.html#tbd-16">6.2.2 Triple Collocation</a></p></td>
+</tr>
+<tr class="row-even"><td><p><span id="tbdrow-17"><a class="reference external" href="alg-02-validation.html#tbd-17">TBD_CALVAL-ATBD_17</a></span></p></td>
+<td><p><em>VDT skeleton</em>: table structure copied from ADPM v1.0, content to be defined</p></td>
+<td><p></p></td>
+<td><p><a class="reference external" href="alg-02-validation.html#tbd-17">6.2.3 One-to-One Validation</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><span id="tbdrow-18"><a class="reference external" href="alg-02-validation.html#tbd-18">TBD_CALVAL-ATBD_18</a></span></p></td>
+<td><p><em>VDT skeleton</em>: table structure copied from ADPM v1.0, content to be defined</p></td>
+<td><p></p></td>
+<td><p><a class="reference external" href="alg-02-validation.html#tbd-18">6.2.4 Spectral Analysis</a></p></td>
+</tr>
+<tr class="row-even"><td><p><span id="tbdrow-19"><a class="reference external" href="alg-03-wind.html#tbd-19">TBD_CALVAL-ATBD_19</a></span></p></td>
+<td><p><em>ALG-007 VDT</em>: table copied from ADPM v1.0, to be aligned with the Cal/Val needs</p></td>
+<td><p></p></td>
+<td><p><a class="reference external" href="alg-03-wind.html#tbd-19">6.3.1 Bayesian Wind Retrieval - ALG-007</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><span id="tbdrow-20"><a class="reference external" href="alg-03-wind.html#tbd-20">TBD_CALVAL-ATBD_20</a></span></p></td>
+<td><p><em>ALG-008 VDT</em>: table copied from ADPM v1.0, to be aligned with the Cal/Val needs</p></td>
+<td><p></p></td>
+<td><p><a class="reference external" href="alg-03-wind.html#tbd-20">6.3.2 Storm-centric Processing - ALG-008 [TBC]</a></p></td>
+</tr>
+<tr class="row-even"><td><p><span id="tbdrow-21"><a class="reference external" href="alg-04-sea-state.html#tbd-21">TBD_CALVAL-ATBD_21</a></span></p></td>
+<td><p><em>ALG-009 VDT</em>: table copied from ADPM v1.0, to be aligned with the Cal/Val needs</p></td>
+<td><p></p></td>
+<td><p><a class="reference external" href="alg-04-sea-state.html#tbd-21">6.4.1 Empirical retrieval of wave parameters - ALG-009</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><span id="tbdrow-22"><a class="reference external" href="alg-04-sea-state.html#tbd-22">TBD_CALVAL-ATBD_22</a></span></p></td>
+<td><p><em>ALG-009b VDT</em>: table copied from ADPM v1.0, to be aligned with the Cal/Val needs</p></td>
+<td><p></p></td>
+<td><p><a class="reference external" href="alg-04-sea-state.html#tbd-22">6.4.2 Reconstruction of wave spectra - ALG-009b</a></p></td>
+</tr>
+<tr class="row-even"><td><p><span id="tbdrow-23"><a class="reference external" href="alg-05-currents.html#tbd-23">TBD_CALVAL-ATBD_23</a></span></p></td>
+<td><p><em>ALG-010 VDT</em>: table copied from ADPM v1.0, to be aligned with the Cal/Val needs</p></td>
+<td><p></p></td>
+<td><p><a class="reference external" href="alg-05-currents.html#tbd-23">6.5.1 Wave Doppler estimation - ALG-010</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><span id="tbdrow-24"><a class="reference external" href="alg-05-currents.html#tbd-24">TBD_CALVAL-ATBD_24</a></span></p></td>
+<td><p><em>ALG-011 VDT</em>: table copied from ADPM v1.0, to be aligned with the Cal/Val needs</p></td>
+<td><p></p></td>
+<td><p><a class="reference external" href="alg-05-currents.html#tbd-24">6.5.2 Ocean Surface Current estimation - ALG-011</a></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="04_uncertainty_analysis.html" class="btn btn-neutral float-left" title="7. Uncertainty analysis" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright RL2Ocean consortium.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

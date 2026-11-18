@@ -4,7 +4,10 @@
 <html class="writer-html5" lang="en" data-content_root="./">
 <head>
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-
+<style>
+.tbd-word {color: #c00; font-weight: bold;}
+.tbd-id, .tbd-id:visited {color: #c00; font-size: 70%; font-family: monospace;}
+</style>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>6.2. Validation &mdash; RL2Ocean Calibration and Validation ATBD</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
@@ -14,15 +17,15 @@
       <script src="_static/jquery.js?v=5d32c60e"></script>
       <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
       <script src="_static/documentation_options.js?v=f2a433a1"></script>
-      <script src="_static/doctools.js?v=fd6eb6e6"></script>
-      <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
       <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
       <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-      <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+      <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="7. Uncertainty analysis" href="04_uncertainty_analysis.html" />
+    <link rel="next" title="6.3. Wind" href="alg-03-wind.html" />
     <link rel="prev" title="6.1. Selected Calibration methods" href="alg-01-calibration.html" /> 
 </head>
 
@@ -52,22 +55,21 @@
 <li class="toctree-l2"><a class="reference internal" href="01_introduction.html#cal-val-context">1.2. Cal/Val context</a></li>
 <li class="toctree-l2"><a class="reference internal" href="01_introduction.html#l2-product-scope">1.3. L2 product scope</a></li>
 <li class="toctree-l2"><a class="reference internal" href="01_introduction.html#cal-val-objectives-and-performance">1.4. Cal/Val objectives and performance</a></li>
-<li class="toctree-l2"><a class="reference internal" href="01_introduction.html#atbd-purpose">1.5. ATBD purpose</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01_introduction.html#calval-atbd-purpose">1.5. CALVAL-ATBD purpose</a></li>
 <li class="toctree-l2"><a class="reference internal" href="01_introduction.html#applicable-and-reference-documents">1.6. Applicable and reference documents</a></li>
 <li class="toctree-l2"><a class="reference internal" href="01_introduction.html#acronyms">1.7. Acronyms</a></li>
 <li class="toctree-l2"><a class="reference internal" href="01_introduction.html#definitions-and-conventions">1.8. Definitions and conventions</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="02_processing_model.html">2. Processing model and data flow</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="02_processing_model.html#overview-and-top-down-decomposition">2.1. Overview and top-down decomposition</a></li>
-<li class="toctree-l2"><a class="reference internal" href="02_processing_model.html#pre-launch-phase-d">2.2. Pre-launch phase (D)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="02_processing_model.html#commissioning-phase-ioc-or-e1">2.3. Commissioning phase (IOC or E1)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="02_processing_model.html#exploitation-phase-e2">2.4. Exploitation phase (E2)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="02_processing_model.html#end-to-end-data-flow">2.5. End-to-end data flow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02_processing_model.html#pre-launch-phase-d">2.1. Pre-launch phase (D)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02_processing_model.html#commissioning-phase-ioc-or-e1">2.2. Commissioning phase (IOC or E1)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02_processing_model.html#exploitation-phase-e2">2.3. Exploitation phase (E2)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02_processing_model.html#end-to-end-data-flow">2.4. End-to-end data flow</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="03_lband_sar_datasets.html">3. L-band SAR datasets description</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="03_lband_sar_datasets.html#generated-datasets">3.1. Generated datasets</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="03_lband_sar_datasets.html#pre-launch-synthetic-datasets">3.1. Pre-launch synthetic datasets</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="03_lband_sar_datasets.html#reconditioned">3.1.1. Reconditioned</a></li>
 <li class="toctree-l3"><a class="reference internal" href="03_lband_sar_datasets.html#emulated">3.1.2. Emulated</a></li>
 <li class="toctree-l3"><a class="reference internal" href="03_lband_sar_datasets.html#simulated">3.1.3. Simulated</a></li>
@@ -145,19 +147,21 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="alg-01-calibration.html#numerical-weather-prediction-ocean-calibration-of-sar-sigma-0">6.1.2. Numerical Weather Prediction Ocean Calibration of SAR <span class="math notranslate nohighlight">\(\sigma_0\)</span></a></li>
 <li class="toctree-l3"><a class="reference internal" href="alg-01-calibration.html#gmf-tuning">6.1.3. GMF tuning</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id1">6.1.3.1. Short description</a></li>
-<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id2">6.1.3.2. Description of inputs</a></li>
-<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id3">6.1.3.3. Detailed methodology</a></li>
-<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id4">6.1.3.4. Performance metrics</a></li>
-<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id5">6.1.3.5. Expected output</a></li>
+<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id3">6.1.3.1. Short description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id4">6.1.3.2. Description of inputs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id5">6.1.3.3. Detailed methodology</a></li>
+<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id6">6.1.3.4. Performance metrics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id7">6.1.3.5. Expected output</a></li>
+<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#variable-description-table">6.1.3.6. Variable Description Table</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="alg-01-calibration.html#mtf-tuning">6.1.4. MTF tuning</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id6">6.1.4.1. Short description</a></li>
-<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id7">6.1.4.2. Description of inputs</a></li>
-<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id8">6.1.4.3. Detailed methodology</a></li>
-<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id9">6.1.4.4. Performance metrics</a></li>
-<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id10">6.1.4.5. Expected output</a></li>
+<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id8">6.1.4.1. Short description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id9">6.1.4.2. Description of inputs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id10">6.1.4.3. Detailed methodology</a></li>
+<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id11">6.1.4.4. Performance metrics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id12">6.1.4.5. Expected output</a></li>
+<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id13">6.1.4.6. Variable Description Table</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="alg-01-calibration.html#summary">6.1.5. Summary</a></li>
@@ -168,6 +172,21 @@
 <li class="toctree-l3"><a class="reference internal" href="#triple-collocation">6.2.2. Triple Collocation</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#one-to-one-validation">6.2.3. One-to-One Validation</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#spectral-analysis">6.2.4. Spectral Analysis</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="alg-03-wind.html">6.3. Wind</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="alg-03-wind.html#bayesian-wind-retrieval-alg-007">6.3.1. Bayesian Wind Retrieval - ALG-007</a></li>
+<li class="toctree-l3"><a class="reference internal" href="alg-03-wind.html#storm-centric-processing-alg-008-tbc">6.3.2. Storm-centric Processing - ALG-008 [TBC]</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="alg-04-sea-state.html">6.4. Sea State</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="alg-04-sea-state.html#empirical-retrieval-of-wave-parameters-alg-009">6.4.1. Empirical retrieval of wave parameters - ALG-009</a></li>
+<li class="toctree-l3"><a class="reference internal" href="alg-04-sea-state.html#reconstruction-of-wave-spectra-alg-009b">6.4.2. Reconstruction of wave spectra - ALG-009b</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="alg-05-currents.html">6.5. Total Surface Currents</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="alg-05-currents.html#wave-doppler-estimation-alg-010">6.5.1. Wave Doppler estimation - ALG-010</a></li>
+<li class="toctree-l3"><a class="reference internal" href="alg-05-currents.html#ocean-surface-current-estimation-alg-011">6.5.2. Ocean Surface Current estimation - ALG-011</a></li>
 </ul>
 </li>
 </ul>
@@ -200,9 +219,9 @@
 <li class="toctree-l3"><a class="reference internal" href="04_uncertainty_analysis.html#summary">7.3.11. Summary</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="04_uncertainty_analysis.html#references">7.4. References</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="tbd_table.html">8. TBD table</a></li>
 </ul>
 
         </div>
@@ -235,7 +254,7 @@
 <section id="spatial-variance">
 <h2><span class="section-number">6.2.1. </span>Spatial Variance<a class="headerlink" href="#spatial-variance" title="Link to this heading"></a></h2>
 <p>Spatial Variance is a method used to estimate the representativeness error
-<span class="math notranslate nohighlight">\(r^2\)</span>, which is a key component for triple collocation (TC). This
+<span class="math notranslate nohighlight">\(r^2\)</span>, which is a key component for triple collocation. This
 procedure estimates the spatial variance for a given geophysical parameter.
 Let <span class="math notranslate nohighlight">\(s_1\)</span> and <span class="math notranslate nohighlight">\(s_2\)</span> be two different sources characterized by
 different spatial resolutions, where <span class="math notranslate nohighlight">\(V_{s_1}(n)\)</span> and
@@ -243,21 +262,22 @@ different spatial resolutions, where <span class="math notranslate nohighlight">
 Given <span class="math notranslate nohighlight">\(n_{\max}\)</span>, the maximum lag, the representativeness error of
 <span class="math notranslate nohighlight">\(s_1\)</span> (the coarsest system) compared to <span class="math notranslate nohighlight">\(s_2\)</span> can be estimated as:</p>
 <div class="math notranslate nohighlight" id="equation-eq-cvtdd-r2-spatial-variance">
-<span class="eqno">(6.1)<a class="headerlink" href="#equation-eq-cvtdd-r2-spatial-variance" title="Link to this equation"></a></span>\[r^2 = \sum_{n=0}^{n_{\max}}
+<span class="eqno">(6.7)<a class="headerlink" href="#equation-eq-cvtdd-r2-spatial-variance" title="Link to this equation"></a></span>\[r^2 = \sum_{n=0}^{n_{\max}}
 \left[V_{s_2}(n)-V_{s_1}(n)\right] .\]</div>
 <p>Let <span class="math notranslate nohighlight">\(\tilde{n}&lt;n_{\max}\)</span> be the spatial-lag threshold above which both
 systems capture the same signal variability. The residual contribution then
 vanishes:</p>
-<div class="math notranslate nohighlight">
-\[V_{s_2}(n)-V_{s_1}(n) \to 0
+<div class="math notranslate nohighlight" id="equation-eq-cvtdd-lag-threshold">
+<span class="eqno">(6.8)<a class="headerlink" href="#equation-eq-cvtdd-lag-threshold" title="Link to this equation"></a></span>\[V_{s_2}(n)-V_{s_1}(n) \to 0
 \qquad \forall n&gt;\tilde{n} .\]</div>
 <p><strong>Purpose</strong></p>
-<p>This method (<a class="reference internal" href="#ref-vogelzang-spatial-variance"><span class="std std-ref">Vogelzang et al. (2015)</span></a>)
+<p>This method (<span class="bibtex-citation" id="id1">[<a class="reference internal" href="01_introduction.html#id10" title="Jur Vogelzang, Gregory P. King, and Ad Stoffelen. Spatial variances of wind fields and their relation to second-order structure functions and spectra. Journal of Geophysical Research: Oceans, 120(2):1048-1064, 2015. URL: https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1002/2014JC010239, arXiv:https://agupubs.onlinelibrary.wiley.com/doi/pdf/10.1002/2014JC010239, doi:https://doi.org/10.1002/2014JC010239.">28</a>]</span>)
 computes wind variances as a function of scale. Unlike the spectral-integration
 method, it operates in the spatial domain rather than the frequency domain. It
 is more tolerant to missing samples and provides a more intuitive
 interpretation. The representativeness error is the difference between the
-system 2 (e.g. satellite) spatial variance and that of system 3 (e.g. model).
+spatial variance of <span class="math notranslate nohighlight">\(s_2\)</span> (e.g. model) and that of <span class="math notranslate nohighlight">\(s_1\)</span> (the
+coarsest system, e.g. satellite).
 This value depends on the selected scale. Spatial variances increase
 monotonically with scale, and their difference also usually increases up to a
 certain scale.</p>
@@ -270,7 +290,7 @@ certain scale.</p>
 <li><p>Estimate the first-order moments for both components of the geophysical
 parameter of interest:</p>
 <div class="math notranslate nohighlight" id="equation-eq-cvtdd-spatial-first-moment">
-<span class="eqno">(6.2)<a class="headerlink" href="#equation-eq-cvtdd-spatial-first-moment" title="Link to this equation"></a></span>\[M_{w,i}(n)
+<span class="eqno">(6.9)<a class="headerlink" href="#equation-eq-cvtdd-spatial-first-moment" title="Link to this equation"></a></span>\[M_{w,i}(n)
 = \frac{1}{n+1}\sum_{j=0}^{n}w_{i+j} .\]</div>
 <p>Here, <span class="math notranslate nohighlight">\(w\)</span> is the component of the geophysical parameter of interest,
 <span class="math notranslate nohighlight">\(n\)</span> is the lag size, and <span class="math notranslate nohighlight">\(i\)</span> is an ancillary index identifying
@@ -278,35 +298,95 @@ the starting element.</p>
 </li>
 <li><p>Estimate the second-order moments:</p>
 <div class="math notranslate nohighlight" id="equation-eq-cvtdd-spatial-second-moment">
-<span class="eqno">(6.3)<a class="headerlink" href="#equation-eq-cvtdd-spatial-second-moment" title="Link to this equation"></a></span>\[M_{ww,i}(n)
+<span class="eqno">(6.10)<a class="headerlink" href="#equation-eq-cvtdd-spatial-second-moment" title="Link to this equation"></a></span>\[M_{ww,i}(n)
 = \frac{1}{n+1}\sum_{j=0}^{n}w^{2}_{i+j} .\]</div>
 <p>The subscript <span class="math notranslate nohighlight">\(w\)</span> denotes the first-order moment, while <span class="math notranslate nohighlight">\(ww\)</span>
 denotes the second-order moment.</p>
 </li>
 <li><p>Estimate the spatial variance:</p>
 <div class="math notranslate nohighlight" id="equation-eq-cvtdd-local-spatial-variance">
-<span class="eqno">(6.4)<a class="headerlink" href="#equation-eq-cvtdd-local-spatial-variance" title="Link to this equation"></a></span>\[V_{w,i}(n)
+<span class="eqno">(6.11)<a class="headerlink" href="#equation-eq-cvtdd-local-spatial-variance" title="Link to this equation"></a></span>\[V_{w,i}(n)
 = \left\langle M_{ww,i}(n)-M_{w,i}^{2}(n)\right\rangle .\]</div>
 <p>Here, angle brackets denote the expected-value operator.</p>
 </li>
 <li><p>Average <span class="math notranslate nohighlight">\(V_{w,i}\)</span> to reduce uncertainty:</p>
 <div class="math notranslate nohighlight" id="equation-eq-cvtdd-average-spatial-variance">
-<span class="eqno">(6.5)<a class="headerlink" href="#equation-eq-cvtdd-average-spatial-variance" title="Link to this equation"></a></span>\[V_w(n)=\frac{1}{M}\sum_{i=0}^{M}V_{w,i}(n),
-\qquad M=N-n .\]</div>
+<span class="eqno">(6.12)<a class="headerlink" href="#equation-eq-cvtdd-average-spatial-variance" title="Link to this equation"></a></span>\[V_w(n)=\frac{1}{K}\sum_{i=0}^{K-1}V_{w,i}(n),
+\qquad K=N-n .\]</div>
+<p>Here, <span class="math notranslate nohighlight">\(K\)</span> is the number of windows of lag size <span class="math notranslate nohighlight">\(n\)</span> that are
+averaged and <span class="math notranslate nohighlight">\(N\)</span> is the total number of samples.</p>
 </li>
 </ol>
 <p><strong>Outputs</strong></p>
 <ul class="simple">
-<li><p><span class="math notranslate nohighlight">\(V_{u,v}(n)\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(V_w(n)\)</span>.</p></li>
 </ul>
+<p><strong>Variable to component mapping</strong></p>
+<p><span class="tbd-word" id="tbd-14">Variable-to-component mapping</span><sup>[<a class="tbd-id reference external" href="tbd_table.html#tbdrow-14">TBD_CALVAL-ATBD_14</a>]</sup></p>
+<table class="docutils align-default" id="id6">
+<caption><span class="caption-number">Table 6.4 </span><span class="caption-text">Mapping of RL2Ocean variables to geophysical components.</span><a class="headerlink" href="#id6" title="Link to this table"></a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>Variable</p></th>
+<th class="head"><p>Component <span class="math notranslate nohighlight">\(w\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>[Variable name]</p></td>
+<td><p>[Component]</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Variable Description Table</strong></p>
+<p><span class="tbd-word" id="tbd-15">VDT skeleton</span><sup>[<a class="tbd-id reference external" href="tbd_table.html#tbdrow-15">TBD_CALVAL-ATBD_15</a>]</sup></p>
+<table class="longtable docutils align-default" id="id7">
+<caption><span class="caption-number">Table 6.5 </span><span class="caption-text">Spatial Variance Variable Description Table (VDT).</span><a class="headerlink" href="#id7" title="Link to this table"></a></caption>
+<colgroup>
+<col style="width: 13.8%" />
+<col style="width: 6.0%" />
+<col style="width: 6.9%" />
+<col style="width: 13.8%" />
+<col style="width: 13.8%" />
+<col style="width: 6.0%" />
+<col style="width: 10.3%" />
+<col style="width: 8.6%" />
+<col style="width: 10.3%" />
+<col style="width: 10.3%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Sym</p></th>
+<th class="head"><p>Role</p></th>
+<th class="head"><p>Origin</p></th>
+<th class="head"><p>Destination</p></th>
+<th class="head"><p>Units</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Dim</p></th>
+<th class="head"><p>Range</p></th>
+<th class="head"><p>Default</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>[Variable name]</p></td>
+<td><p>[Symbol]</p></td>
+<td><p>[IN/OUT]</p></td>
+<td><p>[Origin]</p></td>
+<td><p>[Destination]</p></td>
+<td><p>[Units]</p></td>
+<td><p>[Type]</p></td>
+<td><p>[Dim]</p></td>
+<td><p>[Range]</p></td>
+<td><p>[Default]</p></td>
+</tr>
+</tbody>
+</table>
 </section>
 <section id="triple-collocation">
 <h2><span class="section-number">6.2.2. </span>Triple Collocation<a class="headerlink" href="#triple-collocation" title="Link to this heading"></a></h2>
 <p><strong>Purpose</strong></p>
-<p>Triple collocation (TC) was conceived by Stoffelen (1998) as a tool for
+<p>Triple collocation was conceived by Stoffelen (1998) as a tool for
 inter-calibration and individual error assessment of three different
 collocated sea-surface wind datasets
-(<a class="reference internal" href="#ref-stoffelen-triple-collocation"><span class="std std-ref">Stoffelen (1998)</span></a>). TC is generic
+(<span class="bibtex-citation" id="id2">[<a class="reference internal" href="01_introduction.html#id11" title="Ad Stoffelen. Toward the true near-surface wind speed: error modeling and calibration using triple collocation. Journal of Geophysical Research: Oceans, 103(C4):7755-7766, 1998. URL: https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/97JC03180, arXiv:https://agupubs.onlinelibrary.wiley.com/doi/pdf/10.1029/97JC03180, doi:https://doi.org/10.1029/97JC03180.">29</a>]</span>). Triple collocation is generic
 and can be applied to any geophysical variable and data product, provided that
 errors are additive, linear calibration is sufficient, measurement errors are
 uncorrelated with each other, and measurement errors are constant over the
@@ -314,7 +394,7 @@ range of measured values.</p>
 <p>SAR-derived wind products are recommended to be validated against buoy wind
 measurements, scatterometer-derived winds, and NWP winds. Collocations between
 SAR and scatterometers strictly depend on the Local Time Ascending Node (LTAN).
-TC analysis needs a reliable estimate of the representativeness error
+Triple collocation analysis needs a reliable estimate of the representativeness error
 <span class="math notranslate nohighlight">\(r^2\)</span>; see <a class="reference internal" href="#spatial-variance">Spatial Variance</a> for its estimation.</p>
 <p><strong>Inputs</strong></p>
 <p>One or more triplets including the SAR-derived parameter of interest. For wind,
@@ -346,10 +426,10 @@ validation sources are:</p>
 <p>Given three measurement systems, <span class="math notranslate nohighlight">\(i=1,2,3\)</span>, representing, for example,
 in-situ, satellite, and model estimates, the measurements and measurement
 errors are approximated by the following linear expression
-(<a class="reference internal" href="#ref-vogelzang-quadruple-collocation"><span class="std std-ref">Vogelzang and Stoffelen (2021)</span></a>;
-<a class="reference internal" href="#ref-vogelzang-quintuple-collocation"><span class="std std-ref">Vogelzang and Stoffelen (2022)</span></a>):</p>
+(<span class="bibtex-citation" id="id3">[<a class="reference internal" href="01_introduction.html#id12" title="Jur Vogelzang and Ad Stoffelen. Quadruple collocation analysis of in-situ, scatterometer, and nwp winds. Journal of Geophysical Research: Oceans, 126(5):e2021JC017189, 2021. e2021JC017189 2021JC017189. URL: https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/2021JC017189, arXiv:https://agupubs.onlinelibrary.wiley.com/doi/pdf/10.1029/2021JC017189, doi:https://doi.org/10.1029/2021JC017189.">30</a>]</span>;
+<span class="bibtex-citation" id="id4">[<a class="reference internal" href="01_introduction.html#id13" title="Jur Vogelzang and Ad Stoffelen. On the accuracy and consistency of quintuple collocation analysis of in situ, scatterometer, and nwp winds. Remote Sensing, 2022. URL: https://www.mdpi.com/2072-4292/14/18/4552, doi:10.3390/rs14184552.">31</a>]</span>):</p>
 <div class="math notranslate nohighlight" id="equation-eq-cvtdd-tc-linear-model">
-<span class="eqno">(6.6)<a class="headerlink" href="#equation-eq-cvtdd-tc-linear-model" title="Link to this equation"></a></span>\[s_i=a_i(t+\delta_i)+b_i .\]</div>
+<span class="eqno">(6.13)<a class="headerlink" href="#equation-eq-cvtdd-tc-linear-model" title="Link to this equation"></a></span>\[s_i=a_i(t+\delta_i)+b_i .\]</div>
 <p>Here, <span class="math notranslate nohighlight">\(t\)</span> is the common quantity, i.e. the true value of the parameter
 at the scales commonly resolved by all three data sources. <span class="math notranslate nohighlight">\(a_i\)</span> and
 <span class="math notranslate nohighlight">\(b_i\)</span> are the scaling and offset (bias) calibration coefficients,
@@ -372,8 +452,8 @@ model).</p></li>
 selected convergence threshold.</p></li>
 <li><p>Calibrate the original measurements <span class="math notranslate nohighlight">\(s_i^{\mathrm{uncal}}\)</span> with the
 new calibration coefficients:</p>
-<div class="math notranslate nohighlight">
-\[s_i=\frac{s_i^{\mathrm{uncal}}-b_i}{a_i},
+<div class="math notranslate nohighlight" id="equation-eq-cvtdd-tc-inverse-calibration">
+<span class="eqno">(6.14)<a class="headerlink" href="#equation-eq-cvtdd-tc-inverse-calibration" title="Link to this equation"></a></span>\[s_i=\frac{s_i^{\mathrm{uncal}}-b_i}{a_i},
 \qquad \forall i\in\{1,2,3\} .\]</div>
 <p>This is an inverse calibration. At the first iteration the scaling
 coefficients are one and the bias coefficients are zero.</p>
@@ -382,7 +462,7 @@ coefficients are one and the bias coefficients are zero.</p>
 <li><p>Estimate the first- and second-order moments and the covariances using the
 calibrated measurements for every combination of <span class="math notranslate nohighlight">\(i,j=1,2,3\)</span>:</p>
 <div class="math notranslate nohighlight" id="equation-eq-cvtdd-tc-moments">
-<span class="eqno">(6.7)<a class="headerlink" href="#equation-eq-cvtdd-tc-moments" title="Link to this equation"></a></span>\[\begin{split}\begin{aligned}
+<span class="eqno">(6.15)<a class="headerlink" href="#equation-eq-cvtdd-tc-moments" title="Link to this equation"></a></span>\[\begin{split}\begin{aligned}
 M_i &amp;= \langle s_i\rangle, \\
 M_{ij} &amp;= \langle s_i s_j\rangle, \\
 C_{ij} &amp;= M_{ij}-M_iM_j .
@@ -390,14 +470,14 @@ C_{ij} &amp;= M_{ij}-M_iM_j .
 </li>
 <li><p>Estimate the true common variance <span class="math notranslate nohighlight">\(T\)</span>:</p>
 <div class="math notranslate nohighlight" id="equation-eq-cvtdd-tc-true-variance">
-<span class="eqno">(6.8)<a class="headerlink" href="#equation-eq-cvtdd-tc-true-variance" title="Link to this equation"></a></span>\[T=\frac{C_{12}C_{13}}{C_{23}}-r^2 .\]</div>
+<span class="eqno">(6.16)<a class="headerlink" href="#equation-eq-cvtdd-tc-true-variance" title="Link to this equation"></a></span>\[T=\frac{C_{12}C_{13}}{C_{23}}-r^2 .\]</div>
 </li>
 <li><p>Estimate the calibration coefficients:</p>
-<div class="math notranslate nohighlight">
-\[a_2=\frac{C_{23}}{C_{13}},
+<div class="math notranslate nohighlight" id="equation-eq-cvtdd-tc-coefficients-2">
+<span class="eqno">(6.17)<a class="headerlink" href="#equation-eq-cvtdd-tc-coefficients-2" title="Link to this equation"></a></span>\[a_2=\frac{C_{23}}{C_{13}},
 \qquad b_2=M_2-a_2M_1 .\]</div>
-<div class="math notranslate nohighlight">
-\[a_3=\frac{C_{13}}{T},
+<div class="math notranslate nohighlight" id="equation-eq-cvtdd-tc-coefficients-3">
+<span class="eqno">(6.18)<a class="headerlink" href="#equation-eq-cvtdd-tc-coefficients-3" title="Link to this equation"></a></span>\[a_3=\frac{C_{13}}{T},
 \qquad b_3=M_3-a_3M_1 .\]</div>
 </li>
 <li><p>Check convergence of <span class="math notranslate nohighlight">\(a_{2,3}\)</span> and <span class="math notranslate nohighlight">\(b_{2,3}\)</span>:</p>
@@ -411,7 +491,7 @@ for all <span class="math notranslate nohighlight">\(i\in\{2,3\}\)</span>, where
 <li><p>Iterate until convergence.</p></li>
 <li><p>Estimate the measurement-error variances of the three sources:</p>
 <div class="math notranslate nohighlight" id="equation-eq-cvtdd-tc-error-variances">
-<span class="eqno">(6.9)<a class="headerlink" href="#equation-eq-cvtdd-tc-error-variances" title="Link to this equation"></a></span>\[\begin{split}\begin{aligned}
+<span class="eqno">(6.19)<a class="headerlink" href="#equation-eq-cvtdd-tc-error-variances" title="Link to this equation"></a></span>\[\begin{split}\begin{aligned}
 \epsilon_1^2 &amp;= \frac{C_{11}}{a_1^2}-T-r^2, \\
 \epsilon_2^2 &amp;= \frac{C_{22}}{a_2^2}-T-r^2, \\
 \epsilon_3^2 &amp;= \frac{C_{33}}{a_3^2}-T .
@@ -434,7 +514,7 @@ for all <span class="math notranslate nohighlight">\(i\in\{2,3\}\)</span>, where
 resolution system (e.g. satellite). They can also be computed at the scale of
 the coarser-resolution system (e.g. NWP model), using:</p>
 <div class="math notranslate nohighlight" id="equation-eq-cvtdd-tc-nwp-error-variances">
-<span class="eqno">(6.10)<a class="headerlink" href="#equation-eq-cvtdd-tc-nwp-error-variances" title="Link to this equation"></a></span>\[\begin{split}\begin{aligned}
+<span class="eqno">(6.20)<a class="headerlink" href="#equation-eq-cvtdd-tc-nwp-error-variances" title="Link to this equation"></a></span>\[\begin{split}\begin{aligned}
 \epsilon_{\mathrm{NWP},1}^{2}
   &amp;= \epsilon_{\mathrm{SAT},1}^{2}+r^{2}, \\
 \epsilon_{\mathrm{NWP},2}^{2}
@@ -444,6 +524,49 @@ the coarser-resolution system (e.g. NWP model), using:</p>
 \end{aligned}\end{split}\]</div>
 <p>The labels SAT and NWP indicate the intermediate- and coarser-resolution
 systems, respectively.</p>
+<p><strong>Variable Description Table</strong></p>
+<p><span class="tbd-word" id="tbd-16">VDT skeleton</span><sup>[<a class="tbd-id reference external" href="tbd_table.html#tbdrow-16">TBD_CALVAL-ATBD_16</a>]</sup></p>
+<table class="longtable docutils align-default" id="id8">
+<caption><span class="caption-number">Table 6.6 </span><span class="caption-text">Triple Collocation Variable Description Table (VDT).</span><a class="headerlink" href="#id8" title="Link to this table"></a></caption>
+<colgroup>
+<col style="width: 13.8%" />
+<col style="width: 6.0%" />
+<col style="width: 6.9%" />
+<col style="width: 13.8%" />
+<col style="width: 13.8%" />
+<col style="width: 6.0%" />
+<col style="width: 10.3%" />
+<col style="width: 8.6%" />
+<col style="width: 10.3%" />
+<col style="width: 10.3%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Sym</p></th>
+<th class="head"><p>Role</p></th>
+<th class="head"><p>Origin</p></th>
+<th class="head"><p>Destination</p></th>
+<th class="head"><p>Units</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Dim</p></th>
+<th class="head"><p>Range</p></th>
+<th class="head"><p>Default</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>[Variable name]</p></td>
+<td><p>[Symbol]</p></td>
+<td><p>[IN/OUT]</p></td>
+<td><p>[Origin]</p></td>
+<td><p>[Destination]</p></td>
+<td><p>[Units]</p></td>
+<td><p>[Type]</p></td>
+<td><p>[Dim]</p></td>
+<td><p>[Range]</p></td>
+<td><p>[Default]</p></td>
+</tr>
+</tbody>
+</table>
 </section>
 <section id="one-to-one-validation">
 <h2><span class="section-number">6.2.3. </span>One-to-One Validation<a class="headerlink" href="#one-to-one-validation" title="Link to this heading"></a></h2>
@@ -451,7 +574,7 @@ systems, respectively.</p>
 individual reference sources through linear correlation analysis. This
 approach is performed independently for each validation source, providing
 direct pairwise comparisons between SAR observations and reference data.</p>
-<p>One-to-one validation is particularly useful when TC is not feasible due to
+<p>One-to-one validation is particularly useful when triple collocation is not feasible due to
 insufficient collocated triplets. This may occur, for example, if the SAR
 Local Time Ascending Node (LTAN) does not align with other altimeter or
 scatterometer platforms and the region lacks in-situ sampling from buoys or
@@ -472,12 +595,15 @@ validation source.</p>
 25 km and a temporal constraint within 30 minutes are recommended. For NWP
 models, collect hourly forecasts if available; otherwise interpolate model
 parameters bilinearly in space and time to the SAR wind-retrieval/vector cell
-and acquisition time.</p></li>
+and acquisition time. The finest available temporal sampling of the
+validation source is used.</p></li>
+<li><p>Compute differences between the two sources: linear differences for scalar
+quantities, and component-wise differences for vector quantities.</p></li>
 <li><p>For circular variables such as wind direction, compute the differences
 <span class="math notranslate nohighlight">\(\Delta\phi\)</span> and map the resulting angular differences to
 <span class="math notranslate nohighlight">\([-180^\circ,180^\circ]\)</span>:</p>
 <div class="math notranslate nohighlight" id="equation-eq-cvtdd-direction-difference">
-<span class="eqno">(6.11)<a class="headerlink" href="#equation-eq-cvtdd-direction-difference" title="Link to this equation"></a></span>\[\begin{split}\begin{aligned}
+<span class="eqno">(6.21)<a class="headerlink" href="#equation-eq-cvtdd-direction-difference" title="Link to this equation"></a></span>\[\begin{split}\begin{aligned}
 \Delta\phi_{\mathrm{raw}} &amp;= \phi_{\mathrm{SAR}}-\phi_{\mathrm{VS}}, \\
 \Delta\phi
   &amp;= \Delta\phi_{\mathrm{raw}}-360^\circ
@@ -498,8 +624,8 @@ and acquisition time.</p></li>
 <li><p>Bias: <span class="math notranslate nohighlight">\(b=\langle VAR_{\mathrm{SAR}}-VAR_{\mathrm{VS}}\rangle\)</span>.</p></li>
 <li><p><span class="math notranslate nohighlight">\(RMSD=\sqrt{\langle(VAR_{\mathrm{SAR}}-VAR_{\mathrm{VS}})^2\rangle}\)</span>.</p></li>
 <li><p>Pearson correlation coefficient:</p>
-<div class="math notranslate nohighlight">
-\[r=
+<div class="math notranslate nohighlight" id="equation-eq-cvtdd-pearson">
+<span class="eqno">(6.22)<a class="headerlink" href="#equation-eq-cvtdd-pearson" title="Link to this equation"></a></span>\[r=
 \frac{\left\langle
 (VAR_{\mathrm{SAR}}-\overline{VAR}_{\mathrm{SAR}})
 (VAR_{\mathrm{VS}}-\overline{VAR}_{\mathrm{VS}})
@@ -512,12 +638,12 @@ and acquisition time.</p></li>
 <ul>
 <li><p><span class="math notranslate nohighlight">\(b_w=\langle w_{\mathrm{SAR}}-w_{\mathrm{VS}}\rangle\)</span>.</p></li>
 <li><p><span class="math notranslate nohighlight">\(RMSD_w=\sqrt{\langle(w_{\mathrm{SAR}}-w_{\mathrm{VS}})^2\rangle}\)</span>.</p></li>
-<li><p><span class="math notranslate nohighlight">\(vRMDS=\sqrt{\langle
+<li><p><span class="math notranslate nohighlight">\(vRMSD=\sqrt{\langle
 (u_{\mathrm{SAR}}-u_{\mathrm{VS}})^2+
 (v_{\mathrm{SAR}}-v_{\mathrm{VS}})^2\rangle}\)</span>.</p></li>
 <li><p>Pearson correlation coefficient:</p>
-<div class="math notranslate nohighlight">
-\[r_w=
+<div class="math notranslate nohighlight" id="equation-eq-cvtdd-pearson-w">
+<span class="eqno">(6.23)<a class="headerlink" href="#equation-eq-cvtdd-pearson-w" title="Link to this equation"></a></span>\[r_w=
 \frac{\left\langle
 (w_{\mathrm{SAR}}-\overline{w}_{\mathrm{SAR}})
 (w_{\mathrm{VS}}-\overline{w}_{\mathrm{VS}})
@@ -529,10 +655,10 @@ and acquisition time.</p></li>
 <li><p>Circular variables (e.g. wind direction):</p>
 <ul>
 <li><p><span class="math notranslate nohighlight">\(b_\phi=\langle\mathbf{mod}(\phi_{\mathrm{SAR}}-\phi_{\mathrm{VS}},360)\rangle\)</span>.</p></li>
-<li><p><span class="math notranslate nohighlight">\(RMSD_\phi=\sqrt{\langle\mathbf{mod}(\phi_{\mathrm{SAR}}-\phi_{\mathrm{AS}},360)\rangle}\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(RMSD_\phi=\sqrt{\langle\mathbf{mod}(\phi_{\mathrm{SAR}}-\phi_{\mathrm{VS}},360)^2\rangle}\)</span>.</p></li>
 <li><p>Jammalamadaka–Sarma circular-circular correlation coefficient:</p>
-<div class="math notranslate nohighlight">
-\[\rho_c=
+<div class="math notranslate nohighlight" id="equation-eq-cvtdd-circular-correlation">
+<span class="eqno">(6.24)<a class="headerlink" href="#equation-eq-cvtdd-circular-correlation" title="Link to this equation"></a></span>\[\rho_c=
 \frac{\left\langle
 \sin(\phi_{\mathrm{SAR}}-\overline{\phi}_{\mathrm{SAR}})
 \sin(\phi_{\mathrm{VS}}-\overline{\phi}_{\mathrm{VS}})
@@ -547,7 +673,9 @@ and acquisition time.</p></li>
 </ul>
 <p>Here, angle brackets denote the expected-value operator, <span class="math notranslate nohighlight">\(\mathbf{mod}\)</span>
 denotes modulus, and <span class="math notranslate nohighlight">\(VS\)</span> denotes validation source. <span class="math notranslate nohighlight">\(VAR\)</span> is the
-validation variable of interest. Formulas with subscript <span class="math notranslate nohighlight">\(w\)</span> apply to
+validation variable of interest. <span class="math notranslate nohighlight">\(\sigma_{\mathrm{SAR}}\)</span> and
+<span class="math notranslate nohighlight">\(\sigma_{\mathrm{VS}}\)</span> are the standard deviations of the collocated SAR
+samples and of the collocated validation-source samples, respectively. Formulas with subscript <span class="math notranslate nohighlight">\(w\)</span> apply to
 both components (<span class="math notranslate nohighlight">\(u,v\)</span>) and speed (<span class="math notranslate nohighlight">\(U\)</span>) for vector quantities.</p>
 <p><strong>Output</strong></p>
 <ul class="simple">
@@ -564,7 +692,7 @@ both components (<span class="math notranslate nohighlight">\(u,v\)</span>) and 
 <span class="math notranslate nohighlight">\(b_u,b_v,b_U,b_\phi\)</span>.</p></li>
 <li><p>RMSD for each component, speed, and direction:
 <span class="math notranslate nohighlight">\(RMSD_u,RMSD_v,RMSD_U,RMSD_\phi\)</span>.</p></li>
-<li><p><span class="math notranslate nohighlight">\(vRMDS\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(vRMSD\)</span>.</p></li>
 <li><p>Pearson correlation coefficient for each component and speed:
 <span class="math notranslate nohighlight">\(r_u,r_v,r_U\)</span>.</p></li>
 <li><p>Jammalamadaka–Sarma circular-circular correlation coefficient for
@@ -572,13 +700,56 @@ direction: <span class="math notranslate nohighlight">\(\rho_{c,\phi}\)</span>.<
 </ul>
 </li>
 </ul>
+<p><strong>Variable Description Table</strong></p>
+<p><span class="tbd-word" id="tbd-17">VDT skeleton</span><sup>[<a class="tbd-id reference external" href="tbd_table.html#tbdrow-17">TBD_CALVAL-ATBD_17</a>]</sup></p>
+<table class="longtable docutils align-default" id="id9">
+<caption><span class="caption-number">Table 6.7 </span><span class="caption-text">One-to-One Validation Variable Description Table (VDT).</span><a class="headerlink" href="#id9" title="Link to this table"></a></caption>
+<colgroup>
+<col style="width: 13.8%" />
+<col style="width: 6.0%" />
+<col style="width: 6.9%" />
+<col style="width: 13.8%" />
+<col style="width: 13.8%" />
+<col style="width: 6.0%" />
+<col style="width: 10.3%" />
+<col style="width: 8.6%" />
+<col style="width: 10.3%" />
+<col style="width: 10.3%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Sym</p></th>
+<th class="head"><p>Role</p></th>
+<th class="head"><p>Origin</p></th>
+<th class="head"><p>Destination</p></th>
+<th class="head"><p>Units</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Dim</p></th>
+<th class="head"><p>Range</p></th>
+<th class="head"><p>Default</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>[Variable name]</p></td>
+<td><p>[Symbol]</p></td>
+<td><p>[IN/OUT]</p></td>
+<td><p>[Origin]</p></td>
+<td><p>[Destination]</p></td>
+<td><p>[Units]</p></td>
+<td><p>[Type]</p></td>
+<td><p>[Dim]</p></td>
+<td><p>[Range]</p></td>
+<td><p>[Default]</p></td>
+</tr>
+</tbody>
+</table>
 </section>
 <section id="spectral-analysis">
 <h2><span class="section-number">6.2.4. </span>Spectral Analysis<a class="headerlink" href="#spectral-analysis" title="Link to this heading"></a></h2>
 <p><strong>Purpose</strong></p>
 <p>Spectral analysis is a validation tool used to assess the spatial scales
 resolved by the retrievals
-(<a class="reference internal" href="#ref-vogelzang-spectral"><span class="std std-ref">Vogelzang et al. (2011)</span></a>).</p>
+(<span class="bibtex-citation" id="id5">[<a class="reference internal" href="01_introduction.html#id14" title="Jur Vogelzang, Ad Stoffelen, Anton Verhoef, and Julia Figa-Saldaña. On the quality of high-resolution scatterometer winds. Journal of Geophysical Research: Oceans, 116(C10):, 2011. URL: https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/2010JC006640, arXiv:https://agupubs.onlinelibrary.wiley.com/doi/pdf/10.1029/2010JC006640, doi:https://doi.org/10.1029/2010JC006640.">32</a>]</span>).</p>
 <p><strong>Inputs</strong></p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(M\)</span> sets of <span class="math notranslate nohighlight">\(N\)</span> wind-component samples each, denoted
@@ -590,7 +761,7 @@ resolved by the retrievals
 the gaps using an interpolation procedure.</p></li>
 <li><p>Compute the power spectral density (PSD):</p>
 <div class="math notranslate nohighlight" id="equation-eq-cvtdd-spectral-density">
-<span class="eqno">(6.12)<a class="headerlink" href="#equation-eq-cvtdd-spectral-density" title="Link to this equation"></a></span>\[\begin{split}\psi^{i}_{w,j}=\psi^{i}_{w,k_j}=
+<span class="eqno">(6.25)<a class="headerlink" href="#equation-eq-cvtdd-spectral-density" title="Link to this equation"></a></span>\[\begin{split}\psi^{i}_{w,j}=\psi^{i}_{w,k_j}=
 \begin{cases}
 \dfrac{\Delta}{N}\left|\hat{w}(k_j)\right|^2,
   &amp; j=0\ \text{or}\ j=\dfrac{N}{2},\\[4pt]
@@ -607,7 +778,7 @@ wavenumber.</p>
 </li>
 <li><p>Average the PSD from each set:</p>
 <div class="math notranslate nohighlight" id="equation-eq-cvtdd-average-spectral-density">
-<span class="eqno">(6.13)<a class="headerlink" href="#equation-eq-cvtdd-average-spectral-density" title="Link to this equation"></a></span>\[\Psi_{w,j}=\frac{1}{M}\sum_{i=1}^{M}\psi^{i}_{w,j} .\]</div>
+<span class="eqno">(6.26)<a class="headerlink" href="#equation-eq-cvtdd-average-spectral-density" title="Link to this equation"></a></span>\[\Psi_{w,j}=\frac{1}{M}\sum_{i=1}^{M}\psi^{i}_{w,j} .\]</div>
 <p>PSD units are the squared units of the analyzed variable multiplied by the
 spatial sampling interval <span class="math notranslate nohighlight">\(\Delta\)</span> (in metres). For wind components
 and LoS surface currents, whose units are <span class="math notranslate nohighlight">\(\mathrm{m\,s^{-1}}\)</span>, PSD
@@ -623,34 +794,56 @@ of independent scenes <span class="math notranslate nohighlight">\(M\)</span>. A
 <span class="math notranslate nohighlight">\(2M\)</span> degrees of freedom for each spectral bin <span class="math notranslate nohighlight">\(j\)</span>, the relative
 standard uncertainty is:</p>
 <div class="math notranslate nohighlight" id="equation-eq-cvtdd-psd-uncertainty">
-<span class="eqno">(6.14)<a class="headerlink" href="#equation-eq-cvtdd-psd-uncertainty" title="Link to this equation"></a></span>\[\frac{u(\Psi_{w,j})}{\Psi_{w,j}}=\frac{1}{\sqrt{M}} .\]</div>
+<span class="eqno">(6.27)<a class="headerlink" href="#equation-eq-cvtdd-psd-uncertainty" title="Link to this equation"></a></span>\[\frac{u(\Psi_{w,j})}{\Psi_{w,j}}=\frac{1}{\sqrt{M}} .\]</div>
 <p><strong>Outputs</strong></p>
 <ul class="simple">
 <li><p>PSD for each wind component: <span class="math notranslate nohighlight">\(\Psi_{u,j},\Psi_{v,j}\)</span>.</p></li>
 <li><p>Associated standard-uncertainty profiles derived from
-<a class="reference internal" href="#equation-eq-cvtdd-psd-uncertainty">(6.14)</a>.</p></li>
+<a class="reference internal" href="#equation-eq-cvtdd-psd-uncertainty">(6.27)</a>.</p></li>
 </ul>
-<p class="rubric">References</p>
-<p id="ref-vogelzang-spatial-variance">Vogelzang, J., G. P. King, and A. Stoffelen (2015). “Spatial variances of wind
-fields and their relation to second-order structure functions and spectra.”
-<em>Journal of Geophysical Research: Oceans</em>, 120(2), 1048–1064.
-<a class="reference external" href="https://doi.org/10.1002/2014JC010239">doi:10.1002/2014JC010239</a>.</p>
-<p id="ref-stoffelen-triple-collocation">Stoffelen, A. (1998). “Toward the true near-surface wind speed: Error modeling
-and calibration using triple collocation.” <em>Journal of Geophysical Research:
-Oceans</em>, 103(C4), 7755–7766.
-<a class="reference external" href="https://doi.org/10.1029/97JC03180">doi:10.1029/97JC03180</a>.</p>
-<p id="ref-vogelzang-quadruple-collocation">Vogelzang, J., and A. Stoffelen (2021). “Quadruple collocation analysis of
-in-situ, scatterometer, and NWP winds.” <em>Journal of Geophysical Research:
-Oceans</em>, 126(5), e2021JC017189.
-<a class="reference external" href="https://doi.org/10.1029/2021JC017189">doi:10.1029/2021JC017189</a>.</p>
-<p id="ref-vogelzang-quintuple-collocation">Vogelzang, J., and A. Stoffelen (2022). “On the accuracy and consistency of
-quintuple collocation analysis of in situ, scatterometer, and NWP winds.”
-<em>Remote Sensing</em>, 14(18), 4552.
-<a class="reference external" href="https://doi.org/10.3390/rs14184552">doi:10.3390/rs14184552</a>.</p>
-<p id="ref-vogelzang-spectral">Vogelzang, J., A. Stoffelen, A. Verhoef, and J. Figa-Saldaña (2011). “On the
-quality of high-resolution scatterometer winds.” <em>Journal of Geophysical
-Research: Oceans</em>, 116(C10).
-<a class="reference external" href="https://doi.org/10.1029/2010JC006640">doi:10.1029/2010JC006640</a>.</p>
+<p><strong>Variable Description Table</strong></p>
+<p><span class="tbd-word" id="tbd-18">VDT skeleton</span><sup>[<a class="tbd-id reference external" href="tbd_table.html#tbdrow-18">TBD_CALVAL-ATBD_18</a>]</sup></p>
+<table class="longtable docutils align-default" id="id10">
+<caption><span class="caption-number">Table 6.8 </span><span class="caption-text">Spectral Analysis Variable Description Table (VDT).</span><a class="headerlink" href="#id10" title="Link to this table"></a></caption>
+<colgroup>
+<col style="width: 13.8%" />
+<col style="width: 6.0%" />
+<col style="width: 6.9%" />
+<col style="width: 13.8%" />
+<col style="width: 13.8%" />
+<col style="width: 6.0%" />
+<col style="width: 10.3%" />
+<col style="width: 8.6%" />
+<col style="width: 10.3%" />
+<col style="width: 10.3%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Sym</p></th>
+<th class="head"><p>Role</p></th>
+<th class="head"><p>Origin</p></th>
+<th class="head"><p>Destination</p></th>
+<th class="head"><p>Units</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Dim</p></th>
+<th class="head"><p>Range</p></th>
+<th class="head"><p>Default</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>[Variable name]</p></td>
+<td><p>[Symbol]</p></td>
+<td><p>[IN/OUT]</p></td>
+<td><p>[Origin]</p></td>
+<td><p>[Destination]</p></td>
+<td><p>[Units]</p></td>
+<td><p>[Type]</p></td>
+<td><p>[Dim]</p></td>
+<td><p>[Range]</p></td>
+<td><p>[Default]</p></td>
+</tr>
+</tbody>
+</table>
 </section>
 </section>
 
@@ -659,7 +852,7 @@ Research: Oceans</em>, 116(C10).
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="alg-01-calibration.html" class="btn btn-neutral float-left" title="6.1. Selected Calibration methods" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="04_uncertainty_analysis.html" class="btn btn-neutral float-right" title="7. Uncertainty analysis" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="alg-03-wind.html" class="btn btn-neutral float-right" title="6.3. Wind" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

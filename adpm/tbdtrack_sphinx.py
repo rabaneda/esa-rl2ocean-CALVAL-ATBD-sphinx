@@ -70,12 +70,13 @@ class TbdTableDirective(Directive):
         return [tbdtable()]
 
 
-def _section_title(node):
+def _section(node):
+    """(title, anchor id) of the section containing the node."""
     while node is not None:
         if isinstance(node, nodes.section):
-            return node[0].astext()
+            return node[0].astext(), (node["ids"] or [""])[0]
         node = node.parent
-    return ""
+    return "", ""
 
 
 def _collect(app, doctree):
@@ -84,13 +85,15 @@ def _collect(app, doctree):
         env.tbd_items = {}
     items = []
     for marker in doctree.findall(tbd_marker):
+        title, anchor = _section(marker)
         items.append(
             {
                 "word": marker.astext(),
                 "details": marker["details"],
                 "date": marker["date"],
                 "custom_id": marker["custom_id"],
-                "section": _section_title(marker),
+                "section": title,
+                "anchor": anchor,
             }
         )
         marker["tbd_index"] = len(items) - 1
@@ -149,6 +152,14 @@ def _numbered(env):
     return result
 
 
+def _location(env, e):
+    """Section title prefixed with its number (needs :numbered: in the toctree)."""
+    numbers = env.toc_secnumbers.get(e["doc"], {})
+    number = numbers.get("#" + e["anchor"]) or numbers.get("")
+    title = e["section"] or e["doc"]
+    return ".".join(map(str, number)) + " " + title if number else title
+
+
 def _uri(builder, fromdoc, doc, anchor):
     return builder.get_relative_uri(fromdoc, doc) + "#" + anchor
 
@@ -184,7 +195,7 @@ def _cell(*children):
 
 
 def _table(app, fromdoc, entries):
-    builder = app.builder
+    builder, env = app.builder, app.env
     widths = [22, 38, 14, 26]
     tgroup = nodes.tgroup(cols=4)
     for w in widths:
@@ -199,17 +210,17 @@ def _table(app, fromdoc, entries):
                 "", e["id"], refuri=_uri(builder, fromdoc, e["doc"], f"tbd-{e['n']}")),
                 ids=[f"tbdrow-{e['n']}"]))
             loc = _cell(nodes.reference(
-                "", e["section"] or e["doc"],
+                "", _location(env, e),
                 refuri=_uri(builder, fromdoc, e["doc"], f"tbd-{e['n']}")))
         elif builder.format == "latex":
             idcell = _cell(_raw(rf"\phantomsection\label{{tbd:row:{e['n']}}}"
                                 rf"\hyperref[tbd:src:{e['n']}]{{"),
                            nodes.literal(e["id"], e["id"]), _raw("}"))
-            loc = _cell(nodes.Text(e["section"] or e["doc"]),
+            loc = _cell(nodes.Text(_location(env, e)),
                         _raw(rf", p.~\pageref{{tbd:src:{e['n']}}}"))
         else:
             idcell = _cell(nodes.Text(e["id"]))
-            loc = _cell(nodes.Text(e["section"] or e["doc"]))
+            loc = _cell(nodes.Text(_location(env, e)))
         shown = nodes.emphasis(e["word"], e["word"])
         details = _cell(shown, nodes.Text(f": {e['details']}")) if e["details"] else _cell(shown)
         body += nodes.row("", idcell, details, _cell(nodes.Text(e["date"])), loc)
@@ -246,7 +257,7 @@ def _export(app, exception):
         return
     rows = [
         {"id": e["id"], "document": app.config.tbd_doc_abbrev, "text": e["word"],
-         "details": e["details"], "target_date": e["date"], "location": e["section"]}
+         "details": e["details"], "target_date": e["date"], "location": _location(app.env, e)}
         for e in _numbered(app.env)
     ]
     target = os.path.join(app.outdir, path)

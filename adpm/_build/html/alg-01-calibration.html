@@ -4,7 +4,10 @@
 <html class="writer-html5" lang="en" data-content_root="./">
 <head>
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-
+<style>
+.tbd-word {color: #c00; font-weight: bold;}
+.tbd-id, .tbd-id:visited {color: #c00; font-size: 70%; font-family: monospace;}
+</style>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>6.1. Selected Calibration methods &mdash; RL2Ocean Calibration and Validation ATBD</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
@@ -14,11 +17,11 @@
       <script src="_static/jquery.js?v=5d32c60e"></script>
       <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
       <script src="_static/documentation_options.js?v=f2a433a1"></script>
-      <script src="_static/doctools.js?v=fd6eb6e6"></script>
-      <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
       <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
       <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-      <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+      <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -52,7 +55,7 @@
 <li class="toctree-l2"><a class="reference internal" href="01_introduction.html#cal-val-context">1.2. Cal/Val context</a></li>
 <li class="toctree-l2"><a class="reference internal" href="01_introduction.html#l2-product-scope">1.3. L2 product scope</a></li>
 <li class="toctree-l2"><a class="reference internal" href="01_introduction.html#cal-val-objectives-and-performance">1.4. Cal/Val objectives and performance</a></li>
-<li class="toctree-l2"><a class="reference internal" href="01_introduction.html#atbd-purpose">1.5. ATBD purpose</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01_introduction.html#calval-atbd-purpose">1.5. CALVAL-ATBD purpose</a></li>
 <li class="toctree-l2"><a class="reference internal" href="01_introduction.html#applicable-and-reference-documents">1.6. Applicable and reference documents</a></li>
 <li class="toctree-l2"><a class="reference internal" href="01_introduction.html#acronyms">1.7. Acronyms</a></li>
 <li class="toctree-l2"><a class="reference internal" href="01_introduction.html#definitions-and-conventions">1.8. Definitions and conventions</a></li>
@@ -66,7 +69,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="03_lband_sar_datasets.html">3. L-band SAR datasets description</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="03_lband_sar_datasets.html#generated-datasets">3.1. Generated datasets</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="03_lband_sar_datasets.html#pre-launch-synthetic-datasets">3.1. Pre-launch synthetic datasets</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="03_lband_sar_datasets.html#reconditioned">3.1.1. Reconditioned</a></li>
 <li class="toctree-l3"><a class="reference internal" href="03_lband_sar_datasets.html#emulated">3.1.2. Emulated</a></li>
 <li class="toctree-l3"><a class="reference internal" href="03_lband_sar_datasets.html#simulated">3.1.3. Simulated</a></li>
@@ -144,19 +147,21 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#numerical-weather-prediction-ocean-calibration-of-sar-sigma-0">6.1.2. Numerical Weather Prediction Ocean Calibration of SAR <span class="math notranslate nohighlight">\(\sigma_0\)</span></a></li>
 <li class="toctree-l3"><a class="reference internal" href="#gmf-tuning">6.1.3. GMF tuning</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id1">6.1.3.1. Short description</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id2">6.1.3.2. Description of inputs</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id3">6.1.3.3. Detailed methodology</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id4">6.1.3.4. Performance metrics</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id5">6.1.3.5. Expected output</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id3">6.1.3.1. Short description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id4">6.1.3.2. Description of inputs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id5">6.1.3.3. Detailed methodology</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id6">6.1.3.4. Performance metrics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id7">6.1.3.5. Expected output</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#variable-description-table">6.1.3.6. Variable Description Table</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#mtf-tuning">6.1.4. MTF tuning</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id6">6.1.4.1. Short description</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id7">6.1.4.2. Description of inputs</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id8">6.1.4.3. Detailed methodology</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id9">6.1.4.4. Performance metrics</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id10">6.1.4.5. Expected output</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id8">6.1.4.1. Short description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id9">6.1.4.2. Description of inputs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id10">6.1.4.3. Detailed methodology</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id11">6.1.4.4. Performance metrics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id12">6.1.4.5. Expected output</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id13">6.1.4.6. Variable Description Table</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#summary">6.1.5. Summary</a></li>
@@ -167,6 +172,21 @@
 <li class="toctree-l3"><a class="reference internal" href="alg-02-validation.html#triple-collocation">6.2.2. Triple Collocation</a></li>
 <li class="toctree-l3"><a class="reference internal" href="alg-02-validation.html#one-to-one-validation">6.2.3. One-to-One Validation</a></li>
 <li class="toctree-l3"><a class="reference internal" href="alg-02-validation.html#spectral-analysis">6.2.4. Spectral Analysis</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="alg-03-wind.html">6.3. Wind</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="alg-03-wind.html#bayesian-wind-retrieval-alg-007">6.3.1. Bayesian Wind Retrieval - ALG-007</a></li>
+<li class="toctree-l3"><a class="reference internal" href="alg-03-wind.html#storm-centric-processing-alg-008-tbc">6.3.2. Storm-centric Processing - ALG-008 [TBC]</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="alg-04-sea-state.html">6.4. Sea State</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="alg-04-sea-state.html#empirical-retrieval-of-wave-parameters-alg-009">6.4.1. Empirical retrieval of wave parameters - ALG-009</a></li>
+<li class="toctree-l3"><a class="reference internal" href="alg-04-sea-state.html#reconstruction-of-wave-spectra-alg-009b">6.4.2. Reconstruction of wave spectra - ALG-009b</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="alg-05-currents.html">6.5. Total Surface Currents</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="alg-05-currents.html#wave-doppler-estimation-alg-010">6.5.1. Wave Doppler estimation - ALG-010</a></li>
+<li class="toctree-l3"><a class="reference internal" href="alg-05-currents.html#ocean-surface-current-estimation-alg-011">6.5.2. Ocean Surface Current estimation - ALG-011</a></li>
 </ul>
 </li>
 </ul>
@@ -199,9 +219,9 @@
 <li class="toctree-l3"><a class="reference internal" href="04_uncertainty_analysis.html#summary">7.3.11. Summary</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="04_uncertainty_analysis.html#references">7.4. References</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="tbd_table.html">8. TBD table</a></li>
 </ul>
 
         </div>
@@ -233,6 +253,7 @@
 <h1><span class="section-number">6.1. </span>Selected Calibration methods<a class="headerlink" href="#selected-calibration-methods" title="Link to this heading"></a></h1>
 <section id="rose-l-l1-slc-products">
 <h2><span class="section-number">6.1.1. </span>ROSE-L L1 SLC products<a class="headerlink" href="#rose-l-l1-slc-products" title="Link to this heading"></a></h2>
+<p><span class="tbd-word" id="tbd-8">L1 SLC calibration</span><sup>[<a class="tbd-id reference external" href="tbd_table.html#tbdrow-8">TBD_CALVAL-ATBD_8</a>]</sup></p>
 <section id="short-description">
 <h3><span class="section-number">6.1.1.1. </span>Short description<a class="headerlink" href="#short-description" title="Link to this heading"></a></h3>
 </section>
@@ -252,7 +273,7 @@
 <section id="numerical-weather-prediction-ocean-calibration-of-sar-sigma-0">
 <h2><span class="section-number">6.1.2. </span>Numerical Weather Prediction Ocean Calibration of SAR <span class="math notranslate nohighlight">\(\sigma_0\)</span><a class="headerlink" href="#numerical-weather-prediction-ocean-calibration-of-sar-sigma-0" title="Link to this heading"></a></h2>
 <p>The aim of the Numerical Weather Prediction Ocean Calibration (NOC)
-(<a class="reference internal" href="#ref-verspeek-noc"><span class="std std-ref">Verspeek et al. (2012)</span></a>) is to provide an additional
+(<span class="bibtex-citation" id="id1">[<a class="reference internal" href="01_introduction.html#id8" title="Jeroen Verspeek, Ad Stoffelen, Anton Verhoef, and Marcos Portabella. Improved ascat wind retrieval using nwp ocean calibration. IEEE Transactions on Geoscience and Remote Sensing, 50(7):2488-2494, 2012. doi:10.1109/TGRS.2011.2180730.">26</a>]</span>) is to provide an additional
 calibration step to the SAR averaged normalized radar cross section
 (<span class="math notranslate nohighlight">\(\sigma_0\)</span>) values used to retrieve the wind vector. These values are
 generally averaged on a grid of a few kilometres (approximately
@@ -261,7 +282,7 @@ generally averaged on a grid of a few kilometres (approximately
 these are derived spectrally. Therefore, an absolute <span class="math notranslate nohighlight">\(\sigma_0\)</span>
 calibration is not necessary before retrieval. Instead, inter-calibration
 among different sea-state parameter sources can be useful for comparison and
-validation; this can be achieved with triple collocation (TC). Similarly, no
+validation; this can be achieved with triple collocation. Similarly, no
 additional SAR-specific calibration procedure is recommended for line-of-sight
 (LoS) current retrieval beyond the harmonized Doppler calibration already part
 of the <code class="docutils literal notranslate"><span class="pre">l2o</span></code> processor.</p>
@@ -283,21 +304,21 @@ bin sizes of <span class="math notranslate nohighlight">\(1^\circ\)</span>, <spa
 respectively.</p></li>
 <li><p>Compute the expected (simulated) <span class="math notranslate nohighlight">\(\sigma_0\)</span> values using the
 appropriate geophysical model function (GMF):</p>
-<div class="math notranslate nohighlight">
-\[\sigma_{0}^{W,\mathrm{sim}}
+<div class="math notranslate nohighlight" id="equation-eq-noc-gmf">
+<span class="eqno">(6.1)<a class="headerlink" href="#equation-eq-noc-gmf" title="Link to this equation"></a></span>\[\sigma_{0}^{W,\mathrm{sim}}
 = \mathrm{GMF}(\vec{u}^{\mathrm{NWP}}, \theta, f_c, \mathrm{pol})\]</div>
 <p>Here, <span class="math notranslate nohighlight">\(\vec{u}^{\mathrm{NWP}}\)</span> is the NWP wind vector, and
 <span class="math notranslate nohighlight">\(\theta\)</span>, <span class="math notranslate nohighlight">\(f_c\)</span>, and <span class="math notranslate nohighlight">\(\mathrm{pol}\)</span> are the SAR incidence
 angle, carrier frequency of the transmitted signal, and polarization
 channel, respectively. The intended model is an L-band GMF (LMOD), analogous
 to the CMOD7 GMF used for C-band SAR satellites such as Sentinel-1
-(<a class="reference internal" href="#ref-stoffelen-cmod7"><span class="std std-ref">Stoffelen et al. (2017)</span></a>). LMOD specification needs to be determined.</p>
+(<span class="bibtex-citation" id="id2">[<a class="reference internal" href="01_introduction.html#id9" title="Ad Stoffelen, Jeroen Adriaan Verspeek, Jur Vogelzang, and Anton Verhoef. The cmod7 geophysical model function for ascat and ers wind retrievals. IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing, 10(5):2123-2134, 2017. doi:10.1109/JSTARS.2017.2681806.">27</a>]</span>). LMOD specification needs to be determined.</p>
 </li>
 <li><p>Obtain the final calibration-coefficient profile by weight-averaging the
 ratios of simulated and measured <span class="math notranslate nohighlight">\(\sigma_0^W\)</span> values over wind
 direction and then wind speed:</p>
-<div class="math notranslate nohighlight">
-\[\alpha(\theta)
+<div class="math notranslate nohighlight" id="equation-eq-noc-alpha">
+<span class="eqno">(6.2)<a class="headerlink" href="#equation-eq-noc-alpha" title="Link to this equation"></a></span>\[\alpha(\theta)
 = \left\langle
   \left\langle
   \left\langle
@@ -314,24 +335,24 @@ angle-bracket operator denotes the ensemble average.</p>
 </ol>
 <p>Iterate the procedure until <span class="math notranslate nohighlight">\(\alpha(\theta)\)</span> is close to 1, according to
 the selected threshold:</p>
-<div class="math notranslate nohighlight">
-\[\Delta_{\alpha}
+<div class="math notranslate nohighlight" id="equation-eq-noc-threshold">
+<span class="eqno">(6.3)<a class="headerlink" href="#equation-eq-noc-threshold" title="Link to this equation"></a></span>\[\Delta_{\alpha}
 = \left|
    \frac{\sigma_{0}^{W,\mathrm{sim}}}{\sigma_{0}^{W,c}} - 1
   \right|
 \leq \Delta_{\alpha}^{\mathrm{th}} .\]</div>
 <p>The corrected <span class="math notranslate nohighlight">\(\sigma_0^W\)</span> values are:</p>
-<div class="math notranslate nohighlight">
-\[\sigma_{0}^{W,c}(\theta)
+<div class="math notranslate nohighlight" id="equation-eq-noc-corrected">
+<span class="eqno">(6.4)<a class="headerlink" href="#equation-eq-noc-corrected" title="Link to this equation"></a></span>\[\sigma_{0}^{W,c}(\theta)
 = \alpha(\theta)\sigma_{0}^{W,m}(\theta) .\]</div>
 <p>In logarithmic space:</p>
-<div class="math notranslate nohighlight">
-\[\sigma_{0,\mathrm{dB}}^{W,c}(\theta)
+<div class="math notranslate nohighlight" id="equation-eq-noc-corrected-db">
+<span class="eqno">(6.5)<a class="headerlink" href="#equation-eq-noc-corrected-db" title="Link to this equation"></a></span>\[\sigma_{0,\mathrm{dB}}^{W,c}(\theta)
 = \alpha_{\mathrm{dB}}(\theta)
   + \sigma_{0,\mathrm{dB}}^{W,m}(\theta) .\]</div>
 <p><strong>Metrics</strong></p>
-<div class="math notranslate nohighlight">
-\[\Delta_{\alpha}
+<div class="math notranslate nohighlight" id="equation-eq-noc-metric">
+<span class="eqno">(6.6)<a class="headerlink" href="#equation-eq-noc-metric" title="Link to this equation"></a></span>\[\Delta_{\alpha}
 = \left|
    \frac{\sigma_{0}^{W,\mathrm{sim}}}{\sigma_{0}^{W,c}} - 1
   \right| .\]</div>
@@ -341,55 +362,180 @@ the selected threshold:</p>
 <span class="math notranslate nohighlight">\(\alpha_{\mathrm{dB}}(\theta)\)</span>).</p></li>
 <li><p>Calibration residuals: <span class="math notranslate nohighlight">\(\Delta_{\alpha}\)</span>.</p></li>
 </ul>
+<p><strong>Variable Description Table</strong></p>
+<p id="tab-vdt-noc"><span class="tbd-word" id="tbd-9">VDT skeleton</span><sup>[<a class="tbd-id reference external" href="tbd_table.html#tbdrow-9">TBD_CALVAL-ATBD_9</a>]</sup></p>
+<table class="longtable docutils align-default" id="id14">
+<caption><span class="caption-number">Table 6.1 </span><span class="caption-text">NOC Variable Description Table (VDT).</span><a class="headerlink" href="#id14" title="Link to this table"></a></caption>
+<colgroup>
+<col style="width: 13.8%" />
+<col style="width: 6.0%" />
+<col style="width: 6.9%" />
+<col style="width: 13.8%" />
+<col style="width: 13.8%" />
+<col style="width: 6.0%" />
+<col style="width: 10.3%" />
+<col style="width: 8.6%" />
+<col style="width: 10.3%" />
+<col style="width: 10.3%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Sym</p></th>
+<th class="head"><p>Role</p></th>
+<th class="head"><p>Origin</p></th>
+<th class="head"><p>Destination</p></th>
+<th class="head"><p>Units</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Dim</p></th>
+<th class="head"><p>Range</p></th>
+<th class="head"><p>Default</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>[Variable name]</p></td>
+<td><p>[Symbol]</p></td>
+<td><p>[IN/OUT]</p></td>
+<td><p>[Origin]</p></td>
+<td><p>[Destination]</p></td>
+<td><p>[Units]</p></td>
+<td><p>[Type]</p></td>
+<td><p>[Dim]</p></td>
+<td><p>[Range]</p></td>
+<td><p>[Default]</p></td>
+</tr>
+</tbody>
+</table>
 </section>
 <section id="gmf-tuning">
 <h2><span class="section-number">6.1.3. </span>GMF tuning<a class="headerlink" href="#gmf-tuning" title="Link to this heading"></a></h2>
-<section id="id1">
-<h3><span class="section-number">6.1.3.1. </span>Short description<a class="headerlink" href="#id1" title="Link to this heading"></a></h3>
-</section>
-<section id="id2">
-<h3><span class="section-number">6.1.3.2. </span>Description of inputs<a class="headerlink" href="#id2" title="Link to this heading"></a></h3>
-</section>
+<p><span class="tbd-word" id="tbd-10">GMF tuning description</span><sup>[<a class="tbd-id reference external" href="tbd_table.html#tbdrow-10">TBD_CALVAL-ATBD_10</a>]</sup></p>
 <section id="id3">
-<h3><span class="section-number">6.1.3.3. </span>Detailed methodology<a class="headerlink" href="#id3" title="Link to this heading"></a></h3>
+<h3><span class="section-number">6.1.3.1. </span>Short description<a class="headerlink" href="#id3" title="Link to this heading"></a></h3>
 </section>
 <section id="id4">
-<h3><span class="section-number">6.1.3.4. </span>Performance metrics<a class="headerlink" href="#id4" title="Link to this heading"></a></h3>
+<h3><span class="section-number">6.1.3.2. </span>Description of inputs<a class="headerlink" href="#id4" title="Link to this heading"></a></h3>
 </section>
 <section id="id5">
-<h3><span class="section-number">6.1.3.5. </span>Expected output<a class="headerlink" href="#id5" title="Link to this heading"></a></h3>
+<h3><span class="section-number">6.1.3.3. </span>Detailed methodology<a class="headerlink" href="#id5" title="Link to this heading"></a></h3>
+</section>
+<section id="id6">
+<h3><span class="section-number">6.1.3.4. </span>Performance metrics<a class="headerlink" href="#id6" title="Link to this heading"></a></h3>
+</section>
+<section id="id7">
+<h3><span class="section-number">6.1.3.5. </span>Expected output<a class="headerlink" href="#id7" title="Link to this heading"></a></h3>
+</section>
+<section id="variable-description-table">
+<h3><span class="section-number">6.1.3.6. </span>Variable Description Table<a class="headerlink" href="#variable-description-table" title="Link to this heading"></a></h3>
+<p><span class="tbd-word" id="tbd-11">VDT skeleton</span><sup>[<a class="tbd-id reference external" href="tbd_table.html#tbdrow-11">TBD_CALVAL-ATBD_11</a>]</sup></p>
+<table class="longtable docutils align-default" id="id15">
+<caption><span class="caption-number">Table 6.2 </span><span class="caption-text">GMF tuning Variable Description Table (VDT).</span><a class="headerlink" href="#id15" title="Link to this table"></a></caption>
+<colgroup>
+<col style="width: 13.8%" />
+<col style="width: 6.0%" />
+<col style="width: 6.9%" />
+<col style="width: 13.8%" />
+<col style="width: 13.8%" />
+<col style="width: 6.0%" />
+<col style="width: 10.3%" />
+<col style="width: 8.6%" />
+<col style="width: 10.3%" />
+<col style="width: 10.3%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Sym</p></th>
+<th class="head"><p>Role</p></th>
+<th class="head"><p>Origin</p></th>
+<th class="head"><p>Destination</p></th>
+<th class="head"><p>Units</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Dim</p></th>
+<th class="head"><p>Range</p></th>
+<th class="head"><p>Default</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>[Variable name]</p></td>
+<td><p>[Symbol]</p></td>
+<td><p>[IN/OUT]</p></td>
+<td><p>[Origin]</p></td>
+<td><p>[Destination]</p></td>
+<td><p>[Units]</p></td>
+<td><p>[Type]</p></td>
+<td><p>[Dim]</p></td>
+<td><p>[Range]</p></td>
+<td><p>[Default]</p></td>
+</tr>
+</tbody>
+</table>
 </section>
 </section>
 <section id="mtf-tuning">
 <h2><span class="section-number">6.1.4. </span>MTF tuning<a class="headerlink" href="#mtf-tuning" title="Link to this heading"></a></h2>
-<section id="id6">
-<h3><span class="section-number">6.1.4.1. </span>Short description<a class="headerlink" href="#id6" title="Link to this heading"></a></h3>
-</section>
-<section id="id7">
-<h3><span class="section-number">6.1.4.2. </span>Description of inputs<a class="headerlink" href="#id7" title="Link to this heading"></a></h3>
-</section>
+<p><span class="tbd-word" id="tbd-12">MTF tuning description</span><sup>[<a class="tbd-id reference external" href="tbd_table.html#tbdrow-12">TBD_CALVAL-ATBD_12</a>]</sup></p>
 <section id="id8">
-<h3><span class="section-number">6.1.4.3. </span>Detailed methodology<a class="headerlink" href="#id8" title="Link to this heading"></a></h3>
+<h3><span class="section-number">6.1.4.1. </span>Short description<a class="headerlink" href="#id8" title="Link to this heading"></a></h3>
 </section>
 <section id="id9">
-<h3><span class="section-number">6.1.4.4. </span>Performance metrics<a class="headerlink" href="#id9" title="Link to this heading"></a></h3>
+<h3><span class="section-number">6.1.4.2. </span>Description of inputs<a class="headerlink" href="#id9" title="Link to this heading"></a></h3>
 </section>
 <section id="id10">
-<h3><span class="section-number">6.1.4.5. </span>Expected output<a class="headerlink" href="#id10" title="Link to this heading"></a></h3>
+<h3><span class="section-number">6.1.4.3. </span>Detailed methodology<a class="headerlink" href="#id10" title="Link to this heading"></a></h3>
+</section>
+<section id="id11">
+<h3><span class="section-number">6.1.4.4. </span>Performance metrics<a class="headerlink" href="#id11" title="Link to this heading"></a></h3>
+</section>
+<section id="id12">
+<h3><span class="section-number">6.1.4.5. </span>Expected output<a class="headerlink" href="#id12" title="Link to this heading"></a></h3>
+</section>
+<section id="id13">
+<h3><span class="section-number">6.1.4.6. </span>Variable Description Table<a class="headerlink" href="#id13" title="Link to this heading"></a></h3>
+<p><span class="tbd-word" id="tbd-13">VDT skeleton</span><sup>[<a class="tbd-id reference external" href="tbd_table.html#tbdrow-13">TBD_CALVAL-ATBD_13</a>]</sup></p>
+<table class="longtable docutils align-default" id="id16">
+<caption><span class="caption-number">Table 6.3 </span><span class="caption-text">MTF tuning Variable Description Table (VDT).</span><a class="headerlink" href="#id16" title="Link to this table"></a></caption>
+<colgroup>
+<col style="width: 13.8%" />
+<col style="width: 6.0%" />
+<col style="width: 6.9%" />
+<col style="width: 13.8%" />
+<col style="width: 13.8%" />
+<col style="width: 6.0%" />
+<col style="width: 10.3%" />
+<col style="width: 8.6%" />
+<col style="width: 10.3%" />
+<col style="width: 10.3%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Sym</p></th>
+<th class="head"><p>Role</p></th>
+<th class="head"><p>Origin</p></th>
+<th class="head"><p>Destination</p></th>
+<th class="head"><p>Units</p></th>
+<th class="head"><p>Type</p></th>
+<th class="head"><p>Dim</p></th>
+<th class="head"><p>Range</p></th>
+<th class="head"><p>Default</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>[Variable name]</p></td>
+<td><p>[Symbol]</p></td>
+<td><p>[IN/OUT]</p></td>
+<td><p>[Origin]</p></td>
+<td><p>[Destination]</p></td>
+<td><p>[Units]</p></td>
+<td><p>[Type]</p></td>
+<td><p>[Dim]</p></td>
+<td><p>[Range]</p></td>
+<td><p>[Default]</p></td>
+</tr>
+</tbody>
+</table>
 </section>
 </section>
 <section id="summary">
 <h2><span class="section-number">6.1.5. </span>Summary<a class="headerlink" href="#summary" title="Link to this heading"></a></h2>
-<p class="rubric">References</p>
-<p id="ref-verspeek-noc">Verspeek, J., A. Stoffelen, A. Verhoef, and M. Portabella (2012). “Improved
-ASCAT wind retrieval using NWP ocean calibration.” <em>IEEE Transactions on
-Geoscience and Remote Sensing</em>, 50(7), 2488–2494.
-<a class="reference external" href="https://doi.org/10.1109/TGRS.2011.2180730">doi:10.1109/TGRS.2011.2180730</a>.</p>
-<p id="ref-stoffelen-cmod7">Stoffelen, A., J. A. Verspeek, J. Vogelzang, and A. Verhoef (2017). “The CMOD7
-geophysical model function for ASCAT and ERS wind retrievals.” <em>IEEE Journal
-of Selected Topics in Applied Earth Observations and Remote Sensing</em>, 10(5),
-2123–2134.
-<a class="reference external" href="https://doi.org/10.1109/JSTARS.2017.2681806">doi:10.1109/JSTARS.2017.2681806</a>.</p>
 </section>
 </section>
 

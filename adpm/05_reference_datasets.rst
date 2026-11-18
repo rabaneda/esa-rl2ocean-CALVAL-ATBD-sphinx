@@ -652,6 +652,7 @@ The RVL (Radial Velocity) component of the Sentinel-1 L2_OCN product provides an
 The spatial coverage of the RVL product equals that of the corresponding mode. In WV mode, RVL is thus computed on the same isolated :math:`\sim20\times20` km vignette used by the rest of that mode’s OCN product, at roughly 200 km spacing along the orbit track. In SM/IW/EW mode, RVL is produced on a grid :math:`\sim 1 \times 1` km similar to the OWI products. To compare an in-situ or model current vector (``EWCT``, ``NSCT``) against this scalar radial measurement, the vector is projected onto the SAR line-of-sight in the ``l2o-qc`` toolbox using
 
 .. math::
+   :label: RVL_projection
 
    v_{\text{projection}} = \texttt{EWCT}\cdot\cos(\texttt{rvlHeading} - 90^{\circ}) + \texttt{NSCT}\cdot\sin(\texttt{rvlHeading} - 90^{\circ}),
 

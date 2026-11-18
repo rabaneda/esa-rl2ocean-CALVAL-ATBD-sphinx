@@ -13,7 +13,7 @@ Cal/Val context
 
 Quality Assessment is required for remote sensing and Earth Observation (EO) instruments in order to produce reliable measurements and ensure accuracy. Quality of products are commonly assessed through a Calibration and Validation process (Cal/Val). Consequently, the development of the prototype and operational ROSE-L Ocean products processors (L2O-GPP and L2O-IPF respectively) must be followed by the validation of products. A validation strategy is meant to be planned prior to calibration and validation activities. The required strategy shall cover different stages of the processor and different phases of ROSE-L mission, from pre-launch (phase D) to exploitation (phase E2). The strategy shall include methodologies, datasets, performance and uncertainty metrics.
 
-The ROSE-L instrument will operate in scanning synthetic aperture radar mode. The system will support Dual-Pol, Quad-Pol and Wave modes. The Cal/Val strategy is also meant to cover all modes and polarizations. ROSE-L will not be the first SAR system functioning within L-band. ALOS, ALOS-2, ALOS-4, SAOCOM and NiSAR are, or have been, operating in L-band too. However, there are differences between those systems and the ROSE-L system, e.g. incidence angle, range bandwidth, swath width, among others. Furthermore, ROSE-L incorporates the use of a new technique, the Scan-On-Receive technique with Multiple Azimuth Phase Centers. The different instrument design will impose differences in the retrievals at low level which are meant to influence the inversion into L2 products.
+The ROSE-L instrument acquires data in four modes: the ROSE-L Inferometric Wide Swath (RIWS), the ROSE-L Extra Wide Swath (REWS), both in dual polarisation (HH+HV or VV+VH); the ROSE-L Quad-Pol Wide Swath (QWS), in full quad-pol polarization; and the ROSE-L Wave (RWV), which acquires single-polarisation (HH or VV) 20x20 km vignettes in a leap-frog pattern. The wide-swath modes and RWS are based on a ScanSAR-like acquisition combined with Multiple Azimuth Phase Centers (MAPS). The Cal/Val strategy is also meant to cover all modes and polarizations. ROSE-L will not be the first SAR system functioning within L-band. ALOS, ALOS-2, ALOS-4, SAOCOM and NiSAR are, or have been, operating in L-band too. However, there are differences between those systems and the ROSE-L system, e.g. incidence angle, range bandwidth, swath width, among others. Furthermore, ROSE-L incorporates the use of a new technique, the Scan-On-Receive technique with MAPS. The different instrument design will impose differences in the retrievals at low level which are meant to influence the inversion into L2 products.
 
 Regarding both the development of the retrieval algorithms and the Cal/Val activities, pre-launch work is limited by the inherent differences between ROSE-L and existing L-band SAR data, and by the lack of real ROSE-L data. This limitation is mitigated by the use of similar acquisitions by the above-mentioned systems and by simulated ROSE-L scenes, although this introduces a non-negligible degree of uncertainty. The approach should therefore be refined in phase E: the achievable accuracy of simulated ROSE-L data will be analysed during the In-Orbit-Commissioning (IOC) phase, E1, and once real ROSE-L data is available, the outputs from the L2O-IPF processor will need to be validated again, with the possibility to encounter a need for a readjustment of the processor or introduction of supplementary calibration steps.
 
@@ -29,8 +29,6 @@ The L2 products to validate are already listed in the objectives of L2O-GPP and 
   - Wind vector
 
   - Wind stress
-
-  - Hub height wind speed
 
 - Sea state:
 
@@ -65,10 +63,10 @@ The key objectives of the Calibration and Validation (Cal/Val) phase include ens
 
 To meet performance requirements, L2 products must achieve predefined thresholds in accuracy, precision, and stability, with uncertainties traceable and reliable across pixel and aggregate levels. Products must demonstrate consistency over full mission coverage, addressing global, regional, and temporal scales, and maintain defined operational latencies (e.g., near-real-time or reprocessed outputs). Validation activities use measurable metrics, including statistical bias, RMS error, and spatial-temporal coverage rates, to assess product quality systematically. Lastly, the outputs should be delivered in user-ready formats with comprehensive documentation while maintaining version control and data provenance.
 
-ATBD purpose
-------------
+CALVAL-ATBD purpose
+-------------------
 
-The aim of the Calibration and Validation Algorithm Theoretical Basis Document (ATBD) is to provide a comprehensive and transparent description of the scientific principles, mathematical methods, and processing steps used to calibrate and validate ROSE-L L2 ocean products. It ensures that the algorithms are well-documented, reproducible, and traceable, facilitating a clear understanding of how measurements are transformed into geophysical quantities. The ATBD serves as a foundation for ensuring data quality, guiding calibration/validation efforts, and supporting user confidence in the satellite mission’s outputs.
+The aim of the Calibration and Validation Algorithm Theoretical Basis Document (CALVAL-ATBD) is to provide a comprehensive and transparent description of the scientific principles, mathematical methods, and processing steps used to calibrate and validate ROSE-L L2 ocean products. It ensures that the algorithms are well-documented, reproducible, and traceable, facilitating a clear understanding of how measurements are transformed into geophysical quantities. The CALVAL-ATBD serves as a foundation for ensuring data quality, guiding Cal/Val efforts, and supporting user confidence in the satellite mission’s outputs.
 
 Applicable and reference documents
 ----------------------------------
@@ -97,8 +95,8 @@ Acronyms
    ASCAT
       Advanced Scatterometer.
 
-   ATBD
-      Algorithm Theoretical Basis Document.
+   CALVAL-ATBD
+      Calibration and Validation Algorithm Theoretical Basis Document.
 
    Cal/Val
       Calibration and Validation.
@@ -166,6 +164,9 @@ Acronyms
    LTAN
       Local Time of Ascending Node.
 
+   MAPS
+      Multiple Azimuth Phase Centers.
+
    MARS
       Meteorological Archival and Retrieval System.
 
@@ -201,6 +202,15 @@ Acronyms
 
    QC
       Quality Control.
+   
+   QWS
+      ROSE-L Quad-Pol Wide Swath.
+
+   REWS
+      ROSE-L Extra Wide Swath.
+   
+   RIWS
+      ROSE-L Interferometric Wide Swath.
 
    RMSD
       Root Mean Square Difference.
@@ -213,6 +223,9 @@ Acronyms
 
    RVL
       Radial Surface Velocity component of the Sentinel-1 Level-2 OCN product.
+
+   RWV
+      ROSE-L Wave.
 
    SLC
       Single Look Complex.

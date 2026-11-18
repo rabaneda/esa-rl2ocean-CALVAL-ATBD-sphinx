@@ -3,7 +3,10 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" data-content_root="./">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8" /><style>
+.tbd-word {color: #c00; font-weight: bold;}
+.tbd-id, .tbd-id:visited {color: #c00; font-size: 70%; font-family: monospace;}
+</style>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Search &mdash; RL2Ocean Calibration and Validation ATBD</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
@@ -14,8 +17,8 @@
       <script src="_static/jquery.js?v=5d32c60e"></script>
       <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
       <script src="_static/documentation_options.js?v=f2a433a1"></script>
-      <script src="_static/doctools.js?v=fd6eb6e6"></script>
-      <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
       <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="_static/js/theme.js"></script>
     <script src="_static/searchtools.js"></script>
@@ -50,7 +53,7 @@
 <li class="toctree-l2"><a class="reference internal" href="01_introduction.html#cal-val-context">1.2. Cal/Val context</a></li>
 <li class="toctree-l2"><a class="reference internal" href="01_introduction.html#l2-product-scope">1.3. L2 product scope</a></li>
 <li class="toctree-l2"><a class="reference internal" href="01_introduction.html#cal-val-objectives-and-performance">1.4. Cal/Val objectives and performance</a></li>
-<li class="toctree-l2"><a class="reference internal" href="01_introduction.html#atbd-purpose">1.5. ATBD purpose</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01_introduction.html#calval-atbd-purpose">1.5. CALVAL-ATBD purpose</a></li>
 <li class="toctree-l2"><a class="reference internal" href="01_introduction.html#applicable-and-reference-documents">1.6. Applicable and reference documents</a></li>
 <li class="toctree-l2"><a class="reference internal" href="01_introduction.html#acronyms">1.7. Acronyms</a></li>
 <li class="toctree-l2"><a class="reference internal" href="01_introduction.html#definitions-and-conventions">1.8. Definitions and conventions</a></li>
@@ -64,7 +67,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="03_lband_sar_datasets.html">3. L-band SAR datasets description</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="03_lband_sar_datasets.html#generated-datasets">3.1. Generated datasets</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="03_lband_sar_datasets.html#pre-launch-synthetic-datasets">3.1. Pre-launch synthetic datasets</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="03_lband_sar_datasets.html#reconditioned">3.1.1. Reconditioned</a></li>
 <li class="toctree-l3"><a class="reference internal" href="03_lband_sar_datasets.html#emulated">3.1.2. Emulated</a></li>
 <li class="toctree-l3"><a class="reference internal" href="03_lband_sar_datasets.html#simulated">3.1.3. Simulated</a></li>
@@ -142,19 +145,21 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="alg-01-calibration.html#numerical-weather-prediction-ocean-calibration-of-sar-sigma-0">6.1.2. Numerical Weather Prediction Ocean Calibration of SAR <span class="math notranslate nohighlight">\(\sigma_0\)</span></a></li>
 <li class="toctree-l3"><a class="reference internal" href="alg-01-calibration.html#gmf-tuning">6.1.3. GMF tuning</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id1">6.1.3.1. Short description</a></li>
-<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id2">6.1.3.2. Description of inputs</a></li>
-<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id3">6.1.3.3. Detailed methodology</a></li>
-<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id4">6.1.3.4. Performance metrics</a></li>
-<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id5">6.1.3.5. Expected output</a></li>
+<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id3">6.1.3.1. Short description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id4">6.1.3.2. Description of inputs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id5">6.1.3.3. Detailed methodology</a></li>
+<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id6">6.1.3.4. Performance metrics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id7">6.1.3.5. Expected output</a></li>
+<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#variable-description-table">6.1.3.6. Variable Description Table</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="alg-01-calibration.html#mtf-tuning">6.1.4. MTF tuning</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id6">6.1.4.1. Short description</a></li>
-<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id7">6.1.4.2. Description of inputs</a></li>
-<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id8">6.1.4.3. Detailed methodology</a></li>
-<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id9">6.1.4.4. Performance metrics</a></li>
-<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id10">6.1.4.5. Expected output</a></li>
+<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id8">6.1.4.1. Short description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id9">6.1.4.2. Description of inputs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id10">6.1.4.3. Detailed methodology</a></li>
+<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id11">6.1.4.4. Performance metrics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id12">6.1.4.5. Expected output</a></li>
+<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id13">6.1.4.6. Variable Description Table</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="alg-01-calibration.html#summary">6.1.5. Summary</a></li>
@@ -165,6 +170,21 @@
 <li class="toctree-l3"><a class="reference internal" href="alg-02-validation.html#triple-collocation">6.2.2. Triple Collocation</a></li>
 <li class="toctree-l3"><a class="reference internal" href="alg-02-validation.html#one-to-one-validation">6.2.3. One-to-One Validation</a></li>
 <li class="toctree-l3"><a class="reference internal" href="alg-02-validation.html#spectral-analysis">6.2.4. Spectral Analysis</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="alg-03-wind.html">6.3. Wind</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="alg-03-wind.html#bayesian-wind-retrieval-alg-007">6.3.1. Bayesian Wind Retrieval - ALG-007</a></li>
+<li class="toctree-l3"><a class="reference internal" href="alg-03-wind.html#storm-centric-processing-alg-008-tbc">6.3.2. Storm-centric Processing - ALG-008 [TBC]</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="alg-04-sea-state.html">6.4. Sea State</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="alg-04-sea-state.html#empirical-retrieval-of-wave-parameters-alg-009">6.4.1. Empirical retrieval of wave parameters - ALG-009</a></li>
+<li class="toctree-l3"><a class="reference internal" href="alg-04-sea-state.html#reconstruction-of-wave-spectra-alg-009b">6.4.2. Reconstruction of wave spectra - ALG-009b</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="alg-05-currents.html">6.5. Total Surface Currents</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="alg-05-currents.html#wave-doppler-estimation-alg-010">6.5.1. Wave Doppler estimation - ALG-010</a></li>
+<li class="toctree-l3"><a class="reference internal" href="alg-05-currents.html#ocean-surface-current-estimation-alg-011">6.5.2. Ocean Surface Current estimation - ALG-011</a></li>
 </ul>
 </li>
 </ul>
@@ -197,9 +217,9 @@
 <li class="toctree-l3"><a class="reference internal" href="04_uncertainty_analysis.html#summary">7.3.11. Summary</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="04_uncertainty_analysis.html#references">7.4. References</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="tbd_table.html">8. TBD table</a></li>
 </ul>
 
         </div>

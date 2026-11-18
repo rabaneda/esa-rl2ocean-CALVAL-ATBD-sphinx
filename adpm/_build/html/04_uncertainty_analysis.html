@@ -4,7 +4,10 @@
 <html class="writer-html5" lang="en" data-content_root="./">
 <head>
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-
+<style>
+.tbd-word {color: #c00; font-weight: bold;}
+.tbd-id, .tbd-id:visited {color: #c00; font-size: 70%; font-family: monospace;}
+</style>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>7. Uncertainty analysis &mdash; RL2Ocean Calibration and Validation ATBD</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
@@ -14,15 +17,16 @@
       <script src="_static/jquery.js?v=5d32c60e"></script>
       <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
       <script src="_static/documentation_options.js?v=f2a433a1"></script>
-      <script src="_static/doctools.js?v=fd6eb6e6"></script>
-      <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
       <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
       <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-      <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+      <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="6.2. Validation" href="alg-02-validation.html" /> 
+    <link rel="next" title="8. TBD table" href="tbd_table.html" />
+    <link rel="prev" title="6.5. Total Surface Currents" href="alg-05-currents.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -51,7 +55,7 @@
 <li class="toctree-l2"><a class="reference internal" href="01_introduction.html#cal-val-context">1.2. Cal/Val context</a></li>
 <li class="toctree-l2"><a class="reference internal" href="01_introduction.html#l2-product-scope">1.3. L2 product scope</a></li>
 <li class="toctree-l2"><a class="reference internal" href="01_introduction.html#cal-val-objectives-and-performance">1.4. Cal/Val objectives and performance</a></li>
-<li class="toctree-l2"><a class="reference internal" href="01_introduction.html#atbd-purpose">1.5. ATBD purpose</a></li>
+<li class="toctree-l2"><a class="reference internal" href="01_introduction.html#calval-atbd-purpose">1.5. CALVAL-ATBD purpose</a></li>
 <li class="toctree-l2"><a class="reference internal" href="01_introduction.html#applicable-and-reference-documents">1.6. Applicable and reference documents</a></li>
 <li class="toctree-l2"><a class="reference internal" href="01_introduction.html#acronyms">1.7. Acronyms</a></li>
 <li class="toctree-l2"><a class="reference internal" href="01_introduction.html#definitions-and-conventions">1.8. Definitions and conventions</a></li>
@@ -65,7 +69,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="03_lband_sar_datasets.html">3. L-band SAR datasets description</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="03_lband_sar_datasets.html#generated-datasets">3.1. Generated datasets</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="03_lband_sar_datasets.html#pre-launch-synthetic-datasets">3.1. Pre-launch synthetic datasets</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="03_lband_sar_datasets.html#reconditioned">3.1.1. Reconditioned</a></li>
 <li class="toctree-l3"><a class="reference internal" href="03_lband_sar_datasets.html#emulated">3.1.2. Emulated</a></li>
 <li class="toctree-l3"><a class="reference internal" href="03_lband_sar_datasets.html#simulated">3.1.3. Simulated</a></li>
@@ -143,19 +147,21 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="alg-01-calibration.html#numerical-weather-prediction-ocean-calibration-of-sar-sigma-0">6.1.2. Numerical Weather Prediction Ocean Calibration of SAR <span class="math notranslate nohighlight">\(\sigma_0\)</span></a></li>
 <li class="toctree-l3"><a class="reference internal" href="alg-01-calibration.html#gmf-tuning">6.1.3. GMF tuning</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id1">6.1.3.1. Short description</a></li>
-<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id2">6.1.3.2. Description of inputs</a></li>
-<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id3">6.1.3.3. Detailed methodology</a></li>
-<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id4">6.1.3.4. Performance metrics</a></li>
-<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id5">6.1.3.5. Expected output</a></li>
+<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id3">6.1.3.1. Short description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id4">6.1.3.2. Description of inputs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id5">6.1.3.3. Detailed methodology</a></li>
+<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id6">6.1.3.4. Performance metrics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id7">6.1.3.5. Expected output</a></li>
+<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#variable-description-table">6.1.3.6. Variable Description Table</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="alg-01-calibration.html#mtf-tuning">6.1.4. MTF tuning</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id6">6.1.4.1. Short description</a></li>
-<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id7">6.1.4.2. Description of inputs</a></li>
-<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id8">6.1.4.3. Detailed methodology</a></li>
-<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id9">6.1.4.4. Performance metrics</a></li>
-<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id10">6.1.4.5. Expected output</a></li>
+<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id8">6.1.4.1. Short description</a></li>
+<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id9">6.1.4.2. Description of inputs</a></li>
+<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id10">6.1.4.3. Detailed methodology</a></li>
+<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id11">6.1.4.4. Performance metrics</a></li>
+<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id12">6.1.4.5. Expected output</a></li>
+<li class="toctree-l4"><a class="reference internal" href="alg-01-calibration.html#id13">6.1.4.6. Variable Description Table</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="alg-01-calibration.html#summary">6.1.5. Summary</a></li>
@@ -166,6 +172,21 @@
 <li class="toctree-l3"><a class="reference internal" href="alg-02-validation.html#triple-collocation">6.2.2. Triple Collocation</a></li>
 <li class="toctree-l3"><a class="reference internal" href="alg-02-validation.html#one-to-one-validation">6.2.3. One-to-One Validation</a></li>
 <li class="toctree-l3"><a class="reference internal" href="alg-02-validation.html#spectral-analysis">6.2.4. Spectral Analysis</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="alg-03-wind.html">6.3. Wind</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="alg-03-wind.html#bayesian-wind-retrieval-alg-007">6.3.1. Bayesian Wind Retrieval - ALG-007</a></li>
+<li class="toctree-l3"><a class="reference internal" href="alg-03-wind.html#storm-centric-processing-alg-008-tbc">6.3.2. Storm-centric Processing - ALG-008 [TBC]</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="alg-04-sea-state.html">6.4. Sea State</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="alg-04-sea-state.html#empirical-retrieval-of-wave-parameters-alg-009">6.4.1. Empirical retrieval of wave parameters - ALG-009</a></li>
+<li class="toctree-l3"><a class="reference internal" href="alg-04-sea-state.html#reconstruction-of-wave-spectra-alg-009b">6.4.2. Reconstruction of wave spectra - ALG-009b</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="alg-05-currents.html">6.5. Total Surface Currents</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="alg-05-currents.html#wave-doppler-estimation-alg-010">6.5.1. Wave Doppler estimation - ALG-010</a></li>
+<li class="toctree-l3"><a class="reference internal" href="alg-05-currents.html#ocean-surface-current-estimation-alg-011">6.5.2. Ocean Surface Current estimation - ALG-011</a></li>
 </ul>
 </li>
 </ul>
@@ -198,9 +219,9 @@
 <li class="toctree-l3"><a class="reference internal" href="#summary">7.3.11. Summary</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#references">7.4. References</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="tbd_table.html">8. TBD table</a></li>
 </ul>
 
         </div>
@@ -231,45 +252,45 @@
 <h1><span class="section-number">7. </span>Uncertainty analysis<a class="headerlink" href="#uncertainty-analysis" title="Link to this heading"></a></h1>
 <section id="introduction">
 <h2><span class="section-number">7.1. </span>Introduction<a class="headerlink" href="#introduction" title="Link to this heading"></a></h2>
-<p>The “Evaluation of measurement data – GUM” <a class="reference internal" href="#ref-jcgmgum"><span class="std std-ref">(BIPM et al., n.d.-a)</span></a>, or the “GUM bible”, is a foundational international document that provides a conceptual and mathematical framework for identifying sources of uncertainty, quantifying them in a consistent way (as standard deviations), combining them into a single uncertainty figure, and reporting the result and its uncertainty clearly and comparably across disciplines and countries. Focusing on evaluation and expression of uncertainty in measurement it is an important component of the science of measurement and application, known as metrology (e.g., <a class="reference internal" href="#ref-jcgmvim"><span class="std std-ref">BIPM et al., n.d.-b</span></a>).</p>
+<p>The “Evaluation of measurement data – GUM” <span class="bibtex-citation" id="id1">[<a class="reference internal" href="01_introduction.html#id2" title="BIPM, IEC, IFCC, ILAC, ISO, IUPAC, IUPAP, and OIML. Evaluation of measurement data — Guide to the expression of uncertainty in measurement. Joint Committee for Guides in Metrology, JCGM 100:2008. doi:https://doi.org/10.59161/JCGM100-2008E.">33</a>]</span>, or the “GUM bible”, is a foundational international document that provides a conceptual and mathematical framework for identifying sources of uncertainty, quantifying them in a consistent way (as standard deviations), combining them into a single uncertainty figure, and reporting the result and its uncertainty clearly and comparably across disciplines and countries. Focusing on evaluation and expression of uncertainty in measurement it is an important component of the science of measurement and application, known as metrology (e.g., <span class="bibtex-citation" id="id2">[<a class="reference internal" href="01_introduction.html#id3" title="BIPM, IEC, IFCC, ILAC, ISO, IUPAC, IUPAP, and OIML. International vocabulary of metrology -– basic and general concepts and associated terms (vim). Joint Committee for Guides in Metrology, JCGM 200:2012(E/F).">2</a>]</span>).</p>
 <p>The GEO is an international partnership of governments and organizations acting as a policy and coordination body to promote global sharing and use of EO data, for example to support work on climate, disaster management, agriculture, water, and ecosystems. The GEOSS is the global, distributed infrastructure that GEO is building and coordinating. Rather than being a single system, it connects many independent EO systems – such as satellites, ground networks, and ocean buoys – from different countries and agencies, and aims to make them interoperable, accessible through common standards and interfaces, and accompanied by information about data quality and uncertainty. As such, GEO is the partnership, and GEOSS is the “system of systems” that GEO oversees.</p>
-<p>To support its mission, GEOSS needs a metrological framework. As such, the 2010 endorsement of the QA4EO by the CEOS (part of GEOSS), has defined guidelines for EO applications based on principles adapted from the metrology community <a class="reference internal" href="#ref-qa4eo1"><span class="std std-ref">(Woolliams et al. 2025a)</span></a>. QA4EO aims to ensure that EO data are accessible, of known and documented quality, traceable to reference standards, in particular the SI, and suitable for user application (“fit for purpose”).</p>
-<p>This section applies the GUM principles to SAR data and reviews the existing frameworks supporting metrology: the VIM <a class="reference internal" href="#ref-jcgmvim"><span class="std std-ref">(BIPM et al., n.d.-b)</span></a>, the GUM <a class="reference internal" href="#ref-jcgmgum"><span class="std std-ref">(BIPM et al., n.d.-a)</span></a>, and QA4EO.</p>
+<p>To support its mission, GEOSS needs a metrological framework. As such, the 2010 endorsement of the QA4EO by the CEOS (part of GEOSS), has defined guidelines for EO applications based on principles adapted from the metrology community <span class="bibtex-citation" id="id3">[<a class="reference internal" href="01_introduction.html#id5" title="Emma Woolliams, Sajedeh Behnia, Agnieszka Bialek, Pieter De Vis, Jacob Fahy, Nigel Fox, Tom Gardiner, Paul Green, Samuel Hunt, Jonathan Mittaz, Bernardo Mota, Joanne Nightingale, Niall Origo, Anna Pustogvar, and Madeline Stedman. General guidance on a metrological approach to fundamental data records (fdr), thematic data products (tdp) and fiducial reference measurements (frm) – executive summary. 2025.">1</a>]</span>. QA4EO aims to ensure that EO data are accessible, of known and documented quality, traceable to reference standards, in particular the SI, and suitable for user application (“fit for purpose”).</p>
+<p>This section applies the GUM principles to SAR data and reviews the existing frameworks supporting metrology: the VIM <span class="bibtex-citation" id="id4">[<a class="reference internal" href="01_introduction.html#id3" title="BIPM, IEC, IFCC, ILAC, ISO, IUPAC, IUPAP, and OIML. International vocabulary of metrology -– basic and general concepts and associated terms (vim). Joint Committee for Guides in Metrology, JCGM 200:2012(E/F).">2</a>]</span>, the GUM <span class="bibtex-citation" id="id5">[<a class="reference internal" href="01_introduction.html#id2" title="BIPM, IEC, IFCC, ILAC, ISO, IUPAC, IUPAP, and OIML. Evaluation of measurement data — Guide to the expression of uncertainty in measurement. Joint Committee for Guides in Metrology, JCGM 100:2008. doi:https://doi.org/10.59161/JCGM100-2008E.">33</a>]</span>, and QA4EO.</p>
 </section>
 <section id="the-gum-principles-a-review">
 <h2><span class="section-number">7.2. </span>The GUM Principles: A review<a class="headerlink" href="#the-gum-principles-a-review" title="Link to this heading"></a></h2>
 <section id="the-international-vocabulary-of-metrology-vim">
 <h3><span class="section-number">7.2.1. </span>The International Vocabulary of Metrology (VIM)<a class="headerlink" href="#the-international-vocabulary-of-metrology-vim" title="Link to this heading"></a></h3>
-<p>The International Vocabulary of Metrology (VIM; <a class="reference internal" href="#ref-jcgmvim"><span class="std std-ref">BIPM et al., n.d.-b</span></a>) defines and organizes key concepts in metrology to ensure global consistency in measurement science. It provides standardized terminology covering quantities, units, and measuring instruments, with a focus on measurement uncertainty rather than error.</p>
+<p>The International Vocabulary of Metrology (VIM; <span class="bibtex-citation" id="id6">[<a class="reference internal" href="01_introduction.html#id3" title="BIPM, IEC, IFCC, ILAC, ISO, IUPAC, IUPAP, and OIML. International vocabulary of metrology -– basic and general concepts and associated terms (vim). Joint Committee for Guides in Metrology, JCGM 200:2012(E/F).">2</a>]</span>) defines and organizes key concepts in metrology to ensure global consistency in measurement science. It provides standardized terminology covering quantities, units, and measuring instruments, with a focus on measurement uncertainty rather than error.</p>
 <p>The document explains critical properties of measuring devices, such as precision, stability, and sensitivity, and highlights the importance of traceability and standards for reliability.</p>
 <p>Its applications span various fields, including physics, chemistry, biology, medicine, and emerging areas like forensic science and food technology. Harmonization of terms is emphasized to ensure coherence in the various scientific, engineering, regulatory, and quality assurance fields.</p>
 </section>
 <section id="guide-to-the-expression-of-uncertainty-in-measurement-gum">
 <h3><span class="section-number">7.2.2. </span>Guide to the Expression of Uncertainty in Measurement (GUM)<a class="headerlink" href="#guide-to-the-expression-of-uncertainty-in-measurement-gum" title="Link to this heading"></a></h3>
-<p>The GUM establishes general rules for evaluating and expressing uncertainty in measurement that are intended to be applicable to a broad spectrum of measurements <a class="reference internal" href="#ref-jcgmgum"><span class="std std-ref">(BIPM et al., n.d.-a)</span></a>. The guide was developed to solve the challenge of different laboratories and disciplines using different methods and terminology for uncertainty, which made measurement results difficult to compare.</p>
+<p>The GUM establishes general rules for evaluating and expressing uncertainty in measurement that are intended to be applicable to a broad spectrum of measurements <span class="bibtex-citation" id="id7">[<a class="reference internal" href="01_introduction.html#id2" title="BIPM, IEC, IFCC, ILAC, ISO, IUPAC, IUPAP, and OIML. Evaluation of measurement data — Guide to the expression of uncertainty in measurement. Joint Committee for Guides in Metrology, JCGM 100:2008. doi:https://doi.org/10.59161/JCGM100-2008E.">33</a>]</span>. The guide was developed to solve the challenge of different laboratories and disciplines using different methods and terminology for uncertainty, which made measurement results difficult to compare.</p>
 <p>The central idea of the GUM is to treat all components of uncertainty in the same mathematical way, regardless of whether they arise from random variation or systematic effects. Every component is represented by a probability distribution and a standard uncertainty. To obtain standard uncertainties, the GUM distinguishes between two kinds of evaluation. “Type A” evaluations use statistical analysis of repeated measurements, whereas “Type B” evaluations use all other available information, such as instrument specifications, calibration certificates, or expert judgment. The results of both evaluation types can be converted into standard uncertainties so they can be used on the same terms.</p>
 <p>Measurements are described by a mathematical model that links the quantity being measured (the measurand) to various input, or influence, quantities. Once standard uncertainties of the influence quantities are estimated, they are combined – taking into account any correlations – using standard rules for propagating variances. This yields the combined standard uncertainty of the measurand, taken as the estimated standard deviation associated with the result. An expanded uncertainty is obtained by multiplying the standard uncertainty by a coverage factor <span class="math notranslate nohighlight">\(k\)</span>. The purpose of the expanded uncertainty is to provide an interval about the result of a measurement that may be expected to encompass a large fraction of the distribution of values that could reasonably be attributed to the measurand. The value of <span class="math notranslate nohighlight">\(k\)</span> and how it was chosen must always be stated.</p>
 <p>A key emphasis of the GUM is transparency. An uncertainty statement should clearly describe which inputs were considered, how each uncertainty component was obtained, what assumptions were made, and how the components were combined. The document supplements this framework with definitions, statistical background, guidance on practical evaluation, and worked examples. In doing so, it provides a common language and method that allow measurement results and their uncertainties to be understood and compared across borders and domains.</p>
 </section>
 <section id="quality-assurance-framework-for-earth-observation-qa4eo">
 <h3><span class="section-number">7.2.3. </span>Quality Assurance Framework for Earth Observation (QA4EO)<a class="headerlink" href="#quality-assurance-framework-for-earth-observation-qa4eo" title="Link to this heading"></a></h3>
-<p>GEOSS depends on interoperable and quality-assured data to derive comprehensive information about climate and environment, as well as, e.g., food, water and energy security. To achieve interoperability across systems and datasets, common and well-defined data and metadata formats are needed, but also metrological principles such as traceability to SI, documented uncertainty analysis and comparison between different measurement references must be followed, and are key to the QA4EO reports <a class="reference internal" href="#ref-qa4eo1"><span class="std std-ref">(Woolliams et al. 2025a)</span></a>.</p>
-<p>Beside <a class="reference internal" href="#ref-jcgmvim"><span class="std std-ref">BIPM et al., n.d.-b</span></a> and <a class="reference internal" href="#ref-jcgmgum"><span class="std std-ref">BIPM et al., n.d.-a</span></a>, QA4EO also builds on EO-metrology collaboration in the EU FP7 and Horizon 2020, ESA and Copernicus projects and, in particular, the FIDUCEO project <a class="reference internal" href="#ref-mittaz19"><span class="std std-ref">(Mittaz et al. 2019)</span></a>.</p>
-<p>As summarized in <a class="reference internal" href="#ref-qa4eo2"><span class="std std-ref">(Woolliams et al. 2025b)</span></a>, three basic metrology principles generally apply to EO data:</p>
+<p>GEOSS depends on interoperable and quality-assured data to derive comprehensive information about climate and environment, as well as, e.g., food, water and energy security. To achieve interoperability across systems and datasets, common and well-defined data and metadata formats are needed, but also metrological principles such as traceability to SI, documented uncertainty analysis and comparison between different measurement references must be followed, and are key to the QA4EO reports <span class="bibtex-citation" id="id8">[<a class="reference internal" href="01_introduction.html#id5" title="Emma Woolliams, Sajedeh Behnia, Agnieszka Bialek, Pieter De Vis, Jacob Fahy, Nigel Fox, Tom Gardiner, Paul Green, Samuel Hunt, Jonathan Mittaz, Bernardo Mota, Joanne Nightingale, Niall Origo, Anna Pustogvar, and Madeline Stedman. General guidance on a metrological approach to fundamental data records (fdr), thematic data products (tdp) and fiducial reference measurements (frm) – executive summary. 2025.">1</a>]</span>.</p>
+<p>Beside <span class="bibtex-citation" id="id9">[<a class="reference internal" href="01_introduction.html#id3" title="BIPM, IEC, IFCC, ILAC, ISO, IUPAC, IUPAP, and OIML. International vocabulary of metrology -– basic and general concepts and associated terms (vim). Joint Committee for Guides in Metrology, JCGM 200:2012(E/F).">2</a>]</span> and <span class="bibtex-citation" id="id10">[<a class="reference internal" href="01_introduction.html#id2" title="BIPM, IEC, IFCC, ILAC, ISO, IUPAC, IUPAP, and OIML. Evaluation of measurement data — Guide to the expression of uncertainty in measurement. Joint Committee for Guides in Metrology, JCGM 100:2008. doi:https://doi.org/10.59161/JCGM100-2008E.">33</a>]</span>, QA4EO also builds on EO-metrology collaboration in the EU FP7 and Horizon 2020, ESA and Copernicus projects and, in particular, the FIDUCEO project <span class="bibtex-citation" id="id11">[<a class="reference internal" href="01_introduction.html#id4" title="Jonathan Mittaz, Christopher J. Merchant, and Emma R. Woolliams. Applying principles of metrology to historical earth observations from satellites. Metrologica, 2019. doi:https://doi.org/10.1088/1681-7575/ab1705.">34</a>]</span>.</p>
+<p>As summarized in <span class="bibtex-citation" id="id12">[<a class="reference internal" href="01_introduction.html#id6" title="Emma Woolliams, Sajedeh Behnia, Agnieszka Bialek, Pieter De Vis, Jacob Fahy, Nigel Fox, Tom Gardiner, Paul Green, Samuel Hunt, Jonathan Mittaz, Bernardo Mota, Joanne Nightingale, Niall Origo, Anna Pustogvar, and Madeline Stedman. General guidance on a metrological approach to fundamental data records (fdr), thematic data products (tdp) and fiducial reference measurements (frm) – metrology theoretical basis. 2025.">35</a>]</span>, three basic metrology principles generally apply to EO data:</p>
 <ol class="arabic simple">
 <li><p><strong>Traceability:</strong> Metrological traceability is a property of a measurement that relates the measured value to a stated metrological reference through an unbroken chain of calibrations or comparisons. It requires, for each step in the traceability chain, that uncertainties are evaluated and that methodologies are documented.</p></li>
 <li><p><strong>Uncertainty Analysis:</strong> Uncertainty analysis is the review of all sources of uncertainty and the propagation of that uncertainty through the traceability chain. It is based on the suite of documents prepared by the JCGM and together known as the GUM.</p></li>
 <li><p><strong>Comparison:</strong> Metrologists validate uncertainty analysis and confirm traceability through comparisons. The Mutual Recognition Arrangement (a formal arrangement to confirm the degree-of-equivalence between SI realisations and disseminations in different countries) requires regular, formal international comparisons that are conducted under strict rules.</p></li>
 </ol>
 <p>The uncertainty analysis, as outlined in the GUM, should follow these principles.</p>
-<p>ESA has initially applied the terms FRM, FDR and TDP to describe metrologically rigorous observations of specific relevance to space-based observations <a class="reference internal" href="#ref-qa4eo2"><span class="std std-ref">(Woolliams et al. 2025b)</span></a>. The terms are increasingly being used by the broader EO community, although they have not yet been formally endorsed. The terms are defined in <a class="reference internal" href="#ref-qa4eo2"><span class="std std-ref">Woolliams et al. 2025b</span></a>, as follows:</p>
+<p>ESA has initially applied the terms FRM, FDR and TDP to describe metrologically rigorous observations of specific relevance to space-based observations <span class="bibtex-citation" id="id13">[<a class="reference internal" href="01_introduction.html#id6" title="Emma Woolliams, Sajedeh Behnia, Agnieszka Bialek, Pieter De Vis, Jacob Fahy, Nigel Fox, Tom Gardiner, Paul Green, Samuel Hunt, Jonathan Mittaz, Bernardo Mota, Joanne Nightingale, Niall Origo, Anna Pustogvar, and Madeline Stedman. General guidance on a metrological approach to fundamental data records (fdr), thematic data products (tdp) and fiducial reference measurements (frm) – metrology theoretical basis. 2025.">35</a>]</span>. The terms are increasingly being used by the broader EO community, although they have not yet been formally endorsed. The terms are defined in <span class="bibtex-citation" id="id14">[<a class="reference internal" href="01_introduction.html#id6" title="Emma Woolliams, Sajedeh Behnia, Agnieszka Bialek, Pieter De Vis, Jacob Fahy, Nigel Fox, Tom Gardiner, Paul Green, Samuel Hunt, Jonathan Mittaz, Bernardo Mota, Joanne Nightingale, Niall Origo, Anna Pustogvar, and Madeline Stedman. General guidance on a metrological approach to fundamental data records (fdr), thematic data products (tdp) and fiducial reference measurements (frm) – metrology theoretical basis. 2025.">35</a>]</span>, as follows:</p>
 <ul class="simple">
 <li><p><strong>Fundamental Data Record (FDR):</strong> An FDR is a record, of sufficient duration for its application, of uncertainty-quantified sensor observations calibrated to physical units and located in time and space, together with all ancillary and lower-level instrument data used to calibrate and locate the observations and to estimate uncertainty.</p></li>
 <li><p><strong>Thematic Data Product (TDP):</strong> A TDP is a record, of sufficient duration for its application, of uncertainty-quantified retrieved values of a geophysical variable, along with all ancillary data used in retrieval and uncertainty estimation.</p></li>
 <li><p><strong>Fiducial Reference Measurement (FRM):</strong> An FRM is a suite of independent, fully characterised, and traceable (to a community agreed reference, ideally SI) measurements of a satellite relevant measurand, tailored specifically to address the calibration/validation needs of a class of satellite borne sensors and that follow the guidelines outlined by the GEO/CEOS QA4EO.</p></li>
 </ul>
-<p>As highlighted by <a class="reference internal" href="#ref-qa4eo2"><span class="std std-ref">Woolliams et al. 2025b</span></a>, “TDPs provide higher level products that have been processed from FDRs, through algorithms which also often combine information from other FDRs (e.g., from other satellite sensors) or from external information (such as reanalysis models and/or certain non-satellite data), along with such additional information”. Guidelines for assessing observational systems with respect to FRMs have been established by CEOS.</p>
-<p>In order to establish a systematic process for generating uncertainty budgets, and ensuring that EO data are interoperable, temporally stable, and fit for scientific, operational and decision-making purposes, the QA4EO and EO projects acknowledged in <a class="reference internal" href="#ref-qa4eo3"><span class="std std-ref">Woolliams et al. 2025c</span></a> have adapted the stages, suggested in GUM, required to support the development of a measurement model and from that an uncertainty analysis. These EO specific stages of uncertainty analysis are given by <a class="reference internal" href="#ref-qa4eo3"><span class="std std-ref">Woolliams et al. 2025c</span></a> as follows:</p>
+<p>As highlighted by <span class="bibtex-citation" id="id15">[<a class="reference internal" href="01_introduction.html#id6" title="Emma Woolliams, Sajedeh Behnia, Agnieszka Bialek, Pieter De Vis, Jacob Fahy, Nigel Fox, Tom Gardiner, Paul Green, Samuel Hunt, Jonathan Mittaz, Bernardo Mota, Joanne Nightingale, Niall Origo, Anna Pustogvar, and Madeline Stedman. General guidance on a metrological approach to fundamental data records (fdr), thematic data products (tdp) and fiducial reference measurements (frm) – metrology theoretical basis. 2025.">35</a>]</span>, “TDPs provide higher level products that have been processed from FDRs, through algorithms which also often combine information from other FDRs (e.g., from other satellite sensors) or from external information (such as reanalysis models and/or certain non-satellite data), along with such additional information”. Guidelines for assessing observational systems with respect to FRMs have been established by CEOS.</p>
+<p>In order to establish a systematic process for generating uncertainty budgets, and ensuring that EO data are interoperable, temporally stable, and fit for scientific, operational and decision-making purposes, the QA4EO and EO projects acknowledged in <span class="bibtex-citation" id="id16">[<a class="reference internal" href="01_introduction.html#id7" title="Emma Woolliams, Sajedeh Behnia, Agnieszka Bialek, Pieter De Vis, Jacob Fahy, Nigel Fox, Tom Gardiner, Paul Green, Samuel Hunt, Jonathan Mittaz, Bernardo Mota, Joanne Nightingale, Niall Origo, Anna Pustogvar, and Madeline Stedman. General guidance on a metrological approach to fundamental data records (fdr), thematic data products (tdp) and fiducial reference measurements (frm) – uncertainty analysis process. 2025.">36</a>]</span> have adapted the stages, suggested in GUM, required to support the development of a measurement model and from that an uncertainty analysis. These EO specific stages of uncertainty analysis are given by <span class="bibtex-citation" id="id17">[<a class="reference internal" href="01_introduction.html#id7" title="Emma Woolliams, Sajedeh Behnia, Agnieszka Bialek, Pieter De Vis, Jacob Fahy, Nigel Fox, Tom Gardiner, Paul Green, Samuel Hunt, Jonathan Mittaz, Bernardo Mota, Joanne Nightingale, Niall Origo, Anna Pustogvar, and Madeline Stedman. General guidance on a metrological approach to fundamental data records (fdr), thematic data products (tdp) and fiducial reference measurements (frm) – uncertainty analysis process. 2025.">36</a>]</span> as follows:</p>
 <ul class="simple">
 <li><p>Step 1: Define the measurand and measurement model.</p></li>
 <li><p>Step 2: Establish the traceability with a diagram.</p></li>
@@ -277,7 +298,7 @@
 <li><p>Step 4: Calculate the data product and uncertainties.</p></li>
 <li><p>Step 5: Record information about the uncertainty analysis for long term data preservation purposes and summarise for today’s users.</p></li>
 </ul>
-<p>These steps are discussed in detail in <a class="reference internal" href="#ref-qa4eo3"><span class="std std-ref">Woolliams et al. 2025c</span></a>.</p>
+<p>These steps are discussed in detail in <span class="bibtex-citation" id="id18">[<a class="reference internal" href="01_introduction.html#id7" title="Emma Woolliams, Sajedeh Behnia, Agnieszka Bialek, Pieter De Vis, Jacob Fahy, Nigel Fox, Tom Gardiner, Paul Green, Samuel Hunt, Jonathan Mittaz, Bernardo Mota, Joanne Nightingale, Niall Origo, Anna Pustogvar, and Madeline Stedman. General guidance on a metrological approach to fundamental data records (fdr), thematic data products (tdp) and fiducial reference measurements (frm) – uncertainty analysis process. 2025.">36</a>]</span>.</p>
 </section>
 </section>
 <section id="product-specific-uncertainty-estimation">
@@ -396,38 +417,14 @@ spectrum.</p>
 <h3><span class="section-number">7.3.11. </span>Summary<a class="headerlink" href="#summary" title="Link to this heading"></a></h3>
 </section>
 </section>
-<section id="references">
-<h2><span class="section-number">7.4. </span>References<a class="headerlink" href="#references" title="Link to this heading"></a></h2>
-<p id="ref-jcgmgum">BIPM, IEC, IFCC, et al. n.d.-a. <em>Evaluation of Measurement Data — Guide to the
-Expression of Uncertainty in Measurement</em>. Joint Committee for Guides in
-Metrology, JCGM 100:2008. <a class="reference external" href="https://doi.org/10.59161/JCGM100-2008E">doi:10.59161/JCGM100-2008E</a>.</p>
-<p id="ref-jcgmvim">BIPM, IEC, IFCC, et al. n.d.-b. <em>International Vocabulary of Metrology - Basic
-and General Concepts and Associated Terms (VIM)</em>. Joint Committee for Guides in
-Metrology, JCGM 200:2012(E/F).</p>
-<p id="ref-mittaz19">Mittaz, Jonathan, Christopher J. Merchant, and Emma R. Woolliams. 2019.
-“Applying Principles of Metrology to Historical Earth Observations from
-Satellites.” <em>Metrologia</em> 56 (3).
-<a class="reference external" href="https://doi.org/10.1088/1681-7575/ab1705">doi:10.1088/1681-7575/ab1705</a>.</p>
-<p id="ref-qa4eo1">Woolliams, Emma, Sajedeh Behnia, Agnieszka Bialek, et al. 2025a. <em>General
-Guidance on a Metrological Approach to Fundamental Data Records (FDR), Thematic
-Data Products (TDP) and Fiducial Reference Measurements (FRM) - Executive
-Summary</em>. National Physical Laboratory.</p>
-<p id="ref-qa4eo2">Woolliams, Emma, Sajedeh Behnia, Agnieszka Bialek, et al. 2025b. <em>General
-Guidance on a Metrological Approach to Fundamental Data Records (FDR), Thematic
-Data Products (TDP) and Fiducial Reference Measurements (FRM) - Metrology
-Theoretical Basis</em>. National Physical Laboratory.</p>
-<p id="ref-qa4eo3">Woolliams, Emma, Sajedeh Behnia, Agnieszka Bialek, et al. 2025c. <em>General
-Guidance on a Metrological Approach to Fundamental Data Records (FDR), Thematic
-Data Products (TDP) and Fiducial Reference Measurements (FRM) - Uncertainty
-Analysis Process</em>. National Physical Laboratory.</p>
-</section>
 </section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="alg-02-validation.html" class="btn btn-neutral float-left" title="6.2. Validation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="alg-05-currents.html" class="btn btn-neutral float-left" title="6.5. Total Surface Currents" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="tbd_table.html" class="btn btn-neutral float-right" title="8. TBD table" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
