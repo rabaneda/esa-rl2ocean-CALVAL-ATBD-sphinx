@@ -5,7 +5,7 @@ Spatial Variance
 ----------------
 
 Spatial Variance is a method used to estimate the representativeness error
-:math:`r^2`, which is a key component for triple collocation (TC). This
+:math:`r^2`, which is a key component for triple collocation. This
 procedure estimates the spatial variance for a given geophysical parameter.
 Let :math:`s_1` and :math:`s_2` be two different sources characterized by
 different spatial resolutions, where :math:`V_{s_1}(n)` and
@@ -141,10 +141,10 @@ Triple Collocation
 
 **Purpose**
 
-Triple collocation (TC) was conceived by Stoffelen (1998) as a tool for
+Triple collocation was conceived by Stoffelen (1998) as a tool for
 inter-calibration and individual error assessment of three different
 collocated sea-surface wind datasets
-(:cite:`StoffelenJGRO1998`). TC is generic
+(:cite:`StoffelenJGRO1998`). Triple collocation is generic
 and can be applied to any geophysical variable and data product, provided that
 errors are additive, linear calibration is sufficient, measurement errors are
 uncorrelated with each other, and measurement errors are constant over the
@@ -153,7 +153,7 @@ range of measured values.
 SAR-derived wind products are recommended to be validated against buoy wind
 measurements, scatterometer-derived winds, and NWP winds. Collocations between
 SAR and scatterometers strictly depend on the Local Time Ascending Node (LTAN).
-TC analysis needs a reliable estimate of the representativeness error
+Triple collocation analysis needs a reliable estimate of the representativeness error
 :math:`r^2`; see `Spatial Variance`_ for its estimation.
 
 **Inputs**
@@ -349,7 +349,7 @@ individual reference sources through linear correlation analysis. This
 approach is performed independently for each validation source, providing
 direct pairwise comparisons between SAR observations and reference data.
 
-One-to-one validation is particularly useful when TC is not feasible due to
+One-to-one validation is particularly useful when triple collocation is not feasible due to
 insufficient collocated triplets. This may occur, for example, if the SAR
 Local Time Ascending Node (LTAN) does not align with other altimeter or
 scatterometer platforms and the region lacks in-situ sampling from buoys or

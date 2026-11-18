@@ -4,16 +4,16 @@ Introduction
 Purpose and scope
 -----------------
 
-The Copernicus Programme, established by the European Union, is a framework for Earth Observation and Monitoring, designed to support environmental protection, civil protection, and civil security efforts. At the heart of this programme is the Copernicus Space Component (CSC), which comprises the Sentinel missions. These missions are integral to providing essential data across various thematic domains, thereby facilitating informed decision-making and policy development.
+The Copernicus Programme, established by the European Union, is a framework for Earth Observation and Monitoring, designed to support environmental protection, civil protection, and civil security efforts. At the heart of this programme is the Copernicus Space Component, which comprises the Sentinel missions. These missions are integral to providing essential data across various thematic domains, thereby facilitating informed decision-making and policy development.
 
 One of the new advancements within this framework is the Copernicus Radar Observing System for Europe – L-Band (ROSE-L). This initiative is aimed at enhancing existing capabilities by introducing L-band Synthetic Aperture Radar (SAR) data. The L-band SAR is set to complement the C-band radar data provided by Sentinel-1, thus addressing specific observational needs within environmental and maritime surveillance.
 
 Cal/Val context
 ---------------
 
-Quality Assessment (QA) is required for remote sensing and Earth Observation (EO) instruments in order to produce reliable measurements and ensure accuracy. Quality of products are commonly assessed through a Calibration and Validation process (Cal/Val). Consequently, the development of the prototype and operational ROSE-L Ocean products processors (L2O-GPP and L2O-IPF respectively) must be followed by the validation of products. A validation strategy is meant to be planned prior to calibration and validation activities. The required strategy shall cover different stages of the processor and different phases of ROSE-L mission, from pre-launch (phase D) to exploitation (phase E2). The strategy shall include methodologies, datasets, performance and uncertainty metrics.
+Quality Assessment is required for remote sensing and Earth Observation (EO) instruments in order to produce reliable measurements and ensure accuracy. Quality of products are commonly assessed through a Calibration and Validation process (Cal/Val). Consequently, the development of the prototype and operational ROSE-L Ocean products processors (L2O-GPP and L2O-IPF respectively) must be followed by the validation of products. A validation strategy is meant to be planned prior to calibration and validation activities. The required strategy shall cover different stages of the processor and different phases of ROSE-L mission, from pre-launch (phase D) to exploitation (phase E2). The strategy shall include methodologies, datasets, performance and uncertainty metrics.
 
-The ROSE-L instrument will operate in scanning synthetic aperture radar (ScanSAR) mode. The system will support Dual-Pol, Quad-Pol and Wave modes. The Cal/Val strategy is also meant to cover all modes and polarizations. ROSE-L will not be the first SAR system functioning within L-band. ALOS, ALOS-2, ALOS-4, SAOCOM and NiSAR are, or have been, operating in L-band too. However, there are differences between those systems and the ROSE-L system, e.g. incidence angle, range bandwidth, swath width, among others. Furthermore, ROSE-L incorporates the use of a new technique, the Scan-On-Receive (SCORE) technique with Multiple Azimuth Phase Centers (MAPS). The different instrument design will impose differences in the retrievals at low level which are meant to influence the inversion into L2 products.
+The ROSE-L instrument will operate in scanning synthetic aperture radar mode. The system will support Dual-Pol, Quad-Pol and Wave modes. The Cal/Val strategy is also meant to cover all modes and polarizations. ROSE-L will not be the first SAR system functioning within L-band. ALOS, ALOS-2, ALOS-4, SAOCOM and NiSAR are, or have been, operating in L-band too. However, there are differences between those systems and the ROSE-L system, e.g. incidence angle, range bandwidth, swath width, among others. Furthermore, ROSE-L incorporates the use of a new technique, the Scan-On-Receive technique with Multiple Azimuth Phase Centers. The different instrument design will impose differences in the retrievals at low level which are meant to influence the inversion into L2 products.
 
 Regarding both the development of the retrieval algorithms and the Cal/Val activities, pre-launch work is limited by the inherent differences between ROSE-L and existing L-band SAR data, and by the lack of real ROSE-L data. This limitation is mitigated by the use of similar acquisitions by the above-mentioned systems and by simulated ROSE-L scenes, although this introduces a non-negligible degree of uncertainty. The approach should therefore be refined in phase E: the achievable accuracy of simulated ROSE-L data will be analysed during the In-Orbit-Commissioning (IOC) phase, E1, and once real ROSE-L data is available, the outputs from the L2O-IPF processor will need to be validated again, with the possibility to encounter a need for a readjustment of the processor or introduction of supplementary calibration steps.
 
@@ -94,29 +94,86 @@ Acronyms
 .. glossary::
    :sorted:
 
+   ASCAT
+      Advanced Scatterometer.
+
    ATBD
       Algorithm Theoretical Basis Document.
+
+   Cal/Val
+      Calibration and Validation.
+
+   ECMWF
+      European Centre for Medium-Range Weather Forecasts.
+
+   EUMETSAT
+      European Organisation for the Exploitation of Meteorological Satellites.
+
+   EW
+      Extra Wide (Sentinel-1 acquisition mode).
+
+   FFT
+      Fast Fourier Transform.
+
+   GDOP
+      Geometric Dilution of Precision.
 
    GMF
       Geophysical Model Function.
 
-   GPP
-      Ground Prototype Processor.
+   GOFS
+      Global Ocean Forecasting System.
+
+   GTS
+      Global Telecommunication System.
+
+   HF
+      High-Frequency.
 
    HFR
       High-Frequency Radar.
 
+   HYCOM
+      HYbrid Coordinate Ocean Model.
+
    IOC
       In-Orbit Commissioning.
 
-   IPF
-      Instrument Processing Facility.
+   IW
+      Interferometric Wide (Sentinel-1 acquisition mode).
+
+   L1
+      Level-1.
+
+   L2
+      Level-2.
+
+   L2O-GPP
+      ROSE-L Level-2 Ocean Ground Prototype Processor.
+
+   L2O-IPF
+      ROSE-L Level-2 Ocean Instrument Processing Facility.
+
+   L2O-QC
+      ROSE-L Level-2 Ocean Quality Control.
+
+   LMOD
+      L-band Geophysical Model Function.
 
    LoS
       Line of Sight.
 
+   LTAN
+      Local Time of Ascending Node.
+
+   MARS
+      Meteorological Archival and Retrieval System.
+
    MTF
       Modulation Transfer Function.
+
+   NOAA
+      National Oceanic and Atmospheric Administration.
 
    NOC
       Numerical Weather Prediction Ocean Calibration.
@@ -127,6 +184,9 @@ Acronyms
    NWP
       Numerical Weather Prediction.
 
+   OSI-SAF
+      Ocean and Sea Ice Satellite Application Facility.
+
    OSVS
       Ocean Surface Vector Stress.
 
@@ -136,26 +196,53 @@ Acronyms
    OWI
       Ocean Wind field component of the Sentinel-1 Level-2 OCN product.
 
+   PSD
+      Power Spectral Density.
+
    QC
       Quality Control.
 
    RMSD
       Root Mean Square Difference.
 
+   ROSE-L
+      Radar Observing System for Europe in L-band.
+
+   RSS
+      Remote Sensing Systems.
+
    RVL
       Radial Surface Velocity component of the Sentinel-1 Level-2 OCN product.
+
+   SLC
+      Single Look Complex.
+
+   SM
+      Stripmap (Sentinel-1 acquisition mode).
 
    SWH
       Significant Wave Height.
 
+   TAC
+      Thematic Assembly Centre.
+
    TC
-      Triple Collocation.
+      Tropical Cyclone.
+
+   VDT
+      Variable Description Table.
 
    VS
       Validation Source.
 
    vRMSD
       Vector Root Mean Square Difference.
+
+   WV
+      Wave (Sentinel-1 acquisition mode).
+
+   WVC
+      Wind Vector Cell.
 
    CANVAS
       CAlibration aNd VAlidation for Sar.

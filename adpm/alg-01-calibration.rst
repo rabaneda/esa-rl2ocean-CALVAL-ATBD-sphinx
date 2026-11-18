@@ -36,7 +36,7 @@ This calibration procedure is not applicable to sea-state parameters, since
 these are derived spectrally. Therefore, an absolute :math:`\sigma_0`
 calibration is not necessary before retrieval. Instead, inter-calibration
 among different sea-state parameter sources can be useful for comparison and
-validation; this can be achieved with triple collocation (TC). Similarly, no
+validation; this can be achieved with triple collocation. Similarly, no
 additional SAR-specific calibration procedure is recommended for line-of-sight
 (LoS) current retrieval beyond the harmonized Doppler calibration already part
 of the ``l2o`` processor.
